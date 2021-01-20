@@ -1,0 +1,469 @@
+/*重置*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+	table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*重置結束*/
+				
+
+				/*最外框*/
+                #sitebody {
+
+						
+                        width:100%;
+						
+
+                        margin: 0 auto;
+						/*position: absolute;*/
+						
+						height: 100vh;
+                        
+
+
+                }
+
+
+
+				/*頁首*/
+                #header {
+						width :100%;
+
+                        background-color: #e67300;
+
+
+                        height:100px;
+
+
+                        text-align: center;                   
+						
+						position:fixed; /*固定位置定位*/
+						top:0; /*距離上方 0 像素*/
+						z-index:1; /*重疊時會在其他元素之上*/
+
+                }
+				/*包住固定不動的Header*/
+				#header2 {
+						width :100%;
+
+                        background-color:  #e67300;
+
+
+                        height: 100px;
+
+
+                        text-align: center;
+						position: relative;
+
+                      
+						
+						
+
+                }
+				/*包住導覽列的DIV*/
+				#wrapnav1{
+					position: absolute; 
+					top: 5px; 
+					right: 300px;
+					z-index:1; /*重疊時會在其他元素之上*/
+				}
+				/*包住導覽列的DIV2*/
+				#wrapnav2{
+					position: absolute; 
+					z-index:1; /*重疊時會在其他元素之上*/
+					bottom: 3px; 
+					right: 300px;
+				}
+				
+				/*放照片區域*/
+				#photo {
+						margin:0 auto;
+						position: relative;
+						
+						background-color:#EEEEEE;
+						
+						width:auto;                   
+                        height: auto;
+						
+
+                        /*background-color: #EEEEEE;
+
+
+                        text-align: center;
+
+
+                        line-height: 400px;*/
+
+
+                }
+				/*放幻燈片*/
+				#container{
+						margin:0 auto;
+						position: relative;
+						
+						width:1100px;
+						background-color:#EEEEEE;
+						/* border:1px solid #F00;*/
+						}
+		
+
+				/*左側*/
+                #sidebar_left {
+
+
+                        background-color:#EEEEEE;
+
+
+                        width: 120px;
+
+
+                        height: 400px;
+
+
+                        text-align: center;
+
+
+                        line-height: 400px;
+
+
+                        float: left;
+
+
+                }
+
+
+
+				/*右側*/
+                #sidebar_right {
+
+
+                        background-color:#EEEEEE;
+
+
+                        width: 120px;
+
+
+                        height: 400px;
+
+
+                        text-align: center;
+
+
+                        line-height: 400px;
+
+
+                        float: right;
+
+
+                }
+
+
+
+				/*主內容*/
+               /* 內容 */
+				#content{
+					background-color:#EEEEEE;
+					min-height: 100%;
+					width:auto;
+					
+						
+					/*height: 100vh;*/
+					/*display: -webkit-flex;*/
+
+					 /*border:1px solid #F00;*/
+					
+				}
+				#contentbig{
+					background-color:#EEEEEE;
+					height:100vh;
+					width:auto;
+					
+						
+					/*height: 100vh;*/
+					/*display: -webkit-flex;*/
+
+					 /*border:1px solid #F00;*/
+					
+				}
+				/*填充空白處*/
+				#fillter{
+					background-color:#EEEEEE;
+					height:inherit;
+					width:auto;
+					position: relative;
+					/* border:1px solid #F00;*/
+				}
+				/*填充空白處*/
+				#fillterbeforcontent{
+					background-color:#EEEEEE;
+					
+					width:auto;
+					height: inherit;
+					position: relative;
+					/* border:1px solid #F00;*/
+				}
+
+
+
+				/*導覽列*/
+	
+				/*導覽列設定*//* 移除項目符號 */
+				nav > ul {
+				/*background-color: rgb(230, 230, 230);*/
+				list-style: none;   
+				margin:0;
+				padding: 0;
+				
+					}
+
+				nav a {
+				color: inherit; /* 移除超連結顏色 */
+				display: block; /* 讓 <a> 填滿 <li> */
+				font-size: 1.2rem;
+				padding: 10px;
+				text-decoration: none;  /* 移除超連結底線 */
+					}
+
+				 /*滑鼠移到 <a> 時變成深底淺色 */
+				/*nav li:hover {
+			
+					color: white;
+				}*/
+				nav a:hover
+				{
+					text-decoration: none;
+					color:#ffffff;
+					/*font-size:24px;*/
+				}
+
+				.flex-nav {
+					display: flex;
+					justify-content: flex-end;
+				}
+
+				.inline-block-nav {
+					text-align: center;
+					font-size: 0;   /* 移除 <li> 之間的空隙 */
+						}
+
+				.inline-block-nav > li {
+					display: inline-block;
+						}
+						
+						
+						
+						
+										
+										/* 內容裡的大標題 */
+				#content .newstitle{
+					position:relative;
+					top:5%;
+					font-size:20px;
+					margin-left:10%;		/* 左右 */
+					margin-right:10%;
+					padding-top:30px;
+					padding-left:30px;
+					padding-right:30px;
+					width:80%;
+					height:auto;
+					color:#1a66ff;  /* 文字顏色 */
+			
+
+					/*  border:1px solid #F00;*/ /*	紅色框線記得刪除*/
+				}
+
+				/* 內容 > 大標題 > 內文*/
+				#content .newstitle .contentlist {
+					padding-top:50px;
+					width:auto;
+					height:auto;
+					font-size:16px;
+					height:100%;
+					/* border:1px solid #F00;  /*	紅色框線記得刪除*/
+					overflow:hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				
+
+				}
+				/*隱藏*/
+				.ellipsis {
+					overflow:hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					}
+				/* 內容 > 大標題 > 內文(表格)*/
+				#content .newstitle .tablelist{
+					overflow: auto;
+					padding-top:50px;
+					width:auto;
+					height:100vh;
+					/* border:1px solid #F00;  /*	紅色框線記得刪除*/
+
+				}
+
+				/* 內容 > 大標題 > 內文(表格灰格線)*/
+				#content .newstitle .tablelist > tr,td,th{
+					height:auto;
+					/*border:0px  solid #cccccc;*/
+				}
+
+				/* 內容 > 大標題 > 內文(表格無格線)*/
+				#content .newstitle .contentlist > table,tr,td,th{
+					height:auto;
+					overflow:hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					/*padding-left: 20px;*/
+					 /*border:1px  solid #000000;*/
+				}
+				#content .contentlist .tableforcontent {
+					padding-left: 5%;
+					padding-right: 5%;
+					min-height: 100%;
+					width:100%; 
+					border: 0px;
+					border:1px  solid #EEEEEE;
+				}
+				/*登入區設定*/
+				.login{
+					color:#000000;  /* 文字顏色 */
+					position:relative;
+					top:20%;
+					margin-left:25%;		/* 左右 */
+					margin-right:25%;
+					width:50%;
+					font-size:15px;
+					/*border:1px solid #F00;*/
+
+				}
+				/*登入及註冊部分*/
+				#loginandregis{
+
+					position: relative;
+
+				}
+				#loginandre {
+					height: 50px;
+					width: 800px;
+					right: 0px;
+					position: relative;
+				}
+				#regis {
+					height: 30px;
+					width: 300px;
+					position: absolute;
+					right: 0px;
+					bottom: 0px;
+					text-align: right;
+				}
+				#tableforregis{
+					background-color:#FFFFFF;
+					border-top-style: ridge;
+					border-top-color: #FFFFFF;
+					border-right-color: #FFFFFF;
+					border-bottom-color:#FFFFFF;
+					border-left-color:#FFFFFF;
+					text-align:center; 
+					vertical-align:middle;
+					
+				}
+				.button {
+					  display: inline-block;
+					  border-radius: 4px;
+					  background-color: #e67300;
+					  border: none;
+					  color: #FFFFFF;
+					  text-align: center;
+					  font-size: 16px;
+					  padding: 10px;
+					  width: 100px;
+					  transition: all 0.5s;
+					  cursor: pointer;
+					  margin: 5px;
+					}
+
+					.button span {
+					  cursor: pointer;
+					  display: inline-block;
+					  position: relative;
+					  transition: 0.5s;
+					}
+
+					.button span:after {
+					  content: '»';
+					  position: absolute;
+					  opacity: 0;
+					  top: 0;
+					  right: -20px;
+					  transition: 0.5s;
+					}
+
+					.button:hover span {
+					  padding-right: 25px;
+					}
+
+					.button:hover span:after {
+					  opacity: 1;
+					  right: 0;
+					}
+				/*註腳*/
+                .footer {
+
+
+                        clear: both;
+
+
+                        background-color: #95CACA;
+
+
+                        height: 30px;
+
+
+                        text-align: center;
+						
+
+                        line-height:30px;
+						 /*border:1px solid #F00;*/
+
+                }
+     

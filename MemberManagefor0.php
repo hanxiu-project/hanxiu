@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>經文管理 | 管理後台</title>
+    <title>會員管理 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,18 @@
 </head>
 
 <body>
-<form name="formsearchdoante" method="post" action="">
+<form name="forms" method="post" action="">
+<?php 
+			 /*資料庫連結*/
+                $db_ip="127.0.0.1";
+                $db_user="root";
+                $db_pwd="123456789";
+                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+				$sqlmember="SELECT * FROM members where m_id= $_SESSION[m_id] ";
+                $resultmanager=mysqli_query($db_link,$sqlmember);
+				$rowmanager = mysqli_fetch_assoc($resultmanager);	
+				
+			?>   
 <div id="wrapper">
     <!--sidebar-->
     <!-- Navigation -->
@@ -124,14 +135,9 @@
         </div>
         <!-- /.navbar-collapse -->
     </nav>
-
-    <!--建立新經文
-    <div class="row" style="margin-bottom: 20px; text-align: left">
-        <div class="col-lg-12">
-           <a href="Donatesearch.php" class="btn btn-success  " style="left">搜尋會員姓名</a>
-		   <input type="text" name="sdonatemember" Placeholder="輸入姓名">
-        </div>
-    </div>-->
+	
+    <!--建立新公告-->
+   
 
     <!--Body-->
     <div id="page-wrapper">
@@ -142,85 +148,100 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-                /*資料庫連結*/
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+               
                 session_start();
 
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql_mid = "SELECT * FROM `donates` where dname like'%$_SESSION[sdonatemember]%' || m_id like '%$_SESSION[sdonatemember]%'  ";
-                $result= mysqli_query($db_link,$sql_mid);
+                $sql = "SELECT * FROM members where authority = 0";
+                $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=1600 style=font-size:20px;>";
+                echo "<table  width=100% style=font-size:22px; >";
+				 echo "<tr align=left>";
+				 echo "<td>一般會員</td>";
+				 echo "</tr>";
                 echo "<tr align=center>";
-                echo "<td>捐獻者ID</td>";
-                echo "<td>捐獻者</td>";
-                echo "<td>捐獻內容</td>";
-				echo "<td>捐獻數量</td>";
-				echo "<td>捐獻日期</td>";
+				
+				 echo "<td>會員編號</td>";
+                echo "<td>會員帳號</td>";
+                echo "<td>會員姓名</td>";
+				echo "<td>會員性別</td>";
+				echo "<td>會員信箱</td>";
+				echo "<td>會員地址</td>";
+				echo "<td>會員行動</td>";
+				
                 echo "<td></td>";
                 echo "</tr>";
-                while($row=$result->fetch_assoc())
+				while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
-                   echo "<td>$row[m_id]</td>";
-                    echo "<td>$row[dname]</td>";
-                    echo "<td>$row[type]</td>";
-					echo "<td>$row[amount]</td>";
-					echo "<td>$row[date]</td>";
-                    
+					echo "<td>$row[m_id]</td>";
+                    echo "<td>$row[account]</td>";
+                    echo "<td>$row[name]</td>";
+					echo "<td>$row[gender]</td>";
+					echo "<td>$row[email]</td>";
+					echo "<td>$row[address]</td>";
+					echo "<td>$row[telephone]</td>";
                     ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[d_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這筆捐贈?')"></td>
+					
+					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這位會員?')"></td>
                     
 					<?php
-
-                    echo "</tr>";
+				   echo "</tr>";
+                
+                    
+					
                 }
-                echo "</table>";
+				
+				
+				
+				
+				 echo "</table>";
+					
+					
+					
+			
+				
 
 
-                //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
-                $sql2 = "SELECT * FROM `members`";
+                $sql2 = "SELECT * FROM members";
                 $result2=mysqli_query($db_link,$sql2);
 
                 while($row2=$result2->fetch_assoc()) {
-                    if (isset($_POST["$row2[m_id]+1"])) {
-                        $_SESSION["edit_m_id"]=$row2["m_id"];
+                    if (isset($_POST["$row2[d_id]+1"])) {
+                        $_SESSION["edit_d_id"]=$row2["d_id"];
                         echo "<script langauge = 'javascript' type='text/javascript'>";
-                        echo "window.location.href = 'DonatemanageEdit.php'";
+                        echo "window.location.href = 'AdminPostsEdit.php'";
                         echo "</script>";
                     }
 
-                    /*if (isset($_POST["$row2[s_id]+2"])) {
-
-                        $_SESSION["delete_s_id"]=$row2["s_id"];
-                        $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
+                    if (isset($_POST["$row2[m_id]+2"])) {
+                        $_SESSION["delete_m_id"]=$row2["m_id"];
+                        $sql_delete="DELETE FROM members WHERE members.m_id = $_SESSION[delete_m_id]";
                         mysqli_query($db_link, $sql_delete);
-                        $filename = $row2["filename"];//刪除檔案
-                        unlink($filename);
-                        echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
-
-                    }*/
+                        echo "<script>alert('成功刪除!');location.href='MemberManage.php'</script>";
+                    }
                 }
 
-                    mysqli_close($db_link);
+                mysqli_close($db_link);
 
 
                 ?>
 
 
+
+
+
+
+            </div>
+            <!-- /#page-wrapper -->
+
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /#wrapper -->
 
-    </div>
-    <!-- /#wrapper -->
-
-   <!-- jQuery -->
+        <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -230,7 +251,6 @@
 <script src="js/plugins/morris/raphael.min.js"></script>
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
-
 </body>
 
 </html>

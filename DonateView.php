@@ -73,8 +73,20 @@
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active">
-                    <a href="AdminDashboard.php"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
+                <li class="dropdown">
+				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+					<li>
+                        <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
+                    </li>
+					<li>
+                        <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
+                    </li>
+                    
+					 
+                   
+                   
+                </ul>
                 </li>
                 <li class="dropdown">
 				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>經文管理<b class="caret"></b></a>

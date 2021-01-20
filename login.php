@@ -174,7 +174,7 @@
 						{
                             header("location:indexs.php");
                             //echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
-						}else if ($authority == 1) {
+						}else if ($authority == 1 || $authority == 2) {
                             header("location:AdminDashboard.php");;		//導向管理員頁面
 						}
 					}

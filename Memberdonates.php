@@ -3,7 +3,7 @@
 
     <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./csss_file/cssfornophoto3.css" rel="stylesheet" type="text/css">
+    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -122,8 +122,9 @@ session_start();
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
-				<h3>|捐獻內容</h3></div>
+
 				 <div class="contentlist" align="left">
+                     <h2>|捐獻內容</h2>
                 <div class="tableforcontent">
 				<div class="table" align="center">
                 <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
@@ -149,8 +150,8 @@ session_start();
 				
                 mysqli_close($db_link);
                 ?>
-			
-			
+
+                </div>
             </div>
 
         </div>

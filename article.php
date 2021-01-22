@@ -3,7 +3,7 @@
 
     <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./csss_file/cssfornophoto3.css" rel="stylesheet" type="text/css">
+    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -70,16 +70,7 @@
              <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                        <li>
-                            <a href="https://www.facebook.com/">
-                                <i class="fab fa-facebook-square" aria-hidden="true" title="臉書粉絲專頁"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.gmail.com/">
-                                <i class="fas fa-envelope-square" aria-hidden="true" title="電子信箱"></i>
-                            </a>
-                        </li>
+
                         <li><a href="indexs.php">回首頁</a></li>
                         <li><a href="articletype.php">經文閱讀</a></li>
                         <li><a href="news.php">最新公告</a></li>

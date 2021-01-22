@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb8781e7-93e1-4b6d-bf6f-805a520ca672" name="Default Changelist" comment="" />
+    <list default="true" id="eb8781e7-93e1-4b6d-bf6f-805a520ca672" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Memberdonates.php" beforeDir="false" afterPath="$PROJECT_DIR$/Memberdonates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articletype.php" beforeDir="false" afterPath="$PROJECT_DIR$/articletype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csss_file/cssfornophoto3.css" beforeDir="false" afterPath="$PROJECT_DIR$/csss_file/cssfornophoto3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csss_file/topic1.css" beforeDir="false" afterPath="$PROJECT_DIR$/csss_file/topic1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csss_file/topicforlogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/csss_file/topicforlogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexs.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchkeyword.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchkeyword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchtitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchtitle.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,14 +25,26 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lDqTqnDZSWJgURm8zD74uUtHpJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/csss_file" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -25,6 +52,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\AppServ\www\漢修專題\csss_file" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,7 +77,8 @@
       <workItem from="1610939692518" duration="436000" />
       <workItem from="1610946591548" duration="1070000" />
       <workItem from="1611036488397" duration="3806000" />
-      <workItem from="1611140915507" duration="4191000" />
+      <workItem from="1611140915507" duration="4793000" />
+      <workItem from="1611329092867" duration="4188000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./csss_file/topic1.css" rel="stylesheet" type="text/css">
+    <link href="./csss_file/topic1.css?ts=<?=filemtime('topic1.css?')?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -156,7 +156,7 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <h3>｜<?php echo $row["title"] ?></h3>
+            <h2>｜<?php echo $row["title"] ?></h2>
         </div>
             <div class="tablelist">
 

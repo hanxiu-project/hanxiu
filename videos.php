@@ -89,7 +89,7 @@ session_start();
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="?">留言區</a></li>
+                        <li><a href="comments.php">留言區</a></li>
 						<?php
 						}
 						?>
@@ -122,9 +122,11 @@ session_start();
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
+		
             <div class="contentlist">
+			<h2>｜影音專區</h2>
                 <?php
-$db_ip="127.0.0.1";
+				$db_ip="127.0.0.1";
                 $db_user="root";
                 $db_pwd="123456789";
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
@@ -134,8 +136,8 @@ $db_ip="127.0.0.1";
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
-				<h3>|電音專區</h3>
-				<div class="table" align="center">
+				
+
                 
                 <?php
                 echo "<form name='form1' method='POST' action=''>";
@@ -155,7 +157,7 @@ $db_ip="127.0.0.1";
                 echo "</table>";
                 ?>
 			
-			</div>
+			
             </div>
 
         </div>

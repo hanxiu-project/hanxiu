@@ -61,12 +61,25 @@
 				<div id="wrapnav2">
 						<nav>
 						 <ul class="flex-nav ">
-                            <li><a href="indexs.php">回首頁</a></li>
-                            <li><a href="articletype.php">經文閱讀</a></li>
-                            <li><a href="news.php">最新公告</a></li>
-                            <li><a href="?">查看捐獻</a></li>
-                            <li><a href="?">個人資料</a></li>
-                            <li><a href="comments.php">留言區</a></li>
+                             <?php
+					 if ($_SESSION[acc] == null) {
+                            echo "<li><a href=indexs.php>回首頁</a></li>";
+                          echo "<li><a href=videos.php>影音專區</a></li></a></li>";
+                            echo "<li><a href=articletype.php>經文閱讀</a></li>";
+							echo " <li><a href=news.php>最新公告</a></li>";
+                            
+                        }else{?>
+						
+							<li><a href="indexs.php">回首頁</a></li>
+						 <li><a href="videos.php">影音專區</a></li>
+                        <li><a href="articletype.php">經文閱讀</a></li>
+                        <li><a href="news.php">最新公告</a></li>
+                        <li><a href="Memberdonates.php">查看捐獻</a></li>
+                        <li><a href="MemberProfile.php">個人資料</a></li>
+                        <li><a href="?">留言區</a></li>
+						<?php
+						}
+						?>
 						</ul>
 						</nav>
 						
@@ -175,7 +188,7 @@
                             header("location:indexs.php");
                             //echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
 						}else if ($authority == 1 || $authority == 2) {
-                            header("location:AdminDashboard.php");;		//導向管理員頁面
+                            header("location:AdminScriptureManage.php");;		//導向管理員頁面
 						}
 					}
 					//mysqli_close($db_link);

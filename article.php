@@ -135,7 +135,7 @@
 				<?php echo "瀏覽人次為 $rowcount[clicktimes]" ?>
 				</div>
 
-                <h3>｜<?php echo "$type[1] / $type[2] / $rtit[4]" ?></h3><br>
+                <h3>｜<?php echo "$type[1] / $type[2]" ?></h3><br>
 				
 				</div>
 				

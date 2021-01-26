@@ -88,11 +88,16 @@ session_start();
                         <li><a href="articletype.php">經文閱讀</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
+
                         <li><a href="MemberProfile.php">個人資料</a></li>
                         <li><a href="?">留言區</a></li>
 						<?php
 						}
 						?>
+
+                        <li><a href="?">個人資料</a></li>
+                        <li><a href="comments.php">留言區</a></li>
+
                     </ul>
                 </nav>
 
@@ -135,7 +140,7 @@ session_start();
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
-				<h2>|最新公告</h2>
+				<h2>｜最新公告</h2>
 				<div class="table" align="center">
                 <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
                     <tr align="center">

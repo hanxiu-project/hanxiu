@@ -22,6 +22,17 @@
     <list default="true" id="eb8781e7-93e1-4b6d-bf6f-805a520ca672" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/article.php" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/articletype.php" beforeDir="false" afterPath="$PROJECT_DIR$/articletype.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexs.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydonates.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchkeyword.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchkeyword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchtitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchtitle.php" afterDir="false" />
+=======
+>>>>>>> 48777067390db2a6c200dc84821bd86eab7f1e58
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +98,13 @@
       <workItem from="1611140915507" duration="4191000" />
       <workItem from="1611657916546" duration="8734000" />
       <workItem from="1611140915507" duration="4793000" />
+<<<<<<< HEAD
+      <workItem from="1611329092867" duration="4384000" />
+      <workItem from="1611662612493" duration="15523000" />
+=======
       <workItem from="1611329092867" duration="4188000" />
       <workItem from="1611668479737" duration="756000" />
+>>>>>>> 48777067390db2a6c200dc84821bd86eab7f1e58
     </task>
     <servers />
   </component>
@@ -108,19 +124,31 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610939814445">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611665524140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607776666535" />
+<<<<<<< HEAD
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.172.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1611665524140" />
+    <state x="777" y="442" key="NewPhpFileDialog" timestamp="1611666015553">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="442" key="NewPhpFileDialog/1920.172.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1611666015553" />
+=======
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.172.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1610939814445" />
     <state x="777" y="442" key="NewPhpFileDialog" timestamp="1611658198702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="442" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611658198702" />
     <state x="777" y="442" key="NewPhpFileDialog/1920.172.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1607861105987" />
+>>>>>>> 48777067390db2a6c200dc84821bd86eab7f1e58
     <state x="662" y="252" width="595" height="536" key="find.popup" timestamp="1611142746494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="252" width="595" height="536" key="find.popup/1920.172.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1611142746494" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611672787797">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.172.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1611672787797" />
   </component>
 </project>

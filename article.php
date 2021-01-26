@@ -76,7 +76,7 @@
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="?">個人資料</a></li>
-                        <li><a href="?">留言區</a></li>
+                        <li><a href="comments.php">留言區</a></li>
                     </ul>
                 </nav>
 

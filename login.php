@@ -6,7 +6,7 @@
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="./csss_file/topicforlogin.css" rel="stylesheet" type="text/css">
+	<link href="./csss_file/topicforlogin.css?ts=<?=filemtime('topicforlogin.css?')?>" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
@@ -127,7 +127,7 @@
 				<!--主內文區-->
                 <div id="content">
 	<div class="newstitle">
-		<h3 >｜ 會員登入 </h3>
+		<h2 >｜ 會員登入 </h2>
 			<div class="tablelist">
 			
 				<div class="login">

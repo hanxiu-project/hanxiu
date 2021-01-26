@@ -187,8 +187,13 @@
                     ?>
 					
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這位會員?')"></td>
-                    
 					<?php
+                   if($rowmanager["authority"]==2){
+						?>
+					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='指定' onclick="return confirm('是否確認將這位會員升級為管理員?')"></td>
+					<?php
+					}
+					
 				   echo "</tr>";
                 
                     
@@ -221,7 +226,13 @@
                         $_SESSION["delete_m_id"]=$row2["m_id"];
                         $sql_delete="DELETE FROM members WHERE members.m_id = $_SESSION[delete_m_id]";
                         mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='MemberManage.php'</script>";
+                        echo "<script>alert('成功刪除!');location.href='MemberManagefor0.php'</script>";
+                    }
+					if (isset($_POST["$row2[m_id]+3"])) {
+                        $_SESSION["assign_m_id"]=$row2["m_id"];
+                        $sql_assign="update  members set authority = 1 WHERE members.m_id = $_SESSION[assign_m_id]";
+                        mysqli_query($db_link, $sql_assign);
+                        echo "<script>alert('成功更改!');location.href='MemberManagefor0.php'</script>";
                     }
                 }
 

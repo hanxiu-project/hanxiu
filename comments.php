@@ -3,7 +3,7 @@
 
     <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./csss_file/cssfornophoto.css" rel="stylesheet" type="text/css">
+    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -49,8 +49,7 @@ session_start();
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-						$mid = $rows["m_id"];
-						$_SESSION['mid']=$mid;
+
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -75,13 +74,12 @@ session_start();
             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-
                         <li><a href="indexs.php">回首頁</a></li>
                         <li><a href="articletype.php">經文閱讀</a></li>
                         <li><a href="news.php">最新公告</a></li>
-                        <li><a href="mydonates.php">查看捐獻</a></li>
+                        <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="?">個人資料</a></li>
-                        <li><a href="?">留言區</a></li>
+                        <li><a href="comments.php">留言區</a></li>
                     </ul>
                 </nav>
 
@@ -111,52 +109,66 @@ session_start();
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <div class="contentlist">
-                <?php
 
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                mysqli_query($db_link, 'SET CHARACTER SET utf8');
-                $sql="SELECT * FROM `donates` where `m_id` ='$_SESSION[mid]' order by `date`";
-                $result= mysqli_query($db_link,$sql);
-
-                ?>
-				<h3>|捐獻內容</h3>
-				<div class="table" align="center">
-                <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
-                    <tr align="center">
-                       
-						<td width="30%" align="center" align="center">捐獻者</th>
-                        <td width="25%" align="center" align="center">捐獻內容</th>
-						 <td width="25%" align="center" align="center">捐獻數量</th>
-						 <td width="20%" size="30px" height="26"  align="center">捐獻日期</th>
-                    </tr>
-                <?php
-                while($row=$result->fetch_assoc())
-                {
-                    echo "<tr>";
-                    
-					 echo "<td align='center'>$row[dname]</td>";
-                    echo "<td align='center'>$row[type]</td>";
-					echo "<td align='center'>$row[amount]</td>";
-					echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-				
-                mysqli_close($db_link);
-                ?>
-			
-			</div>
+            <div class="newstitle2" style="text-align:right;">
+                <a href="mycomments.php">查看我的歷史留言</a>
             </div>
+            <div class="contentlist">
+                <h2>｜留言區</h2>
 
+
+                <div class="table" align="center" >
+                    <br><br>
+                    留言內容<br>
+                    <form name="msg" method="post" action="comments.php">
+                    <textarea  name="message" cols="50" rows="5" placeholder="輸入您的留言..."></textarea>
+                    <br>
+                    <font color="red">※留言內容請以經文內容錯誤為主※</font>
+                    <br>
+                    <br>
+                        <input type="submit" name="send" value="送出">
+                    </form>
+
+                </div>
+            </div>
         </div>
-
-
     </div>
-    <div id="fillter"></div>
+
+
+    <?php
+    $sql_search_member = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
+    $resultsrchmember = mysqli_query($db_link, $sql_search_member);
+    $rows = mysqli_fetch_assoc($resultsrchmember);
+    $m_id = $rows["m_id"];
+
+
+
+
+
+
+    if(isset($_POST["send"]))
+    {
+        $nowdate=date("Y-m-d H:i:s" , mktime(date('H')+8,date('i'),date('s'), date('m'), date('d'), date('Y')));
+        if(strlen($_POST[message])<=0)
+        {
+            echo "<script>alert('請輸入留言內容！');location.href='comments.php'</script>";
+        }
+        else
+        {
+            $sql_msg="INSERT INTO `comments`(`m_id`,`message`,`msg_datetime`) VALUES ('$m_id','$_POST[message]','$nowdate')";
+            mysqli_query($db_link, $sql_msg);
+            echo "<script>alert('留言成功！');location.href='comments.php'</script>";
+        }
+    }
+
+
+
+
+    ?>
+
+
+
+
     <!--註腳-->
     <footer class="footer">版權所有 © 勤益科大</footer>
 

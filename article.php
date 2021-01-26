@@ -105,7 +105,7 @@
     <!--主內文區-->
 	
     <div id="content">
-	
+		
         <div class="newstitle">
            
                 <?php
@@ -120,15 +120,27 @@
                 $rtit = mysqli_fetch_row($resultshow[$tit]);
 
                 $sqltype = "SELECT s_id , scripture.typename , number , title , filename , date FROM `scripture` ,`types` WHERE `scripture`.`s_id`=$_GET[sid] AND `types`.`t_id`=$rtit[1]";
+				
                 $resulttype =mysqli_query($db_link, $sqltype);
                 $type = mysqli_fetch_row($resulttype);
+				$sql_count="update  scripture set clicktimes =clicktimes+1  WHERE scripture.s_id = $_GET[sid]";
+				mysqli_query($db_link, $sql_count);
+				
+						$sqlcount = "SELECT * FROM scripture  WHERE scripture.s_id = $_GET[sid] ";
+                        $resultcount = mysqli_query($db_link, $sqlcount);                                          
+                        $rowcount = mysqli_fetch_assoc($resultcount);
+                       
                 ?>
-
+				<div class="newstitle2" style="text-align:right;">
+				<?php echo "瀏覽人次為 $rowcount[clicktimes]" ?>
+				</div>
 
                 <h3>｜<?php echo "$type[1] / $type[2] / $rtit[4]" ?></h3><br>
+				
 				</div>
 				
 				 <div class="contentlist" >
+				 
                 <div class="tableforcontent">
 
                    

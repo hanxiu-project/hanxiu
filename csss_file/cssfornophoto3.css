@@ -310,6 +310,13 @@ table {
 
 					/*  border:1px solid #F00;*/ /*	紅色框線記得刪除*/
 				}
+				#content .newstitle.newstitle2{
+					text-align:right;
+					color:red;  /* 文字顏色 */
+			
+
+					/*  border:1px solid #F00;*/ /*	紅色框線記得刪除*/
+				}
 
 				/* 內容 > 大標題 > 內文*/
 				#content .newstitle .contentlist {

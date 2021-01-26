@@ -144,6 +144,8 @@ session_start();
                                 while ($script = mysqli_fetch_assoc($resultnum10)) {
                                     echo "<td width='8%'>";
                                     echo "<a href=article.php?sid='$script[s_id]' title='$script[number]'>$script[number]</a></p>";
+									
+									
                                     echo "</td>";
                                 }
 
@@ -204,6 +206,8 @@ session_start();
                                 while ($row = mysqli_fetch_assoc($resultnums10)) {
                                     echo "<td width='8%'>";
                                     echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
+									
+								
                                     echo "</td>";
                                 }
 

@@ -127,7 +127,7 @@ session_start();
                     <form name="form" method="post" action="">
                     <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
                         <tr align="center">
-                            <tr>
+                            
                                 <td height="65"  align="center" style="height:60px" >
                                     <label for="account" accesskey="N">&emsp;&emsp;帳號:</label>
                                     <input type="text" style="font size:20px; padding:6px;" name="account" id="account" value="<?php echo $row[account]; ?>" readonly="readonly">

@@ -125,7 +125,7 @@
                 ?>
 
 
-                <h3>｜<?php echo "$type[1] / $type[2] / $rtit[4]" ?></h3><br>
+                <h3>｜<?php echo "$type[1] / $type[2]" ?></h3><br>
 				</div>
 				
 				 <div class="contentlist" >

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>會員管理 | 管理後台</title>
+    <title>公告管理 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,18 +33,7 @@
 </head>
 
 <body>
-<form name="forms" method="post" action="">
-<?php 
-			 /*資料庫連結*/
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-				$sqlmember="SELECT * FROM members where m_id= $_SESSION[m_id] ";
-                $resultmanager=mysqli_query($db_link,$sqlmember);
-				$rowmanager = mysqli_fetch_assoc($resultmanager);	
-				
-			?>   
+
 <div id="wrapper">
     <!--sidebar-->
     <!-- Navigation -->
@@ -83,20 +72,8 @@
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                 <li class="dropdown">
-				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-					<li>
-                        <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
-                    </li>
-					<li>
-                        <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
-                    </li>
-                    
-					 
-                   
-                   
-                </ul>
+                <li class="active">
+                    <a href="AdminDashboard.php"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
                 </li>
                 <li class="dropdown">
 				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>經文管理<b class="caret"></b></a>
@@ -127,17 +104,23 @@
 					 <li>
                         <a href="Donatemanage.php"><i class="fa fa-fw fa-user"></i>增加捐獻</a>
                     </li>
-                   
-                   
+					
                 </ul>
+				<li>
+                   <a href="AdminVideosManage.php"><i class="fa fa-fw fa-edit"></i> 影音專區管理</a>
+                   </li>
             </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </nav>
-	
+
     <!--建立新公告-->
-   
+    <div class="row" style="margin-bottom: 20px; text-align: left">
+        <div class="col-lg-12">
+            <a href="AdminNewVideos.php" class="btn btn-success  ">建立新影音</a>
+        </div>
+    </div>
 
     <!--Body-->
     <div id="page-wrapper">
@@ -148,91 +131,55 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-               
+                /*資料庫連結*/
+                $db_ip="127.0.0.1";
+                $db_user="root";
+                $db_pwd="123456789";
+                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 session_start();
 
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql = "SELECT * FROM members where authority = 0";
+                $sql = "SELECT * FROM videos";
                 $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=100% style=font-size:22px; >";
-				 echo "<tr align=left>";
-				 echo "<td>一般會員</td>";
-				 echo "</tr>";
+                echo "<table  width=100% style=font-size:24px; >";
                 echo "<tr align=center>";
-				
-				 echo "<td>會員編號</td>";
-                echo "<td>會員帳號</td>";
-                echo "<td>會員姓名</td>";
-				echo "<td>會員性別</td>";
-				echo "<td>會員信箱</td>";
-				echo "<td>會員地址</td>";
-				echo "<td>會員行動</td>";
-				
+                echo "<td>影片描述</td>";
+                echo "<td>影片網址</td>";
                 echo "<td></td>";
                 echo "</tr>";
-				while($row=$result->fetch_assoc())
+                while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
-					echo "<td>$row[m_id]</td>";
-                    echo "<td>$row[account]</td>";
-                    echo "<td>$row[name]</td>";
-					echo "<td>$row[gender]</td>";
-					echo "<td>$row[email]</td>";
-					echo "<td>$row[address]</td>";
-					echo "<td>$row[telephone]</td>";
-                    ?>
-					
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這位會員?')"></td>
-					<?php
-                   if($rowmanager["authority"]==2){
-						?>
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='指定' onclick="return confirm('是否確認將這位會員升級為管理員?')"></td>
-					<?php
-					}
-					
-				   echo "</tr>";
-                
-                    
-					
+                    echo "<td>$row[vcontent]</td>";
+                    echo "<td>$row[vnet]</td>";
+                    echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[v_id]+1' value='編輯'></td>";
+                    echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[v_id]+2' value='刪除'></td>";
+                    echo "</tr>";
                 }
-				
-				
-				
-				
-				 echo "</table>";
-					
-					
-					
-			
-				
+                echo "</table>";
 
 
-                $sql2 = "SELECT * FROM members";
+
+                $sql2 = "SELECT * FROM videos";
                 $result2=mysqli_query($db_link,$sql2);
 
                 while($row2=$result2->fetch_assoc()) {
-                    if (isset($_POST["$row2[d_id]+1"])) {
-                        $_SESSION["edit_d_id"]=$row2["d_id"];
+                    if (isset($_POST["$row2[v_id]+1"])) {
+                        $_SESSION["edit_v_id"]=$row2["v_id"];
                         echo "<script langauge = 'javascript' type='text/javascript'>";
                         echo "window.location.href = 'AdminPostsEdit.php'";
                         echo "</script>";
                     }
 
-                    if (isset($_POST["$row2[m_id]+2"])) {
-                        $_SESSION["delete_m_id"]=$row2["m_id"];
-                        $sql_delete="DELETE FROM members WHERE members.m_id = $_SESSION[delete_m_id]";
+                    if (isset($_POST["$row2[v_id]+2"])) {
+                        $_SESSION["delete_v_id"]=$row2["v_id"];
+                        $sql_delete="DELETE FROM videos WHERE videos.v_id = $_SESSION[delete_v_id]";
                         mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='MemberManagefor0.php'</script>";
-                    }
-					if (isset($_POST["$row2[m_id]+3"])) {
-                        $_SESSION["assign_m_id"]=$row2["m_id"];
-                        $sql_assign="update  members set authority = 1 WHERE members.m_id = $_SESSION[assign_m_id]";
-                        mysqli_query($db_link, $sql_assign);
-                        echo "<script>alert('成功更改!');location.href='MemberManagefor0.php'</script>";
+                        echo "<script>alert('成功刪除!');location.href='AdminVideossManage.php'</script>";
                     }
                 }
 

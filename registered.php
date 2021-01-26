@@ -109,56 +109,62 @@
                 <h2 >｜會員註冊</h2>
                 <div class="tableforregis" align="center">
             
-			<table width="60%" style="font-family:標楷體; font-size:18px;  solid;padding:5px;" cellpadding='5' ;  >
+			<table width="60%" style="font-family:標楷體; font-size:18px;  solid;padding:5px;" cellpadding='5';>
 					
-					<tr >
+					<tr>
 						<td height="65" align="center" style="height:60px" ><label for="account" accesskey="N">&emsp;&emsp;帳號:</label><input type="text" style="font size:20px; padding:6px;" name="account"id="account" required autofocus placeholder="必填"><br>
 						</td>
-						
 					</tr>
-					<tr >
+
+					<tr>
 						<td height="65" align="center" style="height:60px"><label for="password" accesskey="N">&emsp;&emsp;密碼:</label><input type="password" style="font size:20px; padding:6px;" name="password" id="password" required autofocus placeholder="必填"> </br>
 						</td>
-						
 					</tr>
+
 					<tr>
 						<td height="65" align="center" style="height:60px"><label for="confirmpassword" accesskey="N">確認密碼:</label><input type="password" style="font size:20px; padding:6px;" name="confirmpassword" id="confirmpassword" required autofocus placeholder="必填"> </br>
 						</td>
-						</tr>
+                    </tr>
+
 					<tr>
 						<td height="65" align="center" style="height:60px"><label for="name" accesskey="N">會員姓名:</label><input type="text" style="font size:20px; padding:6px;" name="name" id="name" required autofocus placeholder="必填"> </br>
 						</td>
-						</tr>
+                    </tr>
+
 					<tr>
 						<td height="65" align="center" style="height:60px">會員性別:<input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女<br>
 						</td>
-						</tr>
+                    </tr>
+
 					<tr>
 						<td height="65" align="center" style="height:60px"><label for="email" accesskey="N">會員信箱:</label><input type="gmail" style="font size:20px; padding:6px;" name="email" id="email" required autofocus placeholder="必填"><br>
 						</td>
-						</tr>
+                    </tr>
+
 					<tr>
 						<td height="65" align="center" style="height:60px"><label for="telephone" accesskey="N">會員行動:</label><input type="text" style="font size:20px; padding:6px;" name="telephone" id="telephone" required autofocus placeholder="必填"><br>
 						</td>
-						</tr>
-						<tr>
-						<td height="65" align="center" style="height:60px"><label for="address" accesskey="N">會員地址:</label><input type="text" style="font size:20px; padding:6px;  width:450px;" name="address" id="address" required autofocus placeholder="必填"> </br>
-						  </td>
-						  </tr>
-						  <div id="loginandre">
-						</br>
-						<tr>
-						<td height="65" align="center" style="height:60px">
-					<input type="submit" style='width:120px; height:40px;color:#ffffff;background-color:#e67300;border:0px none;' name="gore" value="註冊" style="width:60px;height:40px;">
+                    </tr>
 
-						
-                        </div>
-                        
-						</td>
-						
-					</tr>
-	
+                    <tr>
+						<td height="65" align="center" style="height:60px"><label for="address" accesskey="N">會員地址:</label><input type="text" style="font size:20px; padding:6px;  width:450px;" name="address" id="address" required autofocus placeholder="必填"> </br>
+                        </td>
+                    </tr>
+
+            <div id="loginandre">
+						</br>
+
+                <tr>
+                    <td height="65" align="center" style="height:60px">
+                        <input type="submit" style='width:120px; height:40px;color:#ffffff;background-color:#e67300;border:0px none;' name="gore" value="註冊" style="width:60px;height:40px;">
+                    </td>
+
+                </tr>
+
+            </div>
+
 				</table>
+
         </div>
 
 

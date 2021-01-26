@@ -78,7 +78,7 @@
                         <li><a href="?">我的最愛</a></li>
                         <li><a href="?">捐獻</a></li>
                         <li><a href="?">個人資料</a></li>
-                        <li><a href="?">留言區</a></li>
+                        <li><a href="comments.php">留言區</a></li>
                     </ul>
                 </nav>
 

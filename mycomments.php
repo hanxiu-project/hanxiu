@@ -49,8 +49,7 @@ session_start();
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-						$mid = $rows["m_id"];
-						$_SESSION['mid']=$mid;
+
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -75,31 +74,12 @@ session_start();
             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-					<?php
-					 if ($_SESSION[acc] == null) {
-                            echo "<li><a href=indexs.php>回首頁</a></li>";
-                          echo "<li><a href=videos.php>影音專區</a></li></a></li>";
-                            echo "<li><a href=articletype.php>經文閱讀</a></li>";
-							echo " <li><a href=news.php>最新公告</a></li>";
-                            
-                        }else{?>
-						
-							<li><a href="indexs.php">回首頁</a></li>
-						 <li><a href="videos.php">影音專區</a></li>
+                        <li><a href="indexs.php">回首頁</a></li>
                         <li><a href="articletype.php">經文閱讀</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
-
-                        <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="?">留言區</a></li>
-						<?php
-						}
-						?>
-                        
-
                         <li><a href="?">個人資料</a></li>
                         <li><a href="comments.php">留言區</a></li>
-
                     </ul>
                 </nav>
 
@@ -125,59 +105,127 @@ session_start();
     右邊欄位
     <div id="sidebar_right">sidebar_right</div>-->
 
+    <!--抓歷史留言-->
+    <?php
+    $sql_search_member = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
+    $resultsrchmember = mysqli_query($db_link, $sql_search_member);
+    $rows = mysqli_fetch_assoc($resultsrchmember);
+    $m_id = $rows["m_id"];
+
+
+    $sql_allmsg="SELECT * FROM `comments` where `comments`.`m_id` = '$m_id' order by `msg_datetime` DESC";
+    $result_allmsg=mysqli_query($db_link,$sql_allmsg);
+    $result_allmsg1=mysqli_query($db_link,$sql_allmsg);
+    ?>
+
+
+
+
 
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            
-                <?php
+            <div class="contentlist">
+                <h2>｜我的歷史留言</h2>
+            <?php
 
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                mysqli_query($db_link, 'SET CHARACTER SET utf8');
-                $sql="SELECT * FROM `donates` where `m_id` ='$_SESSION[mid]' order by `date` DESC";
-                $result= mysqli_query($db_link,$sql);
+            if(!isset($_GET[ccid]))
+            {
+            ?>
 
-                ?>
+                    <center>
+                        <div class="table" align="center" style="width: 60%">
+                            <br><br>
+                            <div>
+                                <font size="6">我的留言</font>
+                            </div>
+                            <br>
 
-				 <div class="contentlist" align="left">
-                     <h2>｜捐獻內容</h2>
-                <div class="tableforcontent">
-				<div class="table" align="center">
-                <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
-                    <tr align="center">
-                       
-						
-                        <td width="25%" align="center" align="center">捐獻內容</th>
-						 <td width="25%" align="center" align="center">捐獻數量</th>
-						 <td width="20%" size="30px" height="26"  align="center">捐獻日期</th>
-                    </tr>
-                <?php
-                while($row=$result->fetch_assoc())
-                {
-                    echo "<tr>";
-                    
-					 
-                    echo "<td align='center'>$row[type]</td>";
-					echo "<td align='center'>$row[amount]</td>";
-					echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-				
-                mysqli_close($db_link);
-                ?>
+                            <?php
 
+                            while($allmsg=mysqli_fetch_assoc($result_allmsg))
+                            {
+                                $c_id=$allmsg['c_id'];
+                                $m_id2=$allmsg['m_id'];
+                                $msg=$allmsg['message'];
+                                $time=$allmsg['msg_datetime'];
+
+                                ?>
+
+                                    <div style='border:1px solid;'>
+                                        <div align="left"><?php echo $msg; ?></div>
+                                        <div align='right'><?php echo $time; ?></div>
+                                <?php
+                                        echo "<div align='right'><a href=?ccid=$c_id>查看回覆</a> </div>";
+                                ?>
+                                    </div>
+                                    <br>
+
+                                <?php
+                            }
+                            ?>
+                    </center>
                 </div>
-            </div>
+
+
+            <?php
+            }
+            elseif (isset($_GET[ccid]))          //按查看回覆
+            {
+            ?>
+
+                    <center>
+                        <div class="table" align="center" style="width: 60%">
+                            <br><br>
+                            <div>
+                                <font size="6">留言回覆</font>
+                            </div>
+                            <br>
+
+                            <?php
+
+                            $sql_search_mbrcid = "SELECT * FROM `comments` WHERE `c_id` = '$_GET[ccid]'";
+                            $resultsrchcommentdata = mysqli_query($db_link, $sql_search_mbrcid);
+                            $rowq = mysqli_fetch_assoc($resultsrchcommentdata);
+                            $msg2 = $rowq["message"];
+                            $time2 = $rowq["msg_datetime"];
+                            $reply = $rowq["reply"];
+                            $rpy_time2 = $rowq["rpy_datetime"];
+
+
+                            ?>
+
+                        <div style='border:1px solid;'>
+                        <div align="left"><b>我：</b><?php echo $msg2; ?></div>
+                        <div align='right'><?php echo $time2; ?></div>
+                        </div>
+                            <br>
+
+                            <div style='border:1px solid;'>
+                                <div align="left"><b>管理員：</b><?php echo $reply; ?></div>
+                                <div align='right'><?php echo $rpy_time2; ?></div>
+                            </div>
+
+
+                    </center>
+                </div>
+
+            <?php
+
+            }
+
+            ?>
+
+
+
+
+
+
 
         </div>
-
-
     </div>
-   
+
+
     <!--註腳-->
     <footer class="footer">版權所有 © 勤益科大</footer>
 

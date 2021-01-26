@@ -181,28 +181,21 @@ session_start();
                                         <form name="forms" method="POST" action="">
 
                                             <div class="form-group">
-                                                <label for="title">公告標題:</label>
-                                                <input id="title" name="title" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                <label for="vcontent">影片描述:</label>
+                                                <input id="vcontent" name="vcontent" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
 
                                             <div class="form-group">
-                                                <label for="content">公告內容:</label>
-                                                <textarea id="content" name="content" rows="10" cols="80"></textarea>
-                                                <script>
-                                                    CKEDITOR.replace('content',{
-                                                        width:1650,height:500,
-                                                    });
-                                                </script>
+                                                <label for="vnet">影片網址:</label>
+                                                <input id="vnet" name="vnet" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                              
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="date">發布日期:</label>
-                                                <input id="date" name="date" type="date"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                            </div>
+                                            
 
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning" name="post" value="發布" >
+                                                <input type="submit" class="btn btn-sm btn-warning" name="vpost" value="發布" >
                                             </div>
 
                                         </form>
@@ -219,22 +212,22 @@ session_start();
                       
 
 
-                        $title = $_POST["title"];
-                        $content = $_POST["content"];
-                        $date = $_POST["date"];
+                        $vcontent = $_POST["vcontent"];
+                        $vnet = $_POST["vnet"];
 
 
-                        if(isset($_POST["post"]))
+
+                        if(isset($_POST["vpost"]))
                         {
-                            if($title==null && $content==null && $date ==null)
+                            if($vcontent==null && $vnet==null)
                             {
-                                echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
+                                echo "<script>alert('請輸入影片網址或影片描述!');location.href='AdminPostsPost.php'</script>";
                             }
                             else
                             {
-                                $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date')";
+                                $sql="INSERT INTO `videos` (v_id,vcontent,vnet) VALUES('NULL','$vcontent','$vnet')";
                                 mysqli_query($db_link, $sql);
-                                echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
+                                echo "<script>alert('影音已經上傳!');location.href='AdminVideosManage.php'</script>";
                             }
                         }
                         mysqli_close($db_link);

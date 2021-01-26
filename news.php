@@ -122,7 +122,7 @@ session_start();
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
-				<h2>|最新公告</h2>
+				<h2>｜最新公告</h2>
 				<div class="table" align="center">
                 <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
                     <tr align="center">

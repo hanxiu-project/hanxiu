@@ -124,7 +124,7 @@ session_start();
                 ?>
 
 				 <div class="contentlist" align="left">
-                     <h2>|捐獻內容</h2>
+                     <h2>｜捐獻內容</h2>
                 <div class="tableforcontent">
 				<div class="table" align="center">
                 <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >

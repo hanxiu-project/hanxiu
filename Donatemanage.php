@@ -46,7 +46,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="AdminDashboard.php">管理後台</a>
+            <a class="navbar-brand" href="AdminScriptureManage.php">管理後台</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">

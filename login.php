@@ -6,7 +6,7 @@
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="./csss_file/topicforlogin.css?ts=<?=filemtime('topicforlogin.css?')?>" rel="stylesheet" type="text/css">
+	<link href="./csss_file/topic1.css?ts=<?=filemtime('topicforlogin.css?')?>" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
@@ -96,22 +96,34 @@
 				<div id="container">
 
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="01.jpg" class="d-block w-100" height="500px" alt="...">
-					</div>
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3" ></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="圖1.jpg" class="d-block w-100" height="500px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="圖2.jpg" class="d-block w-100" height="500px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="圖3.jpg" class="d-block w-100" height="500px" alt="...">
+                    </div>
 					<div class="carousel-item">
-						<img src="04.jpg" class="d-block w-100" height="500px" alt="...">
-					</div>
+                        <img src="圖4.jpg" class="d-block w-100" height="500px" alt="...">
+                    </div>
 					<div class="carousel-item">
-						<img src="07.jpg" class="d-block w-100" height="500px" alt="...">
-					</div>
-				</div>
+                        <img src="圖5.jpg" class="d-block w-100" height="500px" alt="...">
+                    </div>
+					<div class="carousel-item">
+                        <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
+                    </div>
+                </div>
 				 <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>

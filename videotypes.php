@@ -160,20 +160,20 @@ session_start();
 
 
 
-                            $sqlvideos = "SELECT * FROM videos";
-                            $resultvideos= mysqli_query($db_link,$sqlvideos);
-                            echo "<form name='form1' method='POST' action=''>";
-                            echo "<table  width=1600 style=font-size:24px; >";
+                        $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid";
+                        $resultvideos= mysqli_query($db_link,$sqlvideos);
+                        echo "<form name='form1' method='POST' action=''>";
+                        echo "<table  width=1600 style=font-size:24px; >";
+                        echo "<tr align=center>";
+                        echo "<td></td>";
+                        echo "</tr>";
+                        while ($videos = mysqli_fetch_assoc($resultvideos))
+                        {
                             echo "<tr align=center>";
-                            echo "<td></td>";
+                            echo "<td width=70%><iframe width=300 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
+                            echo "<td width=30%>$videos[vcontent]</td>";
                             echo "</tr>";
-                            while ($videos = mysqli_fetch_assoc($resultvideos))
-                            {
-                                echo "<tr align=center>";
-                                echo "<td width=70%><iframe width=300 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
-                                echo "<td width=30%>$videos[vcontent]</td>";
-                                echo "</tr>";
-                            }
+                        }
 
                         echo "</table>";
                         }

@@ -80,7 +80,8 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                 <nav>
                     <ul class="flex-nav ">
                         <li><a href="indexs.php">首頁</a></li>
-                        <li><a href="articletype.php">經文閱讀</a></li>
+                        <li><a href="articletype.php">講記內容</a></li>
+                        <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="?">查看捐獻</a></li>
                         <li><a href="?">個人資料</a></li>

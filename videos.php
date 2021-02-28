@@ -136,10 +136,8 @@ session_start();
                 $db_pwd="123456789";
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
-                $result= mysqli_query($db_link,$sql);
 				$sql = "SELECT * FROM videos";
                 $result= mysqli_query($db_link,$sql);
-
                 ?>
 				
 
@@ -148,13 +146,11 @@ session_start();
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table  width=1600 style=font-size:24px; >";
                 echo "<tr align=center>";
-               
                 echo "<td></td>";
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
-                    
                     echo "<td width=70%><left><iframe width=300 height=200 src=$row[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
 					echo "<td width=30%>$row[vcontent]</td>";
                     echo "</tr>";

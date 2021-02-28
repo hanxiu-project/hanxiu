@@ -81,7 +81,7 @@ session_start();
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
                          echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
                             
                         }else{?>
 						

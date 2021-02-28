@@ -49,7 +49,8 @@ session_start();
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-
+						$mid = $rows["m_id"];
+						$_SESSION['mid']=$mid;
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -63,7 +64,7 @@ session_start();
                             echo "<a href='#'><b>$name</b>，您好</a>";
                             echo "</li>";
                             echo "<li>";
-                            echo "<a href='logout.php' >登出</a>";
+                            echo "<a href='logout.php'>登出</a>";
                             echo "</li>";
                         }
                         ?>
@@ -71,25 +72,30 @@ session_start();
                 </nav>
 
             </div>
-           <div id="wrapnav2">
+             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
                        <?php
 					 if ($_SESSION[acc] == null) {
-                            echo "<li><a href=indexs.php>回首頁</a></li>";
-                          echo "<li><a href=videos.php>影音專區</a></li></a></li>";
-                            echo "<li><a href=articletype.php>經文閱讀</a></li>";
-							echo " <li><a href=news.php>最新公告</a></li>";
+                         echo "<li><a href=indexs.php>回首頁</a></li>";
+                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=?>科判</a></li>";
+                         echo "<li><a href=?>補充資料</a></li>";
+                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
                             
                         }else{?>
 						
-							<li><a href="indexs.php">首頁</a></li>
-						 <li><a href="videos.php">影音專區</a></li>
-                        <li><a href="articletype.php">經文閱讀</a></li>
+							<li><a href="indexs.php">回首頁</a></li>
+                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href=?>科判</a></li>
+                         <li><a href=?>補充資料</a></li>
+                         <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="comments.php">留言區</a></li>
+                        <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
+
 						<?php
 						}
 						?>

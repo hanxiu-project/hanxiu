@@ -42,11 +42,9 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
         <div id="header">
             <img src="logo.png" align="left" width="auto" height="100">
             <div id="wrapnav1">
-                <nav>
+               <nav>
                     <ul class="flex-nav ">
                         <?php
-
-
                         $sql = "SELECT * FROM posts";
                         $result = mysqli_query($db_link, $sql);
                         $sql_search_acc = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
@@ -54,7 +52,8 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-
+						$mid = $rows["m_id"];
+						$_SESSION['mid']=$mid;
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -68,7 +67,7 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                             echo "<a href='#'><b>$name</b>，您好</a>";
                             echo "</li>";
                             echo "<li>";
-                            echo "<a href='logout.php' >登出</a>";
+                            echo "<a href='logout.php'>登出</a>";
                             echo "</li>";
                         }
                         ?>
@@ -76,15 +75,33 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                 </nav>
 
             </div>
-            <div id="wrapnav2">
+             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                        <li><a href="indexs.php">首頁</a></li>
-                        <li><a href="articletype.php">經文閱讀</a></li>
+                       <?php
+					 if ($_SESSION[acc] == null) {
+                         echo "<li><a href=indexs.php>回首頁</a></li>";
+                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=?>科判</a></li>";
+                         echo "<li><a href=?>補充資料</a></li>";
+                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
+                            
+                        }else{?>
+						
+							<li><a href="indexs.php">回首頁</a></li>
+                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href=?>科判</a></li>
+                         <li><a href=?>補充資料</a></li>
+                         <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
-                        <li><a href="?">查看捐獻</a></li>
-                        <li><a href="?">個人資料</a></li>
-                        <li><a href="?">留言區</a></li>
+                        <li><a href="Memberdonates.php">查看捐獻</a></li>
+                        <li><a href="MemberProfile.php">個人資料</a></li>
+                        <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
+
+						<?php
+						}
+						?>
                     </ul>
                 </nav>
 

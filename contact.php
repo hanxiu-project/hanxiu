@@ -14,7 +14,17 @@
 
 <body>
 
+<?php
+$db_ip = "127.0.0.1";
+$db_user = "root";
+$db_pwd = "123456789";
+$db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+mysqli_query($db_link, 'SET CHARACTER SET utf8');
+//載入資料庫連線與啟用session
+//include("sql.php");
+session_start();
 
+?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
@@ -32,14 +42,6 @@
                 <nav>
                     <ul class="flex-nav ">
                         <?php
-                        session_start();
-
-                        $db_ip = "127.0.0.1";
-                        $db_user = "root";
-                        $db_pwd = "123456789";
-                        $db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                        mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
                         $sql = "SELECT * FROM posts";
                         $result = mysqli_query($db_link, $sql);
                         $sql_search_acc = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
@@ -47,7 +49,8 @@
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-
+						$mid = $rows["m_id"];
+						$_SESSION['mid']=$mid;
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -69,24 +72,40 @@
                 </nav>
 
             </div>
-            <div id="wrapnav2">
+             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                        <li><a href="indexs.php">回首頁</a></li>
-                        <li><a href="articletype.php">講記內容</a></li>
-                        <li><a href=?>科判</a></li>
-                        <li><a href=?>補充資料</a></li>
-                        <li><a href="videos.php">法音流佈</a></li>
+                       <?php
+					 if ($_SESSION[acc] == null) {
+                         echo "<li><a href=indexs.php>回首頁</a></li>";
+                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=?>科判</a></li>";
+                         echo "<li><a href=?>補充資料</a></li>";
+                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
+                            
+                        }else{?>
+						
+							<li><a href="indexs.php">回首頁</a></li>
+                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href=?>科判</a></li>
+                         <li><a href=?>補充資料</a></li>
+                         <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
                         <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
+
+						<?php
+						}
+						?>
                     </ul>
                 </nav>
 
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -109,59 +128,47 @@
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-
             <div class="contentlist">
-                <h2>｜搜尋結果 </h2>
-                <center>
-                    <!-- <table width="60%">-->
+                <?php
 
-                    <?php
+                $db_ip="127.0.0.1";
+                $db_user="root";
+                $db_pwd="123456789";
+                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+                mysqli_query($db_link, 'SET CHARACTER SET utf8');
 
-                    if (isset($_GET['srctitle'])) {
+                $sql="SELECT * FROM contact";
+                $result= mysqli_query($db_link,$sql);
 
-                             $_SESSION["srctitle"] = "$_GET[srctitle]";
-                             $sqlscr = "SELECT * FROM `scripture` where `title` LIKE '%$_SESSION[srctitle]%'";
-                             $resultshow = mysqli_query($db_link, $sqlscr);
-
-                             $countresult = mysqli_num_rows($resultshow);
-                             if ($countresult == 0) {
-                                 echo "<script>alert('查無資料！');location.href='articletype.php';</script>";
-                             }
-                             else{
-                                 while ($rowt = $resultshow->fetch_assoc()) {
-                                     $srctitleresult_id[] = $rowt[s_id];
-                                     $srctitleresult_number[] =$rowt[number];
-                                 }
-                                 echo "<table width='60%' border='1px'>";
-                                 $per=10;
-                                 $rows=ceil($countresult/$per);
-                                 for($i=1;$i<=$rows;$i++) {
-                                     echo "<tr height=50px>";
-                                     $start = ($i - 1) * 10;
-                                     for($j=$start;$j<$start+10;$j++)
-                                     {
-                                         echo "<td width='8%'>";
-                                         echo "<a href=article.php?sid='$srctitleresult_id[$j]'>$srctitleresult_number[$j]</a>";
-                                         echo "</td>";
-                                     }
-                                     echo "</tr>";
-                                }
-                                 echo "</table>";
-
-
-                             }
-
-                    }
-
-
-                    ?>
+                ?>
+				<h2>｜聯絡資訊</h2>
+				<div class="table" align="center">
+                <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
+                    <tr align="center">
+                      
+                        <td width="80%" align="center">聯絡資訊</th>
+                    </tr>
+                <?php
+                while($row=$result->fetch_assoc())
+                {
+                    echo "<tr>";
+                   
+                    echo "<td align='center'>$row[content]</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+				
+                mysqli_close($db_link);
+                ?>
+			
+			</div>
             </div>
 
         </div>
 
 
     </div>
-
+    
     <!--註腳-->
     <footer class="footer">版權所有 轉載請註明出處</footer>
 
@@ -171,4 +178,4 @@
 </body>
 
 
-</html><?php
+</html>

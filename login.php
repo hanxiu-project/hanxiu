@@ -166,10 +166,10 @@
 					<font >帳號：</font><input type="text" name="account" ><br><br>
 					<font>密碼：</font><input type="password" name="password" ><br><br>
 					
-					<input type="submit" style='width:120px; height:40px;color:#ffffff;background-color:#C7B897;border:0px none;' name="gologin" value="登入" style="width:60px;height:40px;">
+					<input type="submit" style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="gologin" value="登入" style="width:60px;height:40px;">
 					<div id="loginandre">
 					<div id="regis">還沒註冊請註冊»
-					<input type="submit" style='width:100px; height:40px;color:#ffffff;background-color:#C7B897;border:0px none;' name="goregis" value="註冊" style="width:60px;height:40px;">
+					<input type="submit" style='width:100px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="goregis" value="註冊" style="width:60px;height:40px;">
 					
 				</div>	
 				</form>
@@ -221,7 +221,7 @@
 
 		
 		<!--註腳-->
-        <footer class="footer">版權所有 © 勤益科大</footer>
+        <footer class="footer">版權所有 轉載請註明出處</footer>
 	
 	
 </div>

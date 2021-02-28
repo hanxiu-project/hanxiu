@@ -95,6 +95,7 @@ session_start();
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
                         <li><a href="comments.php">錯誤回報</a></li>
+
 						<?php
 						}
 						?>

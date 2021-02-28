@@ -1,7 +1,7 @@
 <html>
 <head>
 
-    <title>test</title>
+    <title>科判</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -74,27 +74,27 @@ session_start();
             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                      <?php
-					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>回首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
-                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
-                            
+                        <?php
+                        if ($_SESSION[acc] == null) {
+                            echo "<li><a href=indexs.php>回首頁</a></li>";
+                            echo "<li><a href=articletype.php>講記內容</a></li>";
+                            echo "<li><a href=?>科判</a></li>";
+                            echo "<li><a href=?>補充資料</a></li>";
+                            echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                            echo " <li><a href=news.php>最新公告</a></li>";
+
                         }else{?>
-						
-						<li><a href="indexs.php">首頁</a></li>
-                        <li><a href="articletype.php">講記內容</a></li>
-                        <li><a href="videos.php">法音流佈</a></li>
-                        <li><a href="news.php">最新公告</a></li>
-                        <li><a href="Memberdonates.php">查看捐獻</a></li>
-                        <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="comments.php">留言區</a></li>
-						<?php
-						}
-						?>
+
+                            <li><a href="indexs.php">首頁</a></li>
+                            <li><a href="articletype.php">講記內容</a></li>
+                            <li><a href="videos.php">法音流佈</a></li>
+                            <li><a href="news.php">最新公告</a></li>
+                            <li><a href="Memberdonates.php">查看捐獻</a></li>
+                            <li><a href="MemberProfile.php">個人資料</a></li>
+                            <li><a href="comments.php">留言區</a></li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </nav>
 
@@ -126,20 +126,20 @@ session_start();
         <div class="newstitle">
             <div class="contentlist">
                 <?php
-                if (isset($_GET["tid"]))
+                if (isset($_GET["kptid"]))
                 {
-                $tid = $_GET["tid"];
-                $sqltype = "SELECT * FROM `types` where `t_id` = $tid";
+                $kptid = $_GET["kptid"];
+                $sqltype = "SELECT * FROM `kp_types` where `kpt_id` = $kptid";
                 $resulttype = mysqli_query($db_link, $sqltype);
                 $rtypename = mysqli_fetch_row($resulttype);
-				$_SESSION['rtypename']=$rtypename[1];
+                $_SESSION['rtypename']=$rtypename[1];
                 ?>
                 <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                 <center>
                     <table width="80%" border="1px">
                         <br>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `scripture` where `t_id` = $tid";
+                        $sqlatcnum = "SELECT * FROM `kepans` where `kpt_id` = $kptid";
 
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
@@ -151,22 +151,22 @@ session_start();
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
 
                         for($i=1;$i<=$rows;$i++)
-                            {
-                                $start=($i-1)*10;
-                                $sqlatcnum10 = "SELECT * FROM `scripture` where `t_id` = $tid Limit $start , $per";
-                                $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
-                                echo "<tr height=50px>";
-                                while ($script = mysqli_fetch_assoc($resultnum10)) {
-                                    echo "<td width='8%'>";
-                                    echo "<a href=article.php?sid='$script[s_id]' title='$script[number]'>$script[number]</a></p>";
-									
-									
-                                    echo "</td>";
-                                }
+                        {
+                            $start=($i-1)*10;
+                            $sqlatcnum10 = "SELECT * FROM `kepans` where `kpt_id` = $kptid Limit $start , $per";
+                            $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
+                            echo "<tr height=50px>";
+                            while ($kepan = mysqli_fetch_assoc($resultnum10)) {
+                                echo "<td width='8%'>";
+                                echo "<a href=download.php?filename=$kepan[filename] title=$kepan[filename]>$kepan[filename]</a></p>";
 
-                                echo "</tr>";
 
+                                echo "</td>";
                             }
+
+                            echo "</tr>";
+
+                        }
 
 
 
@@ -177,84 +177,56 @@ session_start();
                         {
                         ?>
 
-                        <h2>｜經文類別 </h2>
-
+                        <h2>｜科判 </h2>
                         <br><br>
 
-                        <div align="right">
-                            <form name="src" method="GET" action="">
-
-                                查詢文章標題：<input type="text" name="srctitle" Placeholder="輸入文章標題">
-                                <input type='submit' name='tsrcbtn' value='搜尋'>
-                                <br>
-                                查詢文章內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
-                                <input type='submit' name='srcbtn' value='搜尋'>
-
-                                <br><br>
-                            </form>
-                        </div>
-
-
-                        <center>
                             <br>
-							
-                           <table width="80%" border="1px">
+                        <center>
+                            <table width="80%" border="1px">
                                 <br>
                                 <?php
-                        $sqlatypecnum = "SELECT * FROM `types`";
+                                $sqlkptypecnum = "SELECT * FROM `kp_types`";
 
-                        $results_row = mysqli_query($db_link, $sqlatypecnum);
-                        $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+                                $results_row = mysqli_query($db_link, $sqlkptypecnum);
+                                $datas = mysqli_num_rows($results_row);       //抓總共幾筆
 
 
-                        $per=10;
-                        $rows=ceil($datas/$per);
+                                $per=10;
+                                $rows=ceil($datas/$per);
 
-                        $resultsnum = mysqli_query($db_link, $sqlatypecnum);
+                                $resultsnum = mysqli_query($db_link, $sqlkptypecnum);
 
-                        for($j=1;$j<=$rows;$j++)
-                            {
-                                $start=($j-1)*10;
-                                $sqlatcnums10 = "SELECT * FROM types Limit $start , $per";
-                                $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                echo "<tr height=50px>";
-                                while ($row = mysqli_fetch_assoc($resultnums10)) {
-                                    echo "<td width='8%'>";
-                                    echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
-									
-								
-                                    echo "</td>";
-                                }
+                                for($j=1;$j<=$rows;$j++)
+                                {
+                                    $start=($j-1)*10;
+                                    $sqlatcnums10 = "SELECT * FROM kp_types Limit $start , $per";
+                                    $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                    echo "<tr height=50px>";
+                                    while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                        echo "<td width='8%'>";
+                                        echo "<a href=?kptid='$row[kpt_id]'>$row[kptypename]</a></p>";
 
-                                echo "</tr>";
 
-                            }
-                        ?>
+                                        echo "</td>";
+                                    }
 
-                        </table>
-                            <center>
-                                <?php
-                                }
-                                if (isset($_GET['srcbtn'])) {
-
-                                    echo "<script>location.href='searchkeyword.php?srckword=$_GET[srckeyword]';</script>";        //
+                                    echo "</tr>";
 
                                 }
-                                if (isset($_GET['tsrcbtn'])) {
-
-                                    echo "<script>location.href='searchtitle.php?srctitle=$_GET[srctitle]';</script>";        //
-
                                 }
                                 ?>
-                    
-                </center>
+
+                            </table>
+                        </center>
+
+
             </div>
 
         </div>
-			
+
 
     </div>
-    
+
     <!--註腳-->
     <footer class="footer">版權所有 轉載請註明出處</footer>
 

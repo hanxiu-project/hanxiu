@@ -213,7 +213,7 @@
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table  width=100% style=font-size:20px;>";
                 echo "<tr align=center>";
-                echo "<td>類別編號</td>";
+                echo "<td>類別名稱</td>";
                 echo "<td>卷號</td>";
                 echo "<td>經文標題</td>";
                 echo "<td>發布日期</td>";

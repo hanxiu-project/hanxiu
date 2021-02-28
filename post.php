@@ -82,7 +82,7 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
 					 if ($_SESSION[acc] == null) {
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=?>科判</a></li>";
+                         echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
                           echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
@@ -91,7 +91,7 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
 						
 							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href=?>科判</a></li>
+                         <li><a href=kepan.php>科判</a></li>
                          <li><a href=?>補充資料</a></li>
                          <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>

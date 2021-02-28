@@ -37,7 +37,7 @@ session_start();
     <div id="header2">
 
         <div id="header">
-            <img src="logo3.jpg" align="left" width="auto" height="100">
+            <img src="logo.png" align="left" width="auto" height="100">
             <div id="wrapnav1">
                 <nav>
                     <ul class="flex-nav ">
@@ -84,7 +84,7 @@ session_start();
                             
                         }else{?>
 						
-							<li><a href="indexs.php">回首頁</a></li>
+							<li><a href="indexs.php">首頁</a></li>
 						 <li><a href="videos.php">影音專區</a></li>
                         <li><a href="articletype.php">經文閱讀</a></li>
                         <li><a href="news.php">最新公告</a></li>

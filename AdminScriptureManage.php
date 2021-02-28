@@ -57,7 +57,7 @@
                         <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        <a href="indexs.php"><i class="fa fa-fw fa-envelope"></i> 回前台</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -88,6 +88,18 @@
                 </ul>
 				
                 </li>
+				<li class="dropdown">
+                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
+                    </li>
+					<li>
+                        <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
+                    </li>
+
+                </ul>
+            </li>
 				<li class="dropdown">
                 <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
                 <ul class="dropdown-menu">

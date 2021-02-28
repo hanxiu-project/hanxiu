@@ -40,7 +40,7 @@
 				<div id="header2">
 				
                 <div id="header">
-				<img src="logo3.jpg" align="left" width="auto" height="100">
+				<img src="logo.png" align="left" width="auto" height="100">
 				<div id="wrapnav1">
 						<nav>
 						 <ul class="flex-nav ">

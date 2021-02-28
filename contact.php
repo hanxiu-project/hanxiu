@@ -81,13 +81,8 @@ session_start();
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
-
                          echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
-						 echo " <li><a href=contact.php>聯絡我們</a></li>";
-
-                      
-
+                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
                             
                         }else{?>
 						
@@ -95,16 +90,11 @@ session_start();
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>
-
                          <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="comments.php">錯誤回報</a></li>
-						<li><a href="contact.php">聯絡我們</a></li>
-
-
-                        
+                        <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
 
 						<?php
 						}
@@ -147,23 +137,23 @@ session_start();
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
 
-                $sql="SELECT * FROM posts";
+                $sql="SELECT * FROM contact";
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
-				<h2>｜最新公告</h2>
+				<h2>｜聯絡資訊</h2>
 				<div class="table" align="center">
                 <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
                     <tr align="center">
-                        <td width="20%" size="30px" height="26"  align="center">發佈日期</th>
-                        <td width="80%" align="center">標題內文</th>
+                      
+                        <td width="80%" align="center">聯絡資訊</th>
                     </tr>
                 <?php
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr>";
-                    echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
-                    echo "<td align='center'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
+                   
+                    echo "<td align='center'>$row[content]</td>";
                     echo "</tr>";
                 }
                 echo "</table>";

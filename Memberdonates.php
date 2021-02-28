@@ -37,7 +37,7 @@ session_start();
     <div id="header2">
 
         <div id="header">
-            <img src="logo3.jpg" align="left" width="auto" height="100">
+            <img src="logo.png" align="left" width="auto" height="100">
             <div id="wrapnav1">
                 <nav>
                     <ul class="flex-nav ">
@@ -77,12 +77,17 @@ session_start();
                     <ul class="flex-nav ">
 					<?php
 					 if ($_SESSION[acc] == null) {
+
+                           
+
                          echo "<li><a href=indexs.php>回首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";
+						 echo " <li><a href=comment.php>錯誤回報</a></li>";
+						 echo " <li><a href=contact.php>聯絡我們</a></li>";
                             
                         }else{?>
 						

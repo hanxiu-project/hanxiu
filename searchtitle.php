@@ -72,7 +72,7 @@
             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                        <li><a href="indexs.php">回首頁</a></li>
+                        <li><a href="indexs.php">首頁</a></li>
                         <li><a href="articletype.php">經文閱讀</a></li>
                         <li><a href="?">最新公告</a></li>
                         <li><a href="?">查看捐獻</a></li>

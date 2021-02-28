@@ -66,7 +66,7 @@ table {
                 #header {
 						width :100%;
 
-                        background-color: #e67300;
+                        background-color: #6F6045;
 
 
                         height:100px;
@@ -117,7 +117,7 @@ table {
 						margin:0 auto;
 						position: relative;
 						
-						background-color:#EEEEEE;
+						background-color:#FCFAF2;
 						
 						width:auto;                   
                         height: auto;
@@ -200,7 +200,7 @@ table {
 				/*主內容*/
                /* 內容 */
 				#content{
-					background-color:#EEEEEE;
+					background-color:#FCFAF2;
 					height:auto;
 					width:auto;
 					min-height: 100%;

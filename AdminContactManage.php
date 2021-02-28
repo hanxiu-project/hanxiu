@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="ckeditor/ckeditor.js"></script>
 
-    <title>公告管理 | 管理後台</title>
+    <title>新增公告 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,6 +34,9 @@
 </head>
 
 <body>
+<?php
+session_start();
+?>
 
 <div id="wrapper">
     <!--sidebar-->
@@ -158,13 +162,6 @@
         <!-- /.navbar-collapse -->
     </nav>
 
-    <!--建立新公告-->
-    <div class="row" style="margin-bottom: 20px; text-align: left">
-        <div class="col-lg-12">
-            <a href="AdminPostsPost.php" class="btn btn-success  ">建立新公告</a>
-        </div>
-    </div>
-
     <!--Body-->
     <div id="page-wrapper">
 
@@ -179,70 +176,89 @@
                 $db_user="root";
                 $db_pwd="123456789";
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+                mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
                 session_start();
 
-
-                mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
-
-                $sql = "SELECT * FROM posts";
-                $result= mysqli_query($db_link,$sql);
-
-                echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=1600 style=font-size:24px; >";
-                echo "<tr align=center>";
-                echo "<td>公告標題</td>";
-                echo "<td>公告時間</td>";
-                echo "<td></td>";
-                echo "</tr>";
-                while($row=$result->fetch_assoc())
-                {
-                    echo "<tr align=center>";
-                    echo "<td>$row[title]</td>";
-                    echo "<td>$row[date]</td>";
-                    echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[p_id]+1' value='編輯'></td>";
-                    echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+2' value='刪除'></td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-
-
-
-                $sql2 = "SELECT * FROM posts";
-                $result2=mysqli_query($db_link,$sql2);
-
-                while($row2=$result2->fetch_assoc()) {
-                    if (isset($_POST["$row2[p_id]+1"])) {
-                        $_SESSION["edit_p_id"]=$row2["p_id"];
-                        echo "<script langauge = 'javascript' type='text/javascript'>";
-                        echo "window.location.href = 'AdminPostsEdit.php'";
-                        echo "</script>";
-                    }
-
-                    if (isset($_POST["$row2[p_id]+2"])) {
-                        $_SESSION["delete_p_id"]=$row2["p_id"];
-                        $sql_delete="DELETE FROM posts WHERE posts.p_id = $_SESSION[delete_p_id]";
-                        mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='AdminPostsManage.php'</script>";
-                    }
-                }
-
-                mysqli_close($db_link);
-
+                $sql="SELECT * FROM contact ";
+                $result=mysqli_query($db_link,$sql);
+                $row=mysqli_fetch_assoc($result);
 
                 ?>
 
+                <div id="con2">
+                    <div class="main">
+                        <div class="newstitle" >
+
+                            <div class="contentlist">
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <form name="forms" method="POST" action="">
+
+                                           
+											
+                                            <div class="form-group">
+                                                <label for="content">聯絡資訊內容內容:</label>
+                                                <textarea id="content" name="content" rows="10" cols="80" ><?php echo $row[content]?></textarea>
+                                                <script>
+                                                    CKEDITOR.replace('content',{
+                                                        width:1650,height:500,
+                                                    });
+                                                </script>
+                                            </div>
+
+                                            
+
+                                            
+
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-sm btn-warning" name="post" value="發布" >
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        <?php
+
+                      
 
 
+                        $title = $_POST["title"];
+                        $content = $_POST["content"];
+                        $date = $_POST["date"];
 
 
+                        if(isset($_POST["post"]))
+                        {
+                           
+                           
+								 
+                                $sql="UPDATE contact SET content = '$content' ";
+                                mysqli_query($db_link, $sql);
+                                echo "<script>alert('聯絡資訊已經上傳!');location.href='AdminContactManage.php'</script>";
+                           
+                        }
+                        mysqli_close($db_link);
+                        ?>
+                </form>
 
             </div>
-            <!-- /#page-wrapper -->
+            <!-- /.container-fluid -->
 
         </div>
-        <!-- /#wrapper -->
+        <!-- /#page-wrapper -->
 
-        <!-- jQuery -->
+    </div>
+    <!-- /#wrapper -->
+
+   <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -252,6 +268,7 @@
 <script src="js/plugins/morris/raphael.min.js"></script>
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
+
 </body>
 
 </html>

@@ -74,7 +74,7 @@ session_start();
             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                        <li><a href="indexs.php">回首頁</a></li>
+                        <li><a href="indexs.php">首頁</a></li>
                         <li><a href="articletype.php">講記內容</a></li>
                         <li><a href=?>科判</a></li>
                         <li><a href=?>補充資料</a></li>
@@ -82,7 +82,7 @@ session_start();
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="comments.php">錯誤回報</a></li>
+                        <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
                     </ul>
                 </nav>
 

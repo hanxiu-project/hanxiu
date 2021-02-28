@@ -1,18 +1,14 @@
 <html>
-
 <head>
 
-    <title>首頁</title>
-
-
+    <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./csss_file/topic1.css?ts=<?=filemtime('topic1.css?')?>" rel="stylesheet" type="text/css">
+    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -24,13 +20,17 @@ $db_user = "root";
 $db_pwd = "123456789";
 $db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
 mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
+//載入資料庫連線與啟用session
+//include("sql.php");
 session_start();
+
 ?>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
 <!--最外圍-->
 <div id="sitebody">
+
 
     <!--頁首-->
     <!--包住固定不動的Header-->
@@ -49,8 +49,7 @@ session_start();
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-						$mid = $rows["m_id"];
-						$_SESSION['mid']=$mid;
+
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -64,7 +63,7 @@ session_start();
                             echo "<a href='#'><b>$name</b>，您好</a>";
                             echo "</li>";
                             echo "<li>";
-                            echo "<a href='logout.php'>登出</a>";
+                            echo "<a href='logout.php' >登出</a>";
                             echo "</li>";
                         }
                         ?>
@@ -72,14 +71,14 @@ session_start();
                 </nav>
 
             </div>
-             <div id="wrapnav2">
+           <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
                        <?php
 					 if ($_SESSION[acc] == null) {
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=kepan.php>科判</a></li>";
+                         echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
 
                           echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
@@ -111,7 +110,6 @@ session_start();
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -119,51 +117,6 @@ session_start();
             crossorigin="anonymous"></script>
 
     <!--照片區-->
-    <div id="photo">
-
-        <div id="container">
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="3" ></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="圖1.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖2.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖3.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-					<div class="carousel-item">
-                        <img src="圖4.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-					<div class="carousel-item">
-                        <img src="圖5.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-					<div class="carousel-item">
-                        <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-        </div>
-    </div>
 
 
     <!--左邊欄位
@@ -179,48 +132,109 @@ session_start();
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <h2>｜最新公告 </h2>
-				 </div>
-            <div class="tablelist">
-
+            <div class="contentlist">
                 <?php
-                $sql = "SELECT * FROM posts";
-                $result = mysqli_query($db_link, $sql);
+                if (isset($_GET["tid"]))
+                {
+                $tid = $_GET["tid"];
+                $sqltype = "SELECT * FROM `videotypes` where `t_id` = $tid";
+                $resulttype = mysqli_query($db_link, $sqltype);
+                $rtypename = mysqli_fetch_row($resulttype);
+                $_SESSION['rtypename']=$rtypename[1];
                 ?>
+                <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                 <center>
-				 <div class="contentlist" align="center">
-                     <div class="table" align="center">
-                    <table width="60%"  style="border:3px #000000  solid;" >
-                        <tr height="40px" style="font-weight:bold" bgcolor="#bfbfbf" align="center" >
-                            <th width="20%">發佈日期</th>
-                            <th width="80%">標題內文</th>
-                        </tr>
-
+                    <table width="80%" border="1px">
+                        <br>
                         <?php
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
-                            echo "<td align='center'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
+                        $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
+
+                        $result_row = mysqli_query($db_link, $sqlatcnum);
+                        $data = mysqli_num_rows($result_row);       //抓總共幾筆
+
+
+                        $per=10;
+                        $rows=ceil($data/$per);
+
+                        $resultnum = mysqli_query($db_link, $sqlatcnum);
+
+
+
+                        $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid";
+                        $resultvideos= mysqli_query($db_link,$sqlvideos);
+                        echo "<form name='form1' method='POST' action=''>";
+                        echo "<table  width=1600 style=font-size:24px; >";
+                        echo "<tr align=center>";
+                        echo "<td></td>";
+                        echo "</tr>";
+                        while ($videos = mysqli_fetch_assoc($resultvideos))
+                        {
+                            echo "<tr align=center>";
+                            echo "<td width=70%><iframe width=300 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
+                            echo "<td width=30%>$videos[vcontent]</td>";
                             echo "</tr>";
                         }
-                        echo "</table>";
 
-                        mysqli_close($db_link);
+                        echo "</table>";
+                        }
+                        else                                            //還沒選類別時
+                        {
                         ?>
 
-                    </table>
-                     </div>
-                </center>
+                        <h2>｜影音類別 </h2>
+
+                        <br><br>
+
+                        <center>
+                            <br>
+
+                            <table width="80%" border="1px">
+                                <br>
+                                <?php
+                                $sqlatypecnum = "SELECT * FROM `videotypes`";
+
+                                $results_row = mysqli_query($db_link, $sqlatypecnum);
+                                $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+
+
+                                $per=10;
+                                $rows=ceil($datas/$per);
+
+                                $resultsnum = mysqli_query($db_link, $sqlatypecnum);
+
+                                for($j=1;$j<=$rows;$j++)
+                                {
+                                    $start=($j-1)*10;
+                                    $sqlatcnums10 = "SELECT * FROM videotypes Limit $start , $per";
+                                    $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                    echo "<tr height=50px>";
+                                    while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                        echo "<td width='8%'>";
+                                        echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
+                                        echo "</td>";
+                                    }
+
+                                    echo "</tr>";
+
+                                }
+                                ?>
+
+                            </table>
+
+                                <?php
+                                }
+                                ?>
+
 
             </div>
-		</div>
-       
+
+        </div>
 
 
     </div>
 
     <!--註腳-->
-    <footer class="footer">版權所有 轉載請註明出處</footer>
+    <footer class="footer">版權所有 © 勤益科大</footer>
 
 
 </div>

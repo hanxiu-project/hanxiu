@@ -77,12 +77,12 @@ session_start();
                     <ul class="flex-nav ">
                        <?php
 					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>回首頁</a></li>";
+                         echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
 
-                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";
 						 echo " <li><a href=contact.php>聯絡我們</a></li>";
 
@@ -91,7 +91,7 @@ session_start();
                             
                         }else{?>
 						
-							<li><a href="indexs.php">回首頁</a></li>
+							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>
@@ -152,14 +152,14 @@ session_start();
                         <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
                 </div>
-                <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>-->
+                </a>
             </div>
 
         </div>

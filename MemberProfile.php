@@ -79,7 +79,7 @@ session_start();
 							
 
 
-                         echo "<li><a href=indexs.php>回首頁</a></li>";
+                         echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
@@ -90,7 +90,7 @@ session_start();
                             
                         }else{?>
 						
-							<li><a href="indexs.php">回首頁</a></li>
+							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>

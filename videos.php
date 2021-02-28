@@ -77,16 +77,16 @@ session_start();
                     <ul class="flex-nav ">
                        <?php
 					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>回首頁</a></li>";
+                         echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
-                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
                             
                         }else{?>
 						
-							<li><a href="indexs.php">回首頁</a></li>
+							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>
@@ -136,8 +136,10 @@ session_start();
                 $db_pwd="123456789";
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
+                $result= mysqli_query($db_link,$sql);
 				$sql = "SELECT * FROM videos";
                 $result= mysqli_query($db_link,$sql);
+
                 ?>
 				
 
@@ -146,11 +148,13 @@ session_start();
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table  width=1600 style=font-size:24px; >";
                 echo "<tr align=center>";
+               
                 echo "<td></td>";
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
+                    
                     echo "<td width=70%><left><iframe width=300 height=200 src=$row[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
 					echo "<td width=30%>$row[vcontent]</td>";
                     echo "</tr>";

@@ -168,7 +168,7 @@ session_start();
     </div>
     
     <!--註腳-->
-    <footer class="footer">版權所有 © 勤益科大</footer>
+    <footer class="footer">版權所有 轉載請註明出處</footer>
 
 
 </div>

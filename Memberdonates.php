@@ -37,7 +37,7 @@ session_start();
     <div id="header2">
 
         <div id="header">
-            <img src="logo.png" align="left" width="auto" height="100">
+            <img src="logo3.jpg" align="left" width="auto" height="100">
             <div id="wrapnav1">
                 <nav>
                     <ul class="flex-nav ">
@@ -95,6 +95,7 @@ session_start();
                          <li><a href="Memberdonates.php">查看捐獻</a></li>
                          <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
+
 						<?php
 						}
 						?>
@@ -177,7 +178,7 @@ session_start();
     </div>
    
     <!--註腳-->
-    <footer class="footer">版權所有 © 勤益科大</footer>
+    <footer class="footer">版權所有 轉載請註明出處</footer>
 
 
 </div>

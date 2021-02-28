@@ -76,24 +76,20 @@ session_start();
                     <ul class="flex-nav ">
                       <?php
 					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>回首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=?>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
-                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
+                            echo "<li><a href=indexs.php>回首頁</a></li>";
+                          echo "<li><a href=videos.php>影音專區</a></li></a></li>";
+                            echo "<li><a href=articletype.php>經文閱讀</a></li>";
+							echo " <li><a href=news.php>最新公告</a></li>";
                             
                         }else{?>
 						
-							<li><a href="indexs.php">回首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href="?">科判</a></li>
-                         <li><a href="?">補充資料</a></li>
-                         <li><a href="videos.php">法音流佈</a></li>
-                         <li><a href="news.php">最新公告</a></li>
-                         <li><a href="Memberdonates.php">查看捐獻</a></li>
-                         <li><a href="MemberProfile.php">個人資料</a></li>
-                         <li><a href="comments.php">錯誤回報</a></li>
+							<li><a href="indexs.php">首頁</a></li>
+						 <li><a href="videos.php">影音專區</a></li>
+                        <li><a href="articletype.php">經文閱讀</a></li>
+                        <li><a href="news.php">最新公告</a></li>
+                        <li><a href="Memberdonates.php">查看捐獻</a></li>
+                        <li><a href="MemberProfile.php">個人資料</a></li>
+                        <li><a href="comments.php">留言區</a></li>
 						<?php
 						}
 						?>
@@ -128,7 +124,7 @@ session_start();
         <div class="newstitle">
 		
             <div class="contentlist">
-			<h2>｜法音流佈</h2>
+			<h2>｜影音專區</h2>
                 <?php
 				$db_ip="127.0.0.1";
                 $db_user="root";
@@ -166,7 +162,7 @@ session_start();
     </div>
     
     <!--註腳-->
-    <footer class="footer">版權所有 © 勤益科大</footer>
+    <footer class="footer">版權所有 轉載請註明出處</footer>
 
 
 </div>

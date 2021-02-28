@@ -85,7 +85,7 @@ session_start();
                             
                         }else{?>
 						
-						<li><a href="indexs.php">回首頁</a></li>
+						<li><a href="indexs.php">首頁</a></li>
                         <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>
@@ -94,6 +94,7 @@ session_start();
                          <li><a href="Memberdonates.php">查看捐獻</a></li>
                          <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
+
 						<?php
 						}
 						?>
@@ -258,7 +259,7 @@ session_start();
     </div>
     
     <!--註腳-->
-    <footer class="footer">版權所有 © 勤益科大</footer>
+    <footer class="footer">版權所有 轉載請註明出處</footer>
 
 
 </div>

@@ -67,7 +67,7 @@
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
-                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                         echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
 						 echo " <li><a href=news.php>最新公告</a></li>";
                             
                         }else{?>
@@ -76,7 +76,7 @@
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>
-                         <li><a href="videos.php">法音流佈</a></li>
+                         <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">最新公告</a></li>
                          <li><a href="Memberdonates.php">查看捐獻</a></li>
                          <li><a href="MemberProfile.php">個人資料</a></li>
@@ -163,13 +163,14 @@
 					<center>
 					<form name="login01" method="post" action="">
 
-					<font face="微軟正黑體">帳號：</font><input type="text" name="account" ><br><br>
-					<font face="微軟正黑體">密碼：</font><input type="password" name="password" ><br><br>
+					<font >帳號：</font><input type="text" name="account" ><br><br>
+					<font>密碼：</font><input type="password" name="password" ><br><br>
 					
-					<input type="submit" style='width:120px; height:40px;color:#ffffff;background-color:#e67300;border:0px none;' name="gologin" value="登入" style="width:60px;height:40px;">
+					<input type="submit" style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="gologin" value="登入" style="width:60px;height:40px;">
 					<div id="loginandre">
 					<div id="regis">還沒註冊請註冊»
-					<input type="button"  class="registered1" name="regisbtn" onclick="javascript:location.href='registered.php'" value="註冊" style="width:60px;height:40px">
+					<input type="submit" style='width:100px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="goregis" value="註冊" style="width:60px;height:40px;">
+					
 				</div>	
 				</form>
 					</center>
@@ -204,8 +205,11 @@
                             header("location:indexs.php");
                             //echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
 						}else if ($authority == 1 || $authority == 2) {
-                            header("location:AdminScriptureManage.php");;		//導向管理員頁面
+                            header("location:AdminScriptureManage.php");	//導向管理員頁面
 						}
+					}
+					if (isset($_POST["goregis"])) {			
+						  header("location:registered.php");
 					}
 					//mysqli_close($db_link);
 ?>
@@ -217,7 +221,7 @@
 
 		
 		<!--註腳-->
-        <footer class="footer">版權所有 © 勤益科大</footer>
+        <footer class="footer">版權所有 轉載請註明出處</footer>
 	
 	
 </div>

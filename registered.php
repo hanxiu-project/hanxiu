@@ -76,7 +76,7 @@
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=?>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
-                         echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
+                         echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";
                             
                         }else{?>
@@ -85,7 +85,7 @@
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=?>科判</a></li>
                          <li><a href=?>補充資料</a></li>
-                         <li><a href="videos.php">法音流佈</a></li>
+                         <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">最新公告</a></li>
                          <li><a href="Memberdonates.php">查看捐獻</a></li>
                          <li><a href="MemberProfile.php">個人資料</a></li>
@@ -173,7 +173,7 @@
 
                 <tr>
                     <td height="65" align="center" style="height:60px">
-                        <input type="submit" style='width:120px; height:40px;color:#ffffff;background-color:#e67300;border:0px none;' name="gore" value="註冊" style="width:60px;height:40px;">
+                        <input type="submit" style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="gore" value="註冊" style="width:60px;height:40px;">
                     </td>
 
                 </tr>
@@ -221,7 +221,7 @@
 
 	?>
     <!--註腳-->
-    <footer class="footer">版權所有 © 勤益科大</footer>
+    <footer class="footer">版權所有 轉載請註明出處</footer>
 
 
 </div>

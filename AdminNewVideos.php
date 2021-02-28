@@ -231,13 +231,23 @@ session_start();
 
                         if(isset($_POST["vpost"]))
                         {
+
+                            $testwatchnetpos = strpos($_POST["vnet"],"watch");          //找網址內有watch?v=的位置(算w的位置在24)
+
+
+
+                            $testnet = substr($_POST["vnet"],"$testwatchnetpos"+8);            //取的watch?v=之後的網址字串(因為watch?v=所以+8)
+
+                            $renewnet = substr_replace($_POST["vnet"],"embed/$testnet",$testwatchnetpos);       //新網址
+
                             if($vcontent==null && $vnet==null)
                             {
                                 echo "<script>alert('請輸入影片網址或影片描述!');location.href='AdminPostsPost.php'</script>";
                             }
                             else
                             {
-                                $sql="INSERT INTO `videos` (v_id,vcontent,vnet) VALUES('NULL','$vcontent','$vnet')";
+
+                                $sql="INSERT INTO `videos` (v_id,vcontent,vnet) VALUES('NULL','$vcontent','$renewnet')";
                                 mysqli_query($db_link, $sql);
                                 echo "<script>alert('影音已經上傳!');location.href='AdminVideosManage.php'</script>";
                             }

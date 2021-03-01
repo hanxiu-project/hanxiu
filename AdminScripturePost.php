@@ -178,6 +178,9 @@
                 /*$row=mysqli_fetch_assoc($resulttype);*/
 				session_start();
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
+				# 設定時區
+				date_default_timezone_set('Asia/Taipei');
+				$getDate= date("Y-m-d");
                 ?>
 
 
@@ -238,7 +241,7 @@
 
                                                 <div class="form-group">
                                                     <label for="date">發布日期:</label>
-                                                    <input id="date" value="" name="date" type="date"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                    <input id="date" value="<?php echo $getDate?>" name="date" type="date"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                                 </div>
 
                                                 <div class="form-group">
@@ -256,7 +259,7 @@
 
                     <?php
 					
-					$getDate= date("Y-m-d");
+					
                     $number = $_POST["number"];
                     $title = $_POST["title"];
                     $filename = $_POST["filename"];

@@ -65,7 +65,7 @@
 					 if ($_SESSION[acc] == null) {
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=?>科判</a></li>";
+                         echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
 
                           echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
@@ -76,7 +76,7 @@
 						
 							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href=?>科判</a></li>
+                         <li><a href=kepan.php>科判</a></li>
                          <li><a href=?>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">最新公告</a></li>
@@ -129,14 +129,14 @@
                         <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
                 </div>
-				 <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>-->
+                </a>
 			</div>
 				
 				</div>
@@ -224,7 +224,7 @@
 
 		
 		<!--註腳-->
-        <footer class="footer">版權所有 轉載請註明出處</footer>
+        <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
 	
 	
 </div>

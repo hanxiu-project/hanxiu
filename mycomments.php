@@ -76,7 +76,7 @@ session_start();
                     <ul class="flex-nav ">
                         <li><a href="indexs.php">首頁</a></li>
                         <li><a href="articletype.php">講記內容</a></li>
-                        <li><a href=?>科判</a></li>
+                        <li><a href=kepan.php>科判</a></li>
                         <li><a href=?>補充資料</a></li>
                         <li><a href="videos.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
@@ -230,7 +230,7 @@ session_start();
 
 
     <!--註腳-->
-    <footer class="footer">版權所有 轉載請註明出處</footer>
+    <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
 
 
 </div>

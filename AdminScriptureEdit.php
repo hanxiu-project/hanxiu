@@ -185,7 +185,9 @@
                 $sql2="SELECT typename FROM scripture,types WHERE scripture.t_id = types.t_id AND scripture.s_id = $_SESSION[edit_s_id]";
                 $result2=mysqli_query($db_link,$sql2);
                 $row2=mysqli_fetch_assoc($result2);
-
+				# 設定時區
+				date_default_timezone_set('Asia/Taipei');
+				$getDate= date("Y-m-d");
 
                 //讀取檔案
                 $filename = $row["filename"];
@@ -282,7 +284,7 @@
 
                                             <div class="form-group">
                                                 <label for="date">發布日期:</label>
-                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                <input id="date" name="date" type="date" value="<?php echo $getDate?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
                                             <div class="form-group">
@@ -306,6 +308,7 @@
                 $filename = $_POST["filename"];
                 $content = $_POST["content"];
                 $date = $_POST["date"];
+				
 
 
 				

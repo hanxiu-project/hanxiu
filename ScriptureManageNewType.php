@@ -177,7 +177,7 @@
 				
 				$sql="SELECT * FROM types ";
                 $result=mysqli_query($db_link,$sql);
-                $row=mysqli_fetch_assoc($result);
+                //$row=mysqli_fetch_assoc($result);
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
                 ?>

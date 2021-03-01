@@ -278,7 +278,7 @@
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename.txt","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);

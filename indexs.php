@@ -3,10 +3,10 @@
 <head>
 
     <title>首頁</title>
-	
-	
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="./csss_file/topic1.css?ts=<?=filemtime('topicforlogin.css?')?>" rel="stylesheet" type="text/css">
+	<link href="csss_file/topic.css?ts=<?=filemtime('topic.css?')?>" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
@@ -80,8 +80,7 @@ session_start();
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
-
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                         echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";
 						 echo " <li><a href=contact.php>聯絡我們</a></li>";
 
@@ -179,6 +178,7 @@ session_start();
             <div class="tablelist">
 
                 <?php
+                //...
                 $sql = "SELECT * FROM posts";
                 $result = mysqli_query($db_link, $sql);
                 ?>

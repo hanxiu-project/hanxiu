@@ -74,7 +74,7 @@ session_start();
             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-<<<<<<< HEAD
+
                         <?php
                         if ($_SESSION[acc] == null) {
                             echo "<li><a href=indexs.php>回首頁</a></li>";
@@ -83,27 +83,13 @@ session_start();
                             echo "<li><a href=?>補充資料</a></li>";
                             echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
                             echo " <li><a href=news.php>最新公告</a></li>";
-=======
-                       <?php
-					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
->>>>>>> 5ab8f04266cea4f9529e12f66481882d366f10ce
-
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
-						 echo " <li><a href=contact.php>聯絡我們</a></li>";
-
-                        
 
                             
                         }else{?>
 						
 							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href=kepan.php>科判</a></li>
+                         <li><a href="kepan.php">科判</a></li>
                          <li><a href=?>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
@@ -165,20 +151,20 @@ session_start();
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
 
 
-                        $per=10;
+                        $per=5;
                         $rows=ceil($data/$per);
 
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
 
                         for($i=1;$i<=$rows;$i++)
                         {
-                            $start=($i-1)*10;
+                            $start=($i-1)*5;
                             $sqlatcnum10 = "SELECT * FROM `kepans` where `kpt_id` = $kptid Limit $start , $per";
                             $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
                             echo "<tr height=50px>";
                             while ($kepan = mysqli_fetch_assoc($resultnum10)) {
                                 echo "<td width='8%'>";
-                                echo "<a href=download.php?filename=$kepan[filename] title=$kepan[filename]>$kepan[filename]</a></p>";
+                                echo "<a href='download.php?filename=../漢修專題/kepan/$kepan[filename]' title=$kepan[filename]>$kepan[filename]</a></p>";
 
 
                                 echo "</td>";

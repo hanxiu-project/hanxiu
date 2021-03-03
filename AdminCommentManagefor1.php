@@ -144,7 +144,24 @@
                         <a href="AdminCommentManagefor1.php"><i class="fa fa-fw fa-user"></i>已回覆留言</a>
                     </li>
 					<li>
-                       <a href="AdminCommentManagefor0.php"><i class="fa fa-fw fa-user"></i>未回覆留言</a></li></ul>
+                       <a href="AdminCommentManagefor0.php"><i class="fa fa-fw fa-user"></i>未回覆留言</a>
+                    </li>
+                </ul>
+
+                <li class="dropdown">
+                    <a href="AdminKepanManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>科判管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總攬</a>
+                        </li>
+                        <li>
+                            <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判</a>
+                        </li>
+                        <li>
+                            <a href="AdminNewKepanFile.php"><i class="fa fa-fw fa-user"></i>新增科判檔案</a>
+                        </li>
+                    </ul>
+
 					   <li class="dropdown">
                 <a href="AdminContactManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>聯絡資訊管理<b class="caret"></b></a>
 				<ul class="dropdown-menu">

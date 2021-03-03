@@ -269,10 +269,6 @@ session_start();
 
                             # 將檔案移至指定位置
                             move_uploaded_file($file, $dest);
-
-
-
-
                             //存入資料庫
 
 

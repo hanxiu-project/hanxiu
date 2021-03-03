@@ -80,8 +80,7 @@ session_start();
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
-
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                         echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>最新公告</a></li>";
 						 echo " <li><a href=contact.php>聯絡我們</a></li>";
 
@@ -179,6 +178,7 @@ session_start();
             <div class="tablelist">
 
                 <?php
+                //...
                 $sql = "SELECT * FROM posts";
                 $result = mysqli_query($db_link, $sql);
                 ?>

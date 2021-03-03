@@ -71,25 +71,28 @@ session_start();
                 </nav>
 
             </div>
-            <div id="wrapnav2">
+             <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
+                       <?php
+					 if ($_SESSION[acc] == null) {
+                         echo "<li><a href=indexs.php>首頁</a></li>";
+                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=kepan.php>科判</a></li>";
+                         echo "<li><a href=?>補充資料</a></li>";
 
-                        <?php
-                        if ($_SESSION[acc] == null) {
-                            echo "<li><a href=indexs.php>回首頁</a></li>";
-                            echo "<li><a href=articletype.php>講記內容</a></li>";
-                            echo "<li><a href=kepan.php>科判</a></li>";
-                            echo "<li><a href=?>補充資料</a></li>";
-                            echo "<li><a href=videos.php>法音流佈</a></li></a></li>";
-                            echo " <li><a href=news.php>最新公告</a></li>";
+                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";
+						 echo " <li><a href=contact.php>聯絡我們</a></li>";
+
+                        
 
                             
                         }else{?>
 						
 							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href="kepan.php">科判</a></li>
+                         <li><a href=kepan.php>科判</a></li>
                          <li><a href=?>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
@@ -107,7 +110,6 @@ session_start();
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"

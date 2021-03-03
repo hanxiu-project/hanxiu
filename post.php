@@ -150,8 +150,8 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                     </div>
                 </div>
     </div>
-
-
+</div>
+</div>
     <!--左邊欄位
     <div id="sidebar_left">sidebar_left</div>
 
@@ -199,11 +199,12 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
     </div>
 
     <!--註腳-->
-    <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
+   
 
 
-</div>
 
+ <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
+ </div>
 </body>
 
 

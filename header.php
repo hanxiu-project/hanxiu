@@ -1,9 +1,9 @@
 <html>
 <head>
 
-    <title>test</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
+    <link  rel="stylesheet" type="text/css" href="./csss_file/topic.css?ts=<?=filemtime('topic.css?')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -29,7 +29,7 @@ session_start();
 
 
 <!--最外圍-->
-<div id="sitebody">
+
 
 
     <!--頁首-->
@@ -42,15 +42,13 @@ session_start();
                 <nav>
                     <ul class="flex-nav ">
                         <?php
-                        $sql = "SELECT * FROM posts";
-                        $result = mysqli_query($db_link, $sql);
+                      
                         $sql_search_acc = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
                         $resultsrchacc = mysqli_query($db_link, $sql_search_acc);
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-						$mid = $rows["m_id"];
-						$_SESSION['mid']=$mid;
+
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -64,7 +62,7 @@ session_start();
                             echo "<a href='#'><b>$name</b>，您好</a>";
                             echo "</li>";
                             echo "<li>";
-                            echo "<a href='logout.php'>登出</a>";
+                            echo "<a href='logout.php' >登出</a>";
                             echo "</li>";
                         }
                         ?>
@@ -81,8 +79,13 @@ session_start();
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";
+
                           echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";
+						 echo " <li><a href=contact.php>聯絡我們</a></li>";
+
+                        
+
                             
                         }else{?>
 						
@@ -90,11 +93,12 @@ session_start();
                          <li><a href="articletype.php">講記內容</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=?>補充資料</a></li>
-                         <li><a href="videos.php">法音流佈</a></li>
+                         <li><a href="videotypes.php">法音流佈</a></li>
                         <li><a href="news.php">最新公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
+                         <li><a href="comments.php">錯誤回報</a></li>
+						 <li><a href="contact.php">聯絡我們</a></li>
 
 						<?php
 						}
@@ -105,75 +109,13 @@ session_start();
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-            crossorigin="anonymous"></script>
-
-    <!--照片區-->
+   
 
 
-    <!--左邊欄位
-    <div id="sidebar_left">sidebar_left</div>
+   
 
 
 
-
-    右邊欄位
-    <div id="sidebar_right">sidebar_right</div>-->
-
-
-    <!--主內文區-->
-    <div id="content">
-        <div class="newstitle">
-            <div class="contentlist">
-                <?php
-
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
-                $sql="SELECT * FROM contact";
-                $result= mysqli_query($db_link,$sql);
-
-                ?>
-				<h2>｜聯絡資訊</h2>
-				<div class="table" align="center">
-                <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
-                    <tr align="center">
-                      
-                        <td width="80%" align="center">聯絡資訊</th>
-                    </tr>
-                <?php
-                while($row=$result->fetch_assoc())
-                {
-                    echo "<tr>";
-                   
-                    echo "<td align='center'>$row[content]</td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-				
-                mysqli_close($db_link);
-                ?>
-			
-			</div>
-            </div>
-
-        </div>
-
-
-    </div>
-    
-    <!--註腳-->
-    <?php include 'footer.php';?>
-
-
-</div>
 
 </body>
 

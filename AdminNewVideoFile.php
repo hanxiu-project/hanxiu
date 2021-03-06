@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js"></script>
 
-    <title>新增科判 | 管理後台</title>
+    <title>新增公告 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,6 +34,9 @@
 </head>
 
 <body>
+<?php
+session_start();
+?>
 
 <div id="wrapper">
     <!--sidebar-->
@@ -165,11 +168,14 @@
                             <a href="AdminNewKepanFile.php"><i class="fa fa-fw fa-user"></i>新增科判檔案</a>
                         </li>
                     </ul>
+
                 <li class="dropdown">
                     <a href="AdminContactManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>聯絡資訊管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="AdminContactManage.php"><i class="fa fa-fw fa-user"></i>資訊管理</a>
+                        </li>
+                        </li>
                         </li>
                     </ul>
         </div>
@@ -185,19 +191,22 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-                session_start();
                 /*資料庫連結*/
                 $db_ip="127.0.0.1";
                 $db_user="root";
                 $db_pwd="123456789";
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
+                session_start();
 
-                $sql="SELECT * FROM videotypes ";
+                $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
                 $result=mysqli_query($db_link,$sql);
+                $row=mysqli_fetch_assoc($result);
+
+                $sqltype="SELECT * FROM `videotypes`";
+                $resulttype=mysqli_query($db_link,$sqltype);
+
                 ?>
-
-
 
                 <div id="con2">
                     <div class="main">
@@ -208,31 +217,41 @@
                                 <div class="row">
                                     <div class="col-lg-12">
 
-                                        <form name="form" method="post" action="">
+                                        <form name="forms" method="POST" action="">
 
                                             <div class="form-group">
-                                                <label for="type">目前類別:
+                                                <label for="type">法音類別:</label>
+                                                <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
                                                     <?php
-                                                    while ($row = $result->fetch_assoc()) {
-                                                        echo "<tr>";
-                                                        echo "<td height='65' align='center' style='height:60px'>$row[typename]&emsp;</td>";
-                                                        echo "</tr>";
-                                                    }?>
-                                                </label>
+                                                    while ($row = $resulttype->fetch_assoc())
+                                                    {
+                                                        echo "<option name='type' value=$row[t_id]>$row[typename]</option>";
+                                                    }
+                                                    $sqltypeinput="SELECT * FROM `videotypes` where `t_id`='$_POST[type]'";
+                                                    $resulttypeinput=mysqli_query($db_link,$sqltypeinput);
+                                                    $rowinput= mysqli_fetch_assoc($resulttypeinput);
+                                                    $_SESSION[inputtype]=$rowinput['typename'];
+                                                    ?>
+
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="vcontent">影片描述:</label>
+                                                <input id="vcontent" name="vcontent" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label for="vnet">影片網址:</label>
+                                                <input id="vnet" name="vnet" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
 
                                             </div>
 
 
 
                                             <div class="form-group">
-                                                <label for="content">增加類別:</label>
-                                                <input id="type" name="type" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                            </div>
-
-
-
-                                            <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
+                                                <input type="submit" class="btn btn-sm btn-warning" name="vpost" value="發布" >
                                             </div>
 
                                         </form>
@@ -247,23 +266,34 @@
                 <?php
 
 
-                $videotypes = $_POST["type"];
 
-                if(isset($_POST["go"]))
+
+                $vcontent = $_POST["vcontent"];
+                $vnet = $_POST["vnet"];
+
+
+
+                if(isset($_POST["vpost"]))
                 {
-                    if($videotypes==null)
+
+                    $testwatchnetpos = strpos($_POST["vnet"],"watch");          //找網址內有watch?v=的位置(算w的位置在24)
+                    $testnet = substr($_POST["vnet"],"$testwatchnetpos"+8);            //取的watch?v=之後的網址字串(因為watch?v=所以+8)
+                    $renewnet = substr_replace($_POST["vnet"],"embed/$testnet",$testwatchnetpos);       //新網址
+
+                    if($vcontent==null && $vnet==null)
                     {
-                        echo "<script>alert('請輸入資料!');location.href='AdminNewVideos.php'</script>";
+                        echo "<script>alert('請輸入影片網址或影片描述!');location.href='AdminNewVideoFile.php'</script>";
                     }
                     else
                     {
-
-                        $sqltype="INSERT INTO videotypes (typename) VALUES ('$videotypes')";
-                        mysqli_query($db_link, $sqltype);
-                        echo "<script>alert('法音類別新增成功!');location.href='AdminNewVideos.php'</script>";
+                        $sql="INSERT INTO `videos` (v_id,t_id,typename,vcontent,vnet) VALUES('NULL','$_POST[type]','$rowinput[typename]','$vcontent','$renewnet')";
+                        mysqli_query($db_link, $sql);
+                        echo "<script>alert('影音已經上傳!');location.href='AdminVideosManage.php'</script>";
                     }
                 }
+                mysqli_close($db_link);
                 ?>
+                </form>
 
             </div>
             <!-- /.container-fluid -->

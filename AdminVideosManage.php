@@ -129,10 +129,13 @@
                 <a href="AdminVideosManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>影音管理<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音管理</a>
+                        <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
                     </li>
 					<li>
-                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>建立影音</a>
+                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音</a>
+                    </li>
+                    <li>
+                        <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
                     </li>
 
                 </ul>
@@ -180,6 +183,7 @@
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
             <a href="AdminNewVideos.php" class="btn btn-success  ">建立新影音</a>
+            <a href="AdminNewVideoFile.php" class="btn btn-success  ">建立新影音檔案</a>
         </div>
     </div>
 

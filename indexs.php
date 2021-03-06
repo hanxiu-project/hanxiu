@@ -101,6 +101,9 @@ session_start();
 						 <li><a href="contact.php">聯絡我們</a></li>
 
 						<?php
+                            $sql1 = "SELECT * FROM `carousel`";
+                            $result1 = mysqli_query($db_link,$sql1);
+                            $rowcount = mysqli_num_rows($result1);
 						}
 						?>
                     </ul>
@@ -112,48 +115,59 @@ session_start();
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
     <!--照片區-->
     <div id="photo">
 
         <div id="container">
-			
-           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="3" ></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <?php
+                        $i = 0;
+                        foreach ($result1 as $row1)
+                        {
+                            $actives = '';
+                            if ($i == 0)
+                            {
+                                $actives = 'active';
+                            }
+                    ?>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
+                    <?php $i++; } ?>
                 </ol>
+
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <?php
+
+                        for($i=0;$i<$rowcount;$i++)
+                        {
+                            $row1 = mysqli_fetch_assoc($result1);
+
+                        if($i==0){
+
+                        ?>
+                    <div class="carousel-item active ">
                         <img src="圖1.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
+                    <?php }else{
+                            ?>
                     <div class="carousel-item">
-                        <img src="圖2.jpg" class="d-block w-100" height="500px" alt="...">
+                        <img src="圖2.jpg" class="d-block w-100" alt="..."  height="500px">
                     </div>
-                    <div class="carousel-item">
-                        <img src="圖3.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-					<div class="carousel-item">
-                        <img src="圖4.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-					<div class="carousel-item">
-                        <img src="圖5.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-					<div class="carousel-item">
-                        <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
+                    <?php }?>
+                    <?php } ?>
+
+
                 </div>
-               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
             </div>
 
         </div>

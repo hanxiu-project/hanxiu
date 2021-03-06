@@ -6,7 +6,7 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./csss_file/topic1.css?ts=<?=filemtime('topic1.css?')?>" rel="stylesheet" type="text/css">
+    <link href="csss_file/topic.css?ts=<?= filemtime('topic.css?') ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -42,7 +42,7 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
         <div id="header">
             <img src="logo.png" align="left" width="auto" height="100">
             <div id="wrapnav1">
-               <nav>
+                <nav>
                     <ul class="flex-nav ">
                         <?php
                         $sql = "SELECT * FROM posts";
@@ -52,8 +52,8 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
                         $name = $rows["name"];
-						$mid = $rows["m_id"];
-						$_SESSION['mid']=$mid;
+                        $mid = $rows["m_id"];
+                        $_SESSION['mid'] = $mid;
                         if ($_SESSION[acc] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -75,33 +75,36 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                 </nav>
 
             </div>
-             <div id="wrapnav2">
+            <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                       <?php
-					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";echo " <li><a href=contact.php>聯絡我們</a></li>";
-                            
-                        }else{?>
-						
-							<li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href=kepan.php>科判</a></li>
-                         <li><a href=?>補充資料</a></li>
-                         <li><a href="videos.php">法音流佈</a></li>
-                        <li><a href="news.php">最新公告</a></li>
-                        <li><a href="Memberdonates.php">查看捐獻</a></li>
-                        <li><a href="MemberProfile.php">個人資料</a></li>
-                        <li><a href="comments.php">錯誤回報</a></li><li><a href="contact.php">聯絡我們</a></li>
+                        <?php
+                        if ($_SESSION[acc] == null) {
+                            echo "<li><a href=indexs.php>首頁</a></li>";
+                            echo "<li><a href=articletype.php>講記內容</a></li>";
+                            echo "<li><a href=kepan.php>科判</a></li>";
+                            echo "<li><a href=?>補充資料</a></li>";
+                            echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                            echo " <li><a href=news.php>最新公告</a></li>";
+                            echo " <li><a href=contact.php>聯絡我們</a></li>";
 
-						<?php
-						}
-						?>
+                        } else {
+                            ?>
+
+                            <li><a href="indexs.php">首頁</a></li>
+                            <li><a href="articletype.php">講記內容</a></li>
+                            <li><a href=kepan.php>科判</a></li>
+                            <li><a href=?>補充資料</a></li>
+                            <li><a href="videos.php">法音流佈</a></li>
+                            <li><a href="news.php">最新公告</a></li>
+                            <li><a href="Memberdonates.php">查看捐獻</a></li>
+                            <li><a href="MemberProfile.php">個人資料</a></li>
+                            <li><a href="comments.php">錯誤回報</a></li>
+                            <li><a href="contact.php">聯絡我們</a></li>
+
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </nav>
 
@@ -125,7 +128,7 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                 </ol>
@@ -139,71 +142,80 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
                     <div class="carousel-item">
                         <img src="圖3.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
-					<div class="carousel-item">
+                    <div class="carousel-item">
                         <img src="圖4.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
-					<div class="carousel-item">
+                    <div class="carousel-item">
                         <img src="圖5.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
-					<div class="carousel-item">
+                    <div class="carousel-item">
                         <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
                     </div>
                 </div>
+
     </div>
-
-
+</div>
+</div>
     <!--左邊欄位
     <div id="sidebar_left">sidebar_left</div>
 
+            </div>
+
+>>>>>>> cecac84c061fef24315a5ee692b5ce33a51e3a06
+
+            <!--左邊欄位
+            <div id="sidebar_left">sidebar_left</div>
 
 
 
-    右邊欄位
-    <div id="sidebar_right">sidebar_right</div>-->
+
+            右邊欄位
+            <div id="sidebar_right">sidebar_right</div>-->
 
 
-    <?php
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $sql = "SELECT * FROM posts WHERE p_id = $id";
-        $result = mysqli_query($db_link, $sql);
-        $row = mysqli_fetch_assoc($result);
-    }
-    ?>
+            <?php
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $sql = "SELECT * FROM posts WHERE p_id = $id";
+                $result = mysqli_query($db_link, $sql);
+                $row = mysqli_fetch_assoc($result);
+            }
+            ?>
 
-    <!--主內文區-->
-    <div id="content">
-        <div class="newstitle">
-            <h2>｜<?php echo $row["title"] ?></h2>
-        </div>
-            <div class="tablelist">
-
-
-
-                <div class="table" align="center">
-                    <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5' ;>
-                        <tr>
-                            <td>
-                                發布日期：<?php echo $row["date"] ?></p>
-                                內容：<?php echo $row["content"] ?></td>
-                        </tr>
-                    </table>
+            <!--主內文區-->
+            <div id="content">
+                <div class="newstitle">
+                    <h2>｜<?php echo $row["title"] ?></h2>
+                </div>
+                <div class="tablelist">
 
 
+                    <div class="table" align="center">
+                        <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all"
+                               cellpadding='5' ;>
+                            <tr>
+                                <td>
+                                    發布日期：<?php echo $row["date"] ?></p>
+                                    內容：<?php echo $row["content"] ?></td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
 
 
             </div>
+
+
         </div>
-
-
+        <!--註腳-->
+        <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版</footer>
     </div>
 
-    <!--註腳-->
-    <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
 
-
-</div>
-
+    
+ </div>
 </body>
 
 

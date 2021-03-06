@@ -2,7 +2,7 @@
 
 <head>
 
-	<title>首頁</title>
+	<title>會員登入</title>
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -111,7 +111,9 @@
 					<form name="login01" method="post" action="">
 
 					<font >帳號：</font><input type="text" name="account" ><br><br>
-					<font>密碼：</font><input type="password" name="password" ><br><br>
+					<font>密碼：</font><input type="password" name="password" ><br>
+                        <a href="forgotpwd.php">忘記密碼？</a>
+                    <br><br>
 					
 					<input type="submit" style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="gologin" value="登入" style="width:60px;height:40px;">
 					<div id="loginandre">
@@ -140,10 +142,15 @@
 					$authority = $row["authority"];
 					$_SESSION['name']=$row["name"];
                     $_SESSION['m_id']=$row["m_id"];
+                    $_SESSION["verified"]=$row["verified"];
 
-					if (isset($_POST["gologin"])) {			
+					if (isset($_POST["gologin"])) {
+					    if($_SESSION["verified"] == 0)
+                        {
+                            echo "<script>alert('帳號尚未驗證，請至email收取信驗證信。');location.href='login.php'</script>";
+                        }
 						
-						if ($_POST["account"] == null || $_POST["password"] == null) {
+						else if ($_POST["account"] == null || $_POST["password"] == null) {
 							echo "<script>alert('請輸入帳號或密碼！');location.href='login.php'</script>";
 						} else if ($acc != $_SESSION["acc"] || $pwd != $_SESSION["pwd"]) {
 							echo "<script>alert('帳號或密碼錯誤！請重新輸入。');location.href='login.php'</script>";

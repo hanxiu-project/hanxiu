@@ -53,6 +53,7 @@
                 $resulttype=mysqli_query($db_link,$sqltype);
                 /*$row=mysqli_fetch_assoc($resulttype);*/
 				session_start();
+				
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 				# 設定時區
 				date_default_timezone_set('Asia/Taipei');
@@ -102,11 +103,13 @@
 
                                                 <div class="form-group">
                                                     <label for="filename">&emsp;&emsp;檔名:</label>
-                                                    <input id="filename" name="filename" type="text" placeholder="檔名須為.txt"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                    <input id="filename" name="filename" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="content">經文內容:</label>
+
+													
                                                     <textarea id="content" name="content" id="content" rows="10" cols="80"></textarea>
                                                     <script>
                                                         CKEDITOR.replace('content',{
@@ -122,6 +125,8 @@
 
                                                 <div class="form-group">
                                                     <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
+                                                
+                                                    <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
                                                 </div>
 
                                             </form>
@@ -138,8 +143,12 @@
 					
                     $number = $_POST["number"];
                     $title = $_POST["title"];
-                    $filename = $_POST["filename"];
+                    $filename = $_POST["filename"].".txt";
                     $content = $_POST["content"];
+					$sql_namecheck = "SELECT * FROM scripture  ";
+					$checkresult= mysqli_query($db_link,$sql_namecheck);
+					$rowcheck=mysqli_fetch_assoc($checkresult);
+					$filenamecheck=$rowcheck[filename];
 					if($_POST["date"]==null){
 						$date=$getDate;
 					}else{
@@ -149,22 +158,55 @@
 
                     if(isset($_POST["go"]))
                     {
-                        if($number==null && $title==null && $filename==null && $content==null && $date ==null)
+						if($number==null || $title==null || $_POST["filename"]==null || $content==null || $date ==null)
                         {
-                            echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
+                            echo "<script>alert('請輸入資料!');</script>";
+							
+							
                         }
+						 
+                        else if($filenamecheck==$_POST["filename"])
+                        {
+                            echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
+                        }
+							
                         else
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename.txt","a+") or die("Unable to open file!");
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
 
                             $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date')";
                             mysqli_query($db_link, $sql);
-                            echo "<script>alert('經文已經上傳!');location.href='AdminScriptureManage.php'</script>";
+                            echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
+                        }
+                    }
+					  if(isset($_POST["save"]))
+                    {
+                       if($number==null || $title==null ||$_POST["filename"]=null || $content==null || $date ==null)
+                        {
+                            echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
+                        }
+						  else if($filenamecheck==$_POST["filename"])
+                        {
+                            echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
+                        }
+                        else
+                        {
+                            //寫入檔案
+                            $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
+						
+                            $txt = $content;
+                            fwrite($myfile,$txt);
+                            fclose($myfile);
+
+                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1')";
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
                         }
                     }
                     ?>

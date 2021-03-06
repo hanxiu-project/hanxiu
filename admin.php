@@ -57,6 +57,9 @@
                         <a href="AdminScriptureManage.php"><i class="fa fa-fw fa-user"></i>講記總覽</a>
                     </li>
 					<li>
+                        <a href="AdminScriptureSave.php"><i class="fa fa-fw fa-user"></i>暫存講記總覽</a>
+                    </li>
+					<li>
                         <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>建立新講記</a>
                     </li>
                     <li>
@@ -109,7 +112,7 @@
                         <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
                     </li>
 					<li>
-                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音</a>
+                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音類別</a>
                     </li>
                     <li>
                         <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>

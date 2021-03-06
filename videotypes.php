@@ -34,82 +34,7 @@ session_start();
 
     <!--頁首-->
     <!--包住固定不動的Header-->
-    <div id="header2">
-
-        <div id="header">
-            <img src="logo.png" align="left" width="auto" height="100">
-            <div id="wrapnav1">
-                <nav>
-                    <ul class="flex-nav ">
-                        <?php
-                        $sql = "SELECT * FROM posts";
-                        $result = mysqli_query($db_link, $sql);
-                        $sql_search_acc = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
-                        $resultsrchacc = mysqli_query($db_link, $sql_search_acc);
-                        $rows = mysqli_fetch_assoc($resultsrchacc);
-                        $acc = $rows["account"];
-                        $name = $rows["name"];
-
-                        if ($_SESSION[acc] == null) {
-                            echo "<li>";
-                            echo "<a href='login.php'>登入</a>";
-                            echo "</li>";
-                            echo "<li>";
-                            echo "<a href='registered.php'>註冊</a>";
-                            echo "</li>";
-                        } else if ($acc == $_SESSION['acc']) {
-
-                            echo "<li>";
-                            echo "<a href='#'><b>$name</b>，您好</a>";
-                            echo "</li>";
-                            echo "<li>";
-                            echo "<a href='logout.php' >登出</a>";
-                            echo "</li>";
-                        }
-                        ?>
-                    </ul>
-                </nav>
-
-            </div>
-           <div id="wrapnav2">
-                <nav>
-                    <ul class="flex-nav ">
-                       <?php
-					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
-
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
-						 echo " <li><a href=contact.php>聯絡我們</a></li>";
-
-                        
-
-                            
-                        }else{?>
-						
-							<li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href=kepan.php>科判</a></li>
-                         <li><a href=?>補充資料</a></li>
-                         <li><a href="videotypes.php">法音流佈</a></li>
-                        <li><a href="news.php">最新公告</a></li>
-                        <li><a href="Memberdonates.php">查看捐獻</a></li>
-                        <li><a href="MemberProfile.php">個人資料</a></li>
-                         <li><a href="comments.php">錯誤回報</a></li>
-						 <li><a href="contact.php">聯絡我們</a></li>
-
-						<?php
-						}
-						?>
-                    </ul>
-                </nav>
-
-            </div>
-        </div>
-    </div>
+   <?php include 'header.php';?>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -234,7 +159,7 @@ session_start();
     </div>
 
     <!--註腳-->
-    <footer class="footer">版權所有 © 勤益科大</footer>
+  <?php include 'footer.php';?>
 
 
 </div>

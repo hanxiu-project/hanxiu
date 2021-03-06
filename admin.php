@@ -57,6 +57,9 @@
                         <a href="AdminScriptureManage.php"><i class="fa fa-fw fa-user"></i>講記總覽</a>
                     </li>
 					<li>
+                        <a href="AdminScriptureSave.php"><i class="fa fa-fw fa-user"></i>暫存講記總覽</a>
+                    </li>
+					<li>
                         <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>建立新講記</a>
                     </li>
                     <li>

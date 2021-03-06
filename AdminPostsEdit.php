@@ -96,6 +96,7 @@
                                             </div>
 
                                             <div class="form-group">
+											
                                                 <input type="submit" class="btn btn-sm btn-warning" name="edit" value="修改" >
                                             </div>
 

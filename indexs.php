@@ -41,7 +41,7 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <?php
-                        $sql1 = "SELECT * FROM carousel";
+                        $sql1 = "SELECT images FROM carousel";
                         $result1 = mysqli_query($db_link,$sql1);
                         $rowcount =  mysqli_num_rows($result1);
                         $i = 0;
@@ -59,25 +59,28 @@
 
                 <div class="carousel-inner">
                     <?php
-
-                        for($i=0;$i<$rowcount;$i++)
+                        $i = 0;
+                        foreach ($result1 as $row1)
                         {
-                            $row1 = mysqli_fetch_assoc($result1);
-
-                        if($i==0){
-
-                        ?>
-                    <div class="carousel-item active ">
-                        <img src="<圖6.jpg>" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <?php }else{
+                            if ($i == 0)
+                            {
+                                ?>
+                                <div class="carousel-item active ">
+                                <img src="<?php echo $row1[images]; ?>" class="d-block w-100" height="500px" alt="...">
+                                </div>
+                            <?php
+                            }
+                            else
+                            {
                             ?>
-                    <div class="carousel-item">
-                        <img src="圖6.jpg" class="d-block w-100" alt="..."  height="500px">
-                    </div>
-                    <?php }?>
-                    <?php } ?>
-
+                                <div class="carousel-item ">
+                                    <img src="<?php echo $row1[images]; ?>" class="d-block w-100" height="500px" alt="...">
+                                </div>
+                            <?php
+                            }
+                            $i++;
+                        }
+                            ?>
 
                 </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

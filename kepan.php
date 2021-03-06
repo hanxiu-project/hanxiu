@@ -3,7 +3,7 @@
 
     <title>科判</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
+    <link rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -71,39 +71,38 @@ session_start();
                 </nav>
 
             </div>
-             <div id="wrapnav2">
+            <div id="wrapnav2">
                 <nav>
                     <ul class="flex-nav ">
-                       <?php
-					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
-                         echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
+                        <?php
+                        if ($_SESSION[acc] == null) {
+                            echo "<li><a href=indexs.php>首頁</a></li>";
+                            echo "<li><a href=articletype.php>講記內容</a></li>";
+                            echo "<li><a href=kepan.php>科判</a></li>";
+                            echo "<li><a href=?>補充資料</a></li>";
 
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>最新公告</a></li>";
-						 echo " <li><a href=contact.php>聯絡我們</a></li>";
+                            echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                            echo " <li><a href=news.php>最新公告</a></li>";
+                            echo " <li><a href=contact.php>聯絡我們</a></li>";
 
-                        
 
-                            
-                        }else{?>
-						
-							<li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
-                         <li><a href=kepan.php>科判</a></li>
-                         <li><a href=?>補充資料</a></li>
-                         <li><a href="videotypes.php">法音流佈</a></li>
-                        <li><a href="news.php">最新公告</a></li>
-                        <li><a href="Memberdonates.php">查看捐獻</a></li>
-                        <li><a href="MemberProfile.php">個人資料</a></li>
-                         <li><a href="comments.php">錯誤回報</a></li>
-						 <li><a href="contact.php">聯絡我們</a></li>
+                        } else {
+                            ?>
 
-						<?php
-						}
-						?>
+                            <li><a href="indexs.php">首頁</a></li>
+                            <li><a href="articletype.php">講記內容</a></li>
+                            <li><a href=kepan.php>科判</a></li>
+                            <li><a href=?>補充資料</a></li>
+                            <li><a href="videotypes.php">法音流佈</a></li>
+                            <li><a href="news.php">最新公告</a></li>
+                            <li><a href="Memberdonates.php">查看捐獻</a></li>
+                            <li><a href="MemberProfile.php">個人資料</a></li>
+                            <li><a href="comments.php">錯誤回報</a></li>
+                            <li><a href="contact.php">聯絡我們</a></li>
+
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </nav>
 
@@ -140,11 +139,11 @@ session_start();
                 $sqltype = "SELECT * FROM `kp_types` where `kpt_id` = $kptid";
                 $resulttype = mysqli_query($db_link, $sqltype);
                 $rtypename = mysqli_fetch_row($resulttype);
-                $_SESSION['rtypename']=$rtypename[1];
+                $_SESSION['rtypename'] = $rtypename[1];
                 ?>
                 <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                 <center>
-                    <table width="80%" border="1px">
+                    <table width="80%" border="10px">
                         <br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `kepans` where `kpt_id` = $kptid";
@@ -153,33 +152,55 @@ session_start();
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
 
 
-                        $per=5;
-                        $rows=ceil($data/$per);
+                        $per = 5;
+                        $pages = ceil($data / $per);     //pages
+                        $k = $pages;
+
+
+                        if (!isset($_GET["page"])) {
+                            $page = 1;
+                        } else {
+                            $page = intval($_GET["page"]);
+                        }
+
+                        $start = ($page - 1) * $per;
 
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
 
-                        for($i=1;$i<=$rows;$i++)
-                        {
-                            $start=($i-1)*5;
-                            $sqlatcnum10 = "SELECT * FROM `kepans` where `kpt_id` = $kptid Limit $start , $per";
-                            $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
-                            echo "<tr height=50px>";
-                            while ($kepan = mysqli_fetch_assoc($resultnum10)) {
-                                echo "<td width='8%'>";
-                                echo "<a href='download.php?filename=../漢修專題/kepan/$kepan[filename]' title=$kepan[filename]>$kepan[filename]</a></p>";
+                        $sqlatcnum10 = "SELECT * FROM `kepans` where `kpt_id` = $kptid Limit $start , $per";
+                        $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
+                        $resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
 
-
-                                echo "</td>";
-                            }
-
+                        while ($kepan = mysqli_fetch_assoc($resultnum10[$page])) {
+                            echo "<tr>";
+                            echo "<td width='8%'>";
+                            echo "<a href='download.php?filename=../漢修專題/kepan/$kepan[filename]' title=$kepan[filename]>$kepan[filename]</a></p>";
+                            echo "</td>";
                             echo "</tr>";
 
                         }
 
 
-
                         echo "</table>";
+
+                        ?>
+
+                        <?php
+                        echo '共 ' . $data . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                        echo "<br/><a href=?kptid=$kptid&page=1>首頁</a> ";
+                        echo "第 ";
+                        for ($i = 1; $i <= $pages; $i++) {
+                            if ($page - $k < $i && $i < $page + $k) {
+                                echo "<a href=?kptid=$kptid&page=$i>" . $i . "</a> ";
+                            }
+                        }
+                        echo " 頁 <a href=?kptid=$kptid&page=$pages>末頁</a>";
                         echo "</center>";
+                        ?>
+
+
+                        <?php
+
                         }
                         else                                            //還沒選類別時
                         {
@@ -188,7 +209,7 @@ session_start();
                         <h2>｜科判 </h2>
                         <br><br>
 
-                            <br>
+                        <br>
                         <center>
                             <table width="80%" border="1px">
                                 <br>
@@ -199,14 +220,13 @@ session_start();
                                 $datas = mysqli_num_rows($results_row);       //抓總共幾筆
 
 
-                                $per=10;
-                                $rows=ceil($datas/$per);
+                                $per = 5;
+                                $rows = ceil($datas / $per);
 
                                 $resultsnum = mysqli_query($db_link, $sqlkptypecnum);
 
-                                for($j=1;$j<=$rows;$j++)
-                                {
-                                    $start=($j-1)*10;
+                                for ($j = 1; $j <= $rows; $j++) {
+                                    $start = ($j - 1) * 5;
                                     $sqlatcnums10 = "SELECT * FROM kp_types Limit $start , $per";
                                     $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                     echo "<tr height=50px>";
@@ -225,6 +245,7 @@ session_start();
                                 ?>
 
                             </table>
+
                         </center>
 
 
@@ -235,8 +256,9 @@ session_start();
 
     </div>
 
+
     <!--註腳-->
-    <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
+    <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版</footer>
 
 
 </div>

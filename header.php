@@ -75,7 +75,7 @@ session_start();
                     <ul class="flex-nav ">
                        <?php
 					 if ($_SESSION[acc] == null) {
-                         echo "<li><a href=indexs.php>123首頁</a></li>";
+                         echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=?>補充資料</a></li>";

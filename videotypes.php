@@ -3,7 +3,7 @@
 
     <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link  rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ts=<?=filemtime('cssfornophoto3.css?')?>">
+    <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -14,17 +14,7 @@
 
 <body>
 
-<?php
-$db_ip = "127.0.0.1";
-$db_user = "root";
-$db_pwd = "123456789";
-$db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-mysqli_query($db_link, 'SET CHARACTER SET utf8');
-//載入資料庫連線與啟用session
-//include("sql.php");
-session_start();
 
-?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
@@ -87,23 +77,23 @@ session_start();
 
                         $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid";
                         $resultvideos= mysqli_query($db_link,$sqlvideos);
+
                         echo "<form name='form1' method='POST' action=''>";
-                        echo "<table  width=1600 style=font-size:24px; >";
+                        echo "<table  width=1600 style=font-size:24px;>";
                         echo "<tr align=center>";
-                        echo "<td></td>";
                         echo "</tr>";
                         while ($videos = mysqli_fetch_assoc($resultvideos))
                         {
                             echo "<tr align=center>";
-                            echo "<td width=70%><iframe width=300 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
-                            echo "<td width=30%>$videos[vcontent]</td>";
+                            echo "<td><iframe width=300 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
+                            echo "<td>$videos[vcontent]</td>";
                             echo "</tr>";
                         }
-
                         echo "</table>";
-                        }
-                        else                                            //還沒選類別時
-                        {
+
+                }
+                else                                            //還沒選類別時
+                {
                         ?>
 
                         <h2>｜影音類別 </h2>
@@ -147,7 +137,7 @@ session_start();
                             </table>
 
                                 <?php
-                                }
+                }
                                 ?>
 
 

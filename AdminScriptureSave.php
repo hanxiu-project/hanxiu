@@ -47,8 +47,8 @@
     <!--建立新經文-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
-           <a href="AdminScripturePost.php" class="btn btn-success  " style="left">建立新講記</a>
-		   <a href="ScriptureManageNewType.php" class="btn btn-success  " style="left">建立新講記類別</a>
+           <a href="AdminScripturePost.php" class="btn btn-success  " style="left">建立新經文</a>
+		   <a href="ScriptureManageNewType.php" class="btn btn-success  " style="left">建立新經文類別</a>
 		  
 		   <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:white">
 		   <option>請選擇類別</option>
@@ -61,7 +61,7 @@
 			}?>               `
              </select> 
 			 
-             <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看講記類別" >
+             <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看經文類別" >
             
 			 
         </div>
@@ -83,7 +83,7 @@
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql_tid = "SELECT * FROM scripture  where save='0' order by t_id";
+                $sql_tid = "SELECT * FROM scripture  where save='1' order by t_id";
                 $result= mysqli_query($db_link,$sql_tid);
 
                 echo "<form name='form1' method='POST' action=''>";
@@ -96,7 +96,7 @@
                 echo "<td></td>";
                 echo "</tr>";
 				if (isset($_POST["gotype"])) {
-					$sql_typesearch = "SELECT * FROM scripture WHERE typename ='$_POST[type]' order by t_id ";
+					$sql_typesearch = "SELECT * FROM scripture WHERE  typename ='$_POST[type]' and save='1' order by t_id ";
 					$resulttypesearch= mysqli_query($db_link,$sql_typesearch);
 					if ($_POST[type]=="all"){
 						 while($row=$result->fetch_assoc())
@@ -142,6 +142,7 @@
                     echo "<td>$row[number]</td>";
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
+					 
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
@@ -172,9 +173,8 @@
                         $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
                         mysqli_query($db_link, $sql_delete);
                         $filename = $row2["filename"];//刪除檔案
-						 
-                        unlink("../漢修專題/ScriptureFile/".$filename);
-                        echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
+                          unlink("../漢修專題/ScriptureFile/".$filename);
+                        echo "<script>alert('成功刪除!');location.href='AdminScriptureSave.php'</script>";
 
                     }
 					 if (isset($_POST["$row2[s_id]+1"])) {

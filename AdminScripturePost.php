@@ -36,149 +36,7 @@
 <body>
 <form name="formspost" method="post" action="">
 <div id="wrapper">
-    <!--sidebar-->
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="AdminDashboard.php">管理後台</a>
-        </div>
-        <!-- Top Menu Items -->
-        <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 管理員 <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="indexs.php"><i class="fa fa-fw fa-envelope"></i> 回前台</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-       <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-               
-                <li class="dropdown">
-				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>經文管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-					<li>
-                        <a href="AdminScriptureManage.php"><i class="fa fa-fw fa-user"></i>經文總覽</a>
-                    </li>
-					<li>
-                        <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>建立新經文</a>
-                    </li>
-                    <li>
-                        <a href="ScriptureManageNewType.php"><i class="fa fa-fw fa-user"></i>建立新經文類別</a>
-                    </li>
-                </ul>
-				
-                </li>
-				<li class="dropdown">
-                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
-                    </li>
-					<li>
-                        <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
-                    </li>
-
-                </ul>
-            </li>
-				<li class="dropdown">
-                <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 公告管理</a>
-                    </li>
-					<li>
-                        <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>建立公告</a>
-                    </li>
-
-                </ul>
-            </li>
-              
-				<li class="dropdown">
-                <a href="Donatemanage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>捐獻管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="DonateView.php"><i class="fa fa-fw fa-user"></i>捐獻總覽</a>
-                    </li>
-					 <li>
-                        <a href="Donatemanage.php"><i class="fa fa-fw fa-user"></i>增加捐獻</a>
-                    </li>
-                </ul>
-				
-            </li>
-			<li class="dropdown">
-                <a href="AdminVideosManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>影音管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
-                    </li>
-					<li>
-                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音</a>
-                    </li>
-                    <li>
-                        <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
-                    </li>
-
-                </ul>
-            </li>
-			<li class="dropdown">
-                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>留言管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="AdminCommentManagefor1.php"><i class="fa fa-fw fa-user"></i>已回覆留言</a>
-                    </li>
-					<li>
-                       <a href="AdminCommentManagefor0.php"><i class="fa fa-fw fa-user"></i>未回覆留言</a>
-                    </li>
-                </ul>
-
-
-                <li class="dropdown">
-                    <a href="AdminKepanManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>科判管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總攬</a>
-                        </li>
-                        <li>
-                            <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判</a>
-                        </li>
-                        <li>
-                            <a href="AdminNewKepanFile.php"><i class="fa fa-fw fa-user"></i>新增科判檔案</a>
-                        </li>
-                    </ul>
-
-					   <li class="dropdown">
-                <a href="AdminContactManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>聯絡資訊管理<b class="caret"></b></a>
-				<ul class="dropdown-menu">
-                <li>
-                        <a href="AdminContactManage.php"><i class="fa fa-fw fa-user"></i>資訊管理</a>
-                    </li>
-            </li>
-            </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
+     <?php include 'admin.php';?>
 
     <!--Body-->
     <div id="page-wrapper">
@@ -190,14 +48,12 @@
 
                 <?php
                 /*資料庫連結*/
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+              
 				$sqltype="SELECT * FROM `types` ";
                 $resulttype=mysqli_query($db_link,$sqltype);
                 /*$row=mysqli_fetch_assoc($resulttype);*/
 				session_start();
+				
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 				# 設定時區
 				date_default_timezone_set('Asia/Taipei');
@@ -247,11 +103,13 @@
 
                                                 <div class="form-group">
                                                     <label for="filename">&emsp;&emsp;檔名:</label>
-                                                    <input id="filename" name="filename" type="text" placeholder="檔名須為.txt"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                    <input id="filename" name="filename" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="content">經文內容:</label>
+
+													
                                                     <textarea id="content" name="content" id="content" rows="10" cols="80"></textarea>
                                                     <script>
                                                         CKEDITOR.replace('content',{
@@ -267,6 +125,8 @@
 
                                                 <div class="form-group">
                                                     <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
+                                                
+                                                    <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
                                                 </div>
 
                                             </form>
@@ -283,8 +143,12 @@
 					
                     $number = $_POST["number"];
                     $title = $_POST["title"];
-                    $filename = $_POST["filename"];
+                    $filename = $_POST["filename"].".txt";
                     $content = $_POST["content"];
+					$sql_namecheck = "SELECT * FROM scripture  ";
+					$checkresult= mysqli_query($db_link,$sql_namecheck);
+					$rowcheck=mysqli_fetch_assoc($checkresult);
+					$filenamecheck=$rowcheck[filename];
 					if($_POST["date"]==null){
 						$date=$getDate;
 					}else{
@@ -294,22 +158,55 @@
 
                     if(isset($_POST["go"]))
                     {
-                        if($number==null && $title==null && $filename==null && $content==null && $date ==null)
+						if($number==null || $title==null || $_POST["filename"]==null || $content==null || $date ==null)
                         {
-                            echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
+                            echo "<script>alert('請輸入資料!');</script>";
+							
+							
                         }
+						 
+                        else if($filenamecheck==$_POST["filename"])
+                        {
+                            echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
+                        }
+							
                         else
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename.txt","a+") or die("Unable to open file!");
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
 
                             $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date')";
                             mysqli_query($db_link, $sql);
-                            echo "<script>alert('經文已經上傳!');location.href='AdminScriptureManage.php'</script>";
+                            echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
+                        }
+                    }
+					  if(isset($_POST["save"]))
+                    {
+                       if($number==null || $title==null ||$_POST["filename"]=null || $content==null || $date ==null)
+                        {
+                            echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
+                        }
+						  else if($filenamecheck==$_POST["filename"])
+                        {
+                            echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
+                        }
+                        else
+                        {
+                            //寫入檔案
+                            $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
+						
+                            $txt = $content;
+                            fwrite($myfile,$txt);
+                            fclose($myfile);
+
+                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1')";
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
                         }
                     }
                     ?>

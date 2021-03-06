@@ -3,8 +3,10 @@
 
     <title>會員註冊</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css"
-          href="./csss_file/cssfornophoto3.css?ts=<?= filemtime('cssfornophoto3.css?') ?>">
+
+
+    <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -15,6 +17,7 @@
 
 <body>
 <form name="registered" method="post" action="">
+
 
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
@@ -117,6 +120,9 @@
         <!--左邊欄位
         <div id="sidebar_left">sidebar_left</div>
 
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
 
@@ -287,12 +293,18 @@
 
 
 
+
             ?>
             <!--註腳-->
             <?php include 'footer.php'; ?>
 
 
         </div>
+
+ 
+
+</div>
+
 
 </body>
 

@@ -51,16 +51,16 @@
             <ul class="nav navbar-nav side-nav">
                
                 <li class="dropdown">
-				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>經文管理<b class="caret"></b></a>
+				<a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>講記管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
 					<li>
-                        <a href="AdminScriptureManage.php"><i class="fa fa-fw fa-user"></i>經文總覽</a>
+                        <a href="AdminScriptureManage.php"><i class="fa fa-fw fa-user"></i>講記總覽</a>
                     </li>
 					<li>
-                        <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>建立新經文</a>
+                        <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>建立新講記</a>
                     </li>
                     <li>
-                        <a href="ScriptureManageNewType.php"><i class="fa fa-fw fa-user"></i>建立新經文類別</a>
+                        <a href="ScriptureManageNewType.php"><i class="fa fa-fw fa-user"></i>建立新講記類別</a>
                     </li>
                 </ul>
 				

@@ -6,7 +6,7 @@
 
     <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" type="text/css" href="./csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>">
+    
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -32,81 +32,7 @@
     <!--頁首-->
     <!--包住固定不動的Header-->
 
-    <div id="header2">
-
-        <div id="header">
-            <img src="logo.png" align="left" width="auto" height="100">
-            <div id="wrapnav1">
-                <nav>
-                    <ul class="flex-nav ">
-                        <?php
-                        $sql = "SELECT * FROM posts";
-                        $result = mysqli_query($db_link, $sql);
-                        $sql_search_acc = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
-                        $resultsrchacc = mysqli_query($db_link, $sql_search_acc);
-                        $rows = mysqli_fetch_assoc($resultsrchacc);
-                        $acc = $rows["account"];
-                        $name = $rows["name"];
-
-                        if ($_SESSION[acc] == null) {
-                            echo "<li>";
-                            echo "<a href='login.php'>登入</a>";
-                            echo "</li>";
-                            echo "<li>";
-                            echo "<a href='registered.php'>註冊</a>";
-                            echo "</li>";
-                        } else if ($acc == $_SESSION['acc']) {
-
-                            echo "<li>";
-                            echo "<a href='#'><b>$name</b>，您好</a>";
-                            echo "</li>";
-                            echo "<li>";
-                            echo "<a href='logout.php' >登出</a>";
-                            echo "</li>";
-                        }
-                        ?>
-                    </ul>
-                </nav>
-
-            </div>
-            <div id="wrapnav2">
-                <nav>
-                    <ul class="flex-nav ">
-                        <?php
-                        if ($_SESSION[acc] == null) {
-                            echo "<li><a href=indexs.php>首頁</a></li>";
-                            echo "<li><a href=articletype.php>講記內容</a></li>";
-                            echo "<li><a href=kepan.php>科判</a></li>";
-                            echo "<li><a href=?>補充資料</a></li>";
-
-                            echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                            echo " <li><a href=news.php>最新公告</a></li>";
-                            echo " <li><a href=contact.php>聯絡我們</a></li>";
-
-
-                        } else {
-                            ?>
-
-                            <li><a href="indexs.php">首頁</a></li>
-                            <li><a href="articletype.php">講記內容</a></li>
-                            <li><a href=kepan.php>科判</a></li>
-                            <li><a href=?>補充資料</a></li>
-                            <li><a href="videotypes.php">法音流佈</a></li>
-                            <li><a href="news.php">最新公告</a></li>
-                            <li><a href="Memberdonates.php">查看捐獻</a></li>
-                            <li><a href="MemberProfile.php">個人資料</a></li>
-                            <li><a href="comments.php">錯誤回報</a></li>
-                            <li><a href="contact.php">聯絡我們</a></li>
-
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </nav>
-
-            </div>
-        </div>
-    </div>
+    
 
     <?php include 'header.php';?>
 

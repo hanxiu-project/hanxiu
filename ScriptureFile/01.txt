@@ -1,5 +1,0 @@
-<p><strong>再123來說說用到的幾個PHP設定和API:<br />
-1.php.ini中的output_buffering配置</strong><br />
-&bull;Off: 表示關閉PHP輸出快取<br />
-&bull;On: 開啟無限大的輸出快取<br />
-&bull;4096: 開啟大小為4096Byte的輸出快取</p>

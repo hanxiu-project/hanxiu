@@ -58,7 +58,15 @@ session_start();
                             echo "<a href='registered.php'>註冊</a>";
                             echo "</li>";
 
-                        } else{
+                        } else if($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
+                            echo "<li>";
+                            echo "<a href='login.php'>登入</a>";
+                            echo "</li>";
+                            echo "<li>";
+                            echo "<a href='registered.php'>註冊</a>";
+                            echo "</li>";
+                        }else
+                            {
                             echo "<li>";
                             echo "<a href='#'><b>$name</b>，您好</a>";
                             echo "</li>";
@@ -89,7 +97,17 @@ session_start();
                         
 
                             
-                        }else{?>
+                        }else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
+                         echo "<li><a href=indexs.php>首頁</a></li>";
+                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=kepan.php>科判</a></li>";
+                         echo "<li><a href=?>補充資料</a></li>";
+
+                         echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                         echo " <li><a href=news.php>最新公告</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們</a></li>";
+
+                     }else{?>
 						
 							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>

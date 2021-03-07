@@ -59,15 +59,8 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
 
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-
                     <?php
-                        $sql1 = "SELECT images FROM carousel";
+                        $sql1 = "SELECT path1 FROM carousel";
                         $result1 = mysqli_query($db_link,$sql1);
                         $rowcount =  mysqli_num_rows($result1);
                         $i = 0;
@@ -93,7 +86,7 @@
                             {
                                 ?>
                                 <div class="carousel-item active ">
-                                <img src="<?php echo $row1[images]; ?>" class="d-block w-100" height="500px" alt="...">
+                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
                                 </div>
                             <?php
                             }
@@ -101,7 +94,7 @@
                             {
                             ?>
                                 <div class="carousel-item ">
-                                    <img src="<?php echo $row1[images]; ?>" class="d-block w-100" height="500px" alt="...">
+                                    <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
                                 </div>
                             <?php
                             }

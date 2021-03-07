@@ -46,6 +46,7 @@
 
     <!--主內文區-->
     <div id="content">
+	<br><br>
         <div class="newstitle">
 
             <?php
@@ -143,16 +144,20 @@
                 </div>
 
 
-		</div>
+	
 
     </div>
+	
 
-    <!--註腳-->
+   
+
+<!--註腳-->
     <?php include 'footer.php'; ?>
-
-
+</div>
+ 
 </div>
 
+</div>
 </body>
 
 

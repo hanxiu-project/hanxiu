@@ -327,7 +327,7 @@ table {
 					
 					font-size:20px;
 					min-height: 100%;
-					 border:1px;/* solid #F00;  /*	紅色框線記得刪除*/
+					 /*border:1px;*//* solid #F00;  /*	紅色框線記得刪除*/
 					overflow:hidden;
 					white-space: nowrap;
 					text-overflow: ellipsis;
@@ -345,7 +345,7 @@ table {
 					overflow: auto;
 					padding-top:50px;
 					width:auto;
-					height:100vh;
+					min-height: 100%;
 					/* border:1px solid #F00;  /*	紅色框線記得刪除*/
 
 				}
@@ -363,7 +363,7 @@ table {
 					/*white-space: nowrap;*/
 					/*text-overflow: ellipsis;*/
 					/*padding-left: 20px;*/
-					 border:1px;  /*solid #000000;*/
+					/* border:1px;*/  /*solid #000000;*/
 				}
 				#content .contentlist .tableforcontent {
 					padding-left: 5%;
@@ -371,7 +371,7 @@ table {
 					min-height: 100%;
 					width:100%; 
 					border: 0px;
-					border:1px  solid #EEEEEE;
+					/*border:1px  solid #EEEEEE;*/
 				}
 				/*登入區設定*/
 				.login{

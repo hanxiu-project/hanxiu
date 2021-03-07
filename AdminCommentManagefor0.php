@@ -82,7 +82,7 @@
                     echo "<td>$row[msg_datetime]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[c_id]+1' value='回覆'></td>";
                     ?>
-                    <td><input type='submit' class="btn btn-sm btn-danger "  style='width:100px;height:30px;'name="<?php echo "$row[m_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這位管理員?')"></td><?php
+                    <td><input type='submit' class="btn btn-sm btn-danger "  style='width:100px;height:30px;'name="<?php echo "$row[c_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這位管理員?')"></td><?php
 
                     echo "</tr>";
                 }
@@ -103,12 +103,12 @@
 
                     //刪除還沒做
 
-                   /* if (isset($_POST["$row2[v_id]+2"])) {
-                        $_SESSION["delete_v_id"]=$row2["v_id"];
-                        $sql_delete="DELETE FROM videos WHERE videos.v_id = $_SESSION[delete_v_id]";
+                   if (isset($_POST["$row2[c_id]+2"])) {
+                        $_SESSION["delete_c_id"]=$row2["c_id"];
+                        $sql_delete="DELETE FROM comments WHERE c_id = $_SESSION[delete_c_id]";
                         mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='AdminCommentManagefor1.php'</script>";
-                    }*/
+                        echo "<script>alert('成功刪除!');location.href='AdminCommentManagefor0.php'</script>";
+                    }
                 }
 
                 mysqli_close($db_link);

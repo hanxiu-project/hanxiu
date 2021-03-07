@@ -51,7 +51,7 @@
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <div class="contentlist">
+            
                 <?php
                 if (isset($_GET["tid"]))
                 {
@@ -62,6 +62,9 @@
 				$_SESSION['rtypename']=$rtypename[1];
                 ?>
                 <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
+				</div> 
+				<div class="contentlist">
+				<div class="tableforcontent">
                 <center>
                     <table width="80%" border="1px">
                         <br>
@@ -179,15 +182,15 @@
 
         </div>
 			
-
+	 <!--註腳-->
+   <?php include 'footer.php';?>
     </div>
     
-    <!--註腳-->
-   <?php include 'footer.php';?>
+   
+	
 
 
 </div>
-
 </body>
 
 

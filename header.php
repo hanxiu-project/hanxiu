@@ -49,7 +49,7 @@ session_start();
                         $acc = $rows["account"];
                         $pwd = $rows["password"];
                         $name = $rows["name"];
-
+						$authority = $rows["authority"];
                         if ($_SESSION[acc] == null || $_SESSION[pwd] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
@@ -107,7 +107,24 @@ session_start();
                          echo " <li><a href=news.php>最新公告</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
 
-                     }else{?>
+                     }else if ($authority=='1' || $authority=='2'){
+                        ?>
+						
+							<li><a href="indexs.php">首頁</a></li>
+                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href=kepan.php>科判</a></li>
+                         <li><a href=?>補充資料</a></li>
+                         <li><a href="videotypes.php">法音流佈</a></li>
+                        <li><a href="news.php">最新公告</a></li>
+                        <li><a href="Memberdonates.php">查看捐獻</a></li>
+                        <li><a href="MemberProfile.php">個人資料</a></li>
+                         <li><a href="comments.php">錯誤回報</a></li>
+						 <li><a href="contact.php">聯絡我們</a></li>
+							<li><a href="AdminScriptureManage.php">回後台</a></li>
+						<?php
+
+                     }
+					 else{?>
 						
 							<li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">講記內容</a></li>

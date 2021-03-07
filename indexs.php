@@ -65,16 +65,38 @@
                         $i = 0;
                         foreach ($result1 as $row1)
                         {
-                            $actives = '';
-                            if ($i == 0)
+							 if ($i == 0)
                             {
-                                $actives = 'active';
+                                ?>
+                               
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
+                                
+                            <?php
                             }
+                            else
+                            {
+                            ?>
+                                 <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>"></li>
+                                
+                            <?php
+                            }
+							
+                            $i++;
+                           
+                           
                     ?>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
-                    <?php $i++; } ?>
-
-                </ol>
+					
+            
+                
+					
+                
+                    
+                    <?php  
+					 
+					} ?>
+					
+					</ol>
+               
 
                 <div class="carousel-inner">
                     <?php

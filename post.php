@@ -6,7 +6,7 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="csss_file/topic.css?ts=<?= filemtime('topic.css?') ?>" rel="stylesheet" type="text/css">
+     <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -33,7 +33,7 @@
     <!--頁首-->
     <!--包住固定不動的Header-->
    <?php include 'header.php';?>
-    </div>
+   
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -42,43 +42,7 @@
             crossorigin="anonymous"></script>
 
     <!--照片區-->
-    <div id="photo">
-
-        <div id="container">
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="圖1.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖2.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖3.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖4.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖5.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                </div>
-
-    </div>
-</div>
-</div>
+    
     <!--左邊欄位
     <div id="sidebar_left">sidebar_left</div>
 
@@ -131,7 +95,7 @@
             </div>
 
 
-        </div>
+       
         <!--註腳-->
         <?php include 'footer.php';?>
     </div>

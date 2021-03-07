@@ -92,7 +92,7 @@
                     if (isset($_POST["$row2[v_id]+1"])) {
                         $_SESSION["edit_v_id"]=$row2["v_id"];
                         echo "<script langauge = 'javascript' type='text/javascript'>";
-                        echo "window.location.href = 'AdminPostsEdit.php'";
+                        echo "window.location.href = 'AdminVideoEdit.php'";
                         echo "</script>";
                     }
 

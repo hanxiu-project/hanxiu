@@ -47,17 +47,18 @@ session_start();
                         $resultsrchacc = mysqli_query($db_link, $sql_search_acc);
                         $rows = mysqli_fetch_assoc($resultsrchacc);
                         $acc = $rows["account"];
+                        $pwd = $rows["password"];
                         $name = $rows["name"];
 
-                        if ($_SESSION[acc] == null) {
+                        if ($_SESSION[acc] == null || $_SESSION[pwd] == null) {
                             echo "<li>";
                             echo "<a href='login.php'>登入</a>";
                             echo "</li>";
                             echo "<li>";
                             echo "<a href='registered.php'>註冊</a>";
                             echo "</li>";
-                        } else if ($acc == $_SESSION['acc']) {
 
+                        } else{
                             echo "<li>";
                             echo "<a href='#'><b>$name</b>，您好</a>";
                             echo "</li>";
@@ -65,6 +66,7 @@ session_start();
                             echo "<a href='logout.php' >登出</a>";
                             echo "</li>";
                         }
+
                         ?>
                     </ul>
                 </nav>

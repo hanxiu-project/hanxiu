@@ -58,10 +58,6 @@
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-
-                   
-                    
-
                     <?php
                         $sql1 = "SELECT images FROM carousel";
                         $result1 = mysqli_query($db_link,$sql1);

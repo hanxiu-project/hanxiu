@@ -47,7 +47,7 @@
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <div class="contentlist">
+            
                 <?php
                 if (isset($_GET["tid"]))
                 {
@@ -58,8 +58,11 @@
                 $_SESSION['rtypename']=$rtypename[1];
                 ?>
                 <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
+				</div>
+				<div class="contentlist">
+				<div class="tableforcontent">
                 <center>
-                    <table width="80%" border="1px">
+                   
                         <br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
@@ -79,14 +82,14 @@
                         $resultvideos= mysqli_query($db_link,$sqlvideos);
 
                         echo "<form name='form1' method='POST' action=''>";
-                        echo "<table  width=1600 style=font-size:24px;>";
+                        echo "<table  width=600px style=font-size:24px; valign='top'>";
                         echo "<tr align=center>";
                         echo "</tr>";
                         while ($videos = mysqli_fetch_assoc($resultvideos))
                         {
                             echo "<tr align=center>";
-                            echo "<td><iframe width=300 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
-                            echo "<td>$videos[vcontent]</td>";
+                            echo "<td><iframe width=300px height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
+                            echo "<td width=300px valign='top'>$videos[vcontent]</td>";
                             echo "</tr>";
                         }
                         echo "</table>";
@@ -140,13 +143,13 @@
                 }
                                 ?>
 
-
+				</div>
             </div>
 
         </div>
 
 
-    </div>
+    
 
     <!--註腳-->
   <?php include 'footer.php';?>

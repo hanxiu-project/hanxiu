@@ -59,7 +59,7 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <?php
-                        $sql1 = "SELECT images FROM carousel";
+                        $sql1 = "SELECT path1 FROM carousel";
                         $result1 = mysqli_query($db_link,$sql1);
                         $rowcount =  mysqli_num_rows($result1);
                         $i = 0;
@@ -85,7 +85,7 @@
                             {
                                 ?>
                                 <div class="carousel-item active ">
-                                <img src="<?php echo $row1[images]; ?>" class="d-block w-100" height="500px" alt="...">
+                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
                                 </div>
                             <?php
                             }
@@ -93,7 +93,7 @@
                             {
                             ?>
                                 <div class="carousel-item ">
-                                    <img src="<?php echo $row1[images]; ?>" class="d-block w-100" height="500px" alt="...">
+                                    <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
                                 </div>
                             <?php
                             }
@@ -112,14 +112,6 @@
                     <span class="sr-only">Next</span>
                 </a>
 
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
 
             </div>
 

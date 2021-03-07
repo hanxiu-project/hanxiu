@@ -51,11 +51,11 @@
 
                 <?php
                 /*資料庫連結*/
-               
-           
+
+
                 session_start();
 
-                $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
+                $sql="SELECT * FROM videos WHERE videos.v_id = $_SESSION[edit_v_id]";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
 
@@ -74,29 +74,19 @@
 
                                         <form name="forms" method="POST" action="">
 
-                                            <div class="form-group">
-                                                <label for="title">公告標題:</label>
-                                                <input id="title" name="title" type="text"  value="<?php echo $row['title']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                            </div>
-
 
                                             <div class="form-group">
-                                                <label for="content">公告內容:</label>
-                                                <textarea id="content" name="content" rows="10" cols="80"><?php echo $row['content']?></textarea>
+                                                <label for="vcontent">影片描述:</label>
+                                                <textarea id="vcontent" name="vcontent" rows="10" cols="80"><?php echo $row['vcontent']?></textarea>
                                                 <script>
-                                                    CKEDITOR.replace('content',{
+                                                    CKEDITOR.replace('vcontent',{
                                                         width:1650,height:500,
                                                     });
                                                 </script>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="date">發布日期:</label>
-                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                            </div>
 
                                             <div class="form-group">
-											
                                                 <input type="submit" class="btn btn-sm btn-warning" name="edit" value="修改" >
                                             </div>
 
@@ -114,15 +104,15 @@
 
                 if(isset($_POST["edit"]))
                 {
-                    if($_POST["title"] == NULL || $_POST["content"] == NULL )
+                    if($_POST["vcontent"] == NULL )
                     {
-                        echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
+                        echo "<script>alert('請輸入影片描述!');location.href='AdminVideoEdit.php'</script>";
                     }
                     else
                     {
-                        $sqledit = "UPDATE posts SET `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                        $sqledit = "UPDATE videos SET `vcontent` = '$_POST[vcontent]'WHERE videos.v_id = $_SESSION[edit_v_id] ";
                         mysqli_query($db_link, $sqledit);
-                        echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
+                        echo "<script>alert('影音修改完成!');location.href='AdminVideosManage.php'</script>";
                     }
 
                 }
@@ -138,16 +128,16 @@
     </div>
     <!-- /#wrapper -->
 
-   <!-- jQuery -->
-<script src="js/jquery.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="js/plugins/morris/raphael.min.js"></script>
-<script src="js/plugins/morris/morris.min.js"></script>
-<script src="js/plugins/morris/morris-data.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
 
 </body>
 

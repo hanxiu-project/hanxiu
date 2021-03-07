@@ -24,7 +24,7 @@
 
     <!--頁首-->
     <!--包住固定不動的Header-->
-   <?php include 'header.php';?>
+    <?php include 'header.php'; ?>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -47,6 +47,7 @@
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
+
             
                 <?php
                 if (isset($_GET["tid"]))
@@ -67,92 +68,120 @@
                         <?php
                         $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
 
-                        $result_row = mysqli_query($db_link, $sqlatcnum);
-                        $data = mysqli_num_rows($result_row);       //抓總共幾筆
+
+            <?php
+            if (isset($_GET["tid"]))
+            {
+            $tid = $_GET["tid"];
+            $sqltype = "SELECT * FROM `videotypes` where `t_id` = $tid";
+            $resulttype = mysqli_query($db_link, $sqltype);
+            $rtypename = mysqli_fetch_row($resulttype);
+            $_SESSION['rtypename'] = $rtypename[1];
+            ?>
+            <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
+        </div>
+        <div class="contentlist">
+            <center>
+                <div class="table" width="80%" border="10px" valign="top">
+                    <br>
+                    <?php
+                    $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
+
+                    $result_row = mysqli_query($db_link, $sqlatcnum);
+                    $data = mysqli_num_rows($result_row);       //抓總共幾筆
 
 
-                        $per=10;
-                        $rows=ceil($data/$per);
+                    $per = 10;
+                    $rows = ceil($data / $per);
 
-                        $resultnum = mysqli_query($db_link, $sqlatcnum);
+                    $resultnum = mysqli_query($db_link, $sqlatcnum);
 
 
+                    $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid";
+                    $resultvideos = mysqli_query($db_link, $sqlvideos);
 
-                        $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid";
-                        $resultvideos= mysqli_query($db_link,$sqlvideos);
+                    echo "<form name='form1' method='POST' action=''>";
+                    echo "<table  width=1000 style='font-size:24px;background-color: #f5f3f0'>";
+
 
                         echo "<form name='form1' method='POST' action=''>";
                         echo "<table  width=600px style=font-size:24px; valign='top'>";
                         echo "<tr align=center>";
                         echo "</tr>";
-                        while ($videos = mysqli_fetch_assoc($resultvideos))
-                        {
-                            echo "<tr align=center>";
-                            echo "<td><iframe width=300px height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
-                            echo "<td width=300px valign='top'>$videos[vcontent]</td>";
-                            echo "</tr>";
-                        }
-                        echo "</table>";
+                        
 
-                }
-                else                                            //還沒選類別時
-                {
+                    while ($videos = mysqli_fetch_assoc($resultvideos)) {
+                        echo "<tr >";
+                        echo "<td width='330' height=200 style='vertical-aligntext-top;'><iframe width=324 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
+                        echo "<td>$videos[vcontent]</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+
+
+                    }
+                    else                                            //還沒選類別時
+                    {
+                    ?>
+
+                    <h2>｜影音類別 </h2>
+
+                    <br><br>
+
+                    <center>
+                        <br>
+
+                        <table width="80%" border="1px">
+                            <br>
+                            <?php
+                            $sqlatypecnum = "SELECT * FROM `videotypes`";
+
+                            $results_row = mysqli_query($db_link, $sqlatypecnum);
+                            $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+
+
+                            $per = 10;
+                            $rows = ceil($datas / $per);
+
+                            $resultsnum = mysqli_query($db_link, $sqlatypecnum);
+
+                            for ($j = 1; $j <= $rows; $j++) {
+                                $start = ($j - 1) * 10;
+                                $sqlatcnums10 = "SELECT * FROM videotypes Limit $start , $per";
+                                $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                echo "<tr height=50px>";
+                                while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                    echo "<td width='8%'>";
+                                    echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
+                                    echo "</td>";
+                                }
+
+                                echo "</tr>";
+
+                            }
+                            ?>
+
+                        </table>
+
+                        <?php
+                        }
                         ?>
 
-                        <h2>｜影音類別 </h2>
 
-                        <br><br>
-
-                        <center>
-                            <br>
-
-                            <table width="80%" border="1px">
-                                <br>
-                                <?php
-                                $sqlatypecnum = "SELECT * FROM `videotypes`";
-
-                                $results_row = mysqli_query($db_link, $sqlatypecnum);
-                                $datas = mysqli_num_rows($results_row);       //抓總共幾筆
-
-
-                                $per=10;
-                                $rows=ceil($datas/$per);
-
-                                $resultsnum = mysqli_query($db_link, $sqlatypecnum);
-
-                                for($j=1;$j<=$rows;$j++)
-                                {
-                                    $start=($j-1)*10;
-                                    $sqlatcnums10 = "SELECT * FROM videotypes Limit $start , $per";
-                                    $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                    echo "<tr height=50px>";
-                                    while ($row = mysqli_fetch_assoc($resultnums10)) {
-                                        echo "<td width='8%'>";
-                                        echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
-                                        echo "</td>";
-                                    }
-
-                                    echo "</tr>";
-
-                                }
-                                ?>
-
-                            </table>
-
-                                <?php
-                }
-                                ?>
 
 				</div>
             </div>
 
-        </div>
+                </div>
+
+
+
 
 
     
 
     <!--註腳-->
-  <?php include 'footer.php';?>
+    <?php include 'footer.php'; ?>
 
 
 </div>

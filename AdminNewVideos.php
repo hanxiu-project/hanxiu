@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js"></script>
 
-    <title>新增科判 | 管理後台</title>
+    <title>新增影音類別 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

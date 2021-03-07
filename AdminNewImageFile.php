@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js"></script>
 
-    <title>資訊管理 | 管理後台</title>
+    <title>新增照片檔案 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,16 +49,6 @@ session_start();
             <div class='wrapper'>
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
-                <?php
-                /*資料庫連結*/
-              
-                session_start();
-
-                $sql="SELECT * FROM contact ";
-                $result=mysqli_query($db_link,$sql);
-                $row=mysqli_fetch_assoc($result);
-
-                ?>
 
                 <div id="con2">
                     <div class="main">
@@ -69,26 +59,20 @@ session_start();
                                 <div class="row">
                                     <div class="col-lg-12">
 
-                                        <form name="forms" method="POST" action="">
+                                        <form name="forms" method="POST" action="" enctype="multipart/form-data">
 
-                                           
-											
                                             <div class="form-group">
-                                                <label for="content">聯絡資訊內容內容:</label>
-                                                <textarea id="content" name="content" rows="10" cols="80" ><?php echo $row[content]?></textarea>
-                                                <script>
-                                                    CKEDITOR.replace('content',{
-                                                        width:1650,height:500,
-                                                    });
-                                                </script>
+                                                <label for="title">選擇照片上傳:</label>
                                             </div>
 
-                                            
 
-                                            
+                                             <div class="form-group">
+                                                 <input type="file" name="image" class="form-control p-1 " required style="width:525px; height:50px; color:#000000; background-color:transparent" >
+                                             </div>
+
 
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning" name="post" value="發布" >
+                                                <input type="submit" name="upload" value="上傳照片" class="btn btn-warning "   style="width:200px; height:40px; color:white;" >
                                             </div>
 
                                         </form>
@@ -100,29 +84,34 @@ session_start();
                     </div>
                 </div>
 
-                        <?php
-
-                      
+                <?php
 
 
-                        $title = $_POST["title"];
-                        $content = $_POST["content"];
-                        $date = $_POST["date"];
 
 
-                        if(isset($_POST["post"]))
+                    if(isset($_POST["upload"]))
+                    {
+                        $image = $_FILES['image']['name'];
+                        $path1 = 'images/'.$image;
+                        $path2 = 'C:/AppServ/www/漢修專題/images/'.$image;
+
+                        $sql = "INSERT INTO `carousel` (id,imgname,path1,path2) values ('NULL','$image','$path1','$path2')";
+                        mysqli_query($db_link, $sql);
+
+                        if($sql)
                         {
-                           
-                           
-								 
-                                $sql="UPDATE contact SET content = '$content' ";
-                                mysqli_query($db_link, $sql);
-                                echo "<script>alert('聯絡資訊已經上傳!');location.href='AdminContactManage.php'</script>";
-                           
+                            move_uploaded_file($_FILES['image']['tmp_name'],$path2);
+                            echo "<script>alert('照片上傳成功!');location.href='AdminImageManage.php'</script>";
+
                         }
-                        mysqli_close($db_link);
-                        ?>
-                </form>
+                        else
+                        {
+                            echo "<script>alert('照片上傳失敗!');location.href='AdminNewImageFile.php'</script>";
+                        }
+                    }
+
+                mysqli_close($db_link);
+                ?>
 
             </div>
             <!-- /.container-fluid -->
@@ -133,16 +122,16 @@ session_start();
     </div>
     <!-- /#wrapper -->
 
-   <!-- jQuery -->
-<script src="js/jquery.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="js/plugins/morris/raphael.min.js"></script>
-<script src="js/plugins/morris/morris.min.js"></script>
-<script src="js/plugins/morris/morris-data.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
 
 </body>
 

@@ -327,7 +327,7 @@ table {
 					height:auto;
 					font-size:20px;
 					min-height: 100%;
-					/* border:1px solid #F00;  /*	紅色框線記得刪除*/
+					 border:1px;/* solid #F00;  /*	紅色框線記得刪除*/
 					overflow:hidden;
 					white-space: nowrap;
 					text-overflow: ellipsis;
@@ -359,11 +359,11 @@ table {
 				/* 內容 > 大標題 > 內文(表格無格線)*/
 				#content .newstitle .contentlist > table,tr,td,th{
 					height:auto;
-					overflow:hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
+					/*overflow:hidden;*/
+					/*white-space: nowrap;*/
+					/*text-overflow: ellipsis;*/
 					/*padding-left: 20px;*/
-					 /*border:1px  solid #000000;*/
+					 border:1px;  /*solid #000000;*/
 				}
 				#content .contentlist .tableforcontent {
 					padding-left: 5%;

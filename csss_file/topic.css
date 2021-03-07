@@ -18,7 +18,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-	font-family:標楷體
+	font-family:微軟正黑體!important;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

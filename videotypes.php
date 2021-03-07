@@ -48,27 +48,6 @@
     <div id="content">
         <div class="newstitle">
 
-            
-                <?php
-                if (isset($_GET["tid"]))
-                {
-                $tid = $_GET["tid"];
-                $sqltype = "SELECT * FROM `videotypes` where `t_id` = $tid";
-                $resulttype = mysqli_query($db_link, $sqltype);
-                $rtypename = mysqli_fetch_row($resulttype);
-                $_SESSION['rtypename']=$rtypename[1];
-                ?>
-                <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
-				</div>
-				<div class="contentlist">
-				<div class="tableforcontent">
-                <center>
-                   
-                        <br>
-                        <?php
-                        $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
-
-
             <?php
             if (isset($_GET["tid"]))
             {
@@ -81,6 +60,7 @@
             <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
         </div>
         <div class="contentlist">
+		<div class="tableforcontent">
             <center>
                 <div class="table" width="80%" border="10px" valign="top">
                     <br>
@@ -103,13 +83,6 @@
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table  width=1000 style='font-size:24px;background-color: #f5f3f0'>";
 
-
-                        echo "<form name='form1' method='POST' action=''>";
-                        echo "<table  width=600px style=font-size:24px; valign='top'>";
-                        echo "<tr align=center>";
-                        echo "</tr>";
-                        
-
                     while ($videos = mysqli_fetch_assoc($resultvideos)) {
                         echo "<tr >";
                         echo "<td width='330' height=200 style='vertical-aligntext-top;'><iframe width=324 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
@@ -117,7 +90,6 @@
                         echo "</tr>";
                     }
                     echo "</table>";
-
 
                     }
                     else                                            //還沒選類別時
@@ -168,17 +140,12 @@
                         ?>
 
 
-
-				</div>
-            </div>
-
                 </div>
 
 
+		</div>
 
-
-
-    
+    </div>
 
     <!--註腳-->
     <?php include 'footer.php'; ?>

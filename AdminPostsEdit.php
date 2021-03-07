@@ -110,94 +110,19 @@
                 </div>
 
                 <?php
-                if(isset($_POST["type"]))
-                {
-                    $type = $_POST["type"];
-                    switch ($type){
-                        case '本地分':
-                            $type_id = 1;
-                            break;
-
-                        case '攝決擇分':
-                            $type_id = 2;
-                            break;
-
-                        case '攝釋分':
-                            $type_id = 3;
-                            break;
-
-                        case '攝異門分':
-                            $type_id = 4;
-                            break;
-
-                        case '攝事分':
-                            $type_id = 5;
-                            break;
-
-                    }
-
-                }
-
-                $number = $_POST["number"];
-                $title = $_POST["title"];
-                $filename = $_POST["filename"];
-                $content = $_POST["content"];
-                $date = $_POST["date"];
-
-
-
-
-                $sql_update_t_id = "UPDATE scripture SET t_id = '$type_id' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_number = "UPDATE scripture SET number = '$number' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_title = "UPDATE scripture SET title = '$title' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_filename = "UPDATE scripture SET filename = '$filename' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_content = "UPDATE scripture SET content = '$content' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_date = "UPDATE scripture SET date = '$date' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 
 
                 if(isset($_POST["edit"]))
                 {
-                    //寫入檔案
-                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","w+") or die("Unable to open file!");
-                    $txt = $content;
-                    fwrite($myfile,$txt);
-                    fclose($myfile);
-
-
-                    if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["filename"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
+                    if($_POST["title"] == NULL || $_POST["content"] == NULL )
                     {
-                        mysqli_query($db_link, $sql_update_all);
-                        echo "<script>alert('經文修改完成!');location.href='AdminScriptureManage.php'</script>";
+                        echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
                     }
-
-                    if($_POST["number"]!=null)
+                    else
                     {
-                        mysqli_query($db_link, $sql_update_number);
-                        echo "<script>alert('經文修改完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["title"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_title);
-                        echo "<script>alert('經文修改完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["filename"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_filename);
-                        echo "<script>alert('經文修改完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["content"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_content);
-                        echo "<script>alert('經文修改完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["date"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_date);
-                        echo "<script>alert('經文修改完成!');location.href='AdminScriptureManage.php'</script>";
+                        $sqledit = "UPDATE posts SET `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                        mysqli_query($db_link, $sqledit);
+                        echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
                     }
 
                 }

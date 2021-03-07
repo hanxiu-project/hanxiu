@@ -60,10 +60,10 @@
                             <a href="AdminScriptureSave.php"><i class="fa fa-fw fa-user"></i>暫存講記總覽</a>
                         </li>
 					    <li>
-                            <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>建立新講記</a>
+                            <a href="AdminScripturePost.php"><i class="fa fa-fw fa-user"></i>新增新講記</a>
                         </li>
                         <li>
-                            <a href="ScriptureManageNewType.php"><i class="fa fa-fw fa-user"></i>建立新講記類別</a>
+                            <a href="ScriptureManageNewType.php"><i class="fa fa-fw fa-user"></i>新增新講記類別</a>
                         </li>
                     </ul>
                 </li>
@@ -87,7 +87,7 @@
                             <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 公告管理</a>
                         </li>
 					    <li>
-                            <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>建立公告</a>
+                            <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>新增公告</a>
                         </li>
                     </ul>
                 </li>
@@ -99,7 +99,7 @@
                             <a href="DonateView.php"><i class="fa fa-fw fa-user"></i>捐獻總覽</a>
                         </li>
 					    <li>
-                            <a href="Donatemanage.php"><i class="fa fa-fw fa-user"></i>增加捐獻</a>
+                            <a href="Donatemanage.php"><i class="fa fa-fw fa-user"></i>新增捐獻</a>
                         </li>
                     </ul>
                 </li>
@@ -136,7 +136,7 @@
                 <a href="AdminKepanManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>科判管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總攬</a>
+                            <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總覽</a>
                         </li>
                         <li>
                             <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判</a>
@@ -163,7 +163,7 @@
                             <a href="AdminImageManage.php"><i class="fa fa-fw fa-user"></i>照片總覽</a>
                         </li>
                         <li>
-                            <a href="AdminNewImageFile.php"><i class="fa fa-fw fa-user"></i>新增照片</a>
+                            <a href="AdminNewImageFile.php"><i class="fa fa-fw fa-user"></i>新增照片檔案</a>
                         </li>
                     </ul>
                 </li>

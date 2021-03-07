@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>公告管理 | 管理後台</title>
+    <title>影音總覽 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -92,7 +92,7 @@
                     if (isset($_POST["$row2[v_id]+1"])) {
                         $_SESSION["edit_v_id"]=$row2["v_id"];
                         echo "<script langauge = 'javascript' type='text/javascript'>";
-                        echo "window.location.href = 'AdminPostsEdit.php'";
+                        echo "window.location.href = 'AdminVideoEdit.php'";
                         echo "</script>";
                     }
 

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js"></script>
 
-    <title>新增公告 | 管理後台</title>
+    <title>新增影音檔案 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@ session_start();
                                         <form name="forms" method="POST" action="">
 
                                             <div class="form-group">
-                                                <label for="type">法音類別:</label>
+                                                <label for="type">影音類別:</label>
                                                 <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
                                                     <?php
                                                     while ($row = $resulttype->fetch_assoc())

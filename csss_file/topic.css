@@ -66,11 +66,11 @@ table {
 				/*頁首*/
                 #header {
 						width :100%;
-
+						
                         background-color: #C7B897;
-
-
-                        height:100px;
+						font-weight:bold;
+						color:#612E04;
+                        height:130px;
 
 
                         text-align: center;                   
@@ -83,11 +83,11 @@ table {
 				/*包住固定不動的Header*/
 				#header2 {
 						width :100%;
-
+						
                         background-color:  #6F6045;
 
 
-                        height: 100px;
+                        height: 120px;
 
 
                         text-align: center;
@@ -225,7 +225,7 @@ table {
 				nav a {
 				color: inherit; /* 移除超連結顏色 */
 				display: block; /* 讓 <a> 填滿 <li> */
-				font-size: 1.2rem;
+				font-size:20px;
 				padding: 10px;
 				text-decoration: none;  /* 移除超連結底線 */
 					}

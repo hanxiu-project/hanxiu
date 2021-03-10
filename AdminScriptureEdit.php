@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js"></script>
 
-    <title>新增經文 | 管理後台</title>
+    <title>新增講記 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -141,13 +141,13 @@
 
 
                                             <div class="form-group">
-                                                <label for="title">經文標題:</label>
+                                                <label for="title">講記標題:</label>
                                                 <input id="title" name="title" type="text"  value="<?php echo $row['title']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
 
                                             <div class="form-group">
-                                                <label for="content">經文內容:</label>
+                                                <label for="content">講記內容:</label>
                                                 <textarea id="content" name="content" rows="10" cols="80"><?php echo  $str?></textarea>
                                                 <script>
                                                     CKEDITOR.replace('content',{
@@ -189,8 +189,10 @@
                $filename = $_POST["number"].".txt";
                 $content = $_POST["content"];
                 $date = $_POST["date"];
+
                 $nnewupdate=$_SESSION["updatename"];
 				
+
 
 
 				
@@ -206,7 +208,10 @@
 				$sql_update_save = "UPDATE scripture SET save = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $sql_update_newupdate = "UPDATE scripture SET newupdate = '$nnewupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				
-                    
+
+
+
+
                    
 					/*$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
 					$checkresult= mysqli_query($db_link, $sql_namecheck);
@@ -221,6 +226,7 @@
 
                         if($_POST["number"].".txt" != $oldfilename)           //若檔名與之前的不同  單改檔名
                         {
+
                             $sql3 = "SELECT * FROM scripture ";
                             $result3=mysqli_query($db_link,$sql3);
 
@@ -273,6 +279,7 @@
                         mysqli_query($db_link, $sql_update_all);
                         mysqli_query($db_link,$sql_update_newupdate);
                         echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
+
 						}
                         else                    //檔名相同             沒改類別沒改檔名
                         {

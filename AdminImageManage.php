@@ -36,13 +36,9 @@
 <form name="forms" method="post" action="">
 
     <div id="wrapper">
-        <?php include 'admin.php';?>
-
-        <?php
+        <?php include 'admin.php';
         /*資料庫連結*/
-
         session_start();
-
         ?>
 
 
@@ -55,8 +51,6 @@
                     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                     <?php
-
-
                     mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
                     $sql = "SELECT * FROM carousel";
@@ -76,13 +70,10 @@
                         echo "<td>$row[uploadtime]</td>";
                         ?>
                         <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這張照片?')"></td>
-
                         <?php
                         echo "</tr>";
                     }
                     echo "</table>";
-
-
 
 
                     $sql2 = "SELECT * FROM carousel";
@@ -97,24 +88,12 @@
                             mysqli_query($db_link, $sql_delete);
                             unlink($row2["path2"]);
                             echo "<script>alert('成功刪除!');location.href='AdminImageManage.php'</script>";
-
-
                         }
                     }
-
                     mysqli_close($db_link);
-
-
                     ?>
-
-
-
-
-
-
                 </div>
                 <!-- /#page-wrapper -->
-
             </div>
             <!-- /#wrapper -->
 

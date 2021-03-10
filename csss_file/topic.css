@@ -302,13 +302,13 @@ table {
 
 				/* 內容 > 大標題 > 內文(表格灰格線)*/
 				#content .newstitle .tablelist > tr,td,th{
-					border:0px  solid #cccccc;
+					/*border:1px  solid #cccccc;*/
 				}
 
 				/* 內容 > 大標題 > 內文(表格無格線)*/
 				#content .newstitle .contentlist > table,tr,td,th{
 					/*padding-left: 20px;*/
-					/* border:1px  solid #000000  ;*/
+					 /*border:1px  solid #cccccc  ;*/
 					  border-collapse: collapse;
 					border-spacing: 0;
 				}

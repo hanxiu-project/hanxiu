@@ -4,10 +4,9 @@
 
     <title>首頁</title>
 
-
-
+	<link href="csss_file/topic.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="csss_file/topic.css?ts=<?= filemtime('topic.css?') ?>" rel="stylesheet" type="text/css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -155,18 +154,19 @@
             ?>
             <center>
                 <div class="contentlist" align="center">
-                    <div class="table" align="center">
+				<div class="tableforcontent" align="center">
+                    
                         <table width="60%" style="border:3px #000000  solid;">
-                            <tr height="40px" style="font-weight:bold" bgcolor="#bfbfbf" align="center">
-                                <th width="20%">發佈日期</th>
-                                <th width="80%">標題內文</th>
+                            <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
+                                <th width="30%">發佈日期</th>
+                                <th width="70%">標題內文</th>
                             </tr>
 							
                             <?php
                             while ($row = $result->fetch_assoc()) {
 									$date1 = strtotime($getDate);
 									$date2 = strtotime($row[date]);
-									$days = ceil(abs($date1 - $date2)/86400);
+									$days = (($date1 - $date2)/86400);
 									
 								if($days>$row[newday]){
 									$sqlii="update `posts` set old='1'  where `p_id`='$row[p_id]'";
@@ -185,22 +185,21 @@
                             mysqli_close($db_link);
                             ?>
 
-                        </table>
-                    </div>
+                   
             </center>
 
         </div>
     </div>
-
-
 </div>
+
+
 
 <!--註腳-->
-<?php include 'footer.php'; ?>
 
 
 </div>
-
+<?php include 'footer.php'; ?>
+</div>
 </body>
 
 

@@ -82,9 +82,7 @@
 
     <?php
     /*資料庫連結*/
-
     session_start();
-
     ?>
 
     <!--Body-->
@@ -96,7 +94,7 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
                 <div class="container">
                     <a href="javascript:void(0);" class="reorder_link" id="saveReorder">排序照片</a>
-                    <div id="reorderHelper" class="light_box" style="display:none;">1. 拉動照片來排序.<br>2. 當完成時點擊 '儲存排序' .</div>
+                    <div id="reorderHelper" class="light_box" style="display:none;">1. 拉動照片來排序.<br>2. 當完成時點擊 '儲存更動' .</div>
                     <div class="gallery">
                         <ul class="reorder_ul reorder-photos-list">
                             <?php

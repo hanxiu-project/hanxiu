@@ -3,7 +3,7 @@
 
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link  rel="stylesheet" type="text/css" href="./csss_file/topic.css?ts=<?=filemtime('topic.css?')?>">
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -23,7 +23,8 @@ mysqli_query($db_link, 'SET CHARACTER SET utf8');
 //載入資料庫連線與啟用session
 //include("sql.php");
 session_start();
-
+# 設定時區
+			
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
@@ -115,7 +116,7 @@ session_start();
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=?>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
-                        <li><a href="news.php">最新公告</a></li>
+                        <li><a href="news.php">歷史公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
@@ -131,7 +132,7 @@ session_start();
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=?>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
-                        <li><a href="news.php">最新公告</a></li>
+                        <li><a href="news.php">歷史公告</a></li>
                         <li><a href="Memberdonates.php">查看捐獻</a></li>
                         <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>

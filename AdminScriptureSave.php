@@ -44,11 +44,11 @@
               
 				 session_start();
 	?>
-    <!--建立新經文-->
+    <!--建立新講記-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
-           <a href="AdminScripturePost.php" class="btn btn-success  " style="left">建立新經文</a>
-		   <a href="ScriptureManageNewType.php" class="btn btn-success  " style="left">建立新經文類別</a>
+           <a href="AdminScripturePost.php" class="btn btn-success  " style="left">建立新講記</a>
+		   <a href="ScriptureManageNewType.php" class="btn btn-success  " style="left">建立新講記類別</a>
 		  
 		   <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:white">
 		   <option>請選擇類別</option>
@@ -61,7 +61,7 @@
 			}?>               `
              </select> 
 			 
-             <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看經文類別" >
+             <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看講記類別" >
             
 			 
         </div>
@@ -91,8 +91,9 @@
                 echo "<tr align=center>";
                 echo "<td>類別名稱</td>";
                 echo "<td>卷號</td>";
-                echo "<td>經文標題</td>";
+                echo "<td>講記標題</td>";
                 echo "<td>發布日期</td>";
+				echo "<td>最新修改管理員</td>";
                 echo "<td></td>";
                 echo "</tr>";
 				if (isset($_POST["gotype"])) {
@@ -106,10 +107,11 @@
                     echo "<td>$row[number]</td>";
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
+					echo "<td>$row[newupdate]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇經文?')"></td>
+					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')"></td>
                     
 					<?php
                     echo "</tr>";
@@ -123,10 +125,11 @@
                     echo "<td>$rowt[number]</td>";
                     echo "<td>$rowt[title]</td>";
                     echo "<td>$rowt[date]</td>";
+					echo "<td>$row[newupdate]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$rowt[s_id]+1' value='編輯'></td>";
                    
 					 ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$rowt[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇經文?')"></td>
+					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$rowt[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')"></td>
                     
 					<?php
                     echo "</tr>";
@@ -142,11 +145,12 @@
                     echo "<td>$row[number]</td>";
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
+					echo "<td>$row[newupdate]</td>";
 					 
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇經文?')"></td>
+					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')"></td>
                     
 					<?php
                     echo "</tr>";

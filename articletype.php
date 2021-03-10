@@ -69,7 +69,7 @@
                     <table width="80%" border="1px">
                         <br>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `scripture` where `t_id` = $tid";
+                        $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
 
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
@@ -83,7 +83,7 @@
                         for($i=1;$i<=$rows;$i++)
                             {
                                 $start=($i-1)*10;
-                                $sqlatcnum10 = "SELECT * FROM `scripture` where `t_id` = $tid Limit $start , $per";
+                                $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
                                 $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
                                 echo "<tr height=50px>";
                                 while ($script = mysqli_fetch_assoc($resultnum10)) {
@@ -107,7 +107,7 @@
                         {
                         ?>
 
-                        <h2>｜經文類別 </h2>
+                        <h2>｜講記類別 </h2>
 
                         <br><br>
 

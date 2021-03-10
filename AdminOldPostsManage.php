@@ -60,7 +60,7 @@
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql = "SELECT * FROM posts where old='0' order by date DESC";
+                $sql = "SELECT * FROM posts where old='1' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 				
                 echo "<form name='form1' method='POST' action=''>";
@@ -74,9 +74,13 @@
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
-					
+					if($row[old]=='0'){
+						 echo "<td>$row[title]";
+						 echo "&nbsp&nbsp&nbsp";
+						echo "<font size=+2 face=微軟正黑體 color=red>New!</font></td>";
+					}else{
 						 echo "<td>$row[title]</td>";
-					
+					}
                    
                     echo "<td>$row[date]</td>";
 					 echo "<td>$row[newday]</td>";

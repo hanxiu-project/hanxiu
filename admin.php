@@ -84,7 +84,10 @@
                 <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 公告管理</a>
+                            <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 新公告管理</a>
+                        </li>
+						 <li>
+                            <a href="AdminOldPostsManage.php"><i class="fa fa-fw fa-edit"></i> 歷史公告管理</a>
                         </li>
 					    <li>
                             <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>新增公告</a>
@@ -114,6 +117,7 @@
 					    <li>
                             <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音類別</a>
                         </li>
+						
                         <li>
                             <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
                         </li>

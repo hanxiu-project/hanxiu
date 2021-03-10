@@ -53,7 +53,7 @@ session_start();
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <div class="contentlist">
+           
                 <?php
 
                 $db_ip="127.0.0.1";
@@ -62,11 +62,13 @@ session_start();
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
 
-                $sql="SELECT * FROM posts";
+                $sql="SELECT * FROM posts order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
 				<h2>｜最新公告</h2>
+				</div>
+				 <div class="contentlist">
 				<div class="table" align="center">
                 <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
                     <tr align="center">
@@ -89,7 +91,7 @@ session_start();
 			</div>
             </div>
 
-        </div>
+        
 
 
     </div>

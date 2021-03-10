@@ -125,7 +125,7 @@
                         <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總覽</a>
                     </li>
                     <li>
-                        <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判</a>
+                        <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判類別</a>
                     </li>
                     <li>
                         <a href="AdminNewKepanFile.php"><i class="fa fa-fw fa-user"></i>新增科判檔案</a>

@@ -93,12 +93,12 @@
                                 <?php
                                 $_SESSION["tid"] = "$rtit[0]";
 
-
+                                $typename = $rtit[2];
                                 $filename = $rtit[5];
                                 $str = "";
                                 //判斷是否有該檔案
-                                if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/$filename")) {
-                                    $file = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename", "r");
+                                if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/$typename/$filename")) {
+                                    $file = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$typename/$filename", "r");
                                     if ($file != NULL) {
                                         //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
                                         while (!feof($file)) {

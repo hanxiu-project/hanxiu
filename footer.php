@@ -30,7 +30,7 @@ session_start();
 
 
    
-  <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
+  <footer class="footer">版權所有 轉載請註明出處  </footer>
 
    
 

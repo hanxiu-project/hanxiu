@@ -189,14 +189,15 @@
 
                 $number = $_POST["number"];
                 $title = $_POST["title"];
-                $filename = $_POST["filename"];
+               $filename = $_POST["filename"];
                 $content = $_POST["content"];
                 $date = $_POST["date"];
 				
 
 
 				
-				$sql_update_all = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date' WHERE scripture.s_id = $_SESSION[edit_s_id]";
+				$sql_update_all = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
+				$sql_update_all_save = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '1' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $sql_update_t_id = "UPDATE scripture SET t_id = '$_POST[type]' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				$sql_update_typename = "UPDATE scripture SET typename = '$inputtype' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $sql_update_number = "UPDATE scripture SET number = '$number' WHERE scripture.s_id = $_SESSION[edit_s_id]";
@@ -205,7 +206,13 @@
                 $sql_update_content = "UPDATE scripture SET content = '$content' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $sql_update_date = "UPDATE scripture SET date = '$date' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				$sql_update_save = "UPDATE scripture SET save = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-
+				
+                    
+                   
+					$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
+					$checkresult= mysqli_query($db_link, $sql_namecheck);
+					$rowcheck=mysqli_fetch_assoc($checkresult);
+					$filenamecheck=$rowcheck["filename"];
 
                 if(isset($_POST["edit"]))
                 {
@@ -218,39 +225,17 @@
 
                     if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["filename"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
                     {
+						  if($_POST['filename']!=$row['filename'] && $filename == $filenamecheck)
+                        {
+                            echo "<script>alert('已有一樣的檔名');location.href='AdminScriptureEdit.php'</script>";
+                        }else
+						{
                         mysqli_query($db_link, $sql_update_all);
                         echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
+						}
                     }
 
-                    if($_POST["number"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_number);
-                        echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["title"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_title);
-                        echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["filename"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_filename);
-                        echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["content"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_content);
-                        echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["date"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_save);
-                        echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
+                   
 
                 }
 				  if(isset($_POST["save"]))
@@ -266,39 +251,19 @@
 
                     if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["filename"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
                     {
-                        mysqli_query($db_link, $sql_update_all);
+						  if($_POST['filename']!=$row['filename'] && $filename == $filenamecheck)
+                        {
+                          echo "<script>alert('已有一樣的檔名');location.href='AdminScriptureEdit.php'</script>";
+                        }
+						else
+						{
+                        mysqli_query($db_link, $sql_update_all_save);
                         echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+						}
                     }
 
-                    if($_POST["number"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_number);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["title"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_title);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["filename"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_filename);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["content"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_content);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
-
-                    if($_POST["date"]!=null)
-                    {
-                        mysqli_query($db_link, $sql_update_date);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
-                    }
+                   
+					
 					 
 
                            

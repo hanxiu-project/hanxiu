@@ -226,7 +226,7 @@
             $db_user = "root";
             $db_pwd = "123456789";
             $db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-            $sql = "SELECT * FROM `members`";
+            $sql = "SELECT * FROM `members` where `account`='$_POST[account]'";
             mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
             $result = mysqli_query($db_link, $sql) or die("查詢失敗");
             $row = mysqli_fetch_assoc($result);

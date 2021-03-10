@@ -124,9 +124,10 @@
                                                 </div>
 
                                                 <div class="form-group">
+												<input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
                                                     <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
                                                 
-                                                    <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
+                                                    
                                                 </div>
 
                                             </form>
@@ -145,10 +146,13 @@
                     $title = $_POST["title"];
                     $filename = $_POST["filename"].".txt";
                     $content = $_POST["content"];
-					$sql_namecheck = "SELECT * FROM scripture  ";
-					$checkresult= mysqli_query($db_link,$sql_namecheck);
+					$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
+					$checkresult= mysqli_query($db_link, $sql_namecheck);
 					$rowcheck=mysqli_fetch_assoc($checkresult);
-					$filenamecheck=$rowcheck[filename];
+					$filenamecheck=$rowcheck["filename"];
+				
+					
+				
 					if($_POST["date"]==null){
 						$date=$getDate;
 					}else{
@@ -165,7 +169,7 @@
 							
                         }
 						 
-                        else if($filenamecheck==$_POST["filename"])
+                        else if($filename == $filenamecheck)
                         {
                             echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
                         }
@@ -190,7 +194,7 @@
                         {
                             echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
                         }
-						  else if($filenamecheck==$_POST["filename"])
+						  else if($filename == $filenamecheck)
                         {
                             echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
                         }

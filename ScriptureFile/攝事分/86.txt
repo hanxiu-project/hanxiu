@@ -1,0 +1,233 @@
+<form><strong>瑜伽師地論科句披尋記卷第八十六</strong></form>
+
+<p><span style="font-size:medium"><span style="color:#000000">　　　　　　　　　　　　　　　　　　　　　　　　彌勒菩薩說</span></span><br />
+<a name="86p6485"></a><span style="font-size:medium"><span style="color:#000000">　　　　　　　　　　　　　　　　　　　　　　　　唐三藏沙門玄奘奉詔譯</span></span><br />
+<span style="font-size:medium"><span style="color:#000000">　　　　　　　　　　　　　　　　　　　　　　　　韓清淨科記</span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong>攝事分中契經事行擇攝第一之二</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　卷86延續了卷85，仍為〈攝事分〉中解釋《雜阿含經》的部分，其實，從卷85至88，皆是四種擇攝的第一種：行擇攝（五蘊諸行決擇所攝）的範圍，而本卷屬於行擇攝十一個別頌當中的第二部分，內容含攝了「相行攝」與「速通攝」二個別頌。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　關於行擇攝的所有嗢柁南，請參考（連結：<a href="http://mahabodhi.org/yoga/cb/C85-01.htm">〈攝事分〉四擇攝之「行擇攝」嗢柁南</a>）。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>辛三、想行攝2　壬一、頌標列</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科想行攝，此為「行擇攝」中的第三個別頌，說明想行等所攝的諸行，分二科；第一科頌標列，以偈頌標示列舉出來。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>復次，嗢柁南曰：</strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong>　想行愚相眼勝利　九智無癡與勝進</strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong>　我見差別三相行　法總等品三後廣</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　又，若以偈頌標出想行所攝的內容，可分為十部分，即：想行、愚相、眼、勝利、九智、無癡、勝進、我見差別、三相行、及三種法嗢柁南，依此分為十科，於偈頌後會有長行詳細、廣泛的說明。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　其中，想行、愚相、眼、勝利，是解釋《雜阿含經》的第36經；九種智慧是解釋37、38二經；無癡是解釋〈蘊相應〉中的第39及40經，第39～41經說的是明與無明；勝進是解釋第42經；本論又以「我見差別」來解釋第44經；三相行是在解釋第43經；法嗢柁南則是以三解脫門解釋第45經。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>壬二、長行釋10　癸一、想行2　子一、標列</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科長行釋，以長行解釋，分十科；第一科想行，解釋想行所攝的法性，又分二科；第一科標列，標示列舉出來。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><a name="69298:65480"></a><a name="39226:65480"></a><a name="3296:65480"></a>於諸行中，修無常想行有五種。謂由無常性、無恆性、非久住性、不可保性、變壞法性故。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　在有為法的色受想行識中，對於內身、外事應修無常想，其中可由五個方向作觀察，包括思惟它是無常、無恆、非久住、不可保，並且是變壞法性的。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子二、隨釋</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科隨釋，隨著論文解釋五種法性的體相。</span></span></div>
+
+<p><a name="86p6486"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><a name="22171:65483"></a><a name="15480:65483"></a><a name="4462:65483"></a>此中剎那剎那壞，故無常。自體繫屬有限住壽，故無恆。外事劫後決定無住，故非久住。壽量未滿，容被緣壞，非時而死，故不可保。乃至爾所時住，於其中間不定安樂，故變壞法。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　無論是自己的身體或別人的身體，也無論是過去、現在、未來、內外、粗細、遠近，都一樣是剎那剎那在變壞，是無常的；如果它能常住不變，那我們就不會有老死。儘管這副身體本來很健康，但它終究會生病，更遑論顏色、氣力的衰損等等，皆在自己難以察覺的剎那之間一分一秒的變異。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　剎那變化不容易觀察，那若就著一期生命而言，每個人的壽命也都有限度，不論壽量是七十年、八十年、九十年、一百年，甚至一百五十年等，總之都是不可能恆久的，終有一日要面臨死亡，所以是無恆的。這是以時間上來分別無常與無恆。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　接著，約外面的器世間而言，山河大地也並非是長久安住的，它有成住壞空，壞劫以後器世間就沒有了。或者，於日常生活中也不難觀察到，這個世間確實會變化的；例如下個大雨，土石流一沖，田園、家宅通通無住了，昔日情景猶如過往雲煙一般，不復存在，所以這個器世間也是無法久住的，山河大地也不會永遠的存在。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　另外，這個身體縱使壽量尚未盡滿，例如，本來可以活到八十歲，但是還沒有到八十，就有意外的因緣出現，也會導致非時而死，不應該死而死，所以可知生命也是不可保的。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　最後，約樂受來說，它也是變壞法。不論能活多久，在這當中也不會每天都很安定快樂，有時這裡痛、那裡痛，有時是心情不好，有憂悲苦惱，這便是一種變壞法。若是能修無常想，對於自身的色受想行識就能漸離愛著，懂得要趕快修習善法，能夠究竟出離三界，解決問題，乃至能夠成就無上菩提。若約聲聞人而言，就是要將愛、見煩惱斷除，才不必再有這個身體。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　以上，點出了有情的身體有無常、無恆、非久住、不可保、變壞法性的五個相貌，一旦有五蘊就必然會有這些苦。這是以五種無常想修習五蘊諸行。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>癸二、愚相2　子一、舉愚想3　丑一、標</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科愚相，為「行擇攝」第三個別頌（想行攝）中，第一句「想行愚相眼勝利」的「愚相」，用以解釋愚癡的相貌，分二科；第一科舉愚想，舉出愚癡無聞凡夫的想法，又分三科；第一科標，標出三種。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>復次，愚夫略有三種愚夫之相。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　其次，彌勒菩薩開示，愚癡的凡夫約略來說，有三種愚夫的相貌。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑二、徵</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科徵，提問。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>何等為三？</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　是哪三種相貌？</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑三、釋2　寅一、舉謂己勝</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科釋，解釋，分二科；第一科舉謂己勝，舉出愚夫總是認為自己比他人殊勝。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>謂諸愚夫，於一切行如上所說五無常性不能思惟；於非真實勝劣性中，分別勝劣，稱量自他，謂己為勝。是名第一愚夫之相。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　所謂的愚夫，因為還有我執，所以不能思惟色受想行識上，有如上所說的五種無常性，包括：不能了解色受想行識是無常、無恆、非久住、不可保、變壞法的。因此，往往總是在假安立、虛妄不真實的勝劣性之中，不斷的分別勝劣，就這樣拿著一把尺，衡量著自己及他人，進而認為自己比較殊勝，這是第一種愚夫之相。殊不知，這是由於我執而有優越感，就算此刻的諸根強盛，但因為沒有真實的我，又有誰優、誰勝、誰劣？色受想行識也是幻化的，並非是真實有我的，無明大夢一場，何必作這種比較。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong>《披》於非真實勝劣性中者：諸行勝劣，唯是相待假立差別，故非真實。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　這一切有為法的殊勝或下劣，都是互相觀待而假立的差別，都不是真實的。例如，若自認為是聰明的，但若與更聰明的人相比，自己就是笨的。反之，若感覺自己笨，但相較於更笨的人來說，自己又是較為聰明的。這便是一種相對觀待的假立差別，事實上，沒有誰真實的聰明或真實的笨，因為五蘊是因緣所生無常變化，只是暫時的相待假立而已；其實聰明的角度有很多，有的人在這方面聰明，那方面就笨。每個人聰明的地方不同，端看是就哪一點而言，所以互相的比較，也都是相待假立差別，並不是真實的。如果將它當真，還依此洋洋得意，便是愚夫之相。然而無始以來，凡愚都是這樣分別較量，強爭出頭，若不能值遇佛法，也就這麼毫無止息的持續下去，難有醒覺之日。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>寅二、例謂等劣</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科例謂等劣，例說自認己等、己劣的道理亦爾。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>如謂己勝，謂等、謂劣，廣說亦爾。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　如上所說，認為自己比較殊勝，其餘情況的道理也是如此，包括認為他人跟自己差不多，是相等的，或認為自己輸他人很多，是下劣的。其實如果不知道我是不真實的，就是一種愚夫的相貌。都是因為有我執，而生起這些比較差別，再依分別自他而生起許多煩惱，也就一直無法平等。</span></span></div>
+
+<p><a name="86p6487"></a><span style="font-size:medium"><span style="color:darkred"><strong>子二、例相違</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科例相違，例說相違的智者之相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>與此相違，當知智者亦有三種智者之相。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　與上所說的三種愚相相違，有智慧的人，也有三種智慧之相。智者知道所謂的勝、等、劣都是相待假立所生的差別，它並不是真實的。如果在這種領域差一點，那麼應使因緣具足，多努力一些，也能彌補這種缺失，所以沒有人真實的勝，也沒有誰真實的等、或劣。有智慧的人因為能明白無我、無我所，也不會作無謂的比較。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>癸三、眼2　子一、標列</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科眼，是「行擇攝」第三個別頌（想行攝）中，第一句「想行愚相眼勝利」的「眼」，用以解釋眼所攝的諸行相，分二科；第一科標列，標示列舉出來。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>復次，由二種相，當知聖者慧眼清淨。謂由遠塵及離垢故。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　其次，由二種相貌，應當能夠知道聖人有清淨的慧眼。眼有肉眼、天眼、慧眼、法眼、佛眼，此處介紹的是慧眼。智慧之眼清淨了，是由於已經遠塵離垢的緣故。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　如《雜阿含經》卷35，第30經說：「遠塵離垢，得法眼淨。」行者緣四諦十六行相修習止觀，通達五蘊無常、苦、空無、我的真實義，證入聖諦現觀，成就根本無分別智，轉凡成聖，獲得聖慧眼，於諸法中，正法眼生，名遠塵離垢。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　聲聞行者入見道證四諦十六行相智，由八種法忍能遠塵，永斷一切煩惱塵，由八種法智能離垢，永斷一切煩惱垢。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　又，〈攝異門分〉卷83說：復次遠塵離垢者：塵，謂已生未究竟智，能障現觀有間無間我慢現轉；垢，謂彼品，及見斷品所有麤重，令永無故；名遠塵離垢。又復塵者：所謂我慢、及見所斷一切煩惱。垢，謂二品所有麤重。於諸法中者：謂於自相共相所住法中。言法眼者：謂如實現證唯有法慧。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　下文又以二種面向解釋遠塵離垢。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子二、隨釋2　丑一、約纏及隨眠辨2　寅一、遠塵</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科隨釋，解釋遠塵離垢的差別義，分二科；第一科約纏及隨眠辨，以煩惱的現行及種子辨別，又分二科；第一科遠塵，解釋遠塵的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>由見所斷諸煩惱纏得離繫故，名為遠塵。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　入見道位的行者，斷除見道位所斷分別起的煩惱。這類煩惱主要是由於自己的見地、想法而引起的煩惱，主要是因為執著色受想行識是我或是我所，並依此衍生的三界分別起的各種煩惱。若能遠離分別起的煩惱現行，遠離這種煩惱的繫縛，名為遠塵。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>寅二、離垢</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科離垢，解釋離垢的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>由彼隨眠得離繫故，說名離垢。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　這是再進一步，由於行者能遠離煩惱種子的繫縛，連微細的煩惱種子也沒有了，稱為離垢。遠塵的塵若如粗的灰塵，垢便是更細微的垢染，因為離垢是指斷煩惱種子。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　以上是約煩惱的現行及種子而言。下面再約我慢及其他的煩惱來作分別。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑二、約慢及餘煩惱辨2　寅一、遠塵</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科約慢及餘煩惱辨，約分別起的、麤的慢及餘煩惱辨別，分二科；第一科遠塵，解釋遠塵的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>又現觀時，有麤我慢隨入作意間無間轉，若遍了知所取、能取、所緣平等，彼即斷滅；彼斷滅故，說名遠塵。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　行者在奢摩他中修現觀，觀察色受想行識無我、無我所時，有麤的我慢現行，例如：只有我能修這種觀，別人不能！這便是有麤的我慢參雜在作意之中。本來修的毘鉢舍那，忽然有意無意的有我生起，因而覺得高傲。這時，我慢是有間斷的、或無間斷的生起。如果行者能普遍的了知所取的色受想行識無我、無我所，以此為所緣境，包括能取的這一念心也是無我、我所的，如此能取與所取平等，我慢就不會再生起。由於遠離我慢的煩惱現行，名為遠塵。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>寅二、離垢</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科離垢，說明離垢的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>一切見道所斷煩惱隨眠斷故，說名離垢。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　如果將煩惱的現行斷除，繼續修習，進入止觀雙運，將分別起的三界的112種見道所斷的煩惱種子斷除，才說名離垢。</span></span></div>
+
+<p><a name="86p6488"></a><span style="font-size:medium"><span style="color:darkred"><strong>癸四、勝利3　子一、標</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第四科勝利，為「行擇攝」第三個別頌（想行攝）中，第一句「想行愚相眼勝利」的「勝利」，用以解釋遠塵離垢所得的殊勝利益，分三科；第一科標，標出十種。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>復次，遠塵離垢，於諸法中得法眼時，當知即得十種勝利。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　其次，行者透過奢摩他、毘鉢舍那的修行，成就無漏的修慧，證得了遠塵離垢時，便遠離分別我執、分別起的煩惱現行，離垢是斷除分別起的煩惱種子，這時因得到了法眼，看透法的真實相，即五蘊的無常、苦、空、無我，是親身驗證的，所以應當知道能成就十種殊勝的利益。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子二、徵</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科徵，提問。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>何等為十？</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　是哪十種利益？</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子三、釋4　丑一、見法等4　寅一、見法</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科釋，解釋，分四科；第一科見法等，說明見法等體相，又分四科；第一科見法，說明見法的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>一者、於四聖諦已善見故，說名見法。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　一、見法時是初果，初果聖者以無漏智慧現量通達苦集滅道，如實了知苦真實是苦，集真實是集，滅真實是滅，道真實是道，稱為見法。這是十種勝利中的第一種勝利。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>寅二、得法</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科得法，說明得法的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>二者、隨獲一種沙門果故，說名得法。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　二、初果聖者將見道位分別起的煩惱種子斷除以後，得法眼淨，證得四沙門果中的初果，稱為得法。這是十種勝利中的第二種。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>寅三、知法</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科知法，說明知法的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>三者、於己所證能自了知：我今已盡所有那落迦、傍生、餓鬼，我證預流，乃至廣說。由如是故，說名知法。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　三、行者證得初果能夠自己了知：我今生已經斷除到那落迦、傍生、餓鬼的五蘊身，雖然初果還有三惡道的種子，因為到三惡道的緣不具足，不會到三惡道去。我現在證得預流無退墮法，不會再轉成凡夫了，說名知法。這是十種勝利中的第三種勝利。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong>《披》我證預流乃至廣說者：謂證預流無退墮法，及已永盡除其七生、二生、一生所餘後有所生諸行，是名廣說應知。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　我今證得預流無退墮法等：是指初果聖人，已安住聖道，已有堪能究竟苦邊證阿羅漢果，已轉凡成聖，不會再退成凡夫，是名證得預流無退墮法。又自能了知：我已永盡，除其七生、二生（二家家）、一生（不等生二家家）所餘的後有所生五蘊諸行。這即是論文所說的「廣說」，應當能夠了知。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　初果聖人所餘的後有所生諸行，詳見〈攝事分〉卷85所說。</span></span></div>
+
+<p><a name="86p6489"></a><span style="font-size:medium"><span style="color:darkred"><strong>寅四、遍堅法</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第四科遍堅法，說明遍堅法的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>四者、得四證淨，於佛法僧如實知故，名遍堅法。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　四、初果聖者得到四種證淨，以無漏智證得諦理時，對佛、法、僧寶發生無漏信，當起無漏智時，俱時而轉，隨心轉成無漏戒。對於佛、法、僧、戒這四種法，心能真實體證，內心有清淨堅固無漏的信心，不會被外人所動搖，稱為遍堅法。這是十種勝利中的第四種勝利。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑二、無惑無疑</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科無惑無疑，解釋無惑無疑的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>五者、於自所證無惑。六者、於他所證無疑。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　五、初果聖者對於自己所成就的聖道果，知苦真實是苦、集真實是集，道真實是道、滅真實是滅，已從無明大夢中醒來，親自現量證得現觀，因此於自所證沒有迷惑。這是十種勝利中的第五種勝利。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　六、初果聖者自己已經證得現觀後，對於他人所證的同類功德，也能夠知道，沒有懷疑。這是十種勝利中的第六種勝利。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑三、不藉他緣等</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科不藉他緣等，解釋不需要藉他緣等的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>七者、宣說聖諦相應教時，不藉他緣。八者、不觀他面，不看他口，於此正法毗奈耶中，一切他論所不能轉。九者、記別一切所證解脫，都無所畏。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　七、初果聖者證得根本智，於後得智演說四聖諦的教法時，不用看書看稿子，也不用從外面的善知識那裡領受佛法，因為自己已然依循聖人所走過的古仙人道，能將親身證驗到的佛法，說給他人聽。這是十種勝利中的第七種勝利。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　八、初果聖者成就了四聖諦的智慧，不用再當面拜訪求教於人，也不隨他人的舌頭轉，因為初果聖人的智慧已經跟正見相應，於佛說的法及律當中，都不會退失正信，因此一切外道的理論，絲毫無法動搖其堅固的信心。這是十種勝利中的第八種。這是十種勝利中的第八種勝利。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　九、初果聖者可以記別一切自己所證的解脫，記別也就是分別。能夠分別自己所成就的解脫：我現在解脫的是哪些煩惱，是三界分別起的112種煩惱，是解脫修惑的幾品煩惱，或者還有哪些煩惱還沒有解脫。行者由於親證諸法實相，若其他有情來難問時，內心不會悚慄驚懼，不會感到害怕，這是十種勝利中的第九種勝利。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑四、隨入聖教</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第四科隨入聖教，解釋隨入聖教的體相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>十者、由二因緣，隨入聖教，謂正世俗及第一義故。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　十、初果聖人由正世俗及第一義二種因緣，可以契入聖教。所謂正世俗就是名言能詮的教理，名為法住智；第一義則是約涅槃智來說。行者依於法住智通達苦、集、滅、道四聖諦的道理，依止法住智來修奢摩他、毗缽舍那，就能夠斷除相應的煩惱種子，就會成就涅槃智。所以，先依法住智，後得涅槃智。這是十種勝利中的第十種勝利。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　本論的想行、愚相、眼、勝利，這四大段是在解釋第36經，看到「蘊相應」的第38頁。</span></span></div>
+
+<div class="bb" style="margin-bottom:4px; margin-left:16px; margin-top:8px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><strong><span style="font-family:DFKai-SB">《雜上》第38頁：陰相應第36經；累計經數36經；大正藏（30）經<br />
+　如是我聞：一時，佛住王舍城迦蘭陀竹園。爾時、尊者舍利弗，在耆闍崛山中。時有長者子，名輸屢那，日日遊行，到耆闍崛山，詣尊者舍利弗，問訊起居已，卻坐一面。語舍利弗言：「若諸沙門、婆羅門，於無常色，變易，不安穩色，言我勝、我等、我劣，何故沙門、婆羅門作如是想而不見真實？若沙門、婆羅門，於無常，變易，不安隱受、想、行、識，而言我勝、我等、我劣，何故沙門、婆羅門作如是想而不見真實？若沙門、婆羅門，於無常色，變易，不安隱色，言我勝、我等、我劣，何所計而不見真實？於無常，變易，不安隱受、想、行、識，言我勝、我等、我劣，何所計而不見真實」？「輸屢那！於汝意云何？色為常為無常耶」？答言：「無常」。「輸屢那！若無常為是苦耶」？答云：「是苦」。「輸屢那！若無常，苦，是變易法，於意云何？聖弟子於中見色是我，異我，相在不」？答言：「不也」。「輸屢那！於意云何？受&hellip;&hellip;。想&hellip;&hellip;。行&hellip;&hellip;。識為常為無常」？答言：「無常」。「若無常是苦耶」？答言：「是苦」。「輸屢那！識若無常，苦，是變易法，於意云何？聖弟子於中見識是我，異我，相在不」？答言：「不也」。「輸屢那！當知色若過去、若未來、若現在，若內、若外，若麤、若細，若好、若醜，若遠、若近，彼一切色不是我，不異我，不相在，是名如實知。如是受&hellip;&hellip;。想&hellip;&hellip;。行&hellip;&hellip;。識，若過去、若未來、若現在，若內、若外，若麤、若細，若好、若醜，若遠、若近，彼一切識不是我，不異我，不相在，是名如實知。輸屢那！如是於色、受、想、行、識，生厭，離欲，解脫，解脫知見：我生已盡，梵行已立，所作已作，自知不受後有」。時舍利弗說是經已，長者子輸屢那遠塵，離垢，得法眼淨。時長者子輸屢那見法，得法，不由於他，於正法中得無所畏。從坐起，偏袒右肩，胡跪合掌，白舍利弗言：「我今已度。我從今日，歸依佛，歸依法，歸依僧，為優婆塞。我從今日，已盡壽命清淨歸依三寶」。時長者子輸屢那，聞舍利弗所說，歡喜踊躍，作禮而去。</span></strong></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　佛在王舍城迦蘭陀竹園這個地方住。當機眾是尊者舍利弗，在耆闍崛山中。有位長者子名輸屢那，常常遊行到耆闍崛山，來到尊者舍利弗處，問訊起居已後坐下來，輸屢那向舍利弗尊</span></span></div>

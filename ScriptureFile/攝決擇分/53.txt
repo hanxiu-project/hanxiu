@@ -1,0 +1,138 @@
+<form><strong>瑜伽師地論科句披尋記卷第五十三</strong></form>
+
+<p><span style="font-size:medium"><span style="color:#000000">　　　　　　　　　　　　　　　　　　　　　　　　彌勒菩薩說</span></span><br />
+<span style="font-size:medium"><span style="color:#000000">　　　　　　　　　　　　　　　　　　　　　　　　唐三藏沙門玄奘奉詔譯</span></span><br />
+<span style="font-size:medium"><span style="color:#000000">　　　　　　　　　　　　　　　　　　　　　　　　韓清淨科記</span></span><br />
+<a name="52p4207"></a><span style="font-size:14pt"><span style="color:darkblue"><strong>攝決擇分中五識身相應地意地之三</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　這一卷分為三部分，主要決擇：表、無表業，二種無心定；及二種無為；以及蘊善巧的自性、義、差別、次第、攝、依止等六相差別。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第一部分先決擇表、無表業。〈本地分‧有尋有伺地〉卷8，239頁的業雜染中的業自性說：若法生時，造作相起，及由彼造作相生故，身行、語行於彼後時造作而轉，稱為業自性。業的自性就是造作相，包括身業、語業及意業三種。又表現於外的稱為表業，都是以現行的思心所為體。思心所有三種：審慮思、決定思、及動發思，當思心所一現行，未到達動發思前，都稱為「意表業」，也名「思業」，若到了動發思，動身發語，由身語二業表達出來時，稱為「身業」、「語業」，也稱「思已業」。這三種表業都通於善、惡、無記三性。無表業是沒有表達出來的業，以思心所的種子為體。有律儀、不律儀、及非律儀非不律儀三種。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二部分，決擇二種無心定及二種無為，說明無想定與滅盡定二種無心定的建立、假實及下中上品差別，並分析二種無心定的勝劣差別。 接著說明虛空無為及非擇滅無為的建立、假實差別及非擇滅無為的決定、不決定差別。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三部分，決擇六善巧中的蘊善巧，說明蘊善巧的自性、蘊義、五蘊的差別相（本卷談到行蘊，識蘊差別及後面的內容在卷54）、生起等各種次第、五蘊的十六種攝（五蘊以六相：以自性、義、差別、次第、攝、依止，十個角度來解釋五蘊的色法與心法，如此稱為共十六種攝）及三種攝、色蘊與名蘊的依止處等六相差別。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>辛二、表無表業2　壬一、表業2　癸一、辨差別2　子一、徵</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科表無表業，決擇表業與無表業，分二科；第一科表業，表現於身語意上的業，又分二科；第一科辨差別，能夠用身語意表示出來的業，依思心所的變化來安立它是表業，無表業就是戒體，又分二科；第一科徵，提問。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>復次，云何表業？</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　其次，什麼稱為表業呢？</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子二、釋2　丑一、標列</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科釋，解釋表業，分二科；第一科標列，標示列出表業的種類。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>謂略有三種。一、染汙，二、善，三、無記。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　要略來說有三種表業：一、染污的惡業；二、善業，三、無記業。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑二、隨釋2　寅一、身語表業3　卯一、染汙</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科隨釋，接著解釋，分二科；第一科身語表業，身表和語表業，又分三科；第一科染汙，先明說染汙表業。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>若於身語意十不善業道，不離現行增上力故，所有身語表業，名染汙表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　由於所造作的業，能令有情感得善趣、惡趣的果報，稱為業道。若於身語意十不善業道：殺生、偷盜、邪淫、妄言、綺語、兩舌、惡口，還有貪、瞋、邪見等十個不善業道，通過身語七支的現行表達出來，就稱為染污表業。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>卯二、善</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科善，說明善表業。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>若即於彼誓受遠離，所有身語表業，名善表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　如果發誓願決定遠離十不善業道，於發願時，身口有相應的動作，即是善表業。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　有人問：是不是沒有起身語業，只要心裡這樣想，即可以說是善表業呢？答：這有二種說法，善有止善及作善。根據止善來說。如果行者這樣發願遠離惡法，不會造作身語七支的惡法，也可以說是作善表業。事實上要表達出來，應該還是要有行動，作出善事，作才是作善表業（作善），這地方沒有這麼說。若發了善心，可以說有善表業。當然有了行動，更是善表業了。</span></span></div>
+
+<p><a name="53p4208"></a><span style="font-size:14pt"><span style="color:#590000"><strong>《披》若即於彼誓受遠離等者：謂於彼身語意十種不善業道，自發誓願受戒律儀，遠離現行故，彼增上力所有身語表業，名善表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　願意受戒，遠離十種不善業道，發願後，不會有不善的行動。發願受戒的身語二業即是善表業。因為發願時，以身口表達內心的意願，是要遠離身、語、意的十不善業道，這時的身語二業是善表業。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>卯三、無記</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科無記，說明無記表業。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>若諸威儀路工巧處一分，所有身語表業，名無記表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　諸多無記心相應的行住坐臥四威儀及工巧處，這一分的身語表業，都是無記表業。威儀路，是指行住坐臥的威儀，如拿起一個杯子，或是不經意地摸摸頭、搓搓手等，這些不經意的動作，沒有善心或惡心的威儀路，是無記業。有時的威儀，也是有記別的；有些人要他作什麼，他搔搔頭，表示他不想去做，要推託。表現那種樣子是有意思的，是表業，不是無記業。這裡說威儀路的一分，是指非善心非惡心相應的威儀。工巧處是技藝，如果是有用意的去作，是有記的表業。如果沒有用心，像例行公事一樣去作，沒有特別發喜歡心，也沒有憎惡心，則是無記業。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong>《披》威儀路工巧處一分者：威儀、工巧三性可得，謂染汙、善，及與無記。今於此中唯取無記，故言一分。如下說言：若依伎樂，以染汙心發起威儀，是染汙性；若依寂靜，即是善性。若依染著發起工巧，是染汙性；若善加行所起工巧，即是善性。（<a href="http://mahabodhi.org/yoga/cb/55.htm#40835:43486">陵本五十五卷十三頁4439</a>）若中庸加行所攝威儀路及工巧處，當知是名無記一分。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　威儀路與工巧處都有善、不善、無記三性可得；可以通於染污的惡心相應；或是與善心相應；或是與無記心相應。這裡的一分僅指無記心相應的那一分。如下文說：有的伎樂，像唱歌、跳舞等，如果是與欲相應，由染污心而發起的威儀，是染污性；若依寂靜，如說佛教歌曲，或是唱聖歌等，是使人心裡寂靜趣向解脫，可以說是善性。如果有染著心所發起的工巧，則是染污性的，若是善心發動的工巧是屬善性，在〈決擇‧五識身相應地意地〉卷55，1824頁也提到。如果是沒有特別用心的，只是一種習慣的動作，這種威儀路及工巧處稱作無記一分。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>寅二、意表業</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科意表業，說明唯自起心內意思擇，不說語言的意表業。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>若有不欲表示於他，唯自起心內意思擇，不說語言，但發善、染汙、無記法現行意表業，名意表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　如果不想表示給他人知道，只是自己內心生起的思惟決擇，不說出來，內心生起了善心、惡心：染污心，或是無記心，這些念頭都是意表業。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　意表業能表達思心所的造作。〈決擇‧五識身相應地意地〉卷55說：思的作用是根塵識三和合故令心造作，於所緣境隨與領納、和合、乖離。當根塵相對生識時，觸、作意、受、想、思五遍行心所也同時生起，於非可意非不可意境引生不苦不樂受時，思心所推動心領納接受所緣境相；於可意境引生樂受時，思心所推動心與境和合；於不可意境引生苦受時，思心所推動心與境別離，由此思心所的造作，令意識與貪瞋癡或善、無記等心所相應，此時不以身語表示，唯內自知，稱為意表業。由意表業能看出思心所的造作相。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong>《披》但發善染汙無記法現行意表業者：此意表業，謂造作思。此有善、染、無記差別可得。由現行時，差別表示自心所作，是故說此名意表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　意表業是指內心的造作思惟；意表業有善心、染心、或是無記的差別。內心的造作思現行出來，能表現內心的各種造作，故說這是意表業。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>癸二、明安立3　子一、標三種</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科明安立，用語言文字安立三種表業，分三科；第一科標三種，標出來有三種。</span></span></div>
+
+<p><a name="53p4209"></a><span style="font-size:14pt"><span style="color:darkblue"><strong>此中唯有身餘處滅於餘處生，或即此處唯變異生，名身表業；唯有語音，名語表業；唯有發起心造作思，名意表業。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　當一個人的身體在某個地方消失了，而在另外一個地方現前；或一個人的身體在同一個地方有變異出現，稱為身表業。唯是說話的聲音，是語表業。只有內心各種不同的造作思惟，是意表業。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　如說有人從台北到台中，可說他去台中了，這是身表業；或是從這裡走到那裡，或者他不動只是在同一個地方，彎腰、伸頭、伸手、搖頭晃腦等，也是身表業。說話發出聲音表達內心思想，稱語表業，若只是內心的各種造作，生起貪瞋癡的念頭，並沒有動身發語，稱為意表業。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　《瑜伽論記》景法師說：此文破聲聞乘執著：「一剎那身業有動是真實的業」，現在約身相續此滅彼生假名身業。這是約本識相分根色此滅彼生，以破外執，意識影像隨本質境屬於無記。窺基大師說：因為正量部師主張「色法相續一期四相，有別動色說名身表」，現在破正量部師的主張，所以論主說：「剎那剎那生滅相續，於此處滅於餘處生，並沒有無生滅之真實法，從此不滅而能往彼處」。吠世師之德句中主張「屈申等也有實體」，現在一同破除吠世師的主張。薩婆多部主張「雖動色然別有業色，如屈申時有別業色生」，此處不同意薩婆多部的主張，所以論主主張：唯有異熟無記色身於此處由思力故變易而生，不是別有業色，說：「唯有身於餘處滅等，唯有語音名語表業者」。此文簡別薩婆多主張「聲即語業」，此文說「但有語音」。思業所發名語表業體性唯屬無記，不同聲聞乘業體通三性。唯有發起心造作思名意表業，此文指出以「思」為意業。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子二、釋所以2　丑一、遮有動</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科釋所以，解釋原因，分二科；第一科遮有動，遮止身表業相是有任何色身實在的運動。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>何以故？由一切行皆剎那故，從其餘方徙至餘方，不應道理。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　為什麼這樣安立三種表業呢？由於一切有為諸行都是剎那生滅的，那裡有一個色身從此處移到彼處呢！也沒有實體的身表業相。若是說有任何一種色身從此處移動至彼處，是不合道理的。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong>《披》由一切行皆剎那故等者：前說身表業相，唯於諸行假施設有，為破實執，故作是說。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　前面所說的身表業相，只是在刹那生滅的有為法上假施設有各種身表業相。為破除眾生對身表動作生起真實有的執著，才這樣說。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>丑二、顯唯行</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科顯唯行，說明顯示出來的只是諸行，只是諸思心所造作而已，並無真實的表業存在，因為眼、耳、意的所取三種表業相根本不曾真實存在。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>又離唯諸行生，餘實作用，由眼、耳、意皆不可得。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　又身語意三表業除了思心所造作所生之行外，沒有其餘真實的業用可得，因為從眼、耳二識之現量及意識之比量，所取得的身語意三表的真實業用了不可得。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　《大乘法苑義林章》卷3說：身、語二業假表業體，實是表色不是業性。能發身、語現行之思，實是業性，能招感異熟果，而非身語。顯揚等說：身、語二業表善、惡故假名善、惡，實是無記，故不能招當異熟果。從業而言說身、語二業為假。所以《成唯識論》說：或身、語表，由思發故，假說為業。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　這段文是破正量部有「真實行動的作用」，又破薩婆多「業色極微性有真實作用」，又破吠世師「業句具有真實性」，此處總相破之都無真實作用可得。</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　「由眼耳意皆不可得」，眼能取身表業，耳能取語表業，意能取意表業，離此身語意剎那生滅的諸行外，沒有真實的行動的作用、業色極微性的真實作用、及業的真實性可得。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>子三、結假有</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第三科結假有，結語指出一切表業都是假有。為什麼要說假有？不同的部派說法不同；有的部派主張表業及無表業都是實有的。有部主張表業與無表業都是色法；經部主張無表業是心法；有的部派主張無表業是非色非心。《四分律》根據《成實論》的說法，戒體非色非心。本論說表業是假有，無表業也是假有，都是没有實在法相，而是依名言假安立的。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong>是故當知一切表業皆是假有。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　所以應當了知一切表業都是假有。《大乘法苑義林章》卷3說：能發身、語現行之思，實是業性。業能招感異熟果，而非身語。能發身、語現行之思不是表，也不是色，假名身語表色，所發出的身語是「表」，所防之惡行俱是色故，思假名色。而意本身不是業，唯有發起心造作思才假名為意業。所以說一切表業皆是假有。</span></span></div>
+
+<p><a name="53p4210"></a><span style="font-size:14pt"><span style="color:#590000"><strong>《披》又離唯諸行生等者：身語意三表業雖有，然唯諸行作用所顯，若離諸行，更無所餘有實作用，由眼、耳、意不可得故。為破彼執，故作是說。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　身語意三種表業雖然是有，但只是諸思心造作的作用依身語意所顯，若離諸思心所造作所顯之身語意三種表業，並沒有其餘真實業性可得，因為眼能取身表業，耳能取語表業，意能取意表業，離此身語意剎那生滅的諸行外，沒有其他真實業用可得，為破除正量部等對表業產生真實有的執著，所以這樣說。</span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong>壬二、無表業2　癸一、別辨相3　子一、不律儀攝3　丑一、由不善思2　寅一、出期願2　卯一、舉生不律儀家3　辰一、釋名不律儀者</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　第二科無表業，分二科；第一科別辨相，辨別無表業的相狀，有屬於不律儀、律儀、非律儀非不律儀三種，又分三科；第一科不律儀攝，先說明不律儀，不律儀的原因有三，由不善思、由不信等、及由惡尸羅，又分三科；第一科由不善思，先說由不善思而引起的不律儀，又分二科；第一科出期願，又分二科；第一科舉生不律儀家，又分三科；第一科釋名不律儀者，解釋什麼稱為不律儀家？</span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　不以身語意表達出來的無表業，是思心所的種子，內心的一種思想、意願的功能性，能影響到未來的行為。這裡所說的無表業有屬於律儀、不律儀、非律儀非不律儀的三種；若是律儀所攝的無表業通常是指佛教徒，為求解脫受了律儀戒，如受出家戒，或是受在家的五戒、八戒、菩薩戒之後，所得到的戒體，有防非止惡的功能，但不能表示給他人知道；不律儀所攝的無表業是指生在不律儀家的人、或是受了惡戒、有邪願的人、以惡行的職業為生的人內心中的想法；非律儀非不律儀所攝的無表業，是指一般並沒有強烈的欲望要得解脫，隨緣行善、作惡的人內心想法及意願。</span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><a name="15707:40853"></a><a name="747:40853"></a>復次，若有生不律儀家，有所了別自發期心，謂我當以此活命事而自活命；又於此活命事重復起心，欲樂忍可；爾時說名不律儀者。</strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200">　所謂的不律儀家是：屠羊、養雞、養豬、捕鳥、捕魚、獵鹿、罝兔、劫賊、魁膾、控牛、縛象、立壇、呪龍、守獄、讒構、好為損等，殺生、偷盜、邪淫、妄語等這些職業，所從事的職業與這些惡法相應。若是生到那種家庭環境，有所了別，自己發願，心想：我應該用這種職業來養活自己，這時還不算是不律儀，只是下品加行道，還不決定，還有機會轉變，只是配合自己的家庭這樣作而已。如果此人又再發起一個決心，喜歡並且同意這件事，發願我一定要這樣，這樣作是對的，這時是說不律儀者了。這時已是屬於中品了，雖然</span></span></div>

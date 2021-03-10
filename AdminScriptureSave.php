@@ -91,9 +91,10 @@
                 echo "<tr align=center>";
                 echo "<td>類別名稱</td>";
                 echo "<td>卷號</td>";
-                echo "<td>講記標題</td>";
-                echo "<td>發布日期</td>";
-				echo "<td>最新修改管理員</td>";
+
+                echo "<td>經文標題</td>";
+                echo "<td>發佈日期</td>";
+
                 echo "<td></td>";
                 echo "</tr>";
 				if (isset($_POST["gotype"])) {
@@ -177,7 +178,8 @@
                         $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
                         mysqli_query($db_link, $sql_delete);
                         $filename = $row2["filename"];//刪除檔案
-                          unlink("../漢修專題/ScriptureFile/".$filename);
+                        $typename = $row2["typename"];//刪除檔案
+                          unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
                         echo "<script>alert('成功刪除!');location.href='AdminScriptureSave.php'</script>";
 
                     }
@@ -188,16 +190,6 @@
                         echo "</script>";
                     }
 
-                    /*if (isset($_POST["$row2[s_id]+2"])) {
-
-                        $_SESSION["delete_s_id"]=$row2["s_id"];
-                        $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
-                        mysqli_query($db_link, $sql_delete);
-                        $filename = $row2["filename"];//刪除檔案
-                        unlink($filename);
-                        echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
-
-                    }*/
                 }
 
                     mysqli_close($db_link);

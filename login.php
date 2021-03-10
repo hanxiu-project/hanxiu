@@ -176,7 +176,9 @@
         } else if ($authority == 1 || $authority == 2) {
 			$_SESSION["updatename"]="$row[name]";
             header("location:AdminScriptureManage.php");    //導向管理員頁面
+            $_SESSION["updatename"]="$row[name]";
         }
+
     }
     if (isset($_POST["goregis"])) {
         header("location:registered.php");

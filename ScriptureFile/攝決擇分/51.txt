@@ -1,0 +1,291 @@
+<form><strong style="color:darkred; font-family:&quot;Times New Roman&quot;; font-size:14pt">瑜伽師地論科句披尋記卷第五十一</strong></form>
+
+<p><span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　彌勒菩薩說</span></span></span><br />
+<span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　唐三藏沙門玄奘奉詔譯</span></span></span><br />
+<span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　韓清淨科記</span></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">攝決擇分中五識身相應地意地之一</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　本論的第一個部分是〈本地分〉卷1-50，內容是說明從凡夫到成佛，其中境、行、果的完整詳細的說明，總共有十七地。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二個部分〈攝決擇分〉，決擇十七地中的深隱要義，包括在〈本地分〉中沒有說到的，或是沒有詳細說明的部分，以問答的方式說明。前面的〈本地分〉有三乘所共學的部分，以及大乘所應修學的，但並沒有特別深入說明唯識的深義。從〈攝決擇分〉開始，詳細說明唯識的重點及要義，例如為什麼要建立阿賴耶識，說明生死的流轉與還滅，以及阿賴耶識的體性、相狀、作用，它與現行法的關係如何，又如何轉染成淨；對三世、四緣、假安立法及六善巧的看法，都是唯識中非常重要的觀念。然而本論的論文字句簡要，義理深微，還有許多的辨證，不太容易理解，必須要很有耐心地學習。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　〈攝決擇分〉的要義：開始進入本文以前，先說明〈攝決擇分〉的要義。〈攝決擇分〉是從卷51到卷80，共分四大科；第一大科是結前顯後，結束前面五十卷的文，顯示後面要說的法；第二大科是決擇一切，將〈本地分〉的內容沒有說到的深義，提出來思量簡擇，範圍包括從〈五識身相應地〉到〈有餘依地〉及〈無餘依地〉，共有十七地，以十二科來說明；第三大科是總義決擇，將〈本地分〉的總義再決擇一下；第四大科結顯餘類，就是不再多說，剩下的就依此來推理了知。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　〈攝決擇分〉的第二大科決擇一切，其中第一科五識身地意地，從卷51到卷57，決擇五種事：</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　一、 阿賴耶識：這是有情生命的主體，是生死的所依，應該要將它說明白，在〈本地分〉沒有詳細說明，〈攝決擇分〉特別作了詳細的說明，主要內容是回答下面三個問題；為什麼在〈本地分〉中，不詳說阿賴耶識？如何知道有阿賴耶識的存在？什麼是阿賴耶識，它的體性、作用、與前七識的關係，又如何轉染成淨？</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　二、識身差別：決擇識的體性及其差別；識是指眼識、耳識、鼻識、舌識、身識、意識，前六識以所依根而立名。身是積聚義，識由於長時清淨或染污的熏習，積聚了種種善與不善的種子於阿賴耶識中，遇緣現行而有眾多差別。修行人為了達成轉染還淨的目標，必須完全了知自己現前的心念，是清淨的還是染污的，如果是染污的，就要知道它的過患，以善巧的方法滅除染污；又由布施等積聚福德資糧，幫助有情遠離雜染與過患。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　三、 三世四緣：這是決擇時間觀及因緣觀。三世是指過去、現在、未來時間的差別，從現在的觀點來看，現在有，過去和未來非有，這是唯識的觀點。在論中又特別與有部對論，難破有部的三世實有論。其實時間是一種概念，凡夫受制於此，得禪定的人能少分超越，聖人證入無分別智時，則時空不再是障礙。四緣是因緣、等無間緣、所緣緣、增上緣，說明一切法是因緣所生，並沒有恆常不變的實體，只有因緣而已，因緣會離散、改變，因此沒有真實的我，也沒有真實的法。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　四、假安立法：在此決擇不相應行法中的生、老、住、無常、得獲成就、命根、眾同分、異生性、和合、名句文身、流轉、定異、相應、勢速、次第、時、數，無想定、滅盡定。不相應行法與身、心皆不相應，是依據身心的變化及分位差別，取相言說分別需耍而假安立的名言概念，屬於行蘊所攝。此外，又決擇了無表業的戒體、戒律、種子、虛空無為和擇滅無為等。在唯識學中，種子是一個重要的概念。以上這些都是依概念而安立的假法。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　五、六善巧：決擇蘊、處、界、緣起、處非處善巧及根善巧，善巧就是智慧，蘊、處、界是構成生命結構的差別。六善巧的決擇是從卷53中間一直到卷57末，所佔的篇幅很大，非常的重要，其中特別詳細決擇五蘊，為了顯示無我的真實義，從這裡可以看出如何修習無我觀。如果真實通達六種善巧，可以得到無我的智慧。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　以上是簡略的說明決擇〈五識身相應地〉、〈意地〉的要義。</span></span></span></div>
+
+<p><a name="51p4057"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">甲二、攝決擇分4　乙一、結前顯後</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科攝決擇分，分四科；第一科結前顯後，就是結束前文顯示後文的生起。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是已說本地，次說諸地決擇善巧。由此決擇善巧為依，於一切地善能問答。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　前面已經說過〈本地分〉，其次是將十七地中深隱的要義做善巧的決擇。依此決擇的智慧，對於十七地中所含攝的深淺道理，都能全部的掌握，若有人提出問題，能夠善巧的回答。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">乙二、決擇一切12　丙一、五識身地意地3　丁一、標當先說</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科決擇一切，將十七地要義重新決斷簡擇，分十二科；第一大科是五識身地意地，將〈五識身相應地〉及〈意地〉合在一起簡擇，又分三科；第一科標當先說，標出應當先說明這二地的決擇。第二科是隨應決擇，隨著提出來應該要決斷簡擇的五個項目，包括阿賴耶識、識身差別、三世四緣、假安立法及六善巧。第三科略不說餘，其他就依此類推，依比量智即可了知，所以省略不說其餘的諸法。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">今當先說五識身地意地決擇。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　現在要按照順序決斷簡擇，先從〈五識身相應地〉及〈意地〉這二地開始。〈本地分〉中，〈五識身相應地〉及〈意地〉是分開說明的，為什麼在〈攝決擇分〉中要合併在一起說呢？有幾個原因：〈本地分〉中各別說明眼識、耳識、鼻識、舌識、身識、意識六識的自性、所依的根、所緣的境、助伴和作用，各各不同，要分開來說才容易明白。六識都要依根緣境，心識活動的相貌是一樣的。又前六識共同依止於阿賴耶識，既然是共通依止的，是有共同之處，不可分開，所以這二地要合起來決擇。（可參閱《瑜伽論略纂》卷13及《瑜伽論記》卷13）</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丁二、隨應決擇5　戊一、阿賴耶識2　己一、問</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科隨應決擇，分五科；第一科阿賴耶識，第一個要決擇的就是阿賴耶識，又分二科；第一科問，提出三個問題。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">問：前說種子依，謂阿賴耶識，而未說有、有之因緣、廣分別義。何故不說？何緣知有？廣分別義云何應知？</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　問：在〈本地分〉卷1中，說阿賴耶識是：「一切種子所隨依止性，所隨依附依止性；體能執受，異熟所攝阿賴耶識。」，僅只說到阿賴耶識是染淨種子的所依。現在提出下面三個問題：</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　一、為何在〈五識身相應地〉及〈意地〉不說有阿賴耶識？</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　二、什麼因緣知道一定有阿賴耶識的存在？</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　三、廣分別阿賴耶識的體相、作用是什麼？</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　這裡的「有」，是指一種存在，欲有、色有、無色有，三界名三有。〈攝事分〉卷97解釋「有」為阿賴耶識的別稱。</span></span></span></div>
+
+<p><a name="51p4058"></a><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》而未說有有之因緣分別義等者：為欲決擇阿賴耶識，故舉三種為問因緣。一、由未說契經有此阿賴耶識，二、由未說有之因緣，三、由未說廣分別義，是故興問。若契經有，何故不說？何緣知有？廣分別義云何應知？</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　為了要決斷簡擇阿賴耶識，論主先提出三種問題，引出決擇阿賴耶識的因緣：</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　一、由於《契經》中沒有說有此阿賴耶識。契經通常是指聲聞乘學者所依止的《阿含經》，《阿含經》是大小二乘學者共許的經典，因為聲聞乘學者不承認大乘是佛說，若要攝受聲聞乘學者，必須舉出《阿含經》來作證，才能獲得對方認同。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　二、《契經》中沒有說阿賴耶識的因緣，為什麼一定要有阿賴耶識？</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　三、《契經》中也沒有廣大詳細分別阿賴耶識的體相。阿賴耶識是有情生命的所依，但它的體性、相狀及作用都沒有說，所以提出來問。為何佛於《阿含經》不說阿賴耶識？什麼因緣知道有阿賴耶識？什麼是阿賴耶識的體性？要怎麼知道呢？</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">己二、答3　庚一、不說因緣2　辛一、標義</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科答，回答，分三科；第一科不說因緣，為什麼佛度化聲聞時不說有阿賴耶識呢？又分二科；第一科標義，標出它的義理。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">答：由此建立是佛世尊最深密記，是故不說。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　答：由於阿賴耶識的建立是佛最甚深的密記。深，有玄妙、精微的意思。密，就是深隱的意思。記，是說明。因為阿賴耶識很玄妙、深細，相似相續的活動著，如一似常，若是說了，恐怕凡夫會執著阿賴耶識為我。二乘人還有法執，也會執著有一個法我，因而障生聖道，或墮惡趣，所以不說。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》由此建立等者：此答初問。由此阿賴耶識於大乘中方始建立，然未顯了說此識名，恐彼凡愚由依此名，妄生分別，執為我故。然義非無，當知是佛世尊最深密記。由是道理，雖有不說。如世尊言：阿陀那識。即以異門，說此有義，名佛世尊最深密記。攝大乘論說：何故聲聞乘中不說此心名阿賴耶識，名阿陀那識？由此深細境所攝故。所以者何？由諸聲聞不於一切境智處轉，是故於彼雖離此說，然智得成，解脫成就，故不為說。若諸菩薩定於一切境智處轉，是故為說。若離此智，不易證得一切智智。（攝論一卷五頁）由是當知深密記義。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　這是回答第一個問題，不說的因緣。這裡說的：凡，是指凡夫。愚，是指二乘有情愚於法，法執還沒有完全破除。阿賴耶識是佛在大乘經典中才建立的，在說《阿含經》時還沒有建立。為什沒有很明顯的說阿賴耶識的名字？是恐怕凡夫聽到有阿賴耶識，會執著阿賴耶識為我，認為這是生死流轉的主體；然而此阿賴耶識假名並非沒有依他起「有」義，應當要知道此識乃佛非到必要時不說的最深密說之一。事實上並不是沒有阿賴耶識，雖然有而佛不說，原因如前所指道理。世尊曾說阿陀那識，阿陀那識是阿賴耶識的另外一個名字，用以說出阿賴耶識的依他起「有」義，這是佛的最深密記。《攝大乘論》中說，為什麼在聲聞乘的《契經》中不說有情的心稱作阿賴耶識，或稱為阿陀那識呢？因為阿賴耶識說含攝了最深、最微細的境界。聲聞只要斷我執，就可以證入阿羅漢果，超越生死，不須要有了解一切境界的智慧，也不須要用這種智慧來廣度眾生成就無上菩提，因此不為聲聞眾開示阿賴耶識的道理。對於已發無上菩提心的菩薩，必須廣度眾生成就無上菩提，就一定要有一切境智（或稱道種智），於一切界、一切事、一切品、一切時，能了解一切的境界，包括一切有為、無為法事的自相、共相、因、果、界、趣、善、不善、無記等都要能如實了知，因此只為大乘行者開示阿賴耶識。若離開阿賴耶識的智慧，不了解阿賴耶識的體性相狀，就不容易證得一切境智，若無一切境智，就不能成就佛的一切智智（或稱一切道種智）。這一段文是從《攝大乘論》卷1引出來的，指出佛說阿賴耶識的深密記義。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辛二、引證</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科引證，引聖教來證明、成立所說的道理。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如世尊言：</span></strong></span></span><br />
+<a name="51p4059"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">　阿陀那識甚深細　一切種子如暴流</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">　我於凡愚不開演　恐彼分別執為我</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　如佛陀所說：阿陀那識能執持一切種子，是非常的深細，甚深、甚細。窺基大師說：深細，是為了簡別凡夫，凡夫的教證都很粗淺，凡夫沒有證悟，教義上也不能明白什麼是阿陀那識；甚深細，是針對二乘說的，二乘的教義、行證很深細，已經破除我執，乃至證得阿羅漢果，因為還有法執，不能算是甚深細。而阿陀那識理論的成立是甚深細的。（可參閱印順法師的《攝大乘論講記》第41頁）</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　阿陀那識的種子就像是瀑流的水一樣，「流」有三個含義：</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　一、流入：一切種子如瀑流，流入三界生死中；</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　二、退失：在三界中流轉，從受生界地退失流入其他界地，譬如從無色界流往色界流，或是色界流往欲界流，墮生死不一定處，故名流；</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　三、流脫：流脫功德善根、退失戒定慧，猶如池塘破了，水就留不住。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　阿陀那識很深細，是無覆無記相似相續一直的流轉下去，不明白的人會以為這就是我，而生起人我執及法我執，所以佛對於二乘及凡夫不開示阿陀那識其中的甚深的道理。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》阿陀那識甚深細等者：解深密經說有此頌，又彼長行廣顯阿陀那識建立道理應知。（解深密經一卷十六頁）世親菩薩釋此頌云：甚深細者，難了知故。一切種子如暴流者，次第轉故，一切種子剎那展轉，如瀑流水相續轉故。恐彼分別執為我者，一行相轉故，分別執可得。如世親攝論釋說。（一卷十五頁）</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　《解深密經》第1卷〈心意識相品〉第三 （連結：<a href="http://mahabodhi.org/yoga/cb/C51-01.htm">心意識相品</a>） 說到：阿陀那識甚深細的這個偈頌，是經文最後的一句話。在〈心意識相品〉裡顯示阿陀那識是如何建立的道理，讀那一段文就應該明白。（〈心意識相品〉第三）世親菩薩解釋此頌說：阿陀那識甚深細，表示阿陀那識是很難明白了知。一切種子如暴流，是指一切種子剎那展轉地生起、轉變，如瀑流水相續不斷，恐怕有情會執著阿陀那識就是我，因為阿陀那識同一個行相，相續相似的在那裡活動著，凡夫眾生易執為我、為常、為一。這一段文如世親菩薩解釋《攝大乘論》中所說的道理一樣。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　在《成唯識論》卷三中亦有說明阿陀那識的作用：「以能執持諸法種子，及能執受色根依處，亦能執取結生相續，故說此識名「阿陀那」。若望種子即名執持：令種子不失，無覺受故。色根依處名為『執受』：根不壞，生覺受故。若初結生，後生相續，名為執取，取諸有故。」對於阿賴耶識、前六轉識，及第七識，都用十門來分別，每一識的體性、相狀、作用、功能都說得非常詳細，所以常常引用《成唯識論》來配合本論的說明。阿陀那有執持諸法種子、能執受色根依處、執取結生相續的三種功能，阿陀那的名字是依於這三個功能來安立的，現在將執持、執受，及執取的定義加以說明。若是針對種子來說，就稱為執持，有阿陀那識就可以使種子不失，但不是執受，因為種子是沒有覺受的，不能說是執受。執受是指對色根，能令身根不壞，又能產生覺受；執取是針對投胎受生時說的，「若初結生，後生相續，名為執取，取諸有故」，剛投生，令後有生命相續，稱為執取，有是存在，可以取到一個生命。這三個功能稱作阿陀那識。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">庚二、知有因緣2　辛一、總標八相2　壬一、嗢柁南</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科知有因緣，分二科；第一科總標八相，總相標出由八個道理，證明有阿賴耶識，又分二科；第一科嗢柁南，先用偈頌表達。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，嗢柁南曰：</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">　執受初明了　種子業身受　無心定命終　無皆不應理</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　嗢柁南是偈頌的意思。將下面所要說明的道理，先用短短的偈頌，標列出來。這八種理由是：一、執受：執持攝受；二、初：最初生起；三、明了：有明了性；四、 種子：由有種子性；五、業：由有業用差別；六、身受：由有身受差別；七、無心定：前六轉識不活動的定，包括無想定與滅盡定；八、命終時識。標出由這八個理由，若沒有阿賴耶識，是不合道理的。下面的長行再加以解釋。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">壬二、長行</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科長行，用較長的文字解釋。</span></span></span></div>
+
+<p><a name="51p4060"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由八種相，證阿賴耶識決定是有。謂若離阿賴耶識，依止執受不應道理，最初生起不應道理，有明了性不應道理，有種子性不應道理，業用差別不應道理，身受差別不應道理，處無心定不應道理，命終時識不應道理。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　由有八種相狀，證明決定有阿賴耶識。如果沒有阿賴耶識，則依止執受、最初生起、有明了性、有種子性、業用差別、身受差別、處無心定、命終時識，這八種生命的情況都不能得到合理的解釋。其中有些是用反證方式證明必須要有阿賴耶識。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　唯識學者認為要安立阿賴耶識，才能夠圓滿解釋生命的現象，而聲聞乘學者認為安立前六識就可以解釋生命體的一切，以下的討論都是以六轉識與第八阿賴耶識相對比較討論。簡單的說，前六轉識要有因緣才會生起，是有間斷的，又有善、惡、無記的變化，因此不能執受根身，也不能有保存種子的功能。只有阿賴耶識一向是無記的異熟識，在一期的生命中，它恆常不斷地相續的活動著，因此阿賴耶識可以執受有色根身，也有保存種子的功能；又入無心定及滅盡定的人，在定中前六轉識不活動了，可是阿賴耶識還活動著，能執受著根身，使令他的身體不爛壞；同時也保存著所有的種子，令種子不失去，在定中還能領受輕安的覺受，這都是阿賴耶識的功能。臨命終時阿賴耶識漸漸離開身體，身體漸漸變冷，這都能證明有阿賴耶識。以上八種理由，其中的最初生起、有明了性、業用差別，這三重點主要是為了破聲聞乘的難問。聲聞乘認為諸識不能並生，如果諸識不能並起，就無法成立有阿賴耶識了，為了證成自宗，一定要破斥諸識不能並生的看法，所以這三個理由是間接的證明有阿賴耶識。（可參閱《瑜伽論記》卷13）</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辛二、隨釋一一8　壬一、由依止執受3　癸一、徵</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科隨釋一一，以下是一一解釋八個理由，分八科；第一科由依止執受，有五個原因說明只有阿賴耶識能執受有色根身，又分三科；第一科徵，提問。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">何故若無阿賴耶識，依止執受不應道理？</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　為什麼若沒有阿賴耶識，而身體能有所依止、有所執受，這是不合道理的呢？</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》依止執受者：解深密說：執受有二。一者、有色諸根及所依執受，二者、相名分別言說戲論習氣執受。（解深密經一卷十六頁）今於此中，且說初一執受，名依止執受。攝受執持有色根身，令不壞爛故。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　《解深密經》說有二種執受：一、執受有色諸根及所依執受，有色諸根是指淨色根，所依執受，是指扶根塵。二、執受相名分別言說戲論習氣（名言種子）執受，阿賴耶識中的種子是由相名分別言說戲論習氣而來的。這裡所要說的是指第一種，有色諸根及所依執受，阿賴耶識能夠執持根身，令不爛壞，所以必須要有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">癸二、釋3　子一、標</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科釋，解釋，分三科；第一科標，標出五因。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由五因故。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　有五種原因，從依止執受的角度來看，不可以沒有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子二、徵</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科徵，提問。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">何等為五？</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　是哪五種原因呢？</span></span></span></div>
+
+<p><a name="51p4061"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子三、釋5　丑一、初因</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第三科釋，解釋，分五科；第一科初因，第一個原因由識之生緣差別，證明有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂阿賴耶識先世所造業行為因，眼等轉識於現在世眾緣為因。如說根及境界、作意力故，諸轉識生，乃至廣說。是名初因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　阿賴耶識是依前世所造的業行，由業力為因而生起，此阿賴耶識是異熟的果報，在一期生命中，它恆時相續的活動著，沒有間斷的執受有色根身；譬如說，前生造的業力可以活五十歲，在這五十歲中，阿賴耶識執受著根身，使這個身體活了五十年都沒有壞爛，而眼等前六轉識的生起必須要有現緣，若是緣缺，眼識乃至意識就不能生起，所以前六轉識不能執受有色根身。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　如前卷1所說，六識的生起要所依根不壞、境界現前、能生作意正起，識方得生。又如《八識規矩頌》說：眼識九緣生，耳識唯從八（除明緣），鼻舌身三七（除空明二緣），後三（指六七八三識）五三四（指緣而言），若加等無間，從頭各增一；眼識生起要有種子、色境、明、空（距離）、眼根、分別依、染淨依、根本依、作意心所等九個因緣；耳識生除明緣外要有八個因緣；鼻舌身三識生除空明二緣要有七種因緣；第六識生要有種子、意根（染淨依）、境、根本依、作意心所五種因緣；第七識、第八識要有種子、意根、相關之所緣緣如第八識之見相二分、作意心所四種因緣；於一期生中皆能恆時相續。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　前五識要有諸多因緣才現起，故有間斷的時候。第六識要有五緣才生，而且第六意識會中斷也有不活動的時候，如入無想定、入滅盡定、睡眠、悶絕。所以唯先業所引且恆時相續之阿賴耶識才能為根身之依止執受。這一段文是以阿賴耶識及前六轉識的生起因緣不同，證成唯由先業所生的阿賴耶識恆時相續，沒有間斷，才能執受根身，為根身的依止。這是第一個原因，由識之生緣差別，證明有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》阿賴耶識先世所造業行為因等者：此中義顯阿賴耶識唯先業引，不待現緣，一切時轉，執受所依道理成就。轉識不爾，要待現緣，或轉不轉，執受所依不應道理。如說根不壞、境現前、作意正起，識乃得生，當知此唯顯彼眼等轉識，於現在世眾緣為因。如是眾緣若隨闕一，彼諸轉識必不得生，許能執受，故不應理。是為初因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　阿賴耶識是先世的業力所引生的，不必等待現世因緣而現起，於一切時都可以活動著，所以作為根身的依止處，這個道理是可以成立的。而前六轉識則不如此，前六轉識要等待多項現世因緣現前，否則就不活動，並不是一切時都在活動，因此從能執受所依的觀點來看，是不合道理的。譬如眼識生要眼根不壞，境界正現在前，作意心所作意要去看，這時眼識才會去緣取色塵。由此可知眼等轉識，要有現在世的眾緣現前，方能生起。如果認為前六轉識能夠有執受的功能，而轉識眾緣若隨缺一種，就不能生起，此時人應形同死屍，這與事實不合，若承認六識能執受根身是不合道理的。這是第一個原因，由生緣差別，總破六識不能執受，證明有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、第二因</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科第二因，依識性差別，證成有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又六識身，有善不善等性可得。是第二因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　又前六轉識的體性，有時與善法相應，有時與不善法相應，有時與無記法相應，六識身時常轉變性質，有善、惡、無記三性差別，善與不善相違，二者互相排斥，不能互相包容，因此不能做為執受所依。只有無記性的阿賴耶識能為執受的依止，因為阿賴耶識一向是無記性，不記別善、惡、無記，能包容善、惡、無記，因此一定要有阿賴耶識做執受的依止，這是第二個原因，依識性差別，證成有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》又六識身有善不善等性可得等者：此中義顯阿賴耶識先業為因，一類無記，執受所依道理成就。轉識不爾，或善、不善、無記性類差別可得，執受所依不應道理。是第二因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　此中道理顯示，阿賴耶識是過去生業力所招感的果報，一切時同一類無記的性質，不記別善惡，所以能為執受所依，這樣的道理是可以成就的。前六轉識有時善、有時不善、有時無記，有這麼多的變化，作為執受的所依是不合道理的，這是第二個原因。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑三、第三因</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第三科第三因，依識之種類差別，證成有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又六識身，無覆無記異熟所攝類不可得。是第三因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　又六識身的體性，不是無覆無記的異熟類；覆是指遮覆障礙聖道，蔭蔽真如心的無記性法，六識身可與染法相應，有煩惱的遮覆障礙；六識身也不是一類非善非惡的無記性，不能同時執受善、惡、無記的三性法；也不是異熟所攝，不像阿賴耶識是過去生業力所招感的果報，除非壽盡，隨生何界即何界所攝，而六識身隨著內心的造作有界繫的差別。所以前六轉識不能作為執受所依。這是第三個原因，依識之種類差別，證成有阿賴耶識。</span></span></span></div>
+
+<p><a name="51p4062"></a><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》又六識身無覆無記等者：此中義顯阿賴耶識是異熟果，無覆無記異熟所攝。唯此異熟可許執受，從彼先業所異熟故。轉識不爾，從異熟生，非是異熟，是故說言無覆無記異熟所攝類不可得，許彼執受不應道理。是第三因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　此中道理顯示阿賴耶識是異熟果，它是從過去生所造的業力變異而熟的，它的性質是無覆無記：不會覆障聖道及蔭蔽於心，也沒有善惡之記別，就能包容善、不善、無記，只有這樣的異熟種類才能執受根身。轉識就不是，轉識是從異熟果所生，從阿賴耶識中種子所現起的，不是真異熟，所以說無覆無記異熟所攝類不可得，若是認為轉識可以執受根身是不合道理的。這是第三個原因。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑四、第四因2　寅一、顯過2　卯一、難無執受</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第四科第四因，解釋第四個原因，分二科；第一科顯過，前六轉識若為執受所依，是有過失的，又分二科；第一科難無執受，聲聞乘的經部師認為六識身是可以執受的，論主難問他們六識身若間斷時即無執受，所以不合道理。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又六識身各別依轉。於彼彼依，彼彼識轉，即彼所依應有執受，餘無執受不應道理。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　又六識身的生起必須依止各別的所依根才能活動，譬如眼識依眼根，乃至意識依意根，眼等諸識才能生起。若說眼等諸識依根緣境轉時僅能引生對彼所依根之執受，而對於其他非所依根就沒有執受，這是不合道理的。那麼當任一前六轉識有間斷時，如何來成就執受呢？因此，說六識身能夠成就執受是不應道理的，非第八阿賴耶識不可。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、難有執受</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科難有執受，論主依有執受難問他們六識身可以成就執受不合道理。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">設許執受，亦不應理，識遠離故。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　聲聞乘學者提出反駁，又說：只要前六識中，有任何一個識生起就可以執受身根，雖然其他的識沒有活動，也不妨礙執受身根。論主說：就算承許任一六識轉時能夠執受身根，這也無法合理証成六識可以成就執受，因為眼識生起的地方，並不是在耳根那裡，那眼識怎麼能執受耳根呢？依眼根發眼識，若此時耳識沒有現起，就說眼識能執受耳根，是不合道理的。窺基大師舉一個例子，若是沒有識的執受，根身就成了死屍。假若乙的識已經離開乙的身體，而成了死屍，用甲的阿賴耶識來持乙的屍體，這是不可能的事。同樣的，若只有眼識，而沒有耳識時，就說眼識可以執受耳根，這是不合道理的。這是駁斥聲聞乘學者認為只要有任何一個六識生起，就可以執受身根以至全面成就執受，論主不能同意這樣的說法。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　這是第四個理由證成有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、出因</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科出因，說明有阿賴耶識的原因。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">是第四因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　這是第四個原因證成有阿賴耶識，以識之所依差別，指出唯遍滿所依之阿賴耶識才能成為執受所依。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》又六識身各別依轉等者：此中義顯阿賴耶識遍滿所依，成能執受。轉識不爾，各別依轉，非一一識遍滿所依。許能執受，由二因緣不應道理，如文可知。是第四因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　重點是阿賴耶識能夠遍滿全身，身體的每一個部分，都由阿賴耶識來執受，所以能成就執受。轉識是不行的，它有其各別依止相應的根，各別活動要都沒有間斷才能成就執受。此外，各別轉識只能執受它自己的所依根，而不能執受其他的根；原因是並非一一各別轉識都遍滿其他的所依根，那又怎麼能去執受他根呢？六識身轉不能相續不斷及遍滿所依，由於這二個原因，所以六識身可成就執受的說法不合道理，如文中所說可知。這是第四種原因。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑五、第五因2　寅一、顯過3　卯一、標</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第五科第五因，分二科；第一科顯過，若說六識身能執受有過失，又分三科；第一科標，標出過失。</span></span></span></div>
+
+<p><a name="51p4063"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又所依止應成數數執受過失。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　執著六識就能執受根身的話，則所依止的身體，有時有執受，有時沒有執受，因為前六識有間斷，就會有數數間斷執受的過失。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、徵</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科徵，提問。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">所以者何？</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　為什麼？</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、釋</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第三科釋，解釋。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由彼眼識於一時轉，一時不轉，餘識亦爾。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　由於眼識有時生、有時不生，餘耳識乃至意識也一樣。前六識有間斷，不能相續，所以不能成立執受。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、出因</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科出因，說出第五個原因，以識之作用差別，證成有阿賴耶識。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">是第五因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　這是第五個原因證成有阿賴耶識，以識之作用差別，指出唯相續不斷之阿賴耶識才能成為執受所依。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》又所依止應成數數執受過失等者：此中義顯阿賴耶識從受生已，乃至命終不離於身，無間斷轉，可成執受。轉識不爾，有間斷轉，若許執受，應成數數過失，故不應理。是第五因。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　此中道理顯示阿賴耶識從出生直到命終，從來沒有間斷過，所以可以成立執受義。前六轉識有間斷，若同意前六轉識可以執受根身，就是有時執受，有時不執受，就有數數間斷執受的過失，這樣是不合道理的。這是第五個原因證成有阿賴耶識，由識之作用差別，指出唯從不間斷、相續生起之阿賴耶識才能成為執受所依。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">癸三、結</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第三科結，結語。</span></span></span></div>
+
+<p><a name="51p4064"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是先業及現在緣以為因故，善不善等性可得故，異熟種類不可得故，各別所依諸識轉故，數數執受依止過故，不應道理。</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　這是知有因緣這一科中，八種相裡面的第一相依止執受的結論，有五個原因，前六轉識都不能作為依止執受。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　一、由識的生起差別而言，先業為因而生起的阿賴耶識，在一期生命中，恆常不斷的相續活動著，因此可以執受有色根身。六轉識須要現緣才能生起，因此轉識的生起有間斷時，所以不能執受有色根身。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　二、由識的性質差別而言，前六轉識有時善，有時惡，有時無記，有三性可得，同一時內不能容受三性法，所以不能執受根身，只有阿賴耶識是一向的無記性，才能執受根身。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　三、由識類差別而言，前六轉識不屬於真異熟，隨心念轉變，意識的界繫就不同。比如欲界眾生入色界定時有色界心，色身仍屬欲界，若說轉識能執受所依，此時的色界心如何能執受欲界身？唯阿賴耶識是真異熟，前生業力所招感的果報，界繫不隨意識轉，恆常穩定所以能執受根身。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　四、由識的所依差別而言，前六轉識各各所依根不同，眼識依眼根轉時只能執受眼根，耳識依耳根轉時只能執受耳根&hellip;等，但阿賴耶識沒有這個限制，它能遍滿所依，所以可以全面成就執受。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　五、由識的作用差別而言，眼識等前六轉識，有時有作用，有時沒有作用，所以不能執受所依，只有第八識恆時存在可以執受所依。如果依轉識來執受根身的話，有時候能執受，有時又不能執受，就有數數間斷執受的過失，這是不合道理的。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　由這五個原因來證明，一定要有阿賴耶識的存在，來執受有色根身。</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　《成唯識論》卷3同樣也說到這五個原因，有阿賴耶識能相續執受有色根身。又說：「唯異熟心，先業所引、非善染等、一類、能遍、相續執受有色根身，眼等轉識無如是義。」異熟心就是第八阿賴耶識，阿賴耶識是：一、先業所引；二、非善染等；三、無覆無記的一類；四、能遍：能普遍執受所有的根身；五、相續的執受，不像前六轉識會間斷，所以能夠執受有色根身。</span></span></span></div>
+
+<p><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">壬二、由最初生起2　癸一、徵</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　第二科由最初生起，這不是指投胎的最初生起，這是指聲聞乘學者的看法。聲聞乘學者主張識不並生，識依次第而生，才有最初生起。這種主張有二種過失：一、無第八識，二、有最初生起。若能證明諸識並生，就能對治聲聞乘這二種過失，由下文證明諸識可以並生，反證有阿賴耶識、無最初生起才是合道理的。由最初生起，分二科；第一科徵，提問。</span></span></span></div>
+
+<p><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">何故若無阿賴耶識，最初生起不應道理？</span></strong></span></span></p>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　為什麼說若無阿賴耶識，及有最初生起是不合道理的呢？為什麼聲聞乘學者執著沒有阿賴耶識，及諸識不並生，而有最初生起是不合道理的呢？</span></span></span></div>
+
+<div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　註：問第一因時，論</span></span></span></div>

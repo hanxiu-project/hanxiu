@@ -59,7 +59,7 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <?php
-                        $sql1 = "SELECT path1 FROM carousel";
+                        $sql1 = "SELECT path1 FROM carousel ORDER BY listorder ";
                         $result1 = mysqli_query($db_link,$sql1);
                         $rowcount =  mysqli_num_rows($result1);
                         $i = 0;
@@ -68,9 +68,7 @@
 							 if ($i == 0)
                             {
                                 ?>
-                               
                                   <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
-                                
                             <?php
                             }
                             else
@@ -80,23 +78,11 @@
                                 
                             <?php
                             }
-							
                             $i++;
-                           
-                           
                     ?>
-					
-            
-                
-					
-                
-                    
-                    <?php  
-					 
+                    <?php
 					} ?>
-					
 					</ol>
-               
 
                 <div class="carousel-inner">
                     <?php

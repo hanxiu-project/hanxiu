@@ -165,6 +165,9 @@
                         <li>
                             <a href="AdminNewImageFile.php"><i class="fa fa-fw fa-user"></i>新增照片檔案</a>
                         </li>
+                        <li>
+                            <a href="AdminImageSort.php"><i class="fa fa-fw fa-user"></i>照片排序</a>
+                        </li>
                     </ul>
                 </li>
 

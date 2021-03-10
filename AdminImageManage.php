@@ -41,7 +41,7 @@
         <?php
         /*資料庫連結*/
 
-       session_start();
+        session_start();
 
         ?>
 
@@ -69,18 +69,18 @@
                     echo "<td>上傳日期</td>";
                     echo "<td></td>";
                     echo "</tr>";
-                        while($row=$result->fetch_assoc())
-                        {
-                            echo "<tr align=center>";
-                            echo "<td>$row[imgname]</td>";
-                            echo "<td>$row[uploadtime]</td>";
-                            ?>
-                            <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這張照片?')"></td>
+                    while($row=$result->fetch_assoc())
+                    {
+                        echo "<tr align=center>";
+                        echo "<td>$row[imgname]</td>";
+                        echo "<td>$row[uploadtime]</td>";
+                        ?>
+                        <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這張照片?')"></td>
 
-                            <?php
-                            echo "</tr>";
-                        }
-                        echo "</table>";
+                        <?php
+                        echo "</tr>";
+                    }
+                    echo "</table>";
 
 
 

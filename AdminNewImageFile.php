@@ -94,8 +94,12 @@ session_start();
                         $image = $_FILES['image']['name'];
                         $path1 = 'images/'.$image;
                         $path2 = 'C:/AppServ/www/漢修專題/images/'.$image;
+                        $sqlnum = "SELECT * FROM carousel";
+                        $resultnum = mysqli_query($db_link,$sqlnum);
+                        $rownum = mysqli_num_rows($resultnum);
+                        $num = $rownum+1;
 
-                        $sql = "INSERT INTO `carousel` (id,imgname,path1,path2) values ('NULL','$image','$path1','$path2')";
+                        $sql = "INSERT INTO `carousel` (id,listorder,imgname,path1,path2) values ('NULL','$num','$image','$path1','$path2')";
                         mysqli_query($db_link, $sql);
 
                         if($sql)

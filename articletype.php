@@ -69,7 +69,7 @@
                     <table width="80%" border="1px">
                         <br>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `scripture` where `t_id` = $tid";
+                        $sqlatcnum = "SELECT * FROM `scripture` where `t_id` = $tid && `save`= '0'";
 
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆

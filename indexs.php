@@ -14,10 +14,10 @@
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="csss_file/topic.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="csss_file/topic.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
 
 
@@ -46,8 +46,8 @@
             crossorigin="anonymous"></script>
 
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
     <!--照片區-->
@@ -59,69 +59,69 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <?php
-                        $sql1 = "SELECT path1 FROM carousel";
-                        $result1 = mysqli_query($db_link,$sql1);
-                        $rowcount =  mysqli_num_rows($result1);
-                        $i = 0;
-                        foreach ($result1 as $row1)
+                    $sql1 = "SELECT path1 FROM carousel";
+                    $result1 = mysqli_query($db_link,$sql1);
+                    $rowcount =  mysqli_num_rows($result1);
+                    $i = 0;
+                    foreach ($result1 as $row1)
+                    {
+                        if ($i == 0)
                         {
-							 if ($i == 0)
-                            {
-                                ?>
-                               
-                                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
-                                
-                            <?php
-                            }
-                            else
-                            {
                             ?>
-                                 <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>"></li>
-                                
+
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
+
                             <?php
-                            }
-							
-                            $i++;
-                           
-                           
-                    ?>
-					
-            
-                
-					
-                
-                    
-                    <?php  
-					 
-					} ?>
-					
-					</ol>
-               
+                        }
+                        else
+                        {
+                            ?>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>"></li>
+
+                            <?php
+                        }
+
+                        $i++;
+
+
+                        ?>
+
+
+
+
+
+
+                        <?php
+
+                    } ?>
+
+                </ol>
+
 
                 <div class="carousel-inner">
                     <?php
-                        $i = 0;
-                        foreach ($result1 as $row1)
+                    $i = 0;
+                    foreach ($result1 as $row1)
+                    {
+                        if ($i == 0)
                         {
-                            if ($i == 0)
-                            {
-                                ?>
-                                <div class="carousel-item active ">
+                            ?>
+                            <div class="carousel-item active ">
                                 <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
-                                </div>
+                            </div>
                             <?php
-                            }
-                            else
-                            {
-                            ?>
-                                <div class="carousel-item ">
-                                    <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
-                                </div>
-                            <?php
-                            }
-                            $i++;
                         }
+                        else
+                        {
                             ?>
+                            <div class="carousel-item ">
+                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
+                            </div>
+                            <?php
+                        }
+                        $i++;
+                    }
+                    ?>
 
                 </div>
 

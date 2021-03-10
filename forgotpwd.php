@@ -110,33 +110,56 @@ session_start();
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <?php
+                    $sql1 = "SELECT path1 FROM carousel ORDER BY listorder ";
+                    $result1 = mysqli_query($db_link,$sql1);
+                    $rowcount =  mysqli_num_rows($result1);
+                    $i = 0;
+                    foreach ($result1 as $row1)
+                    {
+                        if ($i == 0)
+                        {
+                            ?>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>"></li>
+                            <?php
+                        }
+                        $i++;
+                    } ?>
                 </ol>
+
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="圖1.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖2.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖3.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖4.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖5.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="圖6.jpg" class="d-block w-100" height="500px" alt="...">
-                    </div>
+                    <?php
+                    $i = 0;
+                    foreach ($result1 as $row1)
+                    {
+                        if ($i == 0)
+                        {
+                            ?>
+                            <div class="carousel-item active ">
+                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
+                            </div>
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                            <div class="carousel-item ">
+                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
+                            </div>
+                            <?php
+                        }
+                        $i++;
+                    }
+                    ?>
+
                 </div>
+
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
@@ -145,6 +168,8 @@ session_start();
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+
+
             </div>
 
         </div>

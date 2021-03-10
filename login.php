@@ -45,7 +45,7 @@
                         <ol class="carousel-indicators">
 
                             <?php
-                            $sql1 = "SELECT path1 FROM carousel";
+                            $sql1 = "SELECT path1 FROM carousel ORDER BY listorder ";
                             $result1 = mysqli_query($db_link,$sql1);
                             $rowcount =  mysqli_num_rows($result1);
                             $i = 0;

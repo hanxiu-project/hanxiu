@@ -152,6 +152,12 @@
 
 
     <!--主內文區-->
+	<?php
+	 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
+				# 設定時區
+				date_default_timezone_set('Asia/Taipei');
+				$getDate= date("Y-m-d");
+	?>
     <div id="content">
         <div class="newstitle">
             <h2>｜最新公告 </h2>
@@ -160,8 +166,9 @@
 
             <?php
             //...
-            $sql = "SELECT * FROM posts";
+            $sql = "SELECT * FROM posts where old='0' order by `date` ASC ";
             $result = mysqli_query($db_link, $sql);
+			
             ?>
             <center>
                 <div class="contentlist" align="center">
@@ -171,12 +178,23 @@
                                 <th width="20%">發佈日期</th>
                                 <th width="80%">標題內文</th>
                             </tr>
-
+							
                             <?php
                             while ($row = $result->fetch_assoc()) {
+									$date1 = strtotime($getDate);
+									$date2 = strtotime($row[date]);
+									$days = ceil(abs($date1 - $date2)/86400);
+									
+								if($days>$row[newday]){
+									$sqlii="update `posts` set old='1'  where `p_id`='$row[p_id]'";
+									mysqli_query($db_link, $sqlii);
+									
+									
+								}
                                 echo "<tr>";
                                 echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
                                 echo "<td align='center'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
+								
                                 echo "</tr>";
                             }
                             echo "</table>";

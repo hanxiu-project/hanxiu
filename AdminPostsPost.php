@@ -57,7 +57,8 @@ session_start();
                 $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
-
+				date_default_timezone_set('Asia/Taipei');
+					$getDate= date("Y-m-d");
                 ?>
 
                 <div id="con2">
@@ -74,6 +75,10 @@ session_start();
                                             <div class="form-group">
                                                 <label for="title">公告標題:</label>
                                                 <input id="title" name="title" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+												<label for="day">下架天數:</label>
+												<?php
+												echo "<select name=day> <option value='1'>一天</option><option value='2'>兩天</option><option value='3'>三天</option><option value='4'>四天</option><option value='5'>五天</option><option value='6'>六天</option><option value='7'>七天</option><option value='15'>十五天</option><option value='30'>三十天</option></select>";
+												?>
                                             </div>
 
 
@@ -89,7 +94,8 @@ session_start();
 
                                             <div class="form-group">
                                                 <label for="date">發布日期:</label>
-                                                <input id="date" name="date" type="date"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                <input id="date" name="date" type="date" value="<?php echo $getDate?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+												
                                             </div>
 
                                             <div class="form-group">
@@ -107,12 +113,18 @@ session_start();
 
                         <?php
 
-                      
+						# 設定時區
+					
+					if($_POST["date"]==null){
+						$date=$getDate;
+					}else{
+						$date = $_POST["date"];
+					}
 
 
                         $title = $_POST["title"];
                         $content = $_POST["content"];
-                        $date = $_POST["date"];
+                        
 
 
                         if(isset($_POST["post"]))
@@ -123,7 +135,7 @@ session_start();
                             }
                             else
                             {
-                                $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date')";
+                                $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[day]')";
                                 mysqli_query($db_link, $sql);
                                 echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
                             }

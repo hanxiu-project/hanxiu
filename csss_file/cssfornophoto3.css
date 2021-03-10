@@ -73,8 +73,9 @@ table {
                         background-color: #C7B897;
 
 
-                        height:100px;
-
+                        height:130px;
+						font-weight:bold;
+						color:#612E04;
 
                         text-align: center;                   
 						
@@ -88,9 +89,10 @@ table {
 						width :100%;
 
                         background-color:  #e67300;
+						font-weight:bold;
+						color:#612E04;
 
-
-                        height: 100px;
+                        height: 130px;
 
 
                         text-align: center;
@@ -260,7 +262,7 @@ table {
 				nav a {
 				color: inherit; /* 移除超連結顏色 */
 				display: block; /* 讓 <a> 填滿 <li> */
-				font-size: 1.2rem;
+				font-size:20px;
 				padding: 10px;
 				text-decoration: none;  /* 移除超連結底線 */
 					}

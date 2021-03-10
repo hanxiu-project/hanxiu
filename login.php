@@ -174,6 +174,7 @@
             header("location:indexs.php");
             //echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
         } else if ($authority == 1 || $authority == 2) {
+			$_SESSION["updatename"]="$row[name]";
             header("location:AdminScriptureManage.php");    //導向管理員頁面
         }
     }

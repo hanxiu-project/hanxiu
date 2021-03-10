@@ -152,7 +152,9 @@
 					$filenamecheck=$rowcheck["filename"];
 				
 					
-				
+					# 設定時區
+					date_default_timezone_set('Asia/Taipei');
+					$getDate= date("Y-m-d");
 					if($_POST["date"]==null){
 						$date=$getDate;
 					}else{
@@ -182,8 +184,8 @@
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
-
-                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date')";
+							$sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','0','$_SESSION[updatename]')";
+                           
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
                         }

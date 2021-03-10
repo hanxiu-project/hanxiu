@@ -77,6 +77,7 @@
                                             <div class="form-group">
                                                 <label for="title">公告標題:</label>
                                                 <input id="title" name="title" type="text"  value="<?php echo $row['title']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
+												
                                             </div>
 
 
@@ -93,6 +94,7 @@
                                             <div class="form-group">
                                                 <label for="date">發布日期:</label>
                                                 <input id="date" name="date" type="date" value="<?php echo $row['date']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
+												 
                                             </div>
 
                                             <div class="form-group">

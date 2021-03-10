@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js"></script>
 
-    <title>新增經文 | 管理後台</title>
+    <title>新增講記 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -140,7 +140,7 @@
 
 
                                             <div class="form-group">
-                                                <label for="title">經文標題:</label>
+                                                <label for="title">講記標題:</label>
                                                 <input id="title" name="title" type="text"  value="<?php echo $row['title']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
@@ -150,7 +150,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="content">經文內容:</label>
+                                                <label for="content">講記內容:</label>
                                                 <textarea id="content" name="content" rows="10" cols="80"><?php echo  $str?></textarea>
                                                 <script>
                                                     CKEDITOR.replace('content',{
@@ -192,7 +192,7 @@
                $filename = $_POST["filename"];
                 $content = $_POST["content"];
                 $date = $_POST["date"];
-				
+				$nnewupdate=$_SESSION["updatename"];
 
 
 				
@@ -206,7 +206,7 @@
                 $sql_update_content = "UPDATE scripture SET content = '$content' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $sql_update_date = "UPDATE scripture SET date = '$date' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				$sql_update_save = "UPDATE scripture SET save = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-				
+				$sql_update_newupdate = "UPDATE scripture SET newupdate = '$nnewupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                     
                    
 					$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
@@ -230,8 +230,9 @@
                             echo "<script>alert('已有一樣的檔名');location.href='AdminScriptureEdit.php'</script>";
                         }else
 						{
+							mysqli_query($db_link,$sql_update_newupdate);
                         mysqli_query($db_link, $sql_update_all);
-                        echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
+                        echo "<script>alert('講記發佈完成!');location.href='AdminScriptureManage.php'</script>";
 						}
                     }
 
@@ -257,8 +258,9 @@
                         }
 						else
 						{
+							mysqli_query($db_link,$sql_update_newupdate);
                         mysqli_query($db_link, $sql_update_all_save);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                        echo "<script>alert('講記暫存完成!');location.href='AdminScriptureManage.php'</script>";
 						}
                     }
 

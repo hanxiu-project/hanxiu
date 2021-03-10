@@ -67,13 +67,14 @@
 				$getDate= date("Y-m-d");
 
                 //讀取檔案
-                $filename = $row["filename"];
+                $oldfilename = $row["filename"];
+                $typename = $row["typename"];   //原本的
                 $str = "";
 
                 //判斷是否有該檔案
-                if(file_exists("C:AppServ/www/漢修專題/ScriptureFile/$filename"))
+                if(file_exists("C:AppServ/www/漢修專題/ScriptureFile/$typename/$oldfilename"))
                 {
-                    $filee = fopen("C:AppServ/www/漢修專題/ScriptureFile/$filename","r");
+                    $filee = fopen("C:AppServ/www/漢修專題/ScriptureFile/$typename/$oldfilename","r");
                     if($filee != NULL)
                         //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
                     {
@@ -125,7 +126,7 @@
 													$sqltypeinput="SELECT * FROM `types` where `t_id`='$_POST[type]'";
 													$resulttypeinput=mysqli_query($db_link,$sqltypeinput);
 													 $rowinput= mysqli_fetch_assoc($resulttypeinput);	
-													 $inputtype=$rowinput['typename'];											
+													 $inputtype=$rowinput['typename'];		//選項中的
 											}
 											?>
 											
@@ -144,10 +145,6 @@
                                                 <input id="title" name="title" type="text"  value="<?php echo $row['title']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="filename">檔名:</label>
-                                                <input id="filename" name="filename" type="text" value="<?php echo $row['filename']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                            </div>
 
                                             <div class="form-group">
                                                 <label for="content">經文內容:</label>
@@ -160,7 +157,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="date">發布日期:</label>
+                                                <label for="date">發佈日期:</label>
                                                 <input id="date" name="date" type="date" value="<?php echo $getDate?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
@@ -189,9 +186,10 @@
 
                 $number = $_POST["number"];
                 $title = $_POST["title"];
-               $filename = $_POST["filename"];
+               $filename = $_POST["number"].".txt";
                 $content = $_POST["content"];
                 $date = $_POST["date"];
+                $nnewupdate=$_SESSION["updatename"];
 				
 
 
@@ -206,68 +204,176 @@
                 $sql_update_content = "UPDATE scripture SET content = '$content' WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $sql_update_date = "UPDATE scripture SET date = '$date' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				$sql_update_save = "UPDATE scripture SET save = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
+                $sql_update_newupdate = "UPDATE scripture SET newupdate = '$nnewupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				
                     
                    
-					$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
+					/*$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
 					$checkresult= mysqli_query($db_link, $sql_namecheck);
 					$rowcheck=mysqli_fetch_assoc($checkresult);
-					$filenamecheck=$rowcheck["filename"];
+					$filenamecheck=$rowcheck["filename"];*/
 
-                if(isset($_POST["edit"]))
+                if(isset($_POST["edit"]))//發佈
                 {
-                    //寫入檔案
-                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","w+") or die("Unable to open file!");
-                    $txt = $content;
-                    fwrite($myfile,$txt);
-                    fclose($myfile);
 
-
-                    if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["filename"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
+                    if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
                     {
-						  if($_POST['filename']!=$row['filename'] && $filename == $filenamecheck)
+
+                        if($_POST["number"].".txt" != $oldfilename)           //若檔名與之前的不同  單改檔名
                         {
-                            echo "<script>alert('已有一樣的檔名');location.href='AdminScriptureEdit.php'</script>";
-                        }else
-						{
+                            $sql3 = "SELECT * FROM scripture ";
+                            $result3=mysqli_query($db_link,$sql3);
+
+                            while($row3=$result3->fetch_assoc()) {
+
+                                if ($_POST["number"].".txt" == $row3["filename"]) {             //檢查新檔名有沒有在資料庫，有就會重複，沒有就下一個
+
+                                    echo "<script>alert('講記卷號重複，請重新輸入！');location.href='AdminScriptureEdit.php'</script>";
+                                }
+                                elseif($typename != $inputtype)     //類別有改過的話，原本的 != 現在選的
+                                {
+                                    unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
+
+                                    //寫入檔案
+                                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                    $txt = $content;
+                                    fwrite($myfile,$txt);
+                                    fclose($myfile);
+
+                                    mysqli_query($db_link, $sql_update_all);
+                                    mysqli_query($db_link,$sql_update_newupdate);
+                                    echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
+                                }
+                                else                                                            //檔名沒重複且類別沒改
+                                {
+                                    unlink("../漢修專題/ScriptureFile/".$typename."/".$oldfilename);
+
+                                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                    $txt = $content;
+                                    fwrite($myfile,$txt);
+                                    fclose($myfile);
+
+                                    mysqli_query($db_link, $sql_update_all);
+                                    mysqli_query($db_link,$sql_update_newupdate);
+                                    echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
+                                }
+                            }
+                        }
+                        else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)  單改類別
+                        {
+
+                            unlink("../漢修專題/ScriptureFile/".$typename."/".$oldfilename);
+
+                        //寫入檔案
+                        $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                        $txt = $content;
+                        fwrite($myfile,$txt);
+                        fclose($myfile);
+
                         mysqli_query($db_link, $sql_update_all);
+                        mysqli_query($db_link,$sql_update_newupdate);
                         echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
 						}
+                        else                    //檔名相同             沒改類別沒改檔名
+                        {
+
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                            $txt = $content;
+                            fwrite($myfile,$txt);
+                            fclose($myfile);
+
+                            mysqli_query($db_link, $sql_update_all);
+                            mysqli_query($db_link,$sql_update_newupdate);
+                            echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
+                        }
+
                     }
 
                    
 
                 }
 				  if(isset($_POST["save"]))
-                        {
-                           
-                           
+                  {
 								//寫入檔案
-                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","w+") or die("Unable to open file!");
+                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                     $txt = $content;
                     fwrite($myfile,$txt);
                     fclose($myfile);
 
 
-                    if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["filename"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
-                    {
-						  if($_POST['filename']!=$row['filename'] && $filename == $filenamecheck)
-                        {
-                          echo "<script>alert('已有一樣的檔名');location.href='AdminScriptureEdit.php'</script>";
-                        }
-						else
-						{
-                        mysqli_query($db_link, $sql_update_all_save);
-                        echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
-						}
+
+                      if($_POST["type"]!=null && $_POST["number"]!=null && $_POST["title"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
+                      {
+                          if($_POST["number"].".txt" != $oldfilename)           //若檔名與之前的不同
+                          {
+                              $sql3 = "SELECT * FROM scripture ";
+                              $result3=mysqli_query($db_link,$sql3);
+
+                              while($row3=$result3->fetch_assoc()) {
+
+                                  if ($_POST["number"].".txt" == $row3["filename"]) {
+
+                                      echo "<script>alert('講記卷號重複，請重新輸入！');location.href='AdminScriptureEdit.php'</script>";
+                                  }
+                                  else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)
+                                  {
+                                      unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
+
+                                      //寫入檔案
+                                      $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                      $txt = $content;
+                                      fwrite($myfile,$txt);
+                                      fclose($myfile);
+
+                                      mysqli_query($db_link, $sql_update_all_save);
+                                      mysqli_query($db_link,$sql_update_newupdate);
+                                      echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                                  }
+                                  else
+                                  {
+                                      unlink("../漢修專題/ScriptureFile/".$typename."/".$oldfilename);
+
+                                      $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                      $txt = $content;
+                                      fwrite($myfile,$txt);
+                                      fclose($myfile);
+
+                                      mysqli_query($db_link, $sql_update_all_save);
+                                      mysqli_query($db_link,$sql_update_newupdate);
+                                      echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                                  }
+                              }
+                          }
+                          else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)
+                          {
+                              unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
+
+                              //寫入檔案
+                              $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                              $txt = $content;
+                              fwrite($myfile,$txt);
+                              fclose($myfile);
+
+                              mysqli_query($db_link, $sql_update_all_save);
+                              mysqli_query($db_link,$sql_update_newupdate);
+                              echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                          }
+                          else                    //檔名相同
+                          {
+
+                              $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                              $txt = $content;
+                              fwrite($myfile,$txt);
+                              fclose($myfile);
+
+                              mysqli_query($db_link, $sql_update_all_save);
+                              mysqli_query($db_link,$sql_update_newupdate);
+                              echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                          }
+                      }
+
+
                     }
-
-                   
-					
-					 
-
-                           
-                        }
 
                 ?>
 

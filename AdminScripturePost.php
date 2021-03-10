@@ -101,10 +101,6 @@
                                                     <input id="title" name="title" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                                 </div>
 
-                                                <div class="form-group">
-                                                    <label for="filename">&emsp;&emsp;檔名:</label>
-                                                    <input id="filename" name="filename" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                                </div>
 
                                                 <div class="form-group">
                                                     <label for="content">經文內容:</label>
@@ -119,7 +115,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="date">發布日期:</label>
+                                                    <label for="date">發佈日期:</label>
                                                     <input id="date" value="<?php echo $getDate?>" name="date" type="date"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                                 </div>
 
@@ -144,7 +140,7 @@
 					
                     $number = $_POST["number"];
                     $title = $_POST["title"];
-                    $filename = $_POST["filename"].".txt";
+                    $filename = $_POST["number"].".txt";
                     $content = $_POST["content"];
 					$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
 					$checkresult= mysqli_query($db_link, $sql_namecheck);
@@ -162,7 +158,7 @@
 
                     if(isset($_POST["go"]))
                     {
-						if($number==null || $title==null || $_POST["filename"]==null || $content==null || $date ==null)
+						if($number==null || $title==null ||  $content==null || $date ==null)
                         {
                             echo "<script>alert('請輸入資料!');</script>";
 							
@@ -171,38 +167,38 @@
 						 
                         else if($filename == $filenamecheck)
                         {
-                            echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
+                            echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                         }
 							
                         else
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
 
-                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date')";
+                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','0','$_SESSION[updatename]')";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
                         }
                     }
 					  if(isset($_POST["save"]))
                     {
-                       if($number==null || $title==null ||$_POST["filename"]=null || $content==null || $date ==null)
+                       if($number==null || $title==null  || $content==null || $date ==null)
                         {
                             echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
                         }
 						  else if($filename == $filenamecheck)
                         {
-                            echo "<script>alert('已有一樣的檔名');location.href='AdminScripturePost.php'</script>";
+                            echo "<script>alert('講記卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                         }
                         else
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
 						
                             $txt = $content;
                             fwrite($myfile,$txt);
@@ -210,7 +206,7 @@
 
                             $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1')";
                             mysqli_query($db_link, $sql);
-                            echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
+                            echo "<script>alert('講記已經暫存!');location.href='AdminScriptureManage.php'</script>";
                         }
                     }
                     ?>

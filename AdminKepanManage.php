@@ -162,7 +162,8 @@
                             $sql_delete="DELETE FROM kepans WHERE kepans.k_id = $_SESSION[delete_k_id]";
                             mysqli_query($db_link, $sql_delete);
                             $filename = $row2["filename"];//刪除檔案
-                            unlink("../漢修專題/kepan/".$filename);
+                            $type = $row2["kptypename"];//刪除檔案
+                            unlink("../漢修專題/kepan/".$type."/".$filename);
                             echo "<script>alert('成功刪除!');location.href='AdminKepanManage.php'</script>";
 
                         }

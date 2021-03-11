@@ -110,7 +110,7 @@ session_start();
                     <?php
 
                     $getDate= date("Y-m-d");
-
+                    $kptype = $_SESSION[inputtype];
                     $filename = $_FILES['my_file']['name'];
 
                     # 檢查檔案是否上傳成功
@@ -122,11 +122,11 @@ session_start();
 
 
                         # 檢查檔案是否已經存在
-                        if (file_exists('../漢修專題/kepan/' . $_FILES['my_file']['name'])){
-                            echo '檔案已存在。<br/>';
+                        if (file_exists("C:/AppServ/www/漢修專題/kepan/".$kptype."/".$filename)){
+                            echo "<script>alert('檔案已存在！');</script>";
                         } else {
                             $file = $_FILES['my_file']['tmp_name'];
-                            $dest = '../漢修專題/kepan/' . $_FILES['my_file']['name'];
+                            $dest = "C:/AppServ/www/漢修專題/kepan/".$kptype."/".$filename;
 
                             # 將檔案移至指定位置
                             move_uploaded_file($file, $dest);
@@ -138,8 +138,8 @@ session_start();
                              echo "<script>alert('檔案已經上傳!');location.href='AdminKepanManage.php'</script>";
                         }
                     } /*else {
-                        echo '錯誤代碼：' . $_FILES['my_file']['error'] . '<br/>';*/
-                    //}
+                        echo '錯誤代碼：' . $_FILES['my_file']['error'] . '<br/>';
+                    }*/
 
 
                     ?>

@@ -47,7 +47,7 @@
         <!--建立新經文-->
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
-                <a href="AdminNewKepan.php" class="btn btn-success  " style="left">建立新科判</a>
+                <a href="AdminNewKepan.php" class="btn btn-success  " style="left">新增科判類別</a>
                 <a href="AdminNewKepanFile.php" class="btn btn-success  " style="left">建立新科判檔案</a>
 
                 <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:white">

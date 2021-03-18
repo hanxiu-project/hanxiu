@@ -41,6 +41,7 @@
     <!--sidebar-->
     <!-- Navigation -->
     <?php include 'admin.php';?>
+	<?php include 'database.php';?>
     <!--Body-->
     <div id="page-wrapper">
 
@@ -92,8 +93,8 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="date">發布日期:</label>
-                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                <label for="date">發布日期:<?php echo $row['date']?></label>
+                                               
 												 
                                             </div>
 

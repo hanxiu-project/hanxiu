@@ -77,6 +77,7 @@
 
 <body>
 <?php include 'nav.php'; ?>
+<?php include 'database.php';?>
 <div id="wrapper">
 
 

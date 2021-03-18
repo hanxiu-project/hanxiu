@@ -66,17 +66,23 @@
                 </ul>
             </li>
 
-            <li class="dropdown">
+          <li class="dropdown">
                 <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 公告管理</a>
-                    </li>
-                    <li>
-                        <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>新增公告</a>
-                    </li>
-                </ul>
-            </li>
+                    <ul class="dropdown-menu">
+						<li>
+                            <a href="AdminPostsKeep.php"><i class="fa fa-fw fa-edit"></i> 待發公告管理</a>
+                        </li>
+                        <li>
+                            <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 新公告管理</a>
+                        </li>
+						 <li>
+                            <a href="AdminOldPostsManage.php"><i class="fa fa-fw fa-edit"></i> 歷史公告管理</a>
+                        </li>
+					    <li>
+                            <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>新增公告</a>
+                        </li>
+                    </ul>
+                </li>
 
             <li class="dropdown">
                 <a href="Donatemanage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>捐獻管理<b class="caret"></b></a>

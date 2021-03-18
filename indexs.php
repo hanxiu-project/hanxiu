@@ -155,7 +155,7 @@
 
             <?php
             //...
-            $sql = "SELECT * FROM posts where old='0' order by `date` ASC ";
+            $sql = "SELECT * FROM posts where old='0' && keep='0'  order by `date` ASC ";
             $result = mysqli_query($db_link, $sql);
 			
             ?>
@@ -175,7 +175,7 @@
 									$date2 = strtotime($row[date]);
 									$days = (($date1 - $date2)/86400);
 									
-								if($days>$row[newday]){
+								if($getDate>=$row[newday]){
 									$sqlii="update `posts` set old='1'  where `p_id`='$row[p_id]'";
 									mysqli_query($db_link, $sqlii);
 									

@@ -42,8 +42,7 @@
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
             <a href="AdminPostsPost.php" class="btn btn-success  ">建立新公告</a>
-			<font size="6"><strong style= "background:white" >歷史公告管理</strong></font>
-			
+			<font size="6"><strong style= "background:white" >待發公告管理</strong></font>
         </div>
     </div>
 
@@ -59,41 +58,47 @@
                 /*資料庫連結*/
                
                 session_start();
-
+				# 設定時區
+				date_default_timezone_set('Asia/Taipei');
+				$getDate= date("Y-m-d");
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql = "SELECT * FROM posts where old='1' order by date DESC";
+                $sql = "SELECT * FROM posts where old='0' && keep='1' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 				
-                echo "<form name='form1' method='POST' action=''>";
+                echo "<form  name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px; >";
                 echo "<tr align=center>";
                 echo "<td>公告標題</td>";
                 echo "<td>公告時間</td>";
 				echo "<td>下架日期</td>";
+				echo "<td>放置首頁天數</td>";
                 echo "<td></td>";
 				echo "<td></td>";
+					
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {
+				$date1 = strtotime($row[date]);
+				$date2 = strtotime($row[newday]);
+				$days = (($date2 - $date1)/86400);
                     echo "<tr align=center>";
-					if($row[old]=='0'){
-						 echo "<td>$row[title]";
-						 echo "&nbsp&nbsp&nbsp";
-						echo "<font size=+2 face=微軟正黑體 color=red>New!</font></td>";
-					}else{
+					
 						 echo "<td>$row[title]</td>";
-					}
+					
                    
                     echo "<td>$row[date]</td>";
 					 echo "<td>$row[newday]</td>";
+					  echo "<td>$days</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[p_id]+1' value='編輯'></td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+2' value='刪除'></td>";
+					
                     echo "</tr>";
+					
                 }
                 echo "</table>";
-
+	
 
 
                 $sql2 = "SELECT * FROM posts";
@@ -111,7 +116,7 @@
                         $_SESSION["delete_p_id"]=$row2["p_id"];
                         $sql_delete="DELETE FROM posts WHERE posts.p_id = $_SESSION[delete_p_id]";
                         mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='AdminPostsManage.php'</script>";
+                        echo "<script>alert('成功刪除!');location.href='AdminPostsKeep.php'</script>";
                     }
                 }
 

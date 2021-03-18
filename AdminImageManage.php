@@ -37,8 +37,9 @@
 
     <div id="wrapper">
         <?php include 'admin.php';
+		 include 'database.php';
         /*資料庫連結*/
-        session_start();
+      
         ?>
 
 
@@ -57,7 +58,7 @@
                     $result= mysqli_query($db_link,$sql);
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table  width=1200 style=font-size:24px; >";
+                    echo "<table border rules=rows cellspacing=0  width=100% style=font-size:24px; >";
                     echo "<tr align=center>";
                     echo "<td>照片名稱</td>";
                     echo "<td>上傳日期</td>";

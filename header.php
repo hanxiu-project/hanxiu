@@ -28,7 +28,61 @@ session_start();
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
+<?php
+	 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
+				# 設定時區
+				date_default_timezone_set('Asia/Taipei');
+				$getDate= date("Y-m-d");
+	?>
+   
 
+            <?php
+            //...
+            $sql = "SELECT * FROM posts where old='0' && keep='1' order by `date` ASC ";
+            $result = mysqli_query($db_link, $sql);
+			
+            ?>
+         
+							
+                            <?php
+                            while ($row = $result->fetch_assoc()) {
+									
+								
+									
+								if($getDate==$row[date] || $row[date]<$getDate){
+									$sqlii="update `posts` set keep='0'  where `p_id`='$row[p_id]'";
+									mysqli_query($db_link, $sqlii);
+									
+									
+								}
+                              
+                            }
+                           
+
+                            
+                            ?>
+							<?php
+            //...
+            $sqlp = "SELECT * FROM posts where old='0' && keep='0'  order by `date` ASC ";
+            $resultp = mysqli_query($db_link, $sqlp);
+			
+            ?>
+                            <?php
+                            while ($rowp = $resultp->fetch_assoc()) {
+									
+									
+								if($getDate>=$rowp[newday]){
+									$sqlp="update `posts` set old='1'  where `p_id`='$row[p_id]'";
+									mysqli_query($db_link, $sqlp);
+									
+									
+								}
+                                
+                            }
+                           
+
+                           
+                            ?>
 <!--最外圍-->
 
 

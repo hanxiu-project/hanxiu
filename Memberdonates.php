@@ -53,11 +53,7 @@
             
                 <?php
 
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                mysqli_query($db_link, 'SET CHARACTER SET utf8');
+                
                 $sql="SELECT * FROM `donates` where `m_id` ='$_SESSION[mid]' order by `date` DESC";
                 $result= mysqli_query($db_link,$sql);
 

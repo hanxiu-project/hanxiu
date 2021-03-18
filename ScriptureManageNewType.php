@@ -36,6 +36,7 @@
 <form name="forms" method="post" action="">
     <div id="wrapper">
         <?php include 'admin.php'; ?>
+		<?php include 'database.php';?>
         <?php
         /*資料庫連結*/
 
@@ -78,7 +79,7 @@
 
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table  width=100% style=font-size:20px;>";
+                    echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;>";
                     echo "<tr align=center>";
                     echo "<td><b>講記類別</b></td>";
                     echo "<td></td>";
@@ -86,18 +87,20 @@
 
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr align=center>";
+						
                         echo "<td>$row[typename]</td>";
-
+							
                         echo "<td>";
 
                         ?>
                         <input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;'
                                name="<?php echo "$row[t_id]+2"; ?>" value='刪除'
                                onclick="return confirm('是否確認刪除此類別?')"></td>
-
+						
                         <?php
 
                         echo "</tr>";
+						
                     }
                     echo "</table>";
                     //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";

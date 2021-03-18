@@ -36,6 +36,7 @@
 <form name="forms" method="post" action="">
 <div id="wrapper">
     <?php include 'admin.php';?>
+	<?php include 'database.php';?>
 	<?php
 	/*資料庫連結*/
                
@@ -87,52 +88,64 @@
                 $result= mysqli_query($db_link,$sql_tid);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=100% style=font-size:20px;>";
+                echo "<table border=1 width=100% style=font-size:20px;>";
                 echo "<tr align=center>";
                 echo "<td>類別名稱</td>";
                 echo "<td>卷號</td>";
 
                 echo "<td>經文標題</td>";
                 echo "<td>發佈日期</td>";
-
+				echo "<td>最新修改管理員</td>";
                 echo "<td></td>";
+				echo "<td></td>";
                 echo "</tr>";
 				if (isset($_POST["gotype"])) {
-					$sql_typesearch = "SELECT * FROM scripture WHERE  typename ='$_POST[type]' and save='1' order by t_id ";
-					$resulttypesearch= mysqli_query($db_link,$sql_typesearch);
+					$sql = "SELECT * FROM scripture WHERE  typename ='$_POST[type]' and save='1' order by t_id ";
+					$result= mysqli_query($db_link,$sql);
 					if ($_POST[type]=="all"){
+						$sql = "SELECT * FROM scripture where save='1' order by t_id   ";
+					$result= mysqli_query($db_link,$sql);
 						 while($row=$result->fetch_assoc())
+                {
+					
+                    echo "<tr align=center>";
+                    echo "<td>$row[typename]</td>";
+                    echo "<td>$row[number]</td>";
+                    echo "<td>$row[title]</td>";
+                    echo "<td>$row[date]</td>";
+
+                    echo "<td>$row[newupdate]</td>";
+
+                    echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
+                    
+					 ?>
+					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
+					<td><hr></td>
+					<?php
+				
+				
+                    echo "</tr>";
+                }
+					}
+					else{
+						while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
                     echo "<td>$row[typename]</td>";
                     echo "<td>$row[number]</td>";
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
-					echo "<td>$row[newupdate]</td>";
+
+                    echo "<td>$row[newupdate]</td>";
+
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')"></td>
-                    
+					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
+					<td><hr></td>
 					<?php
-                    echo "</tr>";
-                }
-					}
-					else{
-						while($rowt=$resulttypesearch->fetch_assoc())
-                {
-                    echo "<tr align=center>";
-                    echo "<td>$rowt[typename]</td>";
-                    echo "<td>$rowt[number]</td>";
-                    echo "<td>$rowt[title]</td>";
-                    echo "<td>$rowt[date]</td>";
-					echo "<td>$row[newupdate]</td>";
-                    echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$rowt[s_id]+1' value='編輯'></td>";
-                   
-					 ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$rowt[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')"></td>
-                    
-					<?php
+				
+				
                     echo "</tr>";
                 }}
 					
@@ -146,16 +159,22 @@
                     echo "<td>$row[number]</td>";
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
-					echo "<td>$row[newupdate]</td>";
-					 
+
+                    echo "<td>$row[newupdate]</td>";
+
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
-					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')"></td>
-                    
+					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
+					<td><hr></td>
 					<?php
+				
+				
                     echo "</tr>";
+					
+					
                 }
+				
 				}
 
                 echo "</table>";

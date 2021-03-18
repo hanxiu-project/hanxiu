@@ -34,7 +34,11 @@
 
 <body>
 <form name="forms" method="post" action="">
-<?php 
+
+<div id="wrapper">
+     <?php include 'admin.php';?>
+	<?php include 'database.php';?>
+	<?php 
 			 /*資料庫連結*/
               
 				$sqlmember="SELECT * FROM members where m_id= $_SESSION[m_id] ";
@@ -42,11 +46,12 @@
 				$rowmanager = mysqli_fetch_assoc($resultmanager);	
 				
 			?>   
-<div id="wrapper">
-     <?php include 'admin.php';?>
-	
     <!--建立新公告-->
-   
+   <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >管理員管理</strong></font>
+		
+        </div>
 
     <!--Body-->
     <div id="page-wrapper">
@@ -67,9 +72,9 @@
                 $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=100% style=font-size:22px; >";
+                echo "<table border rules=rows cellspacing=0  width=100% style=font-size:22px; >";
 				 echo "<tr align=left>";
-				 echo "<td>管理員</td>";
+				 
 				 echo "</tr>";
                 echo "<tr align=center>";
 				
@@ -80,8 +85,12 @@
 				echo "<td>會員信箱</td>";
 				echo "<td>會員地址</td>";
 				echo "<td>會員行動</td>";
-				
+				echo "<td></td>";
                 echo "<td></td>";
+				
+					if($rowmanager["authority"]==2){
+						echo "<td></td>";
+					}
                 echo "</tr>";
 				while($row=$result->fetch_assoc())
                 {
@@ -101,7 +110,7 @@
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='移權' onclick="return confirm('是否停權這位管理員?')"></td>
 					<?php
 					}
-					
+					echo "<td><hr></td>";
 				   echo "</tr>";
                 
                     

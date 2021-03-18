@@ -37,6 +37,7 @@
 <form name="formspost" method="post" action="">
 <div id="wrapper">
      <?php include 'admin.php';?>
+	 <?php include 'database.php';?>
 
     <!--Body-->
     <div id="page-wrapper">

@@ -42,6 +42,7 @@ session_start();
     <!--sidebar-->
     <!-- Navigation -->
      <?php include 'admin.php';?>
+	 <?php include 'database.php';?>
 
     <div class="row" style="margin-bottom: 20px; text-align: left; font-size: 20px; color: #ffffff">
         <div class="col-lg-12">

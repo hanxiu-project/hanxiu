@@ -39,6 +39,7 @@
 
 <div id="wrapper">
      <?php include 'admin.php';?>
+	 <?php include 'database.php';?>
 
     <!--Body-->
     <div id="page-wrapper">

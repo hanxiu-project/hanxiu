@@ -36,6 +36,7 @@
 <form name="formsearchdoante" method="post" action="">
 <div id="wrapper">
     <?php include 'admin.php';?>
+	<?php include 'database.php';?>
 
     <!--建立新經文-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
@@ -70,7 +71,7 @@
                 $result= mysqli_query($db_link,$sql_mid);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=1600 style=font-size:20px;>";
+                echo "<table border=1 width=100% style=font-size:20px;>";
                 echo "<tr align=center>";
                  echo "<td>會員編號</td>";
                 echo "<td>會員姓名</td>";

@@ -36,6 +36,7 @@
 
 <div id="wrapper">
      <?php include 'admin.php';?>
+	 <?php include 'database.php';?>
 
     <!--建立新公告-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
@@ -64,11 +65,12 @@
                 $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=100% style=font-size:24px; >";
+                echo "<table border=1 width=100% style=font-size:24px; >";
                 echo "<tr align=center>";
                 echo "<td>影片描述</td>";
                 echo "<td>影片網址</td>";
                 echo "<td></td>";
+				echo "<td></td>";
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {

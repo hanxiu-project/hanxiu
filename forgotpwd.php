@@ -21,16 +21,7 @@
 
 <body>
 
-<?php
-$db_ip = "127.0.0.1";
-$db_user = "root";
-$db_pwd = "123456789";
-$db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-mysqli_query($db_link, 'SET CHARACTER SET utf8');
-//載入資料庫連線與啟用session
-//include("sql.php");
-session_start();
-?>
+
 
 
 <!--最外圍-->
@@ -39,63 +30,7 @@ session_start();
 
     <!--頁首-->
     <!--包住固定不動的Header-->
-    <div id="header2">
-
-        <div id="header">
-            <img src="logo.png" align="left" width="auto" height="100">
-            <div id="wrapnav1">
-                <nav>
-                    <ul class="flex-nav ">
-
-
-                        <li>
-                            <a href='login.php'>登入</a>
-                        </li>
-                        <li>
-                            <a href='registered.php'>註冊</a>
-                        </li>
-
-
-                    </ul>
-                </nav>
-
-            </div>
-            <div id="wrapnav2">
-                <nav>
-                    <ul class="flex-nav ">
-                        <?php
-                        if ($_SESSION[acc] == null) {
-                            echo "<li><a href=indexs.php>首頁</a></li>";
-                            echo "<li><a href=articletype.php>講記內容</a></li>";
-                            echo "<li><a href=kepan.php>科判</a></li>";
-                            echo "<li><a href=?>補充資料</a></li>";
-
-                            echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                            echo " <li><a href=news.php>最新公告</a></li>";
-                            echo " <li><a href=contact.php>聯絡我們</a></li>";
-
-                        } else {
-                            ?>
-
-                            <li><a href="indexs.php">首頁</a></li>
-                            <li><a href="articletype.php">講記內容</a></li>
-                            <li><a href=kepan.php>科判</a></li>
-                            <li><a href=?>補充資料</a></li>
-                            <li><a href="videotypes.php">法音流佈</a></li>
-                            <li><a href="news.php">最新公告</a></li>
-                            <li><a href="Memberdonates.php">查看捐獻</a></li>
-                            <li><a href="MemberProfile.php">個人資料</a></li>
-                            <li><a href="comments.php">錯誤回報</a></li>
-                            <li><a href="contact.php">聯絡我們</a></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </nav>
-
-            </div>
-        </div>
-    </div>
+    <?php include 'header.php';?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

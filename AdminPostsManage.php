@@ -36,11 +36,14 @@
 
 <div id="wrapper">
      <?php include 'admin.php';?>
+	 <?php include 'database.php';?>
 
     <!--建立新公告-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
             <a href="AdminPostsPost.php" class="btn btn-success  ">建立新公告</a>
+			<font size="6"><strong style= "background:white" >新公告管理</strong></font>
+			
         </div>
     </div>
 
@@ -56,23 +59,30 @@
                 /*資料庫連結*/
                
                 session_start();
-
+				# 設定時區
+				date_default_timezone_set('Asia/Taipei');
+				$getDate= date("Y-m-d");
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql = "SELECT * FROM posts where old='0' order by date DESC";
+                $sql = "SELECT * FROM posts where old='0' && keep='0' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 				
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=1600 style=font-size:24px; >";
+                echo "<table border=1 width=100% style=font-size:24px; >";
                 echo "<tr align=center>";
                 echo "<td>公告標題</td>";
                 echo "<td>公告時間</td>";
-				echo "<td>存放首頁天數</td>";
+				echo "<td>下架日期</td>";
+				echo "<td>放置首頁天數</td>";
                 echo "<td></td>";
+				 echo "<td></td>";
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {
+				$date1 = strtotime($row[date]);
+				$date2 = strtotime($row[newday]);
+				$days = (($date2 - $date1)/86400);
                     echo "<tr align=center>";
 					
 						 echo "<td>$row[title]</td>";
@@ -80,6 +90,7 @@
                    
                     echo "<td>$row[date]</td>";
 					 echo "<td>$row[newday]</td>";
+					  echo "<td>$days</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[p_id]+1' value='編輯'></td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+2' value='刪除'></td>";
                     echo "</tr>";

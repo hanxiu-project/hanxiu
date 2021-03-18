@@ -36,6 +36,7 @@
 <form name="forms" method="post" action="">
     <div id="wrapper">
    <?php include 'admin.php';?>
+   <?php include 'database.php';?>
         <?php
         /*資料庫連結*/
        
@@ -84,7 +85,7 @@
                     $result= mysqli_query($db_link,$sql_tid);
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table  width=100% style=font-size:20px;>";
+                    echo "<table border=1 width=100% style=font-size:20px;>";
                     echo "<tr align=center>";
                     echo "<td>科判名稱</td>";
                     echo "<td>檔案名稱</td>";

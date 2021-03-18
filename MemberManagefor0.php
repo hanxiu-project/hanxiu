@@ -34,22 +34,25 @@
 
 <body>
 <form name="forms" method="post" action="">
-<?php 
+ 
+<div id="wrapper">
+     <?php include 'admin.php';?>
+	<?php include 'database.php';?>
+	<?php 
 			 /*資料庫連結*/
-                $db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
+               
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
 				$sqlmember="SELECT * FROM members where m_id= $_SESSION[m_id] ";
                 $resultmanager=mysqli_query($db_link,$sqlmember);
 				$rowmanager = mysqli_fetch_assoc($resultmanager);	
 				
-			?>   
-<div id="wrapper">
-     <?php include 'admin.php';?>
-	
+			?>  
     <!--建立新公告-->
-   
+   <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >一般會員管理</strong></font>
+		
+        </div>
 
     <!--Body-->
     <div id="page-wrapper">
@@ -70,9 +73,9 @@
                 $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table  width=100% style=font-size:22px; >";
+                echo "<table border rules=rows cellspacing=0  width=100% style=font-size:22px; >";
 				 echo "<tr align=left>";
-				 echo "<td>一般會員</td>";
+				 
 				 echo "</tr>";
                 echo "<tr align=center>";
 				
@@ -84,6 +87,10 @@
 				echo "<td>會員地址</td>";
 				echo "<td>會員行動</td>";
 				
+				 if($rowmanager["authority"]==2){
+						echo "<td></td>";
+					}
+					   echo "<td></td>";
                 echo "<td></td>";
                 echo "</tr>";
 				while($row=$result->fetch_assoc())
@@ -105,7 +112,7 @@
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='指定' onclick="return confirm('是否確認將這位會員升級為管理員?')"></td>
 					<?php
 					}
-					
+					echo "<td><hr></td>";
 				   echo "</tr>";
                 
                     

@@ -122,19 +122,46 @@ session_start();
                         </li>
                     </ul>
                 </li>
-
-				<li class="dropdown">
-                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
+				 <li class="dropdown">
+                <a href="AdminKepanManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>科判管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
+                            <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總覽</a>
                         </li>
-					    <li>
-                            <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
+                        <li>
+                            <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判類別</a>
+                        </li>
+                        <li>
+                            <a href="AdminNewKepanFile.php"><i class="fa fa-fw fa-user"></i>新增科判檔案</a>
                         </li>
                     </ul>
                 </li>
-
+				  <li class="dropdown">
+                    <a href="AdminSupplementManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>補充資料管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="AdminSupplementManage.php"><i class="fa fa-fw fa-user"></i>補充資料總覽</a>
+                        </li>
+                        <li>
+                            <a href="AdminNewSupplementFile.php"><i class="fa fa-fw fa-user"></i>新增補充資料檔案</a>
+                        </li>
+                    </ul>
+                </li>
+				  <li class="dropdown">
+                <a href="AdminVideosManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>影音管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
+                        </li>
+					    <li>
+                            <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音類別</a>
+                        </li>
+						
+                        <li>
+                            <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
+                        </li>
+                    </ul>
+                </li>
 				<li class="dropdown">
                 <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -166,21 +193,7 @@ session_start();
                 </li>
 
 
-			    <li class="dropdown">
-                <a href="AdminVideosManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>影音管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
-                        </li>
-					    <li>
-                            <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音類別</a>
-                        </li>
-						
-                        <li>
-                            <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
-                        </li>
-                    </ul>
-                </li>
+			  
 
 			    <li class="dropdown">
                 <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>留言管理<b class="caret"></b></a>
@@ -194,32 +207,9 @@ session_start();
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                <a href="AdminKepanManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>科判管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="AdminKepanManage.php"><i class="fa fa-fw fa-user"></i>科判總覽</a>
-                        </li>
-                        <li>
-                            <a href="AdminNewKepan.php"><i class="fa fa-fw fa-user"></i>新增科判類別</a>
-                        </li>
-                        <li>
-                            <a href="AdminNewKepanFile.php"><i class="fa fa-fw fa-user"></i>新增科判檔案</a>
-                        </li>
-                    </ul>
-                </li>
+               
 
-                <li class="dropdown">
-                    <a href="AdminSupplementManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>補充資料管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="AdminSupplementManage.php"><i class="fa fa-fw fa-user"></i>補充資料總覽</a>
-                        </li>
-                        <li>
-                            <a href="AdminNewSupplementFile.php"><i class="fa fa-fw fa-user"></i>新增補充資料檔案</a>
-                        </li>
-                    </ul>
-                </li>
+              
 
 
 			    <li class="dropdown">
@@ -242,6 +232,17 @@ session_start();
                         </li>
                         <li>
                             <a href="AdminImageSort.php"><i class="fa fa-fw fa-user"></i>照片排序</a>
+                        </li>
+                    </ul>
+                </li>
+				<li class="dropdown">
+                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
+                        </li>
+					    <li>
+                            <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
                         </li>
                     </ul>
                 </li>

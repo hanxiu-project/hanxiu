@@ -209,6 +209,19 @@ session_start();
                     </ul>
                 </li>
 
+                <li class="dropdown">
+                    <a href="AdminSupplementManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>補充資料管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="AdminSupplementManage.php"><i class="fa fa-fw fa-user"></i>補充資料總覽</a>
+                        </li>
+                        <li>
+                            <a href="AdminNewSupplementFile.php"><i class="fa fa-fw fa-user"></i>新增補充資料檔案</a>
+                        </li>
+                    </ul>
+                </li>
+
+
 			    <li class="dropdown">
                 <a href="AdminContactManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>聯絡資訊管理<b class="caret"></b></a>
 				    <ul class="dropdown-menu">

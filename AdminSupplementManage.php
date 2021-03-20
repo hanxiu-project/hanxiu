@@ -53,7 +53,11 @@
             </div>
 
         </div>
-
+<div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >補充資料總覽</strong></font>
+		
+        </div>
         <!--Body-->
         <div id="page-wrapper">
 
@@ -70,7 +74,7 @@
                     $result= mysqli_query($db_link,$sql_tid);
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table border=1 width=100% style=font-size:20px;>";
+                    echo "<table border=1 width=100% style=font-size:20px;line-height:50px;>";
                     echo "<tr align=center>";
                     echo "<td>檔案名稱</td>";
                     echo "<td>發佈日期</td>";

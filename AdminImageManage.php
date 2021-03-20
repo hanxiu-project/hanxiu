@@ -41,8 +41,11 @@
         /*資料庫連結*/
       
         ?>
-
-
+		
+ <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >照片總覽</strong></font>
+        </div>
         <!--Body-->
         <div id="page-wrapper">
 
@@ -58,7 +61,7 @@
                     $result= mysqli_query($db_link,$sql);
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table border rules=rows cellspacing=0  width=100% style=font-size:24px; >";
+                    echo "<table border rules=rows cellspacing=0  width=100% style=font-size:24px;line-height:50px; >";
                     echo "<tr align=center>";
                     echo "<td>照片名稱</td>";
                     echo "<td>上傳日期</td>";

@@ -42,10 +42,14 @@
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
             <a href="AdminPostsPost.php" class="btn btn-success  ">建立新公告</a>
-			<font size="6"><strong style= "background:white" >待發公告管理</strong></font>
+			
         </div>
     </div>
-
+ <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >代發公告管理</strong></font>
+		
+        </div>
     <!--Body-->
     <div id="page-wrapper">
 
@@ -68,7 +72,7 @@
                 $result= mysqli_query($db_link,$sql);
 				
                 echo "<form  name='form1' method='POST' action=''>";
-                echo "<table border=1 width=100% style=font-size:24px; >";
+                echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
                 echo "<td>公告標題</td>";
                 echo "<td>公告時間</td>";

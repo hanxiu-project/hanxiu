@@ -44,9 +44,10 @@ session_start();
      <?php include 'admin.php';?>
 	 <?php include 'database.php';?>
 
-    <div class="row" style="margin-bottom: 20px; text-align: left; font-size: 20px; color: #ffffff">
+    <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
-            回覆留言區
+            
+			<font size="6"><strong style= "background:white" >回覆留言區</strong></font>
         </div>
     </div>
 

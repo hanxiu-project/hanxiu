@@ -60,7 +60,11 @@
             </div>
 
         </div>
-
+ <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >新增講記類別</strong></font>
+		
+        </div>
         <!--Body-->
         <div id="page-wrapper">
 
@@ -79,7 +83,8 @@
 
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;>";
+					
+                    echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
                     echo "<tr align=center>";
                     echo "<td><b>講記類別</b></td>";
                     echo "<td></td>";

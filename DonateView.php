@@ -100,7 +100,8 @@
 
                 $sql = "SELECT * FROM donates";
                 $result= mysqli_query($db_link,$sql);
-
+				$resultfortd= mysqli_query($db_link,$sql);
+				$rowfortd=$resultfortd->fetch_assoc();
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
@@ -109,7 +110,11 @@
                 echo "<td>捐獻內容</td>";
 				echo "<td>捐獻數量</td>";
 				echo "<td>捐獻日期</td>";
+				if($rowfortd["m_id"]!=null){
                 echo "<td></td>";
+				
+				}
+              
                 echo "</tr>";
 				/*排序*/
 				/**/if (isset($_POST["gosort"])) {

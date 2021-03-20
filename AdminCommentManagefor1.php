@@ -63,17 +63,23 @@
 
                 $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
                 $result= mysqli_query($db_link,$sql);
-
+				$resultfortd= mysqli_query($db_link,$sql);
+				$rowfortd=$resultfortd->fetch_assoc();
+               
+				
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1  width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
                 echo "<td>會員編號</td>";
                 echo "<td>會員帳號</td>";
                 echo "<td>會員姓名</td>";
-                echo "<td>留言內容</td>";
+                
                 echo "<td>留言時間</td>";
-				 echo "<td></td>";
-				  echo "<td></td>";
+				if($rowfortd["c_id"]!=null){
+                echo "<td></td>";
+				echo "<td></td>";
+				}
+				
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {
@@ -81,7 +87,7 @@
                     echo "<td>$row[m_id]</td>";
                     echo "<td>$row[account]</td>";
                     echo "<td>$row[name]</td>";
-                    echo "<td>$row[message]</td>";
+                    
                     echo "<td>$row[msg_datetime]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[c_id]+1' value='查看'></td>";
                     ?>

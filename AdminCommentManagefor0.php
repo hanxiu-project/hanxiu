@@ -62,7 +62,9 @@
 
                 $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='0' ORDER BY msg_datetime DESC";
                 $result= mysqli_query($db_link,$sql);
-
+				$resultfortd= mysqli_query($db_link,$sql);
+				$rowfortd=$resultfortd->fetch_assoc();
+             
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
@@ -70,9 +72,12 @@
                 echo "<td>會員帳號</td>";
                 echo "<td>會員姓名</td>";
                
-                echo "<td>留言時間</td>";
+                echo "<td>留言時間</td>";  
+				if($rowfortd["c_id"]!=null){
+                echo "<td></td>";
 				echo "<td></td>";
-				echo "<td></td>";
+				}
+				
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {

@@ -69,15 +69,19 @@
 
                 $sql = "SELECT * FROM posts where old='1' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
-				
+				$resultfortd= mysqli_query($db_link,$sql);
+				$rowfortd=$resultfortd->fetch_assoc();
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
                 echo "<td>公告標題</td>";
                 echo "<td>公告時間</td>";
 				echo "<td>下架日期</td>";
+				if($rowfortd["p_id"]!=null){
                 echo "<td></td>";
 				echo "<td></td>";
+				}
+               
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {
@@ -115,7 +119,7 @@
                         $_SESSION["delete_p_id"]=$row2["p_id"];
                         $sql_delete="DELETE FROM posts WHERE posts.p_id = $_SESSION[delete_p_id]";
                         mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='AdminPostsManage.php'</script>";
+                        echo "<script>alert('成功刪除!');location.href='AdminOldPostsManage.php'</script>";
                     }
                 }
 

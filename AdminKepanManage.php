@@ -90,7 +90,7 @@
                     $result= mysqli_query($db_link,$sql_tid);
 
                     echo "<form name='form1' method='POST' action=''>";
-                    echo "<table border=1 width=100% style=font-size:20px;>";
+                    echo "<table border=1 width=100% style=font-size:20px;line-height:50px;>";
                     echo "<tr align=center>";
                     echo "<td>科判名稱</td>";
                     echo "<td>檔案名稱</td>";

@@ -124,7 +124,7 @@
                     
 					 ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
-					<td><hr></td>
+					
 					<?php
 				
 				
@@ -146,7 +146,7 @@
                     
 					 ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
-					<td><hr></td>
+				
 					<?php
 				
 				
@@ -170,7 +170,7 @@
                     
 					 ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
-					<td><hr></td>
+					
 					<?php
 				
 				

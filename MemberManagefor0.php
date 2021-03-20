@@ -90,7 +90,7 @@
 				 if($rowmanager["authority"]==2){
 						echo "<td></td>";
 					}
-					   echo "<td></td>";
+					 
                 echo "<td></td>";
                 echo "</tr>";
 				while($row=$result->fetch_assoc())
@@ -112,7 +112,7 @@
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='指定' onclick="return confirm('是否確認將這位會員升級為管理員?')"></td>
 					<?php
 					}
-					echo "<td><hr></td>";
+				
 				   echo "</tr>";
                 
                     

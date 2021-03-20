@@ -71,7 +71,8 @@
 
                 $sql = "SELECT * FROM posts where old='0' && keep='0' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
-				
+				$resultfortd= mysqli_query($db_link,$sql);
+				$rowfortd=$resultfortd->fetch_assoc();
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
@@ -79,8 +80,11 @@
                 echo "<td>公告時間</td>";
 				echo "<td>下架日期</td>";
 				echo "<td>放置首頁天數</td>";
+				if($rowfortd["p_id"]!=null){
                 echo "<td></td>";
-				 echo "<td></td>";
+				echo "<td></td>";
+				}
+               
                 echo "</tr>";
                 while($row=$result->fetch_assoc())
                 {

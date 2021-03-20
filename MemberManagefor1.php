@@ -86,7 +86,7 @@
 				echo "<td>會員地址</td>";
 				echo "<td>會員行動</td>";
 				echo "<td></td>";
-                echo "<td></td>";
+                
 				
 					if($rowmanager["authority"]==2){
 						echo "<td></td>";
@@ -110,7 +110,7 @@
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='移權' onclick="return confirm('是否停權這位管理員?')"></td>
 					<?php
 					}
-					echo "<td><hr></td>";
+					
 				   echo "</tr>";
                 
                     

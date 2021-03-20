@@ -110,7 +110,8 @@
                                     ?>
                                     <li id="image_li_<?php echo $row['id']; ?>" class="ui-sortable-handle">
                                         <a href="javascript:void(0);" style="float:none;" class="image_link">
-                                            <img src="images/<?php echo $row['imgname']; ?>"  width="400px" height="300px" alt="">
+                                            <?php echo $row['listorder']; ?>
+                                            <img src="images/<?php  echo $row['imgname']; ?>"  width="400px" height="300px" alt="">
                                         </a>
                                     </li>
                                 <?php } } ?>

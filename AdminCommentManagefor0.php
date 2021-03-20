@@ -38,12 +38,12 @@
      <?php include 'admin.php';?>
 	<?php include 'database.php';?>
     <!---->
-    <div class="row" style="margin-bottom: 20px;text-align: left; font-size: 20px; color: #ffffff">
-        <div class="col-lg-12">
-           未回覆留言
+    
+ <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >未回覆留言</strong></font>
+		
         </div>
-    </div>
-
     <!--Body-->
     <div id="page-wrapper">
 
@@ -64,12 +64,12 @@
                 $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table border=1 width=100% style=font-size:24px; >";
+                echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
                 echo "<td>會員編號</td>";
                 echo "<td>會員帳號</td>";
                 echo "<td>會員姓名</td>";
-                echo "<td>留言內容</td>";
+               
                 echo "<td>留言時間</td>";
 				echo "<td></td>";
 				echo "<td></td>";
@@ -80,7 +80,7 @@
                     echo "<td>$row[m_id]</td>";
                     echo "<td>$row[account]</td>";
                     echo "<td>$row[name]</td>";
-                    echo "<td>$row[message]</td>";
+                   
                     echo "<td>$row[msg_datetime]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[c_id]+1' value='回覆'></td>";
                     ?>

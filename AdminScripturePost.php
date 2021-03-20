@@ -38,7 +38,11 @@
 <div id="wrapper">
      <?php include 'admin.php';?>
 	 <?php include 'database.php';?>
-
+ <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >新增講記</strong></font>
+		
+        </div>
     <!--Body-->
     <div id="page-wrapper">
 

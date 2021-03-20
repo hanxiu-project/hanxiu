@@ -63,12 +63,17 @@
                 </select>
 
                 <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看科判" >
+				
 
 
             </div>
 
         </div>
-
+<div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >科判總覽</strong></font>
+		
+        </div>
         <!--Body-->
         <div id="page-wrapper">
 

@@ -69,7 +69,11 @@
         </div>
 		
     </div>
-
+ <div class="col-lg-12">
+            
+			<font size="6"><strong style= "background:white" >講記總覽</strong></font>
+		
+        </div>
     <!--Body-->
     <div id="page-wrapper">
 
@@ -89,7 +93,7 @@
                 $result= mysqli_query($db_link,$sql_tid);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table BORDER=1  width=100% style=font-size:20px;>";
+                echo "<table BORDER=1   width=100% style=font-size:20px;line-height:50px;>";
                 echo "<tr align=center>";
                 echo "<td>類別名稱</td>";
                 echo "<td>卷號</td>";
@@ -121,7 +125,7 @@
                     
 					 ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
-					<td><hr></td>
+					
 					<?php
 				
 				
@@ -143,7 +147,7 @@
                     
 					 ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
-					<td><hr></td>
+					
 					<?php
 				
 				
@@ -162,14 +166,15 @@
                     echo "<td>$row[date]</td>";
 
                     echo "<td>$row[newupdate]</td>";
-
+					
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[s_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這篇講記?')">   </td>
-					<td><hr></td>
+					
+					
 					<?php
-				
+					
 				
                     echo "</tr>";
 					

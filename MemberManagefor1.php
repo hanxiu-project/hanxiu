@@ -72,7 +72,7 @@
                 $result= mysqli_query($db_link,$sql);
 
                 echo "<form name='form1' method='POST' action=''>";
-                echo "<table border=1   width=100% style=font-size:22px; >";
+                echo "<table border=1   width=100% style=font-size:22px;line-height:50px; >";
 				 echo "<tr align=left>";
 				 
 				 echo "</tr>";

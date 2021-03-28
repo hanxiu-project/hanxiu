@@ -35,8 +35,8 @@
 <body>
 
 <div id="wrapper">
-     <?php include 'admin.php';?>
-	 <?php include 'database.php';?>
+    <?php include 'nav.php';?>
+    <?php include 'database.php';?>
 
     <!---->
      

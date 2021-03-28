@@ -41,8 +41,8 @@ session_start();
 <div id="wrapper">
     <!--sidebar-->
     <!-- Navigation -->
-     <?php include 'admin.php';?>
-	 <?php include 'database.php';?>
+    <?php include 'nav.php';?>
+    <?php include 'database.php';?>
 
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">

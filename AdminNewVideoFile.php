@@ -39,8 +39,8 @@ session_start();
 ?>
 
 <div id="wrapper">
-     <?php include 'admin.php';?>
-	 <?php include 'database.php';?>
+    <?php include 'nav.php';?>
+    <?php include 'database.php';?>
  <div class="col-lg-12">
             
 			<font size="6"><strong style= "background:white" >新增影音檔案</strong></font>

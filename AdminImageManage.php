@@ -36,11 +36,8 @@
 <form name="forms" method="post" action="">
 
     <div id="wrapper">
-        <?php include 'admin.php';
-		 include 'database.php';
-        /*資料庫連結*/
-      
-        ?>
+        <?php include 'nav.php';?>
+        <?php include 'database.php';?>
 		
  <div class="col-lg-12">
             

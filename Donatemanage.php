@@ -35,8 +35,8 @@
 <body>
 <form name="formsearchdoante" method="post" action="">
 <div id="wrapper">
-    <?php include 'admin.php';?>
-	<?php include 'database.php';?>
+    <?php include 'nav.php';?>
+    <?php include 'database.php';?>
 
     <!--建立新經文-->
     <div class="row" style="margin-bottom: 20px; text-align: left">

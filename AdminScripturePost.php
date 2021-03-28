@@ -98,7 +98,7 @@
 
                                                 <div class="form-group">
                                                     <label for="number">&emsp;&emsp;卷號:</label>
-                                                    <input id="number" name="number" type="number"  style="width:525px; height:30px; color:#000000; background-color:transparent">
+                                                    <input id="number" name="number" type="text"  style="width:525px; height:30px; color:#000000; background-color:transparent">
                                                 </div>
 
 

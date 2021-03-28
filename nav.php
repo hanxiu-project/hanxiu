@@ -73,6 +73,9 @@
                         <a href="AdminSupplementManage.php"><i class="fa fa-fw fa-user"></i>補充資料總覽</a>
                     </li>
                     <li>
+                        <a href="AdminNewSupplement.php"><i class="fa fa-fw fa-user"></i>新增補充資料類別</a>
+                    </li>
+                    <li>
                         <a href="AdminNewSupplementFile.php"><i class="fa fa-fw fa-user"></i>新增補充資料檔案</a>
                     </li>
                 </ul>

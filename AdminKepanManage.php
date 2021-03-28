@@ -131,7 +131,8 @@
 
                                 <?php
                                 echo "</tr>";
-                            }}
+                            }
+                        }
 
 
                     }
@@ -158,12 +159,12 @@
                     $result2=mysqli_query($db_link,$sql2);
 
                     while($row2=$result2->fetch_assoc()) {
-                        if (isset($_POST["$row2[k_id]+1"])) {
+                        /*if (isset($_POST["$row2[k_id]+1"])) {
                             $_SESSION["edit_k_id"]=$row2["k_id"];
                             echo "<script langauge = 'javascript' type='text/javascript'>";
                             echo "window.location.href = 'AdminScriptureEdit.php'";
                             echo "</script>";
-                        }
+                        }*/
 
                         if (isset($_POST["$row2[k_id]+2"])) {
 
@@ -176,12 +177,12 @@
                             echo "<script>alert('成功刪除!');location.href='AdminKepanManage.php'</script>";
 
                         }
-                        if (isset($_POST["$row2[k_id]+1"])) {
+                        /*if (isset($_POST["$row2[k_id]+1"])) {
                             $_SESSION["edit_k_id"]=$row2["k_id"];
                             echo "<script langauge = 'javascript' type='text/javascript'>";
                             echo "window.location.href = 'AdminScriptureEdit.php'";
                             echo "</script>";
-                        }
+                        }*/
 
                         /*if (isset($_POST["$row2[s_id]+2"])) {
 

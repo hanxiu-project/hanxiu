@@ -43,11 +43,11 @@ session_start();
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
-<div class="col-lg-12">
-            
-			<font size="6"><strong style= "background:white" >新增補充資料檔案</strong></font>
-		
-        </div>
+    <div class="col-lg-12">
+
+        <font size="6"><strong style= "background:white" >新增補充資料檔案</strong></font>
+
+    </div>
     <!--Body-->
     <div id="page-wrapper">
 
@@ -55,6 +55,15 @@ session_start();
 
             <div class='wrapper'>
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+                <?php
+                /*資料庫連結*/
+
+                $sqltype="SELECT * FROM `spm_types` ";
+                $resulttype=mysqli_query($db_link,$sqltype);
+
+
+                ?>
 
 
                 <div id="con2">
@@ -67,6 +76,23 @@ session_start();
                                     <div class="col-lg-12">
 
                                         <form method="post" enctype="multipart/form-data" action="">
+
+                                            <div class="form-group">
+                                                <label for="type">補充資料類別:</label>
+                                                <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
+                                                    <?php while ($row = $resulttype->fetch_assoc()) {
+                                                        echo "<option name='type' value=$row[spt_id]>$row[spmtypename]</option>";
+
+
+                                                    }
+                                                    $sqltypeinput="SELECT * FROM `spm_types` where `spt_id`='$_POST[type]'";
+                                                    $resulttypeinput=mysqli_query($db_link,$sqltypeinput);
+                                                    $rowinput= mysqli_fetch_assoc($resulttypeinput);
+                                                    $_SESSION[inputtype]=$rowinput['spmtypename'];
+                                                    ?>
+
+                                                </select>
+                                            </div>
 
 
                                             <div class="form-group">
@@ -91,6 +117,7 @@ session_start();
                 <?php
 
                 $getDate= date("Y-m-d");
+                $spmtype = $_SESSION[inputtype];
                 $filename = $_FILES['my_file']['name'];
 
                 # 檢查檔案是否上傳成功
@@ -102,18 +129,18 @@ session_start();
 
 
                     # 檢查檔案是否已經存在
-                    if (file_exists("C:/AppServ/www/漢修專題/supplement/".$filename)){
+                    if (file_exists("C:/AppServ/www/漢修專題/supplement/".$spmtype."/".$filename)){
                         echo "<script>alert('檔案已存在！');</script>";
                     } else {
                         $file = $_FILES['my_file']['tmp_name'];
-                        $dest = "C:/AppServ/www/漢修專題/supplement/".$filename;
+                        $dest = "C:/AppServ/www/漢修專題/supplement/".$spmtype."/".$filename;
 
                         # 將檔案移至指定位置
                         move_uploaded_file($file, $dest);
                         //存入資料庫
 
 
-                        $sql="INSERT INTO supplement (filename,date) VALUES ('$filename','$getDate')";
+                        $sql="INSERT INTO supplements (spt_id,spmtypename,filename,date) VALUES ('$_POST[type]','$rowinput[spmtypename]','$filename','$getDate')";
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('檔案已經上傳!');location.href='AdminSupplementManage.php'</script>";
                     }

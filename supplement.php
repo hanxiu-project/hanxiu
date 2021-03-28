@@ -1,7 +1,7 @@
 <html>
 <head>
 
-    <title>科判</title>
+    <title>補充資料</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
@@ -60,26 +60,26 @@
         <div class="newstitle">
             <div class="contentlist">
                 <?php
-               /* if (isset($_GET["kptid"]))
+                if (isset($_GET["sptid"]))
                 {
-                $kptid = $_GET["kptid"];
-                $sqltype = "SELECT * FROM `kp_types` where `kpt_id` = $kptid";
+                $sptid = $_GET["sptid"];
+                $sqltype = "SELECT * FROM `spm_types` where `spt_id` = $sptid";
                 $resulttype = mysqli_query($db_link, $sqltype);
                 $rtypename = mysqli_fetch_row($resulttype);
-                $_SESSION['rtypename'] = $rtypename[1];*/
+                $_SESSION['rtypename'] = $rtypename[1];
                 ?>
-                <h2>｜補充資料  </h2>
+                <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                 <center>
                     <table width="80%" border="10px">
                         <br>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `supplement`";
+                        $sqlatcnum = "SELECT * FROM `supplements` where `spt_id` = $sptid";
 
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
 
 
-                        $per = 5;
+                        $per = 10;
                         $pages = ceil($data / $per);     //pages
                         $k = $pages;
 
@@ -94,7 +94,7 @@
 
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
 
-                        $sqlatcnum10 = "SELECT * FROM `supplement`  Limit $start , $per";
+                        $sqlatcnum10 = "SELECT * FROM `supplements` where `spt_id` = $sptid Limit $start , $per";
                         $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
                         $resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
 
@@ -114,20 +114,66 @@
 
                         <?php
                         echo '共 ' . $data . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
-                        echo "<br/><a href=?page=1>首頁</a> ";
+                        echo "<br/><a href=?sptid=$sptid&page=1>首頁</a> ";
                         echo "第 ";
                         for ($i = 1; $i <= $pages; $i++) {
                             if ($page - $k < $i && $i < $page + $k) {
-                                echo "<a href=?page=$i>" . $i . "</a> ";
+                                echo "<a href=?sptid=$sptid&page=$i>" . $i . "</a> ";
                             }
                         }
-                        echo " 頁 <a href=?page=$pages>末頁</a>";
+                        echo " 頁 <a href=?sptid=$sptid&page=$pages>末頁</a>";
                         echo "</center>";
-
-
                         ?>
 
 
+                        <?php
+
+                        }
+                        else                                            //還沒選類別時
+                        {
+                        ?>
+
+                        <h2>｜補充資料 </h2>
+                        <br><br>
+
+                        <br>
+                        <center>
+                            <table width="80%" border="1px">
+                                <br>
+                                <?php
+                                $sqlkptypecnum = "SELECT * FROM `spm_types`";
+
+                                $results_row = mysqli_query($db_link, $sqlkptypecnum);
+                                $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+
+
+                                $per = 10;
+                                $rows = ceil($datas / $per);
+
+                                $resultsnum = mysqli_query($db_link, $sqlkptypecnum);
+
+                                for ($j = 1; $j <= $rows; $j++) {
+                                    $start = ($j - 1) * 5;
+                                    $sqlatcnums10 = "SELECT * FROM spm_types Limit $start , $per";
+                                    $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                    echo "<tr height=50px>";
+                                    while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                        echo "<td width='8%'>";
+                                        echo "<a href=?sptid='$row[spt_id]'>$row[spmtypename]</a></p>";
+
+
+                                        echo "</td>";
+                                    }
+
+                                    echo "</tr>";
+
+                                }
+                                }
+                                ?>
+
+                            </table>
+
+                        </center>
 
 
             </div>

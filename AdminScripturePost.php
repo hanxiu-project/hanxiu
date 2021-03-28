@@ -175,7 +175,7 @@
 							
                         }
 						 
-                        else if($filename == $filenamecheck)
+                        else  if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                         {
                             echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                         }
@@ -202,10 +202,10 @@
                         {
                             echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
                         }
-						  else if($filename == $filenamecheck)
-                        {
-                            echo "<script>alert('講記卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
-                        }
+                       else  if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                       {
+                           echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
+                       }
                         else
                         {
                             //寫入檔案

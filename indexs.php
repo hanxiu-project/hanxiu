@@ -143,7 +143,7 @@
 			
             ?>
        
-		<center> <font color="#612E04"><h2>※此網頁所發佈瑜伽師地論講記為最新版(持續修訂中)※<h2></font></center>
+		<center> <font color="#612E04"><h2>※此網頁所發佈為常柏法師瑜伽師地論100卷講記最新版(持續修訂中)※<h2></font></center>
 		 <div class="newstitle">
             <h2>｜最新公告 </h2>
         </div>

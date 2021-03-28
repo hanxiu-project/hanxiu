@@ -1,4 +1,3 @@
-<!--sidebar-->
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -53,77 +52,6 @@
                     </li>
                 </ul>
             </li>
-
-            <li class="dropdown">
-                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
-                    </li>
-                    <li>
-                        <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
-                    </li>
-                </ul>
-            </li>
-
-          <li class="dropdown">
-                <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-						<li>
-                            <a href="AdminPostsKeep.php"><i class="fa fa-fw fa-edit"></i> 待發公告管理</a>
-                        </li>
-                        <li>
-                            <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 新公告管理</a>
-                        </li>
-						 <li>
-                            <a href="AdminOldPostsManage.php"><i class="fa fa-fw fa-edit"></i> 歷史公告管理</a>
-                        </li>
-					    <li>
-                            <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>新增公告</a>
-                        </li>
-                    </ul>
-                </li>
-
-            <li class="dropdown">
-                <a href="Donatemanage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>捐獻管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="DonateView.php"><i class="fa fa-fw fa-user"></i>捐獻總覽</a>
-                    </li>
-                    <li>
-                        <a href="Donatemanage.php"><i class="fa fa-fw fa-user"></i>新增捐獻</a>
-                    </li>
-                </ul>
-            </li>
-
-
-            <li class="dropdown">
-                <a href="AdminVideosManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>影音管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
-                    </li>
-                    <li>
-                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音類別</a>
-                    </li>
-                    <li>
-                        <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>留言管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="AdminCommentManagefor1.php"><i class="fa fa-fw fa-user"></i>已回覆留言</a>
-                    </li>
-                    <li>
-                        <a href="AdminCommentManagefor0.php"><i class="fa fa-fw fa-user"></i>未回覆留言</a>
-                    </li>
-                </ul>
-            </li>
-
             <li class="dropdown">
                 <a href="AdminKepanManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>科判管理<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -138,6 +66,81 @@
                     </li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="AdminSupplementManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>補充資料管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="AdminSupplementManage.php"><i class="fa fa-fw fa-user"></i>補充資料總覽</a>
+                    </li>
+                    <li>
+                        <a href="AdminNewSupplementFile.php"><i class="fa fa-fw fa-user"></i>新增補充資料檔案</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="AdminVideosManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>影音管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="AdminVideosManage.php"><i class="fa fa-fw fa-user"></i>影音總覽</a>
+                    </li>
+                    <li>
+                        <a href="AdminNewVideos.php"><i class="fa fa-fw fa-user"></i>新增影音類別</a>
+                    </li>
+
+                    <li>
+                        <a href="AdminNewVideoFile.php"><i class="fa fa-fw fa-user"></i>新增影音檔案</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>公告管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="AdminPostsKeep.php"><i class="fa fa-fw fa-edit"></i> 待發公告管理</a>
+                    </li>
+                    <li>
+                        <a href="AdminPostsManage.php"><i class="fa fa-fw fa-edit"></i> 新公告管理</a>
+                    </li>
+                    <li>
+                        <a href="AdminOldPostsManage.php"><i class="fa fa-fw fa-edit"></i> 歷史公告管理</a>
+                    </li>
+                    <li>
+                        <a href="AdminPostsPost.php"><i class="fa fa-fw fa-user"></i>新增公告</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="Donatemanage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>捐獻管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="DonateView.php"><i class="fa fa-fw fa-user"></i>捐獻總覽</a>
+                    </li>
+                    <li>
+                        <a href="Donatemanage.php"><i class="fa fa-fw fa-user"></i>新增捐獻</a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+            <li class="dropdown">
+                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>留言管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="AdminCommentManagefor1.php"><i class="fa fa-fw fa-user"></i>已回覆留言</a>
+                    </li>
+                    <li>
+                        <a href="AdminCommentManagefor0.php"><i class="fa fa-fw fa-user"></i>未回覆留言</a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+
 
             <li class="dropdown">
                 <a href="AdminContactManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>聯絡資訊管理<b class="caret"></b></a>
@@ -159,6 +162,17 @@
                     </li>
                     <li>
                         <a href="AdminImageSort.php"><i class="fa fa-fw fa-user"></i>照片排序</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>會員管理<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="MemberManagefor1.php"><i class="fa fa-fw fa-user"></i>管理員</a>
+                    </li>
+                    <li>
+                        <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i>一般會員</a>
                     </li>
                 </ul>
             </li>

@@ -30,14 +30,17 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
 <form name="formspost" method="post" action="">
 <div id="wrapper">
-     <?php include 'admin.php';?>
-	 <?php include 'database.php';?>
+    <?php include 'nav.php';?>
+    <?php include 'database.php';?>
+
  <div class="col-lg-12">
             
 			<font size="6"><strong style= "background:white" >新增講記</strong></font>
@@ -97,7 +100,7 @@
 
                                                 <div class="form-group">
                                                     <label for="number">&emsp;&emsp;卷號:</label>
-                                                    <input id="number" name="number" type="number"  style="width:525px; height:30px; color:#000000; background-color:transparent">
+                                                    <input id="number" name="number" type="text"  style="width:525px; height:30px; color:#000000; background-color:transparent">
                                                 </div>
 
 

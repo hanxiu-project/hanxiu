@@ -29,14 +29,16 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
 <form name="formsearchdoante" method="post" action="">
 <div id="wrapper">
-    <?php include 'admin.php';?>
-	<?php include 'database.php';?>
+    <?php include 'nav.php';?>
+    <?php include 'database.php';?>
 
     <!--建立新經文-->
     <div class="row" style="margin-bottom: 20px; text-align: left">

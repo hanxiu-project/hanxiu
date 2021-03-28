@@ -361,9 +361,9 @@ table {
 				/* 內容 > 大標題 > 內文(表格無格線)*/
 				#content .newstitle .contentlist > table,tr,td,th{
 					height:auto;
-					/*overflow:hidden;*/
+					overflow:hidden;
 					/*white-space: nowrap;*/
-					/*text-overflow: ellipsis;*/
+					text-overflow: ellipsis;
 					/*padding-left: 20px;*/
 					/* border:1px;*/  /*solid #000000;*/
 				}

@@ -154,7 +154,7 @@
                                                 <textarea id="content" name="content" rows="10" cols="80"><?php echo  $str?></textarea>
                                                 <script>
                                                     CKEDITOR.replace('content',{
-                                                        width:1650,height:500,
+                                                        width:1000,height:500,
                                                     });
                                                 </script>
                                             </div>

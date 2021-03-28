@@ -19,15 +19,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
 
-
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>-->
 </head>
 
 <body>
-
-
-
 
 <!--最外圍-->
 <div id="sitebody">
@@ -55,7 +51,7 @@
 
         <div id="container">
 
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
                 <ol class="carousel-indicators">
                     <?php
                         $sql1 = "SELECT path1 FROM carousel ORDER BY listorder ";
@@ -147,7 +143,7 @@
 			
             ?>
        
-		<center> <font color="#612E04"><h2>※此網頁所發佈瑜伽師地論講記為最新版(持續修訂中)※<h2></font></center>
+		<center> <font color="#612E04"><h2>※此網頁所發佈為常柏法師瑜伽師地論100卷講記最新版(持續修訂中)※<h2></font></center>
 		 <div class="newstitle">
             <h2>｜最新公告 </h2>
         </div>

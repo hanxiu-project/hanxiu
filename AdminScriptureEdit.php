@@ -61,7 +61,7 @@
                 $sql="SELECT * FROM scripture WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
-
+					
                 $sql2="SELECT typename FROM scripture,types WHERE scripture.t_id = types.t_id AND scripture.s_id = $_SESSION[edit_s_id]";
                 $result2=mysqli_query($db_link,$sql2);
                 $row2=mysqli_fetch_assoc($result2);
@@ -186,13 +186,17 @@
 
                 <?php
                 
-
+				 $sqlmodify="SELECT * FROM scripture WHERE scripture.s_id = $_SESSION[edit_s_id]";
+                $resultmodify=mysqli_query($db_link,$sqlmodify);
+                $rowmodify=mysqli_fetch_assoc($resultmodify);
+				$secupdate = $rowmodify["newupdate"];
+				$thrupdate = $rowmodify["secupdate"];
                 $number = $_POST["number"];
                 $title = $_POST["title"];
                $filename = $_POST["number"].".txt";
                 $content = $_POST["content"];
                 $date = $_POST["date"];
-
+				
                 $nnewupdate=$_SESSION["updatename"];
 				
 
@@ -201,17 +205,9 @@
 				
 				$sql_update_all = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				$sql_update_all_save = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '1' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_t_id = "UPDATE scripture SET t_id = '$_POST[type]' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-				$sql_update_typename = "UPDATE scripture SET typename = '$inputtype' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_number = "UPDATE scripture SET number = '$number' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_title = "UPDATE scripture SET title = '$title' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_filename = "UPDATE scripture SET filename = '$filename' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_content = "UPDATE scripture SET content = '$content' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_date = "UPDATE scripture SET date = '$date' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-				$sql_update_save = "UPDATE scripture SET save = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-                $sql_update_newupdate = "UPDATE scripture SET newupdate = '$nnewupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
+               $sql_update_newupdate = "UPDATE scripture SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				
-
+				
 
 
 
@@ -337,7 +333,7 @@
 
                                       mysqli_query($db_link, $sql_update_all_save);
                                       mysqli_query($db_link,$sql_update_newupdate);
-                                      echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                                      echo "<script>alert('經文暫存完成!');location.href='AdminScriptureSave.php'</script>";
                                   }
                                   else
                                   {
@@ -350,7 +346,7 @@
 
                                       mysqli_query($db_link, $sql_update_all_save);
                                       mysqli_query($db_link,$sql_update_newupdate);
-                                      echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                                      echo "<script>alert('經文暫存完成!');location.href='AdminScriptureSave.php'</script>";
                                   }
                               }
                           }
@@ -366,7 +362,7 @@
 
                               mysqli_query($db_link, $sql_update_all_save);
                               mysqli_query($db_link,$sql_update_newupdate);
-                              echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                              echo "<script>alert('經文暫存完成!');location.href='AdminScriptureSave.php'</script>";
                           }
                           else                    //檔名相同
                           {
@@ -378,7 +374,7 @@
 
                               mysqli_query($db_link, $sql_update_all_save);
                               mysqli_query($db_link,$sql_update_newupdate);
-                              echo "<script>alert('經文暫存完成!');location.href='AdminScriptureManage.php'</script>";
+                              echo "<script>alert('經文暫存完成!');location.href='AdminScriptureSave.php'</script>";
                           }
                       }
 

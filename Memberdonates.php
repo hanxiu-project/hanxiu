@@ -4,6 +4,7 @@
     <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+	
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -16,7 +17,7 @@
 
 <?php
 
-
+session_start();
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
@@ -28,6 +29,7 @@
     <!--頁首-->
     <!--包住固定不動的Header-->
     <?php include 'header.php';?>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -96,7 +98,7 @@
     </div>
    
     <!--註腳-->
-    <footer class="footer">版權所有 轉載請註明出處 | 此網頁所發佈瑜伽師地論講記為最新版 </footer>
+   <?php include 'footer.php';?>
 
 
 </div>

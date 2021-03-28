@@ -103,6 +103,7 @@
                 echo "<td>經文標題</td>";
                 echo "<td>發佈日期</td>";
 				echo "<td>最新修改管理員</td>";
+				echo "<td>前二位修改管理員</td>";
                 echo "<td></td>";
 				echo "<td></td>";
                 echo "</tr>";
@@ -121,8 +122,10 @@
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
 
-                    echo "<td>$row[newupdate]</td>";
-
+                 
+					 echo "<td>$row[newupdate]</td>";
+					   echo "<td>$row[secupdate]/$row[thrupdate]</td>";
+	
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
 					 ?>
@@ -143,7 +146,9 @@
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
 
-                    echo "<td>$row[newupdate]</td>";
+                  
+					 echo "<td>$row[newupdate]</td>";
+					   echo "<td>$row[secupdate]/$row[thrupdate]</td>";
 
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     
@@ -167,7 +172,9 @@
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
 
-                    echo "<td>$row[newupdate]</td>";
+                    
+					 echo "<td>$row[newupdate]</td>";
+					   echo "<td>$row[secupdate]/$row[thrupdate]</td>";
 
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
                     

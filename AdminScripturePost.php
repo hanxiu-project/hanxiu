@@ -216,7 +216,7 @@
                             fwrite($myfile,$txt);
                             fclose($myfile);
 
-                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1')";
+                            $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1','$_SESSION[updatename]')";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('講記已經暫存!');location.href='AdminScriptureManage.php'</script>";
                         }

@@ -41,7 +41,7 @@
 
                 <div id="container">
 
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
                         <ol class="carousel-indicators">
 
                             <?php

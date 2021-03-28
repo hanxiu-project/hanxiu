@@ -143,7 +143,7 @@ session_start();
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>講記內容</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=?>補充資料</a></li>";
+                         echo "<li><a href=supplement.php>補充資料</a></li>";
 
                           echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>歷史公告</a></li>";

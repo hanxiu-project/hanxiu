@@ -114,7 +114,7 @@
                                                     <textarea id="content" name="content" id="content" rows="10" cols="80"></textarea>
                                                     <script>
                                                         CKEDITOR.replace('content',{
-                                                            width:1300,height:500,
+                                                            width:1000,height:500,
                                                         });
                                                     </script>
                                                 </div>

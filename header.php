@@ -92,7 +92,7 @@ session_start();
     <div id="header2">
 
         <div id="header">
-            <img src="logo1.png" align="left" width="auto" height="100">
+            <img src="logonew.png" align="left" width="auto" height="130">
             <div id="wrapnav1">
                 <nav>
                     <ul class="flex-nav ">

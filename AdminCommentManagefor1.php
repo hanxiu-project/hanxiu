@@ -83,7 +83,27 @@
 				}
 				
                 echo "</tr>";
-                while($row=$result->fetch_assoc())
+
+                $sqlcomment= "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
+                $result1= mysqli_query($db_link,$sqlcomment);
+
+                $date_nums = mysqli_num_rows($result1);                          //講記數量
+                $per = 10;                                                      //10筆換頁
+                $pages = ceil($date_nums / $per);                             //共幾頁
+                if (!isset($_GET["page"])) {
+                    $page = 1;
+                } else {
+                    $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
+                }
+
+                $start = ($page - 1) * $per;
+
+                $sqlresult = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC Limit $start , $per";
+                $commentresult[$start] = mysqli_query($db_link, $sqlresult);
+                $commentresult[$page] = mysqli_query($db_link, $sqlresult);
+
+
+                while($row = mysqli_fetch_assoc($commentresult[$start]))
                 {
                     echo "<tr align=center>";
                     echo "<td>$row[m_id]</td>";
@@ -97,8 +117,21 @@
 
                     echo "</tr>";
                 }
+
+                echo "</form>";
                 echo "</table>";
 
+                echo "<center>";
+                echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                echo "<br/><a href=?page=1>首頁</a> ";
+                echo "第 ";
+                for ($i = 1; $i <= $pages; $i++) {
+                    if ($page - 10 < $i && $i < $page + 10) {
+                        echo "<a href=?page=$i>" . $i . "</a> ";
+                    }
+                }
+                echo " 頁 <a href=?page=$pages>末頁</a>";
+                echo "</center>";
 
 
                 $sql2 = "SELECT * FROM `comments`";

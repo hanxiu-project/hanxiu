@@ -63,10 +63,6 @@
 
                 <?php
                 /*資料庫連結*/
-               
-
-
-              
 
                 $sql = "SELECT * FROM videos";
                 $result= mysqli_query($db_link,$sql);
@@ -101,9 +97,6 @@
                 $sqlresult = "SELECT * FROM videos  Limit $start , $per";
                 $videoresult[$start] = mysqli_query($db_link, $sqlresult);
                 $videoresult[$page] = mysqli_query($db_link, $sqlresult);
-
-
-
 
 
                 while($row = mysqli_fetch_assoc($videoresult[$start]))

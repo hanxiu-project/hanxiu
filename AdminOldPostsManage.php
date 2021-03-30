@@ -85,7 +85,30 @@
 				}
                
                 echo "</tr>";
-                while($row=$result->fetch_assoc())
+
+
+                $sqlopost = "SELECT * FROM posts where old='1' order by date DESC";
+                $resultopost= mysqli_query($db_link,$sqlopost);
+
+                $date_nums = mysqli_num_rows($resultopost);                          //講記數量
+                $per = 10;                                                      //10筆換頁
+                $pages = ceil($date_nums / $per);                             //共幾頁
+                if (!isset($_GET["page"])) {
+                    $page = 1;
+                } else {
+                    $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
+                }
+
+                $start = ($page - 1) * $per;
+
+                $sqlresult = "SELECT * FROM posts where old='1' order by date DESC Limit $start , $per";
+                $opostresult[$start] = mysqli_query($db_link, $sqlresult);
+                $opostresult[$page] = mysqli_query($db_link, $sqlresult);
+
+
+
+
+                while($row = mysqli_fetch_assoc($opostresult[$start]))
                 {
                     echo "<tr align=center>";
 					if($row[old]=='0'){
@@ -102,7 +125,20 @@
                     echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+2' value='刪除'></td>";
                     echo "</tr>";
                 }
+                echo "</form>";
                 echo "</table>";
+
+                echo "<center>";
+                echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                echo "<br/><a href=?page=1>首頁</a> ";
+                echo "第 ";
+                for ($i = 1; $i <= $pages; $i++) {
+                    if ($page - 10 < $i && $i < $page + 10) {
+                        echo "<a href=?page=$i>" . $i . "</a> ";
+                    }
+                }
+                echo " 頁 <a href=?page=$pages>末頁</a>";
+                echo "</center>";
 
 
 

@@ -134,7 +134,8 @@
 
                 while($row2=$result2->fetch_assoc()) {
                     if (isset($_POST["$row2[c_id]+1"])) {
-                        $_SESSION["reply_c_id"]=$row2["c_id"];
+                        $_SESSION['reply_c_id']=$row2["c_id"];
+                        $_SESSION['reply_m_id']=$row2["m_id"];
                         echo "<script langauge = 'javascript' type='text/javascript'>";
                         echo "window.location.href = 'AdminCommentReply.php'";
                         echo "</script>";

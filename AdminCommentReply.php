@@ -66,7 +66,8 @@ session_start();
                
                 session_start();
 
-                $sql="SELECT * FROM `comments`,`members` where `comments`.`c_id` = $_SESSION[reply_c_id] and `comments`.`status`='0'";
+
+                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[reply_c_id]' and `comments`.`status`='0' and `members`.`m_id` = '$_SESSION[reply_m_id]'";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
 

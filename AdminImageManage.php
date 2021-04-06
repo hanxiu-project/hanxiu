@@ -62,6 +62,7 @@
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table border rules=rows cellspacing=0  width=100% style=font-size:24px;line-height:50px; >";
                     echo "<tr align=center>";
+                    echo "<td>照片圖示</td>";
                     echo "<td>照片名稱</td>";
                     echo "<td>上傳日期</td>";
                     echo "<td></td>";
@@ -69,7 +70,8 @@
                     while($row=$result->fetch_assoc())
                     {
                         echo "<tr align=center>";
-                        echo "<td>$row[imgname]</td>";
+                        echo "<td><img src='images/$row[imgname] '  width='100px' height='100px' alt=''>";
+                        echo "$row[imgname]</td>";
                         echo "<td>$row[uploadtime]</td>";
                         ?>
                         <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這張照片?')"></td>

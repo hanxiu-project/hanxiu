@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<form name="registered" method="post" action="">
+
 
 
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -138,19 +138,19 @@
                     <h2>｜會員註冊</h2>
                     <div class="tableforregis" align="center">
 
-                        <table width="60%" style="font-family:標楷體; font-size:18px;  solid;padding:5px;" cellpadding='5'
-                               ;>
+                        <table width="60%" style="font-family:標楷體; font-size:18px;  solid;padding:5px;" cellpadding='5' ;>
+                            <form name="registered" method="post" action="">
 
                             <tr>
                                 <td height="65" align="center" style="height:60px"><label for="account" accesskey="N">&emsp;&emsp;帳號:</label><input
-                                            type="text" style="font size:20px; padding:6px;" name="account" id="account"
+                                            type="text" style="font size:20px; padding:6px;" name="account" id="account" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"
                                             required autofocus placeholder="必填"><br>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td height="65" align="center" style="height:60px"><label for="password" accesskey="N">&emsp;&emsp;密碼:</label><input
-                                            type="password" style="font size:20px; padding:6px;" name="password"
+                                            type="password" style="font size:20px; padding:6px;" name="password" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"
                                             id="password" required autofocus placeholder="必填"> </br>
                                 </td>
                             </tr>
@@ -158,7 +158,7 @@
                             <tr>
                                 <td height="65" align="center" style="height:60px"><label for="confirmpassword"
                                                                                           accesskey="N">確認密碼:</label><input
-                                            type="password" style="font size:20px; padding:6px;" name="confirmpassword"
+                                            type="password" style="font size:20px; padding:6px;" name="confirmpassword" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"
                                             id="confirmpassword" required autofocus placeholder="必填"> </br>
                                 </td>
                             </tr>
@@ -212,6 +212,7 @@
                                 </tr>
 
                             </div>
+                            </form>
 
                         </table>
 

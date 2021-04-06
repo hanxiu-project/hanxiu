@@ -76,7 +76,7 @@
 </form>
 <div class="col-lg-12">
 
-    <font size="6"><strong style="background:white">講記總覽</strong></font>
+    <font size="6"><strong style="background:white">暫存講記總覽</strong></font>
 
 </div>
 <!--Body-->

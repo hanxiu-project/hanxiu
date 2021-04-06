@@ -141,7 +141,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning" name="dpost" value="發布" >
+                                                <input type="submit" class="btn btn-sm btn-warning" name="dpost" value="發佈" >
                                             </div>
 
                                         </form>

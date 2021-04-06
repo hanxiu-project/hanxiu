@@ -95,7 +95,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="date">發布日期:<?php echo $row['date']?></label>
+                                                <label for="date">發佈日期:<?php echo $row['date']?></label>
                                                
 												 
                                             </div>

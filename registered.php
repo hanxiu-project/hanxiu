@@ -158,7 +158,7 @@
                             <tr>
                                 <td height="65" align="center" style="height:60px"><label for="confirmpassword"
                                                                                           accesskey="N">確認密碼:</label><input
-                                            type="password" style="font size:20px; padding:6px;" name="confirmpassword" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"
+                                            type="password" style="font size:20px; padding:6px;" name="confirmpassword" 
                                             id="confirmpassword" required autofocus placeholder="必填"> </br>
                                 </td>
                             </tr>

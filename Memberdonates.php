@@ -56,7 +56,7 @@ session_start();
                 <?php
 
                 
-                $sql="SELECT * FROM `donates` where `m_id` ='$_SESSION[mid]' order by `date` DESC";
+                $sql="SELECT * FROM `donates` where `m_id` ='$_SESSION[m_id]'  && `type`='金錢' order by `date` DESC";
                 $result= mysqli_query($db_link,$sql);
 
                 ?>
@@ -69,22 +69,87 @@ session_start();
                     <tr align="center">
                        
 						
-                        <td width="25%" align="center" align="center">捐獻內容</th>
-						 <td width="25%" align="center" align="center">捐獻數量</th>
-						 <td width="20%" size="30px" height="26"  align="center">捐獻日期</th>
+                        <td width="25%" align="center" align="center">捐獻內容</td>
+						 <td width="25%" align="center" align="center">捐獻數量</td>
+						 <td width="20%" size="30px" height="26"  align="center">捐獻日期</td>
+
                     </tr>
                 <?php
+				$que3="select sum(amount) as 總和 FROM `donates` where `m_id` ='$_SESSION[m_id]' && `type`='金錢'";
+
+					$check=mysqli_query($db_link,$que3);
+
+						while($show=$check->fetch_assoc()){
+							$x=0;
+							$x=$x+$show["總和"];
+							
+						}
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr>";
                     
-					 
-                    echo "<td align='center'>$row[type]</td>";
+					
+                   echo "<td align='center'>$row[type]</td>";
 					echo "<td align='center'>$row[amount]</td>";
 					echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
-                    echo "</tr>";
+ 
+					
+					echo "</tr>";
+					
                 }
+				
+					
+						
                 echo "</table>";
+				echo "<font size=+3><b>金錢捐獻總和:";
+				echo "$x</b></font>";
+				$sql5="SELECT * FROM `donates` where `m_id` ='$_SESSION[m_id]'  && `type`='物資' order by `date` DESC";
+                $result5= mysqli_query($db_link,$sql5);
+
+                ?>
+
+				
+ 
+          
+				<table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
+                    <tr align="center">
+                       
+						
+                        <td width="25%" align="center" align="center">捐獻內容</td>
+						 <td width="25%" align="center" align="center">捐獻數量</td>
+						 <td width="20%" size="30px" height="26"  align="center">捐獻日期</td>
+
+                    </tr>
+                <?php
+				$que5="select sum(amount) as 總和 FROM `donates` where `m_id` ='$_SESSION[m_id]' && `type`='物資'";
+
+					$check5=mysqli_query($db_link,$que5);
+
+						while($show5=$check5->fetch_assoc()){
+							$z=0;
+							$z=$z+$show5["總和"];
+							
+						}
+                while($row5=$result5->fetch_assoc())
+                {
+                    echo "<tr>";
+                    
+					
+                   echo "<td align='center'>$row5[type]</td>";
+					echo "<td align='center'>$row5[amount]</td>";
+					echo "<td height='65' align='center' style='height:60px'>$row5[date]</td>";
+ 
+					
+					echo "</tr>";
+					
+                }
+				
+					
+						
+                echo "</table>";
+				echo "<font size=+3><b>物資捐獻總和:";
+				echo "$z</b></font>";
+					
 				
                 mysqli_close($db_link);
                 ?>

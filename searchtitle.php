@@ -58,7 +58,7 @@
                     if (isset($_GET['srctitle'])) {
 
                              $_SESSION["srctitle"] = "$_GET[srctitle]";
-                             $sqlscr = "SELECT * FROM `scripture` where `title` LIKE '%$_SESSION[srctitle]%'";
+                             $sqlscr = "SELECT * FROM `scripture` where `title` LIKE '%$_SESSION[srctitle]%' ORDER BY `number` ASC";
                              $resultshow = mysqli_query($db_link, $sqlscr);
 
                              $countresult = mysqli_num_rows($resultshow);

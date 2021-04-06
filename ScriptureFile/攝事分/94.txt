@@ -1,0 +1,604 @@
+<form>
+<table style="background-color:#f8d85a">
+	<tbody>
+		<tr>
+			<td style="background-color:#f8d85a"><span style="font-size:medium">卷:</span></td>
+			<td style="background-color:#f8d85a"><select name="SelectMenu">&nbsp;<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option><option>50</option><option>51</option><option>52</option><option>53</option><option>54</option><option>55</option><option>56</option><option>57</option><option>58</option><option>59</option><option>60</option><option>61</option><option>62</option><option>63</option><option>64</option><option>65</option><option>66</option><option>67</option><option>68</option><option>69</option><option>70</option><option>71</option><option>72</option><option>73</option><option>74</option><option>75</option><option>76</option><option>77</option><option>78</option><option>79</option><option>80</option><option>81</option><option>82</option><option>83</option><option>84</option><option>85</option><option>86</option><option>87</option><option>88</option><option>89</option><option>90</option><option>91</option><option>92</option><option>93</option><option selected="selected">94</option><option>95</option><option>96</option><option>97</option><option>98</option><option>99</option><option>100</option></select></td>
+			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mahabodhi.org/yoga/cb/kp2.htm#yy94">科判中綱</a></td>
+			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mahabodhi.org/yoga/cb/kp2.htm#y94">科判細綱</a></td>
+			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.back()">上一頁</a></td>
+			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.forward()">下一頁</a></td>
+			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mahabodhi.org/yoga/cb/index.htm">回首頁</a></td>
+		</tr>
+	</tbody>
+</table>
+</form>
+
+<form action="http://www.google.com/search" id="search" method="get"><input name="q" type="text" value="" />&nbsp;<input type="submit" value="Search" />&nbsp;</form>
+
+<h3 style="text-align:start"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:14pt"><span style="color:darkred"><strong>瑜伽師地論科句披尋記卷第九十四</strong></span></span></span></span></h3>
+
+<p><span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　彌勒菩薩說</span></span></span><br />
+<a name="94p7059"></a><span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　唐三藏沙門玄奘奉詔譯</span></span></span><br />
+<span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　韓清淨科記</span></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">攝事分中契經事緣起食諦界擇攝第三之二</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子三、觸為緣等2　丑一、頌標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，嗢柁南曰：</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">　觸緣見圓滿　實解不愛樂　法住智精進　生處等為後</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、長行釋8　寅一、觸緣2　卯一、標列三記</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於一切觸緣受有中，若諸沙門、或婆羅門，宣說無因、惡因論者，如前請問，此作此受，乃至廣說。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》乃至廣說者：謂餘作餘受應知。</span></strong></span></span><br />
+<a name="94p7060"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">安住正法大師弟子，若勝、若劣，略有三種無倒記別。一、開自宗記，二、伏他宗記，三、有執無執雜染清淨記。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、隨釋差別3　辰一、開自宗記</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，於彼所問無差別記：謂諸苦樂皆從緣生，是我宗致。斯則名為開自宗記。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、伏他宗記2　巳一、出能伏2　午一、舉記</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若於彼問作如是記：諸計苦樂自作、他作、俱作、俱非無因而生，於一切處由觸生受，何用妄計自他作等。若觸因受現不可得，更求餘因可為巧妙；然觸因受既現可得，故求餘因非為巧妙。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、結名</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是記者，是則名為伏他宗記。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋所以2　午一、第一義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">所以者何？由二因緣，彼為摧伏。一者、除唯根、境、識合，不能顯示餘作者故；二者、不能誹撥一切世間現量如理所得觸因緣故。</span></strong></span></span><br />
+<a name="94p7061"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、第二義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又彼不能立自宗故，亦復不能破他宗故，名被摧伏。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰三、有執無執離染清淨記4　巳一、舉記</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若於彼問作如是記：我亦唯依根、境界、識，假立自作、他作、俱作若苦若樂，而於實我都無所執；汝於此中有邪執著，故不隨許。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">所以者何？若有執著即為雜染，若無執著即為清淨。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、辨相2　午一、雜染</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為若有執著即為雜染？謂彼世間不聰慧者，若於前際有所執著，無明緣行，廣說如前，便於中際苦樂雜染；若於中際有所執著，彼亦如前，當於後際苦樂雜染。</span></strong></span></span><br />
+<a name="94p7062"></a><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》若於前際有所執著等者：謂於前際諸行執我、我所，由是無明為緣生行，廣說如前至觸緣受，便於中際苦樂雜染。如是若於中際有所執著，無明緣行，廣說如前至觸緣受，當於後際苦樂雜染。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為若無執著即為清淨？謂聰慧者，若於前際、或於中際，不於諸行執我、我所，彼於前際諸受因滅，已般涅槃；或於後際諸受因滅，當般涅槃。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳四、結名</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">是名第三有執無執雜染清淨記。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、見圓滿3　卯一、出見差別2　辰一、釋行相3　巳一、名見圓滿</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，若有棄捨無因、惡因，於因生法五種因中獲得正見，名見圓滿。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、名正直見</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於此正法及毗奈耶不可轉故，亦得名為成正直見。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、名成證淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由於涅槃意樂淨故，亦名成就於佛證淨，於所知境智清淨故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、配所緣</span></strong></span></span><br />
+<a name="94p7063"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由此三緣，如其次第，名於正法趣向、親近及與正證。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》由此三緣等者：謂由於因生法五種因中獲得正見，名於正法趣向。於此正法及毗奈耶不可轉故，名於正法親近。涅槃意樂淨故，名於正法正證。如是次第應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋五種因2　辰一、徵起</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為從因生法五種因耶？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、列釋5　巳一、惡趣因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">一、惡趣因，謂諸不善及不善根。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、善趣因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">二、善趣因，謂一切善及諸善根。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、識住因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">三、於識住令識住因，謂四種食。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳四、雜染因</span></strong></span></span><br />
+<a name="94p7064"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">四、現法後法雜染因，謂一切漏。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳五、清淨因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">五、清淨因，謂諦緣起。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、釋見圓滿2　辰一、標名</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若有於此諸因自性，如實了知是其自性；於此因緣，如實了知是其因緣；於因緣滅，如實了知真實是滅；於趣滅道，如實了知真實是道；名見圓滿。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、顯義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">觀緣生事，乃至無明為邊際故，過此更無緣生因觀，唯由此觀，自義究竟。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅三、實2　卯一、標列境事</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，略有三種於現法中真實寂滅，乃至壽量未永止息，恆相續轉所知境事。於彼有學正修行時，施設學性。於彼無學作是思惟：我一切盡，不復當盡。盡、無生智所思擇故，名思擇法。云何為三？一、六處，二、六處緣觸，三、觸緣受。</span></strong></span></span><br />
+<a name="94p7065"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋其施設2　辰一、由補特伽羅增上2　巳一、第一義2　午一、學常委2　未一、釋修相2　申一、別辨三種2　酉一、於受</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，所有多聞諸聖弟子，隨所領受，即於彼受如實遍知。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》所有多聞諸聖弟子者：此中多聞諸聖弟子，謂諸異生。若唯說聖弟子，謂已見諦。如是二種皆有學攝，如下自釋應知。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又即於彼厭離欲滅勤修正行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉二、於觸六處</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又能如實了知彼受觸所引生，觸復由彼六處引生，即於彼觸引因六處厭離欲滅勤修正行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、略攝無常</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又於彼受、觸及六處一切實事略攝為一，了知一切由無常滅名滅法已，於現法中，於此一切三種實事無常滅法，如前修行厭離欲滅。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、結得名</span></strong></span></span><br />
+<a name="94p7066"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由此正行，名學常委。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、擇法常委</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又由修行此正行故，無所造作，究竟解脫，是故說名擇法常委。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、第二義2　午一、學常委</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">為欲證得曾所未得、曾所未證，修行無間、殷重方便，名學常委。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、擇法常委</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">為於所有現法樂住無有退失無間所作、殷重所作，由是說名擇法常委。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、由法增上2　巳一、名法界</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">等說一切事法增上名句文身，名為法界。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》等說一切事法增上名句文身者：無倒名句文身，能令解了一切事法，是名增上，如其法性平等說故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、名善達法界2　午一、由無礙解</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">諸有獲得無礙解故，名句文身隨欲自在，是故說名善達法界。</span></strong></span></span><br />
+<a name="94p7067"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、能廣宣說2　未一、於真實義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由於法界善通達故，即於如是真實想義，更以餘名，隨其所樂差別宣說。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》更以餘名隨其所樂差別宣說者：法界異名有多差別，謂空、真如、實際、無相、勝義、性無我等。如辯中邊論別釋其義應知。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">乃至能於七日七夜，或過彼量，辭辯無竭。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、於有為法</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復以如是差別種類，如實宣說彼是有為，思所造作，動轉羸頓，如病、如癰，乃至廣說。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》如病如癰乃至廣說者：此中廣說，謂即如箭、惱害。如是一切名厭背想，行擇攝中別釋其相應知。（<a href="http://mahabodhi.org/yoga/cb/86.htm#71706:65602">陵本八十六卷四頁6497</a>）</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅四、解3　卯一、標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，當知具解諸阿羅漢，略有六種記別所解。一、有異門記別，二、無異門記別，三、智記別，四、斷記別，五、總記別，六、別記別。</span></strong></span></span><br />
+<a name="94p7068"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、隨釋4　辰一、有異門記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">有異門記別者，謂如有一，或他請問，或復自然為欲令他於佛聖教多起恭敬，故如是記：我於今者無一疑惑。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》我於今者無一疑惑者：謂於聖教宣說異門，無一疑惑故，如是說名有異門記別。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、無異門記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">無異門記別者，謂作是記：我生已盡，乃至廣說。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》我生已盡乃至廣說者：如說：我生已盡，梵行已立，所作已辦，不受後有。攝異門分別釋其相應知。（<a href="http://mahabodhi.org/yoga/cb/83.htm#71715:63673">陵本八十三卷十七頁6325</a>）</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰三、智記別2　巳一、標名</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">智記別者，謂有問言：云何知故，云何見故，彼生已盡？便記別言：生緣盡故，彼生已盡。以如是相，記別自己善解脫智所攝盡智，名智記別。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋相2　午一、別記別2　未一、因緣諸取</span></strong></span></span><br />
+<a name="94p7069"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又即於此別記別者，謂即記別：彼因緣有。又復記別：彼生因緣，因緣諸取。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、遠離諸取</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又復記別：此諸取相如實知故，如實見故，令取無有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、總記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">總記別者，謂即於此一切所記，了知所有諸受皆苦，既了知已，令彼生盡。如是記者，名總記別。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰四、斷記別2　巳一、標名</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">斷記別者，謂即由彼內解脫故，一切貪愛因緣皆盡。如是記者，名斷記別。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》謂即由彼內解脫故等者：彼生已盡，名內解脫。欲、色、無色所有貪愛皆得離繫，是名一切貪愛因緣皆盡。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋相2　午一、別記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此斷記別，即如前說，名別記別。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》即如前說名別記別者：謂如前說，一切貪愛因緣皆盡，各別為記，名別記別。</span></strong></span></span><br />
+<a name="94p7070"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、總記別2　未一、標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此總記別，當知略由三種行相。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、釋3　申一、最初斷總記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂薄伽梵所說諸結，我皆無有。是名最初斷總記別，謂諸有結皆永斷故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、第二斷總記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又我安住如是正念，由我安住此正念故，一切貪憂惡不善法，能令畢竟不漏於心。是名第二斷總記別，謂恆住故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申三、第三斷總記別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又於此中自無憍慢。是名第三斷總記別，謂無有餘增上慢故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、結數</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是總說有六記別。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅五、不愛樂2　卯一、舉所愛樂</span></strong></span></span><br />
+<a name="94p7071"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，有三種法，是諸世間所愛所樂，依內而說。一者、勢力，二者、妙色，三者、壽命。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》一者勢力等者：此中勢力，謂即無病。妙色，謂即少年。翻下疾病、衰老應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、顯不愛樂2　辰一、標列三法</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復有違害如是三法，能引所治不可愛樂三種別法。一者、疾病，二者、衰老，三者、夭歿。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、料簡超越2　巳一、總標列2　午一、標差別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="5127:71749"></a>若於三學起邪行時，便不堪任超越疾病、衰老、夭歿。若於三學起正行時，即能超越如是三事。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、列三學</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何三學？一、增上戒學，二、增上心學，三、增上慧學。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、別釋相2　午一、釋諸學行3　未一、依增上戒2　申一、舉邪行3　酉一、徵</span></strong></span></span><br />
+<a name="94p7072"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為依止所有增上戒學起諸邪行？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉二、釋2　戌一、舉因緣6　亥一、無有羞恥</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂如有一，於初學中有所毀犯，或觀於自、或觀於他，無有羞恥。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">亥二、不自防護</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">既自安住無羞恥已，便於一切惡不善法不自防護。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">亥三、都無敬忌</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">既於彼法不自護已，於佛法僧不起恭敬，於諸所學教授教誡都無敬忌。由是因緣，若於此事他正諫舉，便於彼言不能忍受，自亦於彼默不與語。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">亥四、親近惡友</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於處非處能正諫舉補特伽羅，憎背遠避；</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》於處非處者：於彼彼事理無相違，是名為處。理有相違，是名非處。義如決擇分說應知。（<a href="http://mahabodhi.org/yoga/cb/57.htm#71763:38191">陵本五十七卷一頁4563</a>）</span></strong></span></span><br />
+<a name="94p7073"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於行邪行同己法者，親近交遊，好共安止。由與惡友共安止故，於諸賢聖尚生憎背，況當詣彼躬申敬覲。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">亥五、憎背聖教</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">設復往彼為說正法，憎背聖故，而不欲聞。設暫屬耳，心無敬順，唯懷違諍，不為知解而有聽聞。於處非處分別正行諸智論中，不樂安住。彼由內懷違諍心故，雖有聽聞，而不信受，亦不依行。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》於處非處分別正行者：此處非處證得門，攝決擇分說：無處無位未具資糧，於現法中證學無學究竟解脫，無有是處；已具資糧，斯有是處。無處無位未得聖道能證涅槃，及證聲聞、獨覺菩提，若證無上正等菩提，無有是處；已得聖道，斯有是處。（<a href="http://mahabodhi.org/yoga/cb/57.htm#71768:45024">陵本五十七卷三頁4570</a>）其義應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">亥六、為賢聖棄</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又諸賢聖默不與語，作是思惟：如是行者，不堪與語教授教誡。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">戌二、出毀犯</span></strong></span></span><br />
+<a name="94p7074"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="75207:71773"></a>彼既自然無法自制，又為賢聖之所棄捨，於其內心恆不寂靜，外身語意猥雜而住，勃惡、貪婪、彊口、憍傲，於如是事不見過罪，多所毀犯，不如法悔，由數習故，漸次毀犯一切尸羅。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉三、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知是名依止所有增上戒學起諸邪行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、翻正行</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">與此相違，當知即是依止所有增上戒學所起正行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、依增上心2　申一、舉邪行3　酉一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為依止所有增上心學起諸邪行？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉二、釋2　戌一、於行時</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂於行時，不如正理，執取境界諸相、隨好，由是因緣，發起忘念。即於其中不觀過患，煩惱生已，堅執不捨，由是因緣，不正知住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">戌二、於住時</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">或於住時，居遠離處，無有第二，即以忘念、不正知住為所依止，心外馳散。</span></strong></span></span><br />
+<a name="94p7075"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉三、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是名為依止所有增上心學起諸邪行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、翻正行</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">與此相違，當知即是依止所有增上心學所起正行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未三、依增上慧2　申一、舉邪行3　酉一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為依止所有增上慧學起諸邪行？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉二、釋</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="60577:71792"></a>謂如有一，離近賢聖，依近惡友，聞不正法勝解為因，不如正理思擇諸法。於諸惡欲及諸惡見喜樂受行，或於廣大所學、所得微妙法中，而自輕懱。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉三、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是名為依止所有增上慧學起諸邪行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、翻正行</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">與此相違，當知即是依止所有增上慧學所起正行。</span></strong></span></span><br />
+<a name="94p7076"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、辨於所治2　未一、舉不超越2　申一、不斷三結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此中異生補特伽羅，依止如是三種學中所起邪行，無有堪能超異生地，無倒趣入正性離生，永斷三結。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、不越當苦</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由不永斷三種結故，無有堪能依止修道得阿羅漢，於現法中無餘永斷貪瞋癡等一切煩惱，超越當來疾病、衰老及以夭歿。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、翻能超越</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">與此相違，當知即是於三學中，如實正行一切白品，廣說乃至超越當來疾病、衰老及以夭歿。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅六、法住智2　卯一、略辨2　辰一、出二智依</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，若有苾芻具淨尸羅，住別解脫清淨律儀，增上心學增上力故，得初靜慮近分所攝勝三摩地以為依止；增上慧學增上力故，得法住智及涅槃智。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、明令解脫</span></strong></span></span><br />
+<a name="94p7077"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">用此二智以為依止，先由四種圓滿遠離受學轉時，令心解脫一切煩惱，得阿羅漢，成慧解脫。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》四種圓滿遠離者：行擇攝說：由四支故，具足遠離名善具足。何等為四？一者、無第二而住，二者、處邊際臥具，三者、其身遠離，四者、其心遠離。（<a href="http://mahabodhi.org/yoga/cb/85.htm#71809:65421">陵本八十五卷二十頁6480</a>）此應準釋。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、廣釋2　辰一、法住智3　巳一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此中云何名法住智？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="8028:71813"></a>謂如有一，聽聞隨順緣性緣起無倒教已，於緣生行因果分位，住異生地，便能如實以聞思修所成作意如理思惟，能以妙慧悟入信解苦真是苦、集真是集、滅真是滅、道真是道。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">諸如是等，如其因果安立法中所有妙智，名法住智。</span></strong></span></span><br />
+<a name="94p7078"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、涅槃智3　巳一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又復云何名涅槃智？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂彼法爾若於苦集滅道，以其妙慧悟入信解是真苦集滅道諦時，便於苦集住厭逆想，於滅涅槃起寂靜想。所謂究竟寂靜微妙，棄捨一切生死所依，乃至廣說。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》棄捨一切生死所依等者：謂無餘依涅槃，與一切依不相應故，名棄捨一切生死所依。安住常樂真無漏界，是名廣說。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是依止彼法住智，及因於苦、若苦因緣住厭逆想，便於涅槃能以妙慧悟入信解為寂靜等。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是妙智名涅槃智。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅七、精進2　卯一、出觀六種4　辰一、標</span></strong></span></span><br />
+<a name="94p7079"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，於善說法毗奈耶中諸聰慧者，正觀六種圓備現前，足能發起勤精進住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為六種圓備？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰三、列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">一、大師圓備，二、聖教圓備，三、聖教易入圓備，四、證得自義無上圓備，五、一切如理無間宣說圓備，六、有聖言將圓備。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰四、釋2　巳一、能發精進2　午一、觀圓備6　未一、大師圓備</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為大師圓備？謂諸如來成就十力、四無所畏。如是等名大師圓備。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、聖教圓備</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為聖教圓備？謂自稱言：我今已處大仙尊位，能轉梵輪，於大眾中正師子吼，開示一切順逆緣起、寂滅涅槃。如是等名聖教圓備。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未三、聖教易入圓備</span></strong></span></span><br />
+<a name="94p7080"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為聖教易入圓備？謂此聖教所有文句，其性明顯、其義甚深。由此聖教能正開發諸甚深義，故說文句其性明顯、其義甚深。如是名為聖教易入圓備。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未四、證得自義無上圓備</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為證得自義無上圓備？謂無沙門、或婆羅門，於如來所能正開覺通慧為勝，是故於他證得自義所應得義、所應覺義，唯有如來所說法教為妙、為上。若過於此，言辭路絕。如是名為證得自義無上圓備。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》能正開覺通慧為勝者：此中通慧，謂漏盡智。唯諸如來，由此通慧，能正開示覺了於他，是故為勝。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未五、一切如理無間宣說圓備</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為一切如理無間宣說圓備？謂諸如來所說法教，普為一切人天開示，無倒開示；於一切法不作師拳，無遺開示。如是名為一切如理無間宣說圓備。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未六、有聖言將圓備</span></strong></span></span><br />
+<a name="94p7081"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為有聖言將圓備？謂有能斷一切疑惑，及能生起一切善根、一切善法所依大信現量可得安足之所大師現前。如是名為有聖言將圓備。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、住修學</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">諸聰慧者，正觀此六圓備現前，足能發起勤精進住。於三學中，依增上戒修習瑜伽，依增上心修不放逸，依增上慧於大師教修瑜伽行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、希求勝利2　午一、簡有過患</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若有安住懈怠心者，當知希求二種過患。一者、希求現法、當來能生眾苦，一切煩惱雜染憂苦不安隱住。二者、希求退失所有未證、已證一切善法，退失能引、能住善趣涅槃大義。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、正顯勝利2　未一、標相違</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">與此相違，勤精進者，當知希求二種勝利。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、廣無退2　申一、總標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此精進者，於諸善法未證能證，無退失時，能辦自義、他義、俱義。</span></strong></span></span><br />
+<a name="94p7082"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、別辨3　酉一、能辦自義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為能辦自義？謂出家已，由其二相說名有果。一者、證得煩惱離繫究竟涅槃，謂離繫果。二者、能起世間勝樂，謂往善趣樂異熟果。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉二、能辦他義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為能辦他義？謂廣為他宣說法要，令其能往世間善趣、究竟涅槃。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉三、能辦俱義2　戌一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為能辦俱義？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">戌二、釋2　亥一、成淨福田</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂自修治淨福田性，堪任受用從淨信邊所得如法衣服等事。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">亥二、得自他利2　天一、自利</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由此受用，攝養己身，令其能順一切善品。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">天二、利他4　地一、得大果報</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又能令他於己所作得大果報，謂於當來往善趣故。</span></strong></span></span><br />
+<a name="94p7083"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">地二、得大勝利</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">得大勝利，謂當獲得財寶、僕從皆圓滿故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">地三、得大榮盛</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">得大榮盛，謂當獲得壽命、色、力、樂、辯才等自圓滿故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">地四、得大修廣</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">得大修廣，謂即於上所得三處，長時隨逐無間斷故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、廣聖教相2　辰一、總標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由四種相，應知世尊所說聖教名善說法。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、列釋4　巳一、能趣寂靜</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">一、能趣寂靜，能令證得有餘依涅槃界故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、能般涅槃</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">二、能般涅槃，能令證得無餘依涅槃界故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、能趣菩提</span></strong></span></span><br />
+<a name="94p7084"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">三、能趣菩提，能令證得聲聞、獨覺、無上正等三菩提故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳四、善逝分別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">四、善逝分別，最極究竟、現量所顯無上大師所開示故。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》最極究竟現量所顯無上大師者：永斷二障，得大菩提，是名最極究竟。出現世間宣說正法，是名現量所顯。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅八、生處等3　卯一、能生聖處2　辰一、出四圓滿4　巳一、標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，具四圓滿，能生聖處。若隨有一成此圓滿，於善說法毗奈耶中正修行時，名曰善來、善出家者。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為四種圓滿？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">一、增上意樂圓滿，二、根圓滿，三、智圓滿，四、即於聖處有佛出世得值圓滿。</span></strong></span></span><br />
+<a name="94p7085"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳四、釋4　午一、增上意樂圓滿</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">增上意樂圓滿者，謂如有一，於般涅槃極淨修治增上意樂，方乃出家，非為債主及諸怖畏之所逼迫，乃至廣說。當知如是而出家者名善出家，生於聖處。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》乃至廣說者：謂或為王之所逼錄，或為彊賊之所逼錄，或為債主之所逼錄，或由怖畏之所逼迫，或畏不活而求出家，是名廣說應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、根圓滿2　未一、舉種類</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">根圓滿者，謂如有一，眼耳無闕，非半擇迦，不闕支分。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、釋堪能</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由得如是根無闕故，於善說法毗奈耶中堪任出家，說正法時堪能聽受。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午三、智圓滿2　未一、舉種類</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">智圓滿者，謂如有一，性不愚戇，無有下品愚癡障故；亦不瘖瘂，無有中品愚癡障故；非手代言，無有上品愚癡障故。</span></strong></span></span><br />
+<a name="94p7086"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、釋有能</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">離三種智愚癡障故，有力能解善說、惡說所有法義。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午四、值佛圓滿</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">即於聖處有佛出世得值圓滿者，謂如今時，有薄伽梵釋迦牟尼出現於世，是為如來應正等覺，乃至廣說。若廣解釋，應知如前攝異門分。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》乃至廣說等者：謂如明行圓滿、善逝、世間解、無上丈夫調御士、天人師、佛陀、薄伽梵，是名廣說。攝異門分別釋其相應知。（<a href="http://mahabodhi.org/yoga/cb/83.htm#71908:63758">陵本八十三卷十八頁6333</a>）</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">宣說正法趣寂靜等，廣說如前。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》廣說如前者：謂如前說：由四種相，應知世尊所說聖教名善說法。一、能趣寂靜，二、能般涅槃，三、能趣菩提，四、善逝分別。是名廣說應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、略攝二種2　巳一、名為善來善得出家</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，生聖處故，名為善來、善得出家。</span></strong></span></span><br />
+<a name="94p7087"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、名善獲得具足人身</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">根無闕故，不愚戇故，不瘖瘂故，亦不以手代其言故，名善獲得具足人身。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、觀察流轉2　辰一、有疑惑2　巳一、標列其因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="8141:71917"></a>復次，其於緣生諸行流轉修觀行者，略有二種作猶豫法。云何為二？一者、承習說無因論，二者、承習說惡因論。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、別釋其相2　午一、承習說無因論</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此中承習無因論者，觀一切種皆無所因，便生疑惑：云何諸法無因而轉？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、承習說惡因論</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">其有承習惡因論者，亦生疑惑：云何由彼不相似因、不稱理因，有諸法轉？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、無疑惑2　巳一、標能正觀</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若有多聞諸聖弟子，遠離二種非真實論，正觀流轉，由是因緣，得善決定，無有疑惑，內證真實。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、料簡異類</span></strong></span></span><br />
+<a name="94p7088"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="12877:71926"></a>若於是處說有多聞諸聖弟子，當知此中是諸異生；若於是處唯說有其諸聖弟子，當知此中說已見諦。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、有苦樂住2　辰一、出苦住3　巳一、標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，於正法中，略有三種補特伽羅，猶有苦惱不安隱住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何為三？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、釋3　午一、第一補特伽羅2　未一、辨2　申一、舉類</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂如有一，於善說法毗奈耶中，為求涅槃，趣向涅槃，棄捨家法，趣於非家。既出家已，唯能受持所有禁戒，便喜足住，不於時時轉進修習增上心學、增上慧學。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、釋相</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼捨先時居家所有受用境界，未能隨得無上安隱證涅槃道，處在中間，猶有苦惱不安隱住。</span></strong></span></span><br />
+<a name="94p7089"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">是名第一補特伽羅。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、第二補特伽羅2　未一、辨2　申一、舉類</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復如有一，雖不唯於所受禁戒喜足安住，然其未能超異生地。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、釋相</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由未能超異生地故，於一切法緣藉他故，常視他面、常觀他口，何當如實知於所知、見於所見。恆於他所求聞正法教授教誡，然其自心有疑有惑，猶有苦惱不安隱住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">是名第二補特伽羅。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》於一切法緣藉他故者：非內自證，但隨他聞，名緣藉他。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午三、第三補特伽羅</span></strong></span></span><br />
+<a name="94p7090"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復如有一，是學見跡，放逸而住，於現法中不堪證得究竟涅槃。有能攝受第二有體生起之因，有第二住，猶有苦惱不安隱住。是名第三補特伽羅。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》有能攝受第二有體生起之因等者：如前已說：由二因緣，當知名為有第二住。謂有愛故，為欲生起第二自體，受習其因；此自體滅，第二自體次生起故。（<a href="http://mahabodhi.org/yoga/cb/92.htm#71948:70645">陵本九十二卷十五頁6965</a>）其義應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、翻樂住2　巳一、標三種</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是三種補特伽羅，復有三異補特伽羅，有諸快樂善安隱住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、隨難釋</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂阿羅漢一向樂住。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》復有三異補特伽羅等者：翻前三種，名有三異補特伽羅。於中阿羅漢一向樂住，唯釋後一善安隱住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子四、有滅等2　丑一、頌標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，嗢柁南曰：</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">　有滅若沙門　婆羅門受智　流轉與來往　佛順逆為後</span></strong></span></span><br />
+<a name="94p7091"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、長行釋6　寅一、有滅3　卯一、標相</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">諸學見跡，雖於有滅寂靜涅槃，不隨他信，內聖慧眼自能觀見，然猶未能以身觸證。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、舉喻</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">譬如有人熱渴所逼，馳詣深井，雖以肉眼現見井中離諸塵穢清冷美水，并給水器，而於此水身未觸證。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、合法</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是有學，雖聖慧眼現見所求後煩惱斷最極寂靜，而於此斷身未觸證。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、若沙門婆羅門2　卯一、出唯世俗</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，有諸沙門、若婆羅門，於貪瞋癡無餘斷滅真沙門義、婆羅門義全未證得，而諸世間起沙門想、婆羅門想，彼亦自稱是真沙門、真婆羅門。世間於彼雖起是想，然彼但是世俗沙門及婆羅門，非第一義。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、顯非勝義2　辰一、標不忍許</span></strong></span></span><br />
+<a name="94p7092"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若第一義諸有沙門及婆羅門，皆不忍許彼為沙門及婆羅門。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、釋其所以2　巳一、由不實知2　午一、標列依處</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">所以者何？由彼不能如實了知諸雜染法、雜染法因，亦不如實了知彼滅、趣彼滅行。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、隨釋雜染2　未一、雜染法</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">雜染法者，謂老死支所攝眾苦及以生支。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、雜染因2　申一、標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">雜染法因復有二種。一、愛所作，二、業所作。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、隨釋2　酉一、愛所作</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">愛所作者，謂由緣起逆次道理，有取、愛支，若無明觸所生諸受，若無明觸及無明界所隨六處。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">酉二、業所作</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">業所作者，謂由緣起逆次道理，名色、識、行，及即於彼不如實知。</span></strong></span></span><br />
+<a name="94p7093"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、由無實智</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如法住智尚未能了，況當如彼諦現觀時能遍了知，或如修道未遍了知如無學地，未能超越。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》如法住智尚未能了等者：謂彼沙門及婆羅門，於善說法毗奈耶中，未得法住智故，未能了知諸雜染法，乃至趣彼滅行。由是此說：如法住智尚未能了，何況如彼諦現觀時得真實智，能遍了知；何況修道如無學地究竟現觀，能遍了知。是故於雜染法及雜染因未能超越。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅三、受智2　卯一、略標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，略由二種明觸生法，於其緣生一切行中，依四諦理趣入現觀。云何為二？一、由領納所緣為性明觸生受，二、由簡擇所緣為性明觸生慧。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋差別2　辰一、明建立2　巳一、出依諦</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，於十一支安立四諦，依此一一支諦建立四十四事。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、辨二事2　午一、受事差別</span></strong></span></span><br />
+<a name="94p7094"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">即依明觸所生諸受，宣說如是四十四種受事差別。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、智事差別2　未一、四十四智</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">即依明觸所生諸慧，宣說如是四十四種智事差別。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》於十一支安立四諦等者：從老死支逆次觀察乃至行支，一一各有四諦差別，名十一支安立四諦。謂如緣起聖道經說：曾見老死，見老死集，見老死滅，見於老死趣滅行跡；如是曾見生、有、取、愛、受、觸、六處、名色、識、行，曾見行集，曾見行滅，曾見於行趣滅行跡。其義應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、七十七智2　申一、辨因果</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此中後際所作老死，唯果非因；於其前際所發無明，唯因非果；其餘有支，亦因亦果。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》此中後際所作老死唯果非因等者：由老死支唯果非因，故逆觀察此為最初。由無明支唯因非果，故至行支以為後邊。由是義顯，於十一支安立四諦道理，是故總有四十四事。</span></strong></span></span><br />
+<a name="94p7095"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">申二、出差別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="8141:71998"></a>三時遍智有差別故，如前所說決定遍智有差別故，由法住智所攝能取智無常性有差別故，當知建立七十七種智事差別。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》三時遍智有差別故等者：此中義顯，依十一支，更復建立七十七種智事差別。初中後際建立緣起遍了知故，是名三時遍智差別。如前已說：略由三相，應知建立緣起差別。（<a href="http://mahabodhi.org/yoga/cb/93.htm#71999:70900">陵本九十三卷一頁6990</a>）此應準釋。又如前說：若有多聞諸聖弟子，遠離二種非真實論，正觀流轉，由是因緣，得善決定，無有疑惑，內證真實。是名決定遍智差別。如實了知因集故行集，因滅故行滅，是名由法住智所攝能取智無常性差別。本地分說：為顯有因雜染智故，又復為顯於自相續自己所作雜染智故，又復為顯前際諸支無始時故，又復為顯後際諸支容有雜染還滅義故，又復為顯支所不攝諸有漏慧遍知義故。於一一支皆作七智，當知總有七十七智。（<a href="http://mahabodhi.org/yoga/cb/10.htm#71999:8136">陵本十卷十九頁827</a>）與此文別義同，前已廣釋，今應準知。</span></strong></span></span><br />
+<a name="94p7096"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、結觀果</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是顯示歷觀諸諦一切行相，從此無間入諦現觀，漸次修習，乃至獲得阿羅漢果。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅四、流轉2　卯一、第一義2　辰一、出三相2　巳一、舉流轉2　午一、標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="8107:72004"></a>復次，由三種相，於緣生行應正了知流轉漸次。何等為三？一、因增益故；二、果生起故；三、果增集故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、略攝</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是一切略攝為一，總名諸法若增、若生、若集。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、顯還滅</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="8115:72008"></a>依因果滅，如其所應，當知說名若減、若滅、若沒。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、結意趣</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是意趣差別道理不違法性。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、第二義</span></strong></span></span><br />
+<a name="94p7097"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復有別義。初中後際時差別故，欲、色、無色界差別故，如其次第，若增、若減、若生、若滅、若集、若沒，應正了知。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》如其次第若增若減等者：此中次第配釋二義。謂依流轉還滅漸次，於初際時若增、若減，於中際時若生、若滅，於後際時若集、若沒。又依三界自體差別，於欲界中若增、若減，於色界中若生、若滅，於無色中若集、若沒。如是二種別義應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅五、來往2　卯一、出雜染3　辰一、略標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，當知略有二種雜染。一、業愛雜染，二、妄見雜染。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、明所依</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此二雜染依於二品。一、在家品，二、出家品。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰三、釋二因</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">應知此中，業愛雜染所造作故，名思所作；妄見雜染邪計起故，名計所執。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、辨來往2　辰一、舉二類2　巳一、異生2　午一、由具雜染</span></strong></span></span><br />
+<a name="94p7098"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此中異生，若在家品、若出家品具二雜染，由諸纏故及隨眠故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、能招後有</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">因彼所緣，於四識住令心生起諸雜染已，招集後有，循環往來不得解脫。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》因彼所緣等者：彼謂諸纏及與隨眠。由彼為因，有四依取，以為所緣，令識安住。決擇分說：若諸煩惱事，若屬彼煩惱，說名依取。應知此二亦名所緣，所緣性故，有所緣故。（<a href="http://mahabodhi.org/yoga/cb/54.htm#72026:41741">陵本五十四卷二頁4284</a>）其義應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、有學2　午一、斷見雜染</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">有學見跡，妄見雜染已永斷故，唯有我慢依處習氣尚有餘故，不造新業，不欣後有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、有業愛染</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">業愛雜染，無有諸纏能為雜染，唯有隨眠依附相續能為雜染。因彼所緣，於諸識住雜染其心，招集後有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、簡無學</span></strong></span></span><br />
+<a name="94p7099"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若諸無學，二種雜染纏及隨眠皆永斷故，即現法中，於諸識住其心雜染，及與當來所招後有，一切皆無。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅六、佛順逆2　卯一、出順逆觀2　辰一、舉諸如來2　巳一、意顯無量2　午一、思惟緣起</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，過去諸佛為菩薩時，如理思惟緣起法已，證覺無上正等菩提；今薄伽梵亦於緣起正思惟已，證覺無上正等菩提。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、現住安樂</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如過去佛得菩提已，即於緣起作意攀緣順逆道理，方便隨修現法樂住，已住安樂；今薄伽梵亦復如是。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、結唯說七</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼雖無量，如說世間七劫相似，故唯說七。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、明證菩提</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是無上正等菩提，尚由如實知緣起故，未證能證，證已獲得現法樂住，況餘下劣所有菩提。</span></strong></span></span><br />
+<a name="94p7100"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、指斷方便</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又為如實等覺緣起，攝受五支為斷方便。如前應知。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》攝受五支為斷方便等者：謂如前說：由五種相，正勤方便觀察緣起，能盡眾苦，能作苦邊。何等為五？一者、觀察諸緣生法生起因緣；二者、觀察彼滅因緣；三者、如實了知能趣彼滅正行；四者、修行法隨法行；五者、於證離增上慢。如是名為善起觀察及果成滿。（<a href="http://mahabodhi.org/yoga/cb/93.htm#72045:71193">陵本九十三卷十一頁7019</a>）此應準知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">癸二、顯總義2　子一、品類差別</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又此緣起總略義者，謂依轉品有因諸苦；又依還品有因無漏所有諸法；又有因苦因緣諸漏；又彼諸漏所依止性從無明觸所生諸受；又有因法住立因緣，則現法中煩惱斷者，唯有依緣。</span></strong></span></span><br />
+<a name="94p7101"></a><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》謂依轉品有因諸苦等者：緣起支中，後五所攝生老死支，苦所顯故，是名為苦。愛、取、有三是彼生因，由是總說有因諸苦。無明、愛、取永盡所顯，是名有因無漏所有諸法。無明、愛、取能為雜染，名有因苦因緣諸漏。緣起支中，前七支攝，名有因法。今說於現法中煩惱斷者，唯由先業所引名色，與識展轉相依、展轉為緣，是名唯有依緣。有因法中，為簡餘法，故作是說。本地分說：問：幾緣起支名有因法？答：謂前七。問：幾緣起支名有因苦？答：餘五。問：幾支滅是漏盡所顯？答：三。問：幾支滅是緣盡所顯？答：即此三是餘支緣故。問：幾支滅是受盡所顯？答：一。謂由煩惱已斷故，所依滅時，此一切受皆永息滅故。（<a href="http://mahabodhi.org/yoga/cb/10.htm#72049:8117">陵本十卷十八頁825</a>）此中諸義，準彼應釋。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子二、清淨漸次3　丑一、總標甚深</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又復依於七種清淨漸次修集，為得無造究竟涅槃，應知宣說隨順如是緣性緣起甚深言教。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、釋漸清淨2　寅一、徵列七種</span></strong></span></span><br />
+<a name="94p7102"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為七種清淨？一、戒清淨，二、心清淨，三、見清淨，四、度疑清淨，五、道非道智見清淨，六、行智見清淨，七、行斷智見清淨。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、明漸修集3　卯一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何名為如是清淨漸次修集？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋2　辰一、明漸次7　巳一、戒清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">謂有苾芻，安住具足尸羅，守護別解脫律儀。廣說應知如聲聞地。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》廣說應知如聲聞地者：聲聞地說戒律儀相應知。（<a href="http://mahabodhi.org/yoga/cb/22.htm#72059:18628">陵本二十二卷二頁1893</a>）</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、心清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼由如是具尸羅故，便能無悔；廣說乃至心得正定，漸次乃至具足安住第四靜慮。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》廣說乃至心得正定者：聲聞地說：先於尸羅善清淨故，便無憂悔；無憂悔故，歡喜安樂；由有樂故，心得正定。（<a href="http://mahabodhi.org/yoga/cb/28.htm#72062:23206">陵本二十八卷二頁2327</a>）如是廣說應知。</span></strong></span></span><br />
+<a name="94p7103"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、見清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼既獲得如是定心，漸次乃至質直、調柔、安住不動。於為證得漏盡智通，心定趣向，於四聖諦證入現觀，斷見所斷一切煩惱，獲得無漏有學正見。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳四、度疑清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">得正見故，能於一切苦集滅道及佛法僧永斷疑惑。由畢竟斷，超度猶豫，故名度疑。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳五、道非道智見清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又於正見前行之道，如實了知是為正道，由此能斷見所斷後修所斷惑；又於邪見前行非道，如實了知是為邪道。於道非道得善巧已，遠離非道，遊於正道。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳六、行智見清淨</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又於隨道四種行跡如實了知。何等為四？一、苦遲通，二、苦速通，三、樂遲通，四、樂速通。如是行跡，廣辯應知如聲聞地。</span></strong></span></span><br />
+<a name="94p7104"></a><span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》如是行跡廣辯應知如聲聞地者：聲聞地說：或有行跡是苦遲道，或有行跡是苦速道，或有行跡是樂遲道，或有行跡是樂速道。當知此中，若鈍根性補特伽羅，未得根本靜慮，所有行跡，名苦遲道。若利根性補特伽羅，未得根本靜慮，所有行跡，名苦速道。若鈍根性補特伽羅，已得根本靜慮，所有行跡，名樂遲道。若利根性補特伽羅，已得根本靜慮，所有行跡，名樂速道。（<a href="http://mahabodhi.org/yoga/cb/26.htm#72073:21832">陵本二十六卷十一頁2202</a>）如是廣辯應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳七、行斷智見清淨3　午一、於初行跡</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於此行跡，如實了知最初行跡一切應斷，超越義故，非由煩惱離繫義故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、於第二第三行跡</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如實了知第二第三苦速樂遲二種行跡一分應斷。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》苦速樂遲二種行跡一分應斷者：謂彼二種行跡，隨其所應，若苦、若遲各別一分應超越故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午三、於第四行跡</span></strong></span></span><br />
+<a name="94p7105"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是如實了知初全及二一分應當斷已，依樂速通正勤修集。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、明究竟</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">從此無間永盡諸漏，於現法中獲得無造究竟涅槃，身壞已後證無餘依般涅槃界。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是七種清淨為依，漸次修集，乃至獲得諸漏永盡無造涅槃。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑三、釋定具足2　寅一、應求一切</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，由於如是七種清淨一切具足漸次修集，方乃證得無造涅槃，非隨闕一。是故應求如是一切，於世尊所熟修梵行，非求隨一。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、具說一切2　卯一、明施設</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又佛世尊由此因緣，亦具施設如是一切，為令證得無造涅槃，非隨捨一。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、明甚深</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又於此中，依一一說，非唯由此、亦非離此能獲無造究竟涅槃。如是應知此中緣性緣起甚深。</span></strong></span></span><br />
+<a name="94p7106"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">壬二、食攝2　癸一、頌標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，嗢柁南曰：</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">　安立與因緣　觀察於食義　極多諸過患　雜染等為後</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">癸二、長行釋5　子一、安立4　丑一、略辨2　寅一、能長養法3　卯一、標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="52561:72097"></a>有四種法，於現法中最能長養諸根大種。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">云何為四？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">一者、氣力；二者、喜樂；三者、於可愛事專注希望；四者、氣力、喜樂、專注希望之所依止諸根大種，并壽、并煖安住不壞。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、能為食法2　卯一、標</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是四法，隨其次第，當知別用四法為食。</span></strong></span></span><br />
+<a name="94p7107"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">一者、段，二者、順樂受觸，三者、有漏意會思，四者、能執諸根大種識。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、廣釋2　寅一、能令安住2　卯一、辨4　辰一、段食</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，段與現法氣力為食。由氣力故，便能長養諸根大種。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、觸食</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">能順樂受諸有漏觸，能與喜樂為食。由喜樂故，便能長養諸根大種。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰三、意思食2　巳一、出意思名</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若在意地能會境思，名意會思。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋為食義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">能與一切於可愛境專注希望為食。由專注希望故，便能長養諸根大種。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》若在意地能會境思等者：決擇分說：思有五相，令心造作。一、為境隨與，二、為彼合會，三、為彼別離，四、能發雜染業，五、令心自在轉。（<a href="http://mahabodhi.org/yoga/cb/53.htm#72115:41472">陵本五十三卷十六頁4261</a>）今約為彼合會，名意會思。</span></strong></span></span><br />
+<a name="94p7108"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰四、識食</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由能執受諸根大種識故，令彼諸根大種，并壽、并煖與識不離身為因而住，是故說識名彼住因。由彼住故，氣力、喜樂、專注希望依彼而轉。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是四食，能令已生有情安住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、能令攝益2　卯一、辨2　辰一、初三食2　巳一、舉由段食2　午一、作增長業</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又由段故，而有氣力；有氣力故，諸根大種皆得增長。由是因緣，諸有顧戀身命愚夫，為此義故有所追求，於追求時，造作種種新善惡業，亦令增長。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、增長煩惱</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又能增長種種煩惱。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、例由餘二</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如說於段，觸、意會思，隨其所應，當知亦爾。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、後識食2　巳一、能集後有</span></strong></span></span><br />
+<a name="94p7109"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由此三門，能集後有業、煩惱、識。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、攝受後有</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此於現法，有業、煩惱所隨逐故，成其有取，便能攝受當來後有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="52561:72133"></a><a name="11930:72133"></a>如是四食，令求後有、愛樂後有，於其後有未能斷者，能攝後有、遍攝後有、隨攝後有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑三、料簡2　寅一、第一義2　卯一、初段食</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又諸段食，在欲界天名之為細，或處中有、母腹、卵㲉，當知亦爾。欲界餘位段食名麤。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、後三食</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">觸、意會思及以識食，在無色界當知名細，餘處名麤。有色為依易分別故，無色為依難分別故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、第二義</span></strong></span></span><br />
+<a name="94p7110"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又此諸食，當知有異麤細義門。謂若能使已生有情得安住者，說名為麤；攝益求有諸有情者，當知是細。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑四、總結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是應知安立四食。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子二、因緣2　丑一、流轉攝2　寅一、舉愛為緣2　卯一、於已生有情</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，如上所說諸根大種，由集諦攝先愛而生，為欲令彼得增長故，追求四食。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》如上所說諸根大種等者：前說諸根大種由識執受，是故說識名彼住因。如是諸根大種，當知彼依前際集諦所攝愛為根本而生，於現法中，為令增長，追求四食。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由此道理，已生有情雖由四食而得安住，然本藉愛為緣故有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、於求有有情</span></strong></span></span><br />
+<a name="94p7111"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又有愛故，於現法中依諸食身，由三種門滋長業惑，能辦業惑常所隨逐有取之識，於現法中攝受後有。是故一切求有有情，雖由四食之所攝益，然復藉愛為緣故有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、廣餘為緣2　卯一、舉受等</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又即此愛，於現法中，由無明觸所生諸受為緣故起；此無明觸所生諸受，由無明觸為緣故起；此無明觸，由先串習諸無明界所隨六處為緣故起。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋邊際</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此六處後更無餘因。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》此無明觸由先串習諸無明界所隨六處為緣故起者：決擇分說：於現法中，名色為緣六處生起，不斷不知。此為所緣及依處故，一切愚夫於內自體愚癡生起，是名無明。（<a href="http://mahabodhi.org/yoga/cb/56.htm#72154:44729">陵本五十六卷十六頁4545</a>）此應準釋。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於現法中，唯此六處展轉相依，有色諸根依止於識，識亦依止識所執受有色諸根。由此因緣，六處已後更無所說。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、還滅攝2　寅一、舉因緣</span></strong></span></span><br />
+<a name="94p7112"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">或復有時，聽聞正法為外支力，如理作意正勤修習為內支力，由是因緣，正見生起。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、釋滅相2　卯一、出轉依</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">正見生故，能斷無明，能生於明。彼現法中，諸無明界所隨六處皆得除滅，明界所隨六處得生，名為轉依。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、明永滅</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼品麤重皆止息故，六處既滅，漸次乃至愛亦隨滅；由愛滅故，諸食亦滅。能取後有諸法滅故，當知後有亦復隨滅。是故應知，處於明者不求後有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子三、觀察食義2　丑一、出食義2　寅一、徵</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，無有少法生已安住，亦無有我能食所食。由此因緣，彼何名食？</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、釋</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">然唯約與未生諸法作生緣理，唯法引法說為食義。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、名食者3　寅一、標唯假</span></strong></span></span><br />
+<a name="94p7113"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">但由法假，於其識上假想施設補特伽羅，望此四食說為食者，為欲隨順世間言說。約世俗諦，說有如是補特伽羅，能食四食，非約勝義。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、釋所以2　卯一、明非理</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">所以者何？若說有識生已安住，體是真實補特伽羅，名能食者，不應立識為其食性。未曾見有補特伽羅，還自能食補特伽羅。一相續中，定無二識同時安住。是故立識體是真實補特伽羅，為能食者，不應道理。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、記二問2　辰一、斥他</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由有如是不應理故，若作是問：誰食識食？當知此問為非理問。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、顯自</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若作是問：誰是能食識食因緣？當知此問為如理問，能令悟入緣起理故。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》誰是能食識食因緣等者：此中義顯，諸業、煩惱，名為能食識食因緣。如下釋義應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅三、明緣起2　卯一、辨流轉2　辰一、標列有二</span></strong></span></span><br />
+<a name="94p7114"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復有二有。一者、生有，二者、業有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、釋其相續2　巳一、由業有趣生有2　午一、出名業有</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若為當來後有生起，今現法中，諸業、煩惱所隨逐識為因，能引當來生有。即彼曾有前行業性，說名業有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、顯趣生有</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於現法中有此有故，能令當來生有所攝後有生起。於命終時，前際六處纔無常滅，後際六處尋復續生。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》於現法中有此有故者：謂有業有應知。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、由生有成業有</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">即此六處，識於先時為能引緣，復於今時為結生緣。如是由識入母胎故，得有名色；名色為緣，便有六處；由無明界所隨六處以為緣故，有相似觸；漸次乃至取為緣故，令後際業轉成其有。如是諸法先未曾有，一切新從別別緣起。</span></strong></span></span><br />
+<a name="94p7115"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、結略義2　辰一、簡無補特伽羅</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知此中，都無觸者乃至有者能有所觸，乃至有有。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、顯唯諸法假立3　巳一、標因果</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">唯有諸法別名所食、別名能食，是故因果墮在諸行相續流轉，無有斷絕。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋相續</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由其先際業有，往趣後際生有；復由後際業有，還趣先際生有。如是緣起輪迴不絕，從此世間往彼世間，自彼世間還此世間。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》由其先際業有等者：此中義顯業有為依，往趣生有，此彼世間輪轉不絕，故作是說。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳三、結食義</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">是故唯法能引法義，當知此中說為食義。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子四、極多諸過患3　丑一、標列苦因</span></strong></span></span><br />
+<a name="94p7116"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;"><a name="52573:72199"></a>復次，三食為因，能令三種內苦生起。一者、界不平等所生病苦，二者、欲希求苦，三者、求不允苦。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、正觀過患2　寅一、於前三食2　卯一、辨3　辰一、於段食</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">初苦，段食為因；第二苦，觸食為因；第三苦，意會思食為因。段食因緣，生內病苦，是故苾芻當觀段食如子肉想，不應貪著。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、於觸食2　巳一、標當觀</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">隨順樂受觸食因緣，能生於內欲希求苦，是故苾芻當觀順彼六種觸處如無皮牛。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、釋觀相2　午一、舉初觸處2　未一、觀生眾苦</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">應作是觀：若我依於六種觸處，發起種種欲希求貪，便為依止諸色而住；依止色故，令我發起種種諸惡不善尋思。如無皮牛，觸處諸蟲之所唼食，多生眾苦不安隱住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、結無染住</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是觀已，於初觸處深見過患，無染而住。</span></strong></span></span><br />
+<a name="94p7117"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">午二、例餘觸處2　未一、例生苦</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如依於色，如是依聲、香、味、觸、法，當知亦爾。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">未二、例無染</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如於初觸處深見過患，無染而住；如是乃至於第六觸處，當知亦爾。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰三、於意思食2　巳一、出觀苦</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">有漏意會思食因緣，能生於內求不允苦，是故苾芻當觀有漏意會思食如一分火。觀察如是所求不允，能引身心大熱惱故。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、結住樂</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼作如是正觀察已，終不希望衣食等事，往詣他家，是故不為所求不允所生苦觸，其心坦然安樂而住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、結</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">由是因緣，應正觀察如是三食，所謂段、觸、意會思食。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、於後識食3　卯一、出觀苦</span></strong></span></span><br />
+<a name="94p7118"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">即由如是三食因緣，生如所說依識內苦，是故苾芻當觀識食如三百鉾之所鑽刺。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋所以</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">所以者何？段食因緣，能令非一種種眾多品類病苦依識而起；隨順樂受觸食因緣，能令倍增欲希求苦依識而起；有漏意會思食因緣，能令種種求不允苦依識而起。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯三、結勝利</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是行者，於識食中，正觀諸食以識為依，多生過患。由是因緣，不顧身命。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑三、結能永斷</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如是如理於四種食審正觀察；審觀為依，能於現法永斷諸食；食永斷故，得至當來後有苦際。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">子五、雜染等2　丑一、喜貪過患2　寅一、略標列</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，若不如實觀此四食，便為喜、貪之所染汙；若為是二所染汙者，當知希求二種過患。一者、當來，二者、現法。</span></strong></span></span><br />
+<a name="94p7119"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、隨別釋2　卯一、釋名喜貪</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">於四食中，有漏意會思食因緣，專注希望俱行喜染，名喜。隨順樂受觸食因緣，於能隨順喜樂諸食多生染著，名貪。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》隨順樂受觸食因緣等者：謂由觸食，順生樂受，是名隨順樂受觸食因緣。於六觸處能生喜樂，不見過患，有染而住，是名於能隨順喜樂諸食多生染著。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、釋二過患2　辰一、當來過患</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">此二煩惱，於現法中能染於識，令其安止四種識住，增長當來後有種子；既增長已，生起後有生等眾苦。當知是名喜、貪二種煩惱所作當來過患。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、現法過患</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">彼由如是於四食中安住喜、貪二種煩惱，便於現法有諸塵染；由塵染故，食若變壞，於現法中便生悲歎愁憂萎頓懷慼而住。當知是名喜、貪二種煩惱所作現法過患。</span></strong></span></span><br />
+<a name="94p7120"></a><span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">丑二、喜貪依處2　寅一、緣境煩惱依處2　卯一、舉未斷2　辰一、喻入住</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">復次，諸有於此四種食中喜貪未斷，彼六處攝有識之身猶如臺觀六處窗牖，能與緣境煩惱日光作入依處。是光於此或住上地，或住下地。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、顯生苦</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">既得住已，如前所說於四識住能染於識，生起當來後有眾苦。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》是光於此者：謂彼煩惱日光於此識所依處，或住上地，或住下地，能染於識，令於當來受上地生，或下地生。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、翻能斷</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">若有能斷如是喜貪二種煩惱，與彼相違；緣境煩惱尚不得起，況依此入而當得住。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">寅二、煩惱彩畫依處2　卯一、未斷已斷2　辰一、舉未斷</span></strong></span></span><br />
+<a name="94p7121"></a><span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">又復若有補特伽羅喜貪未斷；便為魔羅來詣其所，以其種種猶如彩色可愛境界彩畫如是補特伽羅，令其變生種種煩惱相貌顯現。當知如是補特伽羅喜貪未斷，譬如其地，能為種種煩惱彩畫作所依處。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">辰二、翻已斷</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">已斷喜貪補特伽羅，魔詣其所，如前廣說。當知如是補特伽羅喜貪已斷，猶若虛空，非為種種煩惱彩畫作所依處。</span></strong></span></span><br />
+<span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">卯二、過患功德</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">當知是名於諸食中喜貪未斷如其次第所有過患；當知是名於諸食中喜貪已斷如其次第所有功德。</span></strong></span></span><br />
+<span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第九十四</span></strong></span></span></p>
+
+<div class="redeviation-bs-fullHeight redeviation-bs-visible" id="redeviation-bs-indicator" style="padding:0px; text-align:start; width:20px">
+<div style="border-radius:0px; width:24px !important">&nbsp;</div>
+</div>

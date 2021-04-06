@@ -82,7 +82,7 @@
                                cellpadding='5' ;>
                             <tr>
                                 <td>
-                                    發布日期：<?php echo $row["date"] ?></p>
+                                    發佈日期：<?php echo $row["date"] ?></p>
                                     內容：<?php echo $row["content"] ?></td>
                             </tr>
                         </table>

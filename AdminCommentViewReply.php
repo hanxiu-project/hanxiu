@@ -64,10 +64,12 @@ session_start();
                 /*資料庫連結*/
                 
                 session_start();
+                //echo "<script>alert('$_SESSION[vreply_c_id]')</script>";
 
-                $sql="SELECT * FROM `comments`,`members` where `comments`.`c_id` = $_SESSION[vreply_c_id] and `comments`.`status`='1'";
+                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[vreply_c_id]' and `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]'";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
+
 
                 ?>
 

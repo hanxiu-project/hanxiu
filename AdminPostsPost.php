@@ -97,14 +97,14 @@ session_start();
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="date">發布日期:</label>
+                                                <label for="date">發佈日期:</label>
                                                 <input id="date" name="date" type="date" value="<?php echo $getDate?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
 												<label for="day">下架日期:</label>
 												 <input id="newday" name="newday" type="date" value="<?php echo $getDate?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 											
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning" name="post" value="發布" >
+                                                <input type="submit" class="btn btn-sm btn-warning" name="post" value="發佈" >
                                             </div>
 
                                         </form>
@@ -149,15 +149,15 @@ session_start();
                             {
                                 echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
                             }else if($_POST["date"]>$_POST["newday"]){
-								  echo "<script>alert('發布日期不得大於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
+								  echo "<script>alert('發佈日期不得大於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
 							}else if($_POST["date"]<$getDate){
-								  echo "<script>alert('發布日期不得小於今天日期!');location.href='AdminPostsPost.php'</script>";
+								  echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsPost.php'</script>";
 							}
                             else if($_POST["date"]>$getDate)
                             {
                                 $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep')";
                                 mysqli_query($db_link, $sql);
-                                echo "<script>alert('公告已經上傳待發布專區!');location.href='AdminPostsKeep.php'</script>";
+                                echo "<script>alert('公告已經上傳待發佈專區!');location.href='AdminPostsKeep.php'</script>";
                             }else{
 								$sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep')";
                                 mysqli_query($db_link, $sql);

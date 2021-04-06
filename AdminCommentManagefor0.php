@@ -60,13 +60,10 @@
                 session_start();
 
 
-               
-
                 $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='0' ORDER BY msg_datetime DESC";
                 $result= mysqli_query($db_link,$sql);
 				$resultfortd= mysqli_query($db_link,$sql);
 				$rowfortd=$resultfortd->fetch_assoc();
-             
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
@@ -79,9 +76,28 @@
                 echo "<td></td>";
 				echo "<td></td>";
 				}
-				
                 echo "</tr>";
-                while($row=$result->fetch_assoc())
+
+                $sqlcomment= "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='0' ORDER BY msg_datetime DESC";
+                $result0= mysqli_query($db_link,$sqlcomment);
+
+                $date_nums = mysqli_num_rows($result0);                          //講記數量
+                $per = 10;                                                      //10筆換頁
+                $pages = ceil($date_nums / $per);                             //共幾頁
+                if (!isset($_GET["page"])) {
+                    $page = 1;
+                } else {
+                    $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
+                }
+
+                $start = ($page - 1) * $per;
+
+                $sqlresult = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='0' ORDER BY msg_datetime DESC Limit $start , $per";
+                $commentresult[$start] = mysqli_query($db_link, $sqlresult);
+                $commentresult[$page] = mysqli_query($db_link, $sqlresult);
+
+
+                while($row = mysqli_fetch_assoc($commentresult[$start]))
                 {
                     echo "<tr align=center>";
                     echo "<td>$row[m_id]</td>";
@@ -95,7 +111,21 @@
 
                     echo "</tr>";
                 }
+
+                echo "</form>";
                 echo "</table>";
+
+                echo "<center>";
+                echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                echo "<br/><a href=?page=1>首頁</a> ";
+                echo "第 ";
+                for ($i = 1; $i <= $pages; $i++) {
+                    if ($page - 10 < $i && $i < $page + 10) {
+                        echo "<a href=?page=$i>" . $i . "</a> ";
+                    }
+                }
+                echo " 頁 <a href=?page=$pages>末頁</a>";
+                echo "</center>";
 
 
 
@@ -104,7 +134,8 @@
 
                 while($row2=$result2->fetch_assoc()) {
                     if (isset($_POST["$row2[c_id]+1"])) {
-                        $_SESSION["reply_c_id"]=$row2["c_id"];
+                        $_SESSION['reply_c_id']=$row2["c_id"];
+                        $_SESSION['reply_m_id']=$row2["m_id"];
                         echo "<script langauge = 'javascript' type='text/javascript'>";
                         echo "window.location.href = 'AdminCommentReply.php'";
                         echo "</script>";

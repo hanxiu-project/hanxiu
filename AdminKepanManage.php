@@ -35,7 +35,7 @@
 </head>
 
 <body>
-<form name="forms" method="post" action="">
+<form name="forms" method="GET" action="">
     <div id="wrapper">
         <?php include 'nav.php';?>
         <?php include 'database.php';?>
@@ -66,12 +66,10 @@
                 </select>
 
                 <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看科判" >
-				
-
 
             </div>
-
         </div>
+</form>
 <div class="col-lg-12">
             
 			<font size="6"><strong style= "background:white" >科判總覽</strong></font>
@@ -89,8 +87,8 @@
 
                     mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                    $sql_tid = "SELECT * FROM kepans order by kpt_id";
-                    $result= mysqli_query($db_link,$sql_tid);
+                    /*$sql_tid = "SELECT * FROM kepans order by kpt_id";
+                    $result= mysqli_query($db_link,$sql_tid);*/
 
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table border=1 width=100% style=font-size:20px;line-height:50px;>";
@@ -100,73 +98,126 @@
                     echo "<td>發佈日期</td>";
                     echo "<td></td>";
                     echo "</tr>";
-                    if (isset($_POST["gotype"])) {
-                        $sql_typesearch = "SELECT * FROM kepans WHERE kptypename ='$_POST[type]' order by kpt_id ";
-                        $resulttypesearch= mysqli_query($db_link,$sql_typesearch);
-                        if ($_POST[type]=="all"){
-                            while($row=$result->fetch_assoc())
-                            {
-                                echo "<tr align=center>";
-                                echo "<td>$row[kptypename]</td>";
-                                echo "<td>$row[filename]</td>";;
-                                echo "<td>$row[date]</td>";
 
-                                ?>
-                                <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[k_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
+                    if (!($_GET["type"]) || $_GET["type"]=="all")
+                    {
+                        $sql_kptid = "SELECT * FROM kepans order by kpt_id";
+                        $resultpage = mysqli_query($db_link, $sql_kptid);
 
-                                <?php
-                                echo "</tr>";
-                            }
-                        }
-                        else{
-                            while($rowt=$resulttypesearch->fetch_assoc())
-                            {
-                                echo "<tr align=center>";
-                                echo "<td>$rowt[kptypename]</td>";
-                                echo "<td>$rowt[filename]</td>";
-                                echo "<td>$rowt[date]</td>";
 
-                                ?>
-                                <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$rowt[k_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
-
-                                <?php
-                                echo "</tr>";
-                            }
+                        $date_nums = mysqli_num_rows($resultpage);                          //講記數量
+                        $per = 10;                                                      //10筆換頁
+                        $pages = ceil($date_nums / $per);                             //共幾頁
+                        if (!isset($_GET["page"])) {
+                            $page = 1;
+                        } else {
+                            $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
                         }
 
+                        $start = ($page - 1) * $per;
 
-                    }
-                    else{
-                        while($row=$result->fetch_assoc())
+                        $sqlresult = "SELECT * FROM kepans order by kpt_id Limit $start , $per";
+                        $scriptureresult[$start] = mysqli_query($db_link, $sqlresult);
+                        $scriptureresult[$page] = mysqli_query($db_link, $sqlresult);
+
+
+
+
+                        while ($row = mysqli_fetch_assoc($scriptureresult[$start]))//$row=$result->fetch_assoc())
                         {
                             echo "<tr align=center>";
                             echo "<td>$row[kptypename]</td>";
-                            echo "<td>$row[filename]</td>";
+                            echo "<td>$row[filename]</td>";;
+                            echo "<td>$row[date]</td>";
+
+
+                            ?>
+                            <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[k_id]+1"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
+
+
+
+                            <?php
+
+                            echo "</tr>";
+                        }
+                        echo "</form>";
+                        echo "</table>";
+                        echo "<center>";
+                        echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                        echo "<br/><a href=?page=1>首頁</a> ";
+                        echo "第 ";
+                        for ($i = 1; $i <= $pages; $i++) {
+                            if ($page - 10 < $i && $i < $page + 10) {
+                                echo "<a href=?page=$i>" . $i . "</a> ";
+                            }
+                        }
+                        echo " 頁 <a href=?page=$pages>末頁</a>";
+                        echo "</center>";
+
+
+
+                    }
+                    else if (isset($_GET["type"]))
+                    {
+                        $sqltype = "SELECT * FROM kepans WHERE kptypename ='$_GET[type]' order by kpt_id";
+                        $resulttype= mysqli_query($db_link, $sqltype);
+
+                        $date_nums = mysqli_num_rows($resulttype);                             //講記數量
+                        //$date_nums = mysqli_num_rows($sqltype);
+                        $per = 10;                                                      //10筆換頁
+                        $pages = ceil($date_nums / $per);                             //共幾頁
+                        if (!isset($_GET["page"])) {
+                            $page = 1;
+                        } else {
+                            $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
+                        }
+
+                        $start = ($page - 1) * $per;
+
+                        $sqlresultsrc = "SELECT * FROM kepans WHERE kptypename ='$_GET[type]' order by kpt_id Limit $start , $per";
+                        $scriptureresult[src] = mysqli_query($db_link, $sqlresultsrc);
+
+                        while ($row = mysqli_fetch_assoc($scriptureresult[src]))
+                        {
+                            echo "<tr align=center>";
+                            echo "<td>$row[kptypename]</td>";
+                            echo "<td>$row[filename]</td>";;
                             echo "<td>$row[date]</td>";
 
                             ?>
-                            <td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[k_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
+                            <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[k_id]+1"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
+
 
                             <?php
+
+
                             echo "</tr>";
                         }
+
+                        echo "</form>";
+                        echo "</table>";
+                        echo "<center>";
+                        echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                        echo "<br/><a href=?type=$_GET[type]&gotype=查看講記類別&page=1>首頁</a> ";
+                        echo "第 ";
+                        for ($i = 1; $i <= $pages; $i++) {
+                            if ($page - 10 < $i && $i < $page + 10) {
+                                echo "<a href=?type=$_GET[type]&gotype=查看講記類別&page=$i>" . $i . "</a> ";
+                            }
+                        }
+                        echo " 頁 <a href=?type=$_GET[type]&gotype=查看講記類別&page=$pages>末頁</a>";
+                        echo "</center>";
+
+
+
                     }
 
-                    echo "</table>";
-
-                    //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
                     $sql2 = "SELECT * FROM kepans ";
                     $result2=mysqli_query($db_link,$sql2);
 
                     while($row2=$result2->fetch_assoc()) {
-                        /*if (isset($_POST["$row2[k_id]+1"])) {
-                            $_SESSION["edit_k_id"]=$row2["k_id"];
-                            echo "<script langauge = 'javascript' type='text/javascript'>";
-                            echo "window.location.href = 'AdminScriptureEdit.php'";
-                            echo "</script>";
-                        }*/
 
-                        if (isset($_POST["$row2[k_id]+2"])) {
+                        if (isset($_POST["$row2[k_id]+1"])) {
 
                             $_SESSION["delete_k_id"]=$row2["k_id"];
                             $sql_delete="DELETE FROM kepans WHERE kepans.k_id = $_SESSION[delete_k_id]";
@@ -177,23 +228,7 @@
                             echo "<script>alert('成功刪除!');location.href='AdminKepanManage.php'</script>";
 
                         }
-                        /*if (isset($_POST["$row2[k_id]+1"])) {
-                            $_SESSION["edit_k_id"]=$row2["k_id"];
-                            echo "<script langauge = 'javascript' type='text/javascript'>";
-                            echo "window.location.href = 'AdminScriptureEdit.php'";
-                            echo "</script>";
-                        }*/
 
-                        /*if (isset($_POST["$row2[s_id]+2"])) {
-
-                            $_SESSION["delete_s_id"]=$row2["s_id"];
-                            $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
-                            mysqli_query($db_link, $sql_delete);
-                            $filename = $row2["filename"];//刪除檔案
-                            unlink($filename);
-                            echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
-
-                        }*/
                     }
 
                     mysqli_close($db_link);
@@ -218,7 +253,7 @@
             <script src="js/plugins/morris/raphael.min.js"></script>
             <script src="js/plugins/morris/morris.min.js"></script>
             <script src="js/plugins/morris/morris-data.js"></script>
-</form>
+
 </body>
 
 </html>

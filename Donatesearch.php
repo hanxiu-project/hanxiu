@@ -111,16 +111,6 @@
                         echo "</script>";
                     }
 
-                    /*if (isset($_POST["$row2[s_id]+2"])) {
-
-                        $_SESSION["delete_s_id"]=$row2["s_id"];
-                        $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
-                        mysqli_query($db_link, $sql_delete);
-                        $filename = $row2["filename"];//刪除檔案
-                        unlink($filename);
-                        echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
-
-                    }*/
                 }
 
                     mysqli_close($db_link);

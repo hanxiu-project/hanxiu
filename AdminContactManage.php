@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="ckeditor/ckeditor.js"></script>
+    <script src="ckeditor/ckeditor.js?ver=<?php echo time; ?>"></script>
 
     <title>資訊管理 | 管理後台</title>
 

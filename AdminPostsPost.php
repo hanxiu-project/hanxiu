@@ -150,7 +150,7 @@ session_start();
                                 echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
                             }else if($_POST["date"]>$_POST["newday"]){
 								  echo "<script>alert('發佈日期不得大於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
-							}else if($_POST["date"]<$getDate){
+							}else if($_POST["date"]<=$getDate){
 								  echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsPost.php'</script>";
 							}
                             else if($_POST["date"]>$getDate)

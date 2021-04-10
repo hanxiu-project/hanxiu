@@ -98,10 +98,10 @@
                         $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
                         $resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
 
-                        while ($kepan = mysqli_fetch_assoc($resultnum10[$page])) {
+                        while ($kepan = mysqli_fetch_assoc($resultnum10[$start])) {
                             echo "<tr>";
                             echo "<td width='8%'>";
-                            echo "<a href='download.php?filename=../漢修專題/kepan/$kepan[filename]' title=$kepan[filename]>$kepan[filename]</a></p>";
+                            echo "<a href='download.php?filename=../漢修專題/kepan/$kepan[kptypename]/$kepan[filename]'>$kepan[filename]</a></p>";
                             echo "</td>";
                             echo "</tr>";
 

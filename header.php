@@ -86,9 +86,12 @@ session_start();
 <!--最外圍-->
 
 
+<span style="font-family:微軟正黑體,serif;">
+
 
     <!--頁首-->
     <!--包住固定不動的Header-->
+	
     <div id="header2">
 
         <div id="header">
@@ -202,7 +205,7 @@ session_start();
         </div>
     </div>
    
-
+</span>
 
    
 

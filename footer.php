@@ -3,7 +3,7 @@
 
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link  rel="stylesheet" type="text/css" href="./csss_file/topic.css?ts=<?=filemtime('topic.css?')?>">
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -27,7 +27,7 @@ session_start();
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
-
+<span style="font-family:微軟正黑體,serif;">
 
    
   <footer class="footer">版權所有 轉載請註明出處  </footer>
@@ -35,7 +35,7 @@ session_start();
    
 
 
-
+</span>
 
 </body>
 

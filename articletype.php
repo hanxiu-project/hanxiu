@@ -66,7 +66,7 @@
 				<div class="contentlist">
 				<div class="tableforcontent">
                 <center>
-                    <table width="80%" border="1px">
+                    <table width="80%">
                         <br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
@@ -128,7 +128,7 @@
                         <center>
                             <br>
 							
-                           <table width="80%" border="1px">
+                           <table width="80%" >
                                 <br>
                                 <?php
                         $sqlatypecnum = "SELECT * FROM `types`";

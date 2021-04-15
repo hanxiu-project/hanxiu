@@ -70,7 +70,7 @@
                 ?>
                 <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                 <center>
-                    <table width="80%" border="10px">
+                    <table width="80%" >
                         <br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `kepans` where `kpt_id` = $kptid";
@@ -138,7 +138,7 @@
 
                         <br>
                         <center>
-                            <table width="80%" border="1px">
+                            <table width="80%" >
                                 <br>
                                 <?php
                                 $sqlkptypecnum = "SELECT * FROM `kp_types`";

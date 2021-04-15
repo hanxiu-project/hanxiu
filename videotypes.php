@@ -63,7 +63,7 @@
         <div class="contentlist">
 		<div class="tableforcontent">
             <center>
-                <div class="table" width="80%" border="10px" valign="top">
+                <div class="table" width="80%"  valign="top">
                     <br>
                     <?php
                     $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
@@ -104,7 +104,7 @@
                     <center>
                         <br>
 
-                        <table width="80%" border="1px">
+                        <table width="80%" >
                             <br>
                             <?php
                             $sqlatypecnum = "SELECT * FROM `videotypes`";

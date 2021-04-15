@@ -28,86 +28,7 @@
 
         <!--頁首-->
         <!--包住固定不動的Header-->
-        <div id="header2">
-
-            <div id="header">
-                <img src="logo.png" align="left" width="auto" height="100">
-                <div id="wrapnav1">
-                    <nav>
-                        <ul class="flex-nav ">
-                            <?php
-                            $db_ip = "127.0.0.1";
-                            $db_user = "root";
-                            $db_pwd = "123456789";
-                            $db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                            mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
-                            $sql = "SELECT * FROM posts";
-                            $result = mysqli_query($db_link, $sql);
-                            $sql_search_acc = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
-                            $resultsrchacc = mysqli_query($db_link, $sql_search_acc);
-                            $rows = mysqli_fetch_assoc($resultsrchacc);
-                            $acc = $rows["account"];
-                            $name = $rows["name"];
-
-                            if ($_SESSION[acc] == null) {
-                                echo "<li>";
-                                echo "<a href='login.php'>登入</a>";
-                                echo "</li>";
-                                echo "<li>";
-                                echo "<a href='registered.php'>註冊</a>";
-                                echo "</li>";
-                            } else if ($acc == $_SESSION['acc']) {
-
-                                echo "<li>";
-                                echo "<a href='#'><b>$name</b>，您好</a>";
-                                echo "</li>";
-                                echo "<li>";
-                                echo "<a href='logout.php' >登出</a>";
-                                echo "</li>";
-                            }
-                            ?>
-                        </ul>
-                    </nav>
-
-                </div>
-                <div id="wrapnav2">
-                    <nav>
-                        <ul class="flex-nav ">
-                            <?php
-                            if ($_SESSION[acc] == null) {
-                                echo "<li><a href=indexs.php>首頁</a></li>";
-                                echo "<li><a href=articletype.php>講記內容</a></li>";
-                                echo "<li><a href=kepan.php>科判</a></li>";
-                                echo "<li><a href=?>補充資料</a></li>";
-
-                                echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                                echo " <li><a href=news.php>最新公告</a></li>";
-                                echo " <li><a href=contact.php>聯絡我們</a></li>";
-
-
-                            } else {
-                                ?>
-
-                                <li><a href="indexs.php">首頁</a></li>
-                                <li><a href="articletype.php">講記內容</a></li>
-                                <li><a href=kepan.php>科判</a></li>
-                                <li><a href=?>補充資料</a></li>
-                                <li><a href="videotypes.php">法音流佈</a></li>
-                                <li><a href="news.php">最新公告</a></li>
-                                <li><a href="Memberdonates.php">查看捐獻</a></li>
-                                <li><a href="MemberProfile.php">個人資料</a></li>
-                                <li><a href="comments.php">錯誤回報</a></li>
-                                <li><a href="contact.php">聯絡我們</a></li>
-                                <?php
-                            }
-                            ?>
-                        </ul>
-                    </nav>
-
-                </div>
-            </div>
-        </div>
+      <?php include 'header.php'; ?>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"
                 integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -129,7 +50,7 @@
         右邊欄位
         <div id="sidebar_right">sidebar_right</div>-->
 
-
+<span style="font-family:微軟正黑體,serif;">
         <!--主內文區-->
         <div id="content">
             <div class="newstitle">
@@ -138,7 +59,7 @@
                     <h2>｜會員註冊</h2>
                     <div class="tableforregis" align="center">
 
-                        <table width="60%" style="font-family:標楷體; font-size:18px;  solid;padding:5px;" cellpadding='5' ;>
+                        <table width="60%" style=" font-size:18px;  solid;padding:5px;" cellpadding='5' ;>
                             <form name="registered" method="post" action="">
 
                             <tr>
@@ -222,11 +143,7 @@
                 </div>
             </div>
             <?php
-            /*資料庫連結*/
-            $db_ip = "127.0.0.1";
-            $db_user = "root";
-            $db_pwd = "123456789";
-            $db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+          
             $sql = "SELECT * FROM `members` where `account`='$_POST[account]'";
             mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
             $result = mysqli_query($db_link, $sql) or die("查詢失敗");
@@ -301,7 +218,7 @@
 
 
         </div>
-
+</span>
  
 
 </div>

@@ -138,7 +138,7 @@
 
                         <br>
                         <center>
-                            <table width="80%" border="1px">
+                            <table width="80%" >
                                 <br>
                                 <?php
                                 $sqlkptypecnum = "SELECT * FROM `spm_types`";

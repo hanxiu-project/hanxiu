@@ -117,6 +117,7 @@
                 <div id="sidebar_right">sidebar_right</div>-->
 
     <!--主內文區-->
+	<span style="font-family:微軟正黑體,serif;">
     <div id="content">
         <div class="newstitle">
             <h2>｜ 會員登入 </h2>
@@ -193,7 +194,7 @@
 <!--註腳-->
 <?php include 'footer.php'; ?>
 
-
+</span>
 </body>
 
 

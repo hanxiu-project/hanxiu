@@ -91,8 +91,8 @@ session_start();
 									
 								}
                                 echo "<tr>";
-                                echo "<td height='65' align='center' style='height:60px'>$row[date]</td>";
-                                echo "<td align='center'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
+                                echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>$row[date]</td>";
+                                echo "<td align='center' style='height:60px; vertical-align:middle;'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
 								
                                 echo "</tr>";
                             }

@@ -66,7 +66,7 @@ session_start();
                 session_start();
                 //echo "<script>alert('$_SESSION[vreply_c_id]')</script>";
 
-                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[vreply_c_id]' and `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]'";
+                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`replyman`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[vreply_c_id]' and `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]'";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
 
@@ -105,6 +105,13 @@ session_start();
                                             <div class="form-group">
                                                 <label for="content">留言內容:</label>
                                                 <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['message']?></font>
+                                            </div>
+
+                                        <hr>
+
+                                            <div class="form-group">
+                                                <label for="">回覆人員：</label>
+                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['replyman']?></font>
                                             </div>
 
                                             <div class="form-group">

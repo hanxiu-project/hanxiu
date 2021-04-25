@@ -30,7 +30,17 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-
+				<li class="dropdown">
+				<a href="AdminSloganEdit.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-file"></i>標語管理<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+				<a href="AdminSloganEdit.php"><i class="fas fa-file"></i> 首頁標語編輯</a>
+				</li>
+					<li>
+				<a href="AdminErrorSloganEdit.php"><i class="fas fa-file"></i> 錯誤回報標語編輯</a>
+				</li>
+				</ul>
+				</li>
             <li class="dropdown">
                 <a href="AdminScriptureManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-file"></i> 講記管理<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -178,7 +188,7 @@
                     </li>
                 </ul>
             </li>
-
+</ul>
     </div>
     <!-- /.navbar-collapse -->
 </nav>

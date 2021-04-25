@@ -62,7 +62,17 @@
                     <form name="msg" method="post" action="comments.php">
                     <textarea  name="message" cols="50" rows="5" placeholder="輸入您的留言..."></textarea>
                     <br>
-                    <font color="red">※留言內容僅限以網頁發佈內容錯誤為主※</font>
+					<?php
+					$sqlslo2 = "SELECT * FROM slogan where `sloganid`= '2'";
+                $resultslo2= mysqli_query($db_link,$sqlslo2);
+            
+                
+				while($rowsl2 = mysqli_fetch_assoc($resultslo2))
+                {
+					echo "<center><font color=red>$rowsl2[slogantext]</center></font>";
+				}
+				?>
+
                     <br>
                     <br>
                         <input type="submit" name="send" value="送出">

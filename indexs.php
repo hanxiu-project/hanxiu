@@ -140,10 +140,15 @@
     <div id="content">
 	 <?php
           echo "</br>";
-			
             ?>
-       
-		<center> <font color="#612E04"><h2>※此網頁所發佈為常柏法師瑜伽師地論100卷講記最新版(持續修訂中)※<h2></font></center>
+       <?php $sqlslo = "SELECT * FROM slogan where `sloganid`= '1'";
+                $resultslo= mysqli_query($db_link,$sqlslo);
+      
+				while($rowsl = mysqli_fetch_assoc($resultslo))
+				{
+					echo "<center> <font color=#612E04><h2>$rowsl[slogantext]<h2></font></center><p>";
+				}
+					?>
 		 <div class="newstitle">
             <h2>｜最新公告 </h2>
         </div>

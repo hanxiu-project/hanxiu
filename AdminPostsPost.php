@@ -66,6 +66,8 @@ session_start();
                 $row=mysqli_fetch_assoc($result);
 				date_default_timezone_set('Asia/Taipei');
 					$getDate= date("Y-m-d");
+					$getDate2= date("Y-m-d", strtotime($getDate."+1 day"));
+					
                 ?>
 
                 <div id="con2">
@@ -100,7 +102,8 @@ session_start();
                                                 <label for="date">發佈日期:</label>
                                                 <input id="date" name="date" type="date" value="<?php echo $getDate?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
 												<label for="day">下架日期:</label>
-												 <input id="newday" name="newday" type="date" value="<?php echo $getDate?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+												 <input id="newday" name="newday" type="date" value="<?php echo $getDate2?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+												 <input type='checkbox' name='top' value='1'><label>置頂</label>
                                             </div>
 											
                                             <div class="form-group">
@@ -148,20 +151,25 @@ session_start();
                             if($title==null || $content==null || $date ==null)
                             {
                                 echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
-                            }else if($_POST["date"]>$_POST["newday"]){
-								  echo "<script>alert('發佈日期不得大於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
-							}else if($_POST["date"]<=$getDate){
+                            }else if($_POST["date"]>=$_POST["newday"]){
+								  echo "<script>alert('發佈日期不得大於等於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
+							}else if($_POST["date"]<$getDate){
 								  echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsPost.php'</script>";
 							}
                             else if($_POST["date"]>$getDate)
                             {
-                                $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep')";
+                                $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep','$_POST[top]')";
                                 mysqli_query($db_link, $sql);
                                 echo "<script>alert('公告已經上傳待發佈專區!');location.href='AdminPostsKeep.php'</script>";
                             }else{
-								$sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep')";
+								$sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep','$_POST[top]')";
                                 mysqli_query($db_link, $sql);
-                                echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
+								if($_POST['top']=='1'){
+									echo "<script>alert('公告已經上傳!');location.href='AdminPostsTop.php'</script>";
+									}else{
+										 echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
+									}
+                               
 							}
                         }
                         mysqli_close($db_link);

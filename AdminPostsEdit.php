@@ -96,8 +96,8 @@
 
                                             <div class="form-group">
                                                 <label for="date">發佈日期:<?php echo $row['date']?></label>
-                                               
-												 
+                                               </br>
+												 <input type='checkbox' name='top' value='1'><label>置頂</label>
                                             </div>
 
                                             <div class="form-group">
@@ -125,9 +125,17 @@
                     }
                     else
                     {
-                        $sqledit = "UPDATE posts SET `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                        $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
                         mysqli_query($db_link, $sqledit);
-                        echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
+						if($_POST['top']=='1'){
+							 echo "<script>alert('公告修改完成!');location.href='AdminPostsTop.php'</script>";
+						}else if($row['old']=='1'){
+						echo "<script>alert('公告修改完成!');location.href='AdminOldPostsManage.php'</script>";
+
+						}else{
+							echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
+						}
+                        
                     }
 
                 }

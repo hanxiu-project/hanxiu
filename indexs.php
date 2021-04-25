@@ -14,7 +14,7 @@
             crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="csss_file/topic.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
@@ -151,7 +151,7 @@
 
             <?php
             //...
-            $sql = "SELECT * FROM posts where old='0' && keep='0'  order by `date` ASC ";
+            $sql = "SELECT * FROM posts where  old='0' && keep='0'|| top='1'  order by `top` DESC, `date` ASC ";
             $result = mysqli_query($db_link, $sql);
 			
             ?>
@@ -178,7 +178,12 @@
 									
 								}
                                 echo "<tr>";
-                                echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>$row[date]</td>";
+							if($row['top']=='1'){
+								echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'><i class='fas fa-thumbtack'></i>&nbsp&nbsp$row[date]</td>";
+							}else{
+								 echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>&emsp; $row[date]</td>";
+							}
+                               
                                 echo "<td align='center' style='vertical-align:middle;'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
 								
                                 echo "</tr>";

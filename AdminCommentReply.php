@@ -148,7 +148,7 @@ session_start();
                     }
                     else
                     {
-                        $sql_update_reply="UPDATE `comments` SET `reply` = '$reply',`rpy_datetime`= '$nowdate' ,`status`= '1' where `comments`.`c_id` = $_SESSION[reply_c_id]";
+                        $sql_update_reply="UPDATE `comments` SET `reply` = '$reply',`replyman`='$_SESSION[name]',`rpy_datetime`= '$nowdate' ,`status`= '1' where `comments`.`c_id` = $_SESSION[reply_c_id]";
                         mysqli_query($db_link, $sql_update_reply);
                         echo "<script>alert('回覆成功!');location.href='AdminCommentManagefor0.php'</script>";
                     }

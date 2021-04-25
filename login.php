@@ -172,17 +172,19 @@
         } else if ($_SESSION["verified"] == 0) {
             echo "<script>alert('帳號尚未驗證，請至email收取信驗證信。');location.href='login.php'</script>";
         } else if ($authority == 0) {
-            header("location:indexs.php");
-            //echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
+            //header("location:indexs.php");
+            echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
         } else if ($authority == 1 || $authority == 2) {
 			$_SESSION["updatename"]="$row[name]";
-            header("location:AdminScriptureManage.php");    //導向管理員頁面
+            //header("location:AdminScriptureManage.php");
+            echo "<script>location.href='AdminScriptureManage.php';</script>";        //導向管理員頁面
             $_SESSION["updatename"]="$row[name]";
         }
 
     }
     if (isset($_POST["goregis"])) {
-        header("location:registered.php");
+        //header("location:registered.php");
+        echo "<script>location.href='registered.php';</script>";
     }
     //mysqli_close($db_link);
     ?>

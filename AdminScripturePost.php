@@ -36,7 +36,7 @@
 </head>
 
 <body>
-<form name="formspost" method="post" action="">
+<form name="formspost" method="POST" action="">
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
@@ -55,6 +55,7 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
+                include 'includes.php';
                 /*資料庫連結*/
               
 				$sqltype="SELECT * FROM `types` ";
@@ -79,7 +80,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
 
-                                            <form name="form" method="post" action="">
+                                            <form name="form" method="POST" action="">
 
                                                 <div class="form-group">
                                                     <label for="type">類別編號:</label>
@@ -189,6 +190,8 @@
                             fwrite($myfile,$txt);
                             fclose($myfile);
 
+                            $system_msg = "講記新增";
+
 
                             $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','0','$_SESSION[updatename]')";
 
@@ -216,11 +219,32 @@
                             fwrite($myfile,$txt);
                             fclose($myfile);
 
+                            $system_msg = "講記暫存";
+
                             $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1','$_SESSION[updatename]')";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('講記已經暫存!');location.href='AdminScriptureSave.php'</script>";
                         }
                     }
+
+
+                    if($_SERVER['REQUEST_METHOD'] === "POST")
+                    {
+                       if ($system_msg == "講記新增")
+                       {
+                           $log = "$_SESSION[name]新增$inputtype/卷號$_POST[number]";
+                           logger($log);
+                       }else if($system_msg == "講記暫存"){
+                           $log = "$_SESSION[name]暫存$inputtype/卷號$_POST[number]";
+                           logger($log);
+                       }
+
+                    }
+
+
+
+
+
                     ?>
 
         </div>

@@ -166,7 +166,7 @@
                         <table width="60%" style="border:3px #000000  solid;" >
                             <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
                                 <th width="30%">發佈日期</th>
-                                <th width="70%">標題內文</th>
+                                <th width="70%">公告標題</th>
                             </tr>
 							
                             <?php

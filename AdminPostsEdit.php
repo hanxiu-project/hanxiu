@@ -53,15 +53,9 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-                /*資料庫連結*/
-               
-           
-                session_start();
-
                 $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
-
                 ?>
 
 
@@ -101,7 +95,6 @@
                                             </div>
 
                                             <div class="form-group">
-											
                                                 <input type="submit" class="btn btn-sm btn-warning" name="edit" value="修改" >
                                             </div>
 

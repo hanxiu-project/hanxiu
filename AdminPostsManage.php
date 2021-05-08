@@ -62,14 +62,9 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-                /*資料庫連結*/
-               
-                session_start();
 				# 設定時區
 				date_default_timezone_set('Asia/Taipei');
 				$getDate= date("Y-m-d");
-
-                mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
                 $sql = "SELECT * FROM posts where old='0' && keep='0' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
@@ -106,10 +101,6 @@
                 $sqlresult = "SELECT * FROM posts where old='0' && keep='0' order by date DESC Limit $start , $per";
                 $postresult[$start] = mysqli_query($db_link, $sqlresult);
                 $postresult[$page] = mysqli_query($db_link, $sqlresult);
-
-
-
-
 
 
                 while($row= mysqli_fetch_assoc($postresult[$start]))

@@ -79,10 +79,13 @@
                         <a href="AdminSupplementManage.php"><i class="fas fa-sticky-note"></i> 補充資料總覽</a>
                     </li>
                     <li>
-                        <a href="AdminNewSupplement.php"><i class="fas fa-sticky-note"></i> 新增補充資料類別</a>
+                        <a href="AdminSupplementSave.php"><i class="fas fa-file"></i> 暫存補充資料總覽</a>
                     </li>
                     <li>
                         <a href="AdminNewSupplementFile.php"><i class="fas fa-sticky-note"></i> 新增補充資料檔案</a>
+                    </li>
+                    <li>
+                        <a href="AdminNewSupplement.php"><i class="fas fa-sticky-note"></i> 新增補充資料類別</a>
                     </li>
                 </ul>
             </li>

@@ -15,7 +15,10 @@
 <body>
 
 <?php
-
+session_start();
+if($_SESSION['acc']==null||$_SESSION['pwd']==null){
+	echo "<script>alert('請先登入或註冊！');location.href='login.php'</script>";
+}
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
@@ -75,7 +78,7 @@
                 {
                     echo "<tr>";
                    
-                    echo "<td align='center'>$row[content]</td>";
+                    echo "<td >$row[content]</td>";
                     echo "</tr>";
                 }
                 echo "</table>";

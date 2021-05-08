@@ -180,7 +180,7 @@
                 $mail->Username = 'xuj8906@gmail.com';
                 $mail->Password = '3acc732087p';
                 $mail->setFrom('crazy32968@gmail.com');
-                $mail->Subject = '漢修學院｜重設您的帳戶密碼';
+                $mail->Subject = '漢修學院｜重設您的會員密碼';
                 $mail->Body = "<a href='http://localhost/漢修專題/resetpwd.php?fgpwd=$fgpwd'>重設密碼</a>";
                 $mail->addAddress("$email");
                 $mail->SMTPDebug = 3;

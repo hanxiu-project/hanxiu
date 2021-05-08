@@ -15,8 +15,10 @@
 <body>
 
 <?php
-
-
+session_start();
+if($_SESSION['acc']==null||$_SESSION['pwd']==null){
+	echo "<script>alert('請先登入或註冊！');location.href='login.php'</script>";
+}
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
@@ -97,7 +99,7 @@
 
     if(isset($_POST["send"]))
     {
-        $nowdate=date("Y-m-d H:i:s" , mktime(date('H')+8,date('i'),date('s'), date('m'), date('d'), date('Y')));
+        $nowdate=date("Y-m-d H:i:s" , mktime(date('H'),date('i'),date('s'), date('m'), date('d'), date('Y')));
         if(strlen($_POST[message])<=0)
         {
             echo "<script>alert('請輸入留言內容！');location.href='comments.php'</script>";

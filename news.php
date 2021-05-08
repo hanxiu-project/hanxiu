@@ -15,9 +15,10 @@
 <body>
 
 <?php
-
-
 session_start();
+if($_SESSION['acc']==null||$_SESSION['pwd']==null){
+	echo "<script>alert('請先登入或註冊！');location.href='login.php'</script>";
+}
 
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -57,9 +58,6 @@ session_start();
                 <?php
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
-                $sql="SELECT * FROM posts where old='0' && keep='0' order by date DESC";
-                $result= mysqli_query($db_link,$sql);
 
                 //$sqlold = "SELECT * FROM posts where old = '1' order by date DESC";
                 //$resultold= mysqli_query($db_link,$sqlold);

@@ -140,7 +140,7 @@ session_start();
 
                 if(isset($_POST["reply"]))
                 {
-                    $nowdate=date("Y-m-d H:i:s" , mktime(date('H')+8,date('i'),date('s'), date('m'), date('d'), date('Y')));
+                    $nowdate=date("Y-m-d H:i:s" , mktime(date('H'),date('i'),date('s'), date('m'), date('d'), date('Y')));
 
                     if( $reply==null)
                     {

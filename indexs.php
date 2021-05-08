@@ -156,7 +156,8 @@
 
             <?php
             //...
-            $sql = "SELECT * FROM posts where  old='0' && keep='0'|| top='1'  order by `top` DESC, `date` ASC,p_id DESC ";
+
+            $sql = "SELECT * FROM posts where  old='0' && keep='0'|| top='1'  order by `top` DESC, `p_id` desc ";
             $result = mysqli_query($db_link, $sql);
             ?>
 

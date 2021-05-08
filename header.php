@@ -127,29 +127,34 @@ session_start();
                        <?php
 					 if ($_SESSION[acc] == null  || $_SESSION[pwd] == null) {
                          echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=supplement.php>補充資料</a></li>";
-
+                         echo "<li><a href=supplement.php>補充資料</a></li>";	
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>公告訊息</a></li>";
-						 echo " <li><a href=contact.php>聯絡我們</a></li>";
+						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
+						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
+						 echo " <li><a href=comments.php>錯誤回報</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們</a></li>";
 
                         }else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
                          echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=supplement.php>補充資料</a></li>";
-
+                         echo "<li><a href=supplement.php>補充資料</a></li>";	
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>公告訊息</a></li>";
+						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
+						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
+						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
+
 
                      }else if ($authority=='1' || $authority=='2'){
                         ?>
 
                          <li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplement.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
@@ -164,8 +169,9 @@ session_start();
                      }
 					 else{?>
 						
+
                          <li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplement.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>

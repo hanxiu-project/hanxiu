@@ -156,18 +156,18 @@
 
             <?php
             //...
+
             $sql = "SELECT * FROM posts where  old='0' && keep='0'|| top='1'  order by `top` DESC, `p_id` desc ";
             $result = mysqli_query($db_link, $sql);
-			
             ?>
+
             <center>
                 <div class="contentlist" align="center">
 				<div class="tableforcontent" align="center">
-                    
                         <table width="60%" style="border:3px #000000  solid;" >
                             <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
                                 <th width="30%">發佈日期</th>
-                                <th width="70%">標題內文</th>
+                                <th width="70%">公告標題</th>
                             </tr>
 							
                             <?php
@@ -179,23 +179,21 @@
 								if($getDate>=$row[newday]){
 									$sqlii="update `posts` set old='1'  where `p_id`='$row[p_id]'";
 									mysqli_query($db_link, $sqlii);
-									
-									
 								}
+
                                 echo "<tr>";
-							if($row['top']=='1'){
-								echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'><i class='fas fa-thumbtack'></i>&nbsp&nbsp$row[date]</td>";
-							}else{
-								 echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>&emsp; $row[date]</td>";
-							}
+							    if($row['top']=='1'){
+								    echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'><i class='fas fa-thumbtack'></i>&nbsp&nbsp$row[date]</td>";
+							    }else{
+								    echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>&emsp; $row[date]</td>";
+							    }
                                
                                 echo "<td align='center' style='vertical-align:middle;'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
-								
                                 echo "</tr>";
-                            }
-                            echo "</table>";
+                                }
+                                echo "</table>";
 
-                            mysqli_close($db_link);
+                                mysqli_close($db_link);
                             ?>
 
                    

@@ -40,49 +40,32 @@ session_start();
             //...
             $sql = "SELECT * FROM posts where old='0' && keep='1' order by `date` ASC ";
             $result = mysqli_query($db_link, $sql);
-			
             ?>
          
 							
-                            <?php
-                            while ($row = $result->fetch_assoc()) {
-									
-								
-									
-								if($getDate==$row[date] || $row[date]<$getDate){
-									$sqlii="update `posts` set keep='0'  where `p_id`='$row[p_id]'";
-									mysqli_query($db_link, $sqlii);
-									
-									
-								}
-                              
-                            }
-                           
+           <?php
+               while ($row = $result->fetch_assoc()) {
+               if($getDate==$row[date] || $row[date]<$getDate){
+				$sqlii="update `posts` set keep='0'  where `p_id`='$row[p_id]'";
+				mysqli_query($db_link, $sqlii);
+                }
+                }
+                ?>
+				<?php
 
-                            
-                            ?>
-							<?php
             //...
             $sqlp = "SELECT * FROM posts where old='0' && keep='0'  order by `date` ASC ";
             $resultp = mysqli_query($db_link, $sqlp);
 			
             ?>
-                            <?php
-                            while ($rowp = $resultp->fetch_assoc()) {
-									
-									
-								if($getDate>=$rowp[newday]){
-									$sqlp="update `posts` set old='1'  where `p_id`='$row[p_id]'";
-									mysqli_query($db_link, $sqlp);
-									
-									
-								}
-                                
-                            }
-                           
-
-                           
-                            ?>
+            <?php
+            while ($rowp = $resultp->fetch_assoc()) {
+			if($getDate>=$rowp[newday]){
+			    $sqlp="update `posts` set old='1'  where `p_id`='$row[p_id]'";
+				mysqli_query($db_link, $sqlp);
+				    }
+                }
+            ?>
 <!--最外圍-->
 
 
@@ -148,55 +131,53 @@ session_start();
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=supplementtype.php>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>歷史公告</a></li>";
+                         echo " <li><a href=news.php>公告訊息</a></li>";
 						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
-						  echo " <li><a href=MemberProfile.php>個人資料</a></li>";
-						  echo " <li><a href=comments.php>錯誤回報</a></li>";
+						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
+						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
 
-                        
-
-                            
                         }else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=supplementtype.php>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
-                         echo " <li><a href=news.php>歷史公告</a></li>";
+                         echo " <li><a href=news.php>公告訊息</a></li>";
 						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
-						  echo " <li><a href=MemberProfile.php>個人資料</a></li>";
-						  echo " <li><a href=comments.php>錯誤回報</a></li>";
+						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
+						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
 
 
                      }else if ($authority=='1' || $authority=='2'){
                         ?>
-						
-							<li><a href="indexs.php">首頁</a></li>
+
+                         <li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplementtype.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
-                        <li><a href="news.php">歷史公告</a></li>
-                        <li><a href="Memberdonates.php">查看捐獻</a></li>
-                        <li><a href="MemberProfile.php">個人資料</a></li>
+                         <li><a href="news.php">公告訊息</a></li>
+                         <li><a href="Memberdonates.php">查看捐獻</a></li>
+                         <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
 						 <li><a href="contact.php">聯絡我們</a></li>
-							<li><a href="AdminScriptureManage.php">回後台</a></li>
+                         <li><a href="AdminScriptureManage.php">回後台</a></li>
 						<?php
 
                      }
 					 else{?>
 						
-							<li><a href="indexs.php">首頁</a></li>
+
+                         <li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplementtype.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
-                        <li><a href="news.php">歷史公告</a></li>
-                        <li><a href="Memberdonates.php">查看捐獻</a></li>
-                        <li><a href="MemberProfile.php">個人資料</a></li>
+                         <li><a href="news.php">公告訊息</a></li>
+                         <li><a href="Memberdonates.php">查看捐獻</a></li>
+                         <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
 						 <li><a href="contact.php">聯絡我們</a></li>
 

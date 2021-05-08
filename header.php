@@ -169,7 +169,7 @@ session_start();
                         ?>
 						
 							<li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplement.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
@@ -185,7 +185,7 @@ session_start();
 					 else{?>
 						
 							<li><a href="indexs.php">首頁</a></li>
-                         <li><a href="articletype.php">講記內容</a></li>
+                         <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplement.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>

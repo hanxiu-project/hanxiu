@@ -60,7 +60,7 @@ session_start();
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
 
-                $sql="SELECT * FROM posts order by date DESC";
+                $sql="SELECT * FROM posts where keep =0 order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 				# 設定時區
 				date_default_timezone_set('Asia/Taipei');

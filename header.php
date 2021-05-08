@@ -146,11 +146,14 @@ session_start();
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=supplement.php>補充資料</a></li>";
-
-                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
+                         echo "<li><a href=supplement.php>補充資料</a></li>";	
+                         echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>歷史公告</a></li>";
-						 echo " <li><a href=contact.php>聯絡我們</a></li>";
+						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
+						  echo " <li><a href=MemberProfile.php>個人資料</a></li>";
+						  echo " <li><a href=comments.php>錯誤回報</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們</a></li>";
+						 echo " <li><a href=AdminScriptureManage.php>回後台</a></li>";
 
                         
 
@@ -159,11 +162,14 @@ session_start();
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=supplement.php>補充資料</a></li>";
-
+                         echo "<li><a href=supplement.php>補充資料</a></li>";	
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>歷史公告</a></li>";
+						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
+						  echo " <li><a href=MemberProfile.php>個人資料</a></li>";
+						  echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
+						 echo " <li><a href=AdminScriptureManage.php>回後台</a></li>";
 
                      }else if ($authority=='1' || $authority=='2'){
                         ?>

@@ -144,7 +144,7 @@ session_start();
                        <?php
 					 if ($_SESSION[acc] == null  || $_SESSION[pwd] == null) {
                          echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=supplement.php>補充資料</a></li>";
 
@@ -157,7 +157,7 @@ session_start();
                             
                         }else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
                          echo "<li><a href=indexs.php>首頁</a></li>";
-                         echo "<li><a href=articletype.php>講記內容</a></li>";
+                         echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=supplement.php>補充資料</a></li>";
 

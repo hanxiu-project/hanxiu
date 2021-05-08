@@ -75,7 +75,7 @@
                 {
                     echo "<tr>";
                    
-                    echo "<td align='center'>$row[content]</td>";
+                    echo "<td >$row[content]</td>";
                     echo "</tr>";
                 }
                 echo "</table>";

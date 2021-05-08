@@ -124,7 +124,7 @@
 
                         $start = ($page - 1) * $per;
 
-                        $sqlresult = "SELECT * FROM scripture  where save='0' order by t_id Limit $start , $per";
+                        $sqlresult = "SELECT * FROM scripture  where save='0' order by t_id ASC, `number` ASC Limit $start , $per";
                         $scriptureresult[$start] = mysqli_query($db_link, $sqlresult);
                         $scriptureresult[$page] = mysqli_query($db_link, $sqlresult);
 

@@ -70,7 +70,7 @@
                 ?>
                 <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                 <center>
-                    <table width="80%" border="10px">
+                    <table width="80%">
                         <br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `supplements` where `spt_id` = $sptid";
@@ -101,7 +101,7 @@
                         while ($sup = mysqli_fetch_assoc($resultnum10[$page])) {
                             echo "<tr>";
                             echo "<td width='8%'>";
-                            echo "<a href='download.php?filename=../漢修專題/supplement/$sup[filename]' title=$sup[filename]>$sup[filename]</a></p>";
+                            echo "<a href='download.php?filename=../漢修專題/supplement/$sup[spmtypename]/$sup[filename]' title=$sup[filename]>$sup[filename]</a></p>";
                             echo "</td>";
                             echo "</tr>";
 

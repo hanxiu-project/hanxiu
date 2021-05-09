@@ -56,6 +56,9 @@
                     <li>
                         <a href="ScriptureManageNewType.php"><i class="fas fa-file"></i> 新增新講記類別</a>
                     </li>
+                    <li>
+                        <a href="AdminScripturesTypeSort.php"><i class="fas fa-file"></i> 講記類別排序</a>
+                    </li>
                 </ul>
             </li>
             <li class="dropdown">

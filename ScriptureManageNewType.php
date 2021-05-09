@@ -23,6 +23,11 @@
     <!-- Custom Fonts -->
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- 後台講記排序 CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,6 +40,7 @@
 </head>
 
 <body>
+
 <form name="forms" method="post" action="">
     <div id="wrapper">
         <?php include 'nav.php';?>
@@ -52,65 +58,51 @@
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
                 <label for="content"><font color="#ffffff">新增講記類別:</font></label>
-                <input id="type" name="type" type="text"
-                       style="width:525px; height:30px; color:#000000; ">
-
-
-                <input type="submit" class="btn btn-sm btn-warning" name="go"
-                       value="發佈">
-
-
+                <input id="type" name="type" type="text" style="width:525px; height:30px; color:#000000; ">
+                <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈">
             </div>
+        </div>
 
-        </div>
- <div class="col-lg-12">
-            
+        <div class="col-lg-12">
 			<font size="6"><strong style= "background:white" >新增講記類別</strong></font>
-		
         </div>
+
         <!--Body-->
         <div id="page-wrapper">
 
             <div class="container-fluid">
 
-                <div class='wrapper'>
+                <table class='wrapper'>
                     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                     <?php
-
-
-                    mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
-
                     $sql = "SELECT * FROM types ";
                     $result = mysqli_query($db_link, $sql);
 
-
                     echo "<form name='form1' method='POST' action=''>";
-					
                     echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
                     echo "<tr align=center>";
                     echo "<td><b>講記類別</b></td>";
                     echo "<td></td>";
                     echo "</tr>";
 
-                    while ($row = $result->fetch_assoc()) {
+                    while ($row = $result->fetch_array()) {
                         echo "<tr align=center>";
-						
                         echo "<td>$row[typename]</td>";
-							
                         echo "<td>";
-
                         ?>
+
                         <input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;'
                                name="<?php echo "$row[t_id]+2"; ?>" value='刪除'
                                onclick="return confirm('是否確認刪除此類別?')"></td>
 						
                         <?php
-
                         echo "</tr>";
 						
                     }
                     echo "</table>";
+                    ?>
+                    <?php
                     //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
                     $sql2 = "SELECT * FROM types ";
                     $result2 = mysqli_query($db_link, $sql2);

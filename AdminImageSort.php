@@ -107,7 +107,7 @@
                             $images = $db->getRows();
                             if(!empty($images)){
                                 foreach($images as $row){
-                                    ?>
+                            ?>
                                     <li id="image_li_<?php echo $row['id']; ?>" class="ui-sortable-handle">
                                         <a href="javascript:void(0);" style="float:none;" class="image_link">
                                             <?php echo $row['listorder']; ?>

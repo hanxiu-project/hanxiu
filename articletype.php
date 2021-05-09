@@ -130,7 +130,7 @@ session_start();
                            <table width="80%" >
                                 <br>
                                 <?php
-                        $sqlatypecnum = "SELECT * FROM `types`";
+                        $sqlatypecnum = "SELECT * FROM `types` order by listorder";
 
                         $results_row = mysqli_query($db_link, $sqlatypecnum);
                         $datas = mysqli_num_rows($results_row);       //抓總共幾筆
@@ -144,7 +144,7 @@ session_start();
                         for($j=1;$j<=$rows;$j++)
                             {
                                 $start=($j-1)*10;
-                                $sqlatcnums10 = "SELECT * FROM types Limit $start , $per";
+                                $sqlatcnums10 = "SELECT * FROM types order by listorder Limit $start , $per";
                                 $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                 echo "<tr height=50px>";
                                 while ($row = mysqli_fetch_assoc($resultnums10)) {

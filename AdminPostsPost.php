@@ -60,10 +60,6 @@ session_start();
                 /*資料庫連結*/
             
                 session_start();
-
-                $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
-                $result=mysqli_query($db_link,$sql);
-                $row=mysqli_fetch_assoc($result);
 				date_default_timezone_set('Asia/Taipei');
 					$getDate= date("Y-m-d");
 					$getDate2= date("Y-m-d", strtotime($getDate."+1 day"));
@@ -107,6 +103,7 @@ session_start();
                                             </div>
 											
                                             <div class="form-group">
+                                                <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
                                                 <input type="submit" class="btn btn-sm btn-warning" name="post" value="發佈" >
                                             </div>
 
@@ -136,24 +133,25 @@ session_start();
 
 
                         if(isset($_POST["post"]))
-							
                         {
-							if($_POST["date"]>$getDate){
+							if($_POST["date"]>$getDate)
+							{
 								$keep=1;
-							}else{
-								$keep=0;
 							}
-							if($_POST["date"]>$getDate){
-								$keep=1;
-							}else{
+							else
+							{
 								$keep=0;
 							}
                             if($title==null || $content==null || $date ==null)
                             {
                                 echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
-                            }else if($_POST["date"]>=$_POST["newday"]){
+                            }
+                            else if($_POST["date"]>=$_POST["newday"])
+                            {
 								  echo "<script>alert('發佈日期不得大於等於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
-							}else if($_POST["date"]<$getDate){
+							}
+                            else if($_POST["date"]<$getDate)
+                            {
 								  echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsPost.php'</script>";
 							}
                             else if($_POST["date"]>$getDate)
@@ -161,17 +159,45 @@ session_start();
                                 $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep','$_POST[top]')";
                                 mysqli_query($db_link, $sql);
                                 echo "<script>alert('公告已經上傳待發佈專區!');location.href='AdminPostsKeep.php'</script>";
-                            }else{
+                            }
+                            else
+                            {
 								$sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,keep,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','$keep','$_POST[top]')";
                                 mysqli_query($db_link, $sql);
-								if($_POST['top']=='1'){
+								if($_POST['top']=='1')
+								{
 									echo "<script>alert('公告已經上傳!');location.href='AdminPostsTop.php'</script>";
-									}else{
-										 echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
-									}
-                               
+								}
+								else
+								{
+								    echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
+								}
 							}
                         }
+
+
+                        if(isset($_POST["save"]))
+                        {
+                            if($title==null || $content==null || $date ==null)
+                            {
+                                echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
+                            }
+                            else if($_POST["date"]>=$_POST["newday"])
+                            {
+                                echo "<script>alert('發佈日期不得大於等於首頁下架日期!');location.href='AdminPostsPost.php'</script>";
+                            }
+                            else if($_POST["date"]<$getDate)
+                            {
+                                echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsPost.php'</script>";
+                            }
+                            else
+                            {
+                                $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,date,newday,save,keep,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$title','$content','$date','$_POST[newday]','1','$keep','$_POST[top]')";
+                                mysqli_query($db_link, $sql);
+                                echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";
+                            }
+                        }
+
                         mysqli_close($db_link);
                         ?>
                 </form>

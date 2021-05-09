@@ -129,10 +129,8 @@
                                                 </div>
 
                                                 <div class="form-group">
-												<input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
+												    <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
                                                     <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
-                                                
-                                                    
                                                 </div>
 
                                             </form>
@@ -175,12 +173,10 @@
 							
 							
                         }
-						 
                         else  if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                         {
                             echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                         }
-							
                         else
                         {
                             //寫入檔案
@@ -199,18 +195,20 @@
                             echo "<script>alert('講記已經上傳!');location.href='AdminScriptureManage.php'</script>";
                         }
                     }
-					  if(isset($_POST["save"]))
+
+
+                    if(isset($_POST["save"]))
                     {
                        if($number==null || $title==null  || $content==null || $date ==null)
-                        {
+                       {
                             echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
-                        }
+                       }
                        else  if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                        {
                            echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                        }
-                        else
-                        {
+                       else
+                       {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
                             $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
@@ -224,7 +222,7 @@
                             $sql="INSERT INTO scripture (t_id,typename,number,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$number','$title','$filename','$content','$date','1','$_SESSION[updatename]')";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('講記已經暫存!');location.href='AdminScriptureSave.php'</script>";
-                        }
+                       }
                     }
 
 

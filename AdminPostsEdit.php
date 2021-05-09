@@ -53,12 +53,11 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
+                session_start();
                 $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
                 ?>
-
-
 
                 <div id="con2">
                     <div class="main">

@@ -107,6 +107,12 @@
             <li class="dropdown">
                 <a href="AdminPostsManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> 公告管理<b class="caret"></b></a>
                 <ul class="dropdown-menu">
+                    <li>
+                        <a href="AdminPostsPost.php"><i class="fas fa-bell"></i> 新增公告</a>
+                    </li>
+                    <li>
+                        <a href="AdminPostsSave.php"><i class="fas fa-bell"></i> 暫存公告管理</a>
+                    </li>
 					<li>
                         <a href="AdminPostsTop.php"><i class="fas fa-bell"></i> 置頂公告管理</a>
                     </li>
@@ -118,9 +124,6 @@
                     </li>
                     <li>
                         <a href="AdminOldPostsManage.php"><i class="fas fa-bell"></i> 歷史公告管理</a>
-                    </li>
-                    <li>
-                        <a href="AdminPostsPost.php"><i class="fas fa-bell"></i> 新增公告</a>
                     </li>
                 </ul>
             </li>

@@ -47,7 +47,6 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous">
     </script>
-
     <script type="text/javascript">
         $(document).ready(function (){
             $('table tbody').sortable({
@@ -86,17 +85,12 @@
 </head>
 
 <body>
-
 <form name="forms" method="post" action="">
     <div id="wrapper">
-        <?php include 'nav.php';?>
-        <?php include 'database.php';?>
-
         <?php
-        /*資料庫連結*/
-
-
-        session_start();
+            include 'nav.php';
+            include 'database.php';
+            session_start();
         ?>
 
 
@@ -127,7 +121,6 @@
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('排序完成!');location.href='test.php'</script>";
                         }
-
                         exit('success');
                     }
 

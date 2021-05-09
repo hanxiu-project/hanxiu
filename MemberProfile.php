@@ -87,7 +87,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                                 aria-expanded="false" aria-controls="collapse2">
                                             編輯
                                         </button>
-                                        <div id="collapse2" class="collapse show " aria-labelledby="heading2" data-parent="#accordionExample2">
+                                        <div id="collapse2" class="collapse hidden" aria-labelledby="heading2" data-parent="#accordionExample2">
                                             <label for="e_password" accesskey="N">&emsp;&emsp;舊密碼:</label>
                                             <input type="text" style="font size:20px; padding:6px;" name="e_oldpassword" id="e_password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
                                             <label>&emsp;&emsp;新密碼:</label>
@@ -110,7 +110,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                                 aria-expanded="false" aria-controls="collapse3">
                                             編輯
                                         </button>
-                                        <div id="collapse3" class="collapse show " aria-labelledby="heading3" data-parent="#accordionExample3">
+                                        <div id="collapse3" class="collapse hidden" aria-labelledby="heading3" data-parent="#accordionExample3">
                                             <label for="e_name" accesskey="N">&emsp;&emsp;會員姓名:</label>
                                             <input type="text" style="font size:20px; padding:6px;" name="e_name" id="e_name" value="<?php echo $row[name]; ?>">
                                             <input type="submit" name="edit_name" value="修改">
@@ -129,7 +129,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                                 aria-expanded="false" aria-controls="collapse4">
                                             編輯
                                         </button>
-                                        <div id="collapse4" class="collapse show " aria-labelledby="heading4" data-parent="#accordionExample4">
+                                        <div id="collapse4" class="collapse hidden" aria-labelledby="heading4" data-parent="#accordionExample4">
                                             <label for="e_email" accesskey="N">&emsp;&emsp;會員信箱:</label>
                                             <input type="text" style="font size:20px; padding:6px;" name="e_email" id="e_email" value="<?php echo $row[email]; ?>">
                                             <input type="submit" name="edit_email" value="修改">
@@ -148,7 +148,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                                 aria-expanded="false" aria-controls="collapse5">
                                             編輯
                                         </button>
-                                        <div id="collapse5" class="collapse show " aria-labelledby="heading5" data-parent="#accordionExample5">
+                                        <div id="collapse5" class="collapse hidden" aria-labelledby="heading5" data-parent="#accordionExample5">
                                             <label for="e_telephone" accesskey="N">&emsp;&emsp;會員行動:</label>
                                             <input type="text" style="font size:20px; padding:6px;" name="e_telephone" id="e_telephone" value="<?php echo $row[telephone]; ?>">
                                             <input type="submit" name="edit_telephone" value="修改">
@@ -167,7 +167,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                                 aria-expanded="false" aria-controls="collapse6">
                                             編輯
                                         </button>
-                                        <div id="collapse6" class="collapse show " aria-labelledby="heading6" data-parent="#accordionExample6">
+                                        <div id="collapse6" class="collapse hidden" aria-labelledby="heading6" data-parent="#accordionExample6">
                                             <label for="e_address" accesskey="N">&emsp;&emsp;會員地址:</label>
                                             <input type="text" style="font size:20px; padding:6px;" name="e_address" id="e_address" value="<?php echo $row[address]; ?>">
                                             <input type="submit" name="edit_address" value="修改">

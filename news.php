@@ -75,7 +75,7 @@ session_start();
 
                             <?php
 
-                            $sqlnew = "SELECT * FROM posts where old='0' && keep='0' order by date DESC";
+                            $sqlnew = "SELECT * FROM posts where save='0' && old='0' && keep='0' order by date DESC";
                             $resultnew= mysqli_query($db_link,$sqlnew);
 
                             $date_nums1 = mysqli_num_rows($resultnew);                          //講記數量
@@ -89,7 +89,7 @@ session_start();
 
                             $start1 = ($page1 - 1) * $per1;
 
-                            $sqlresultnew = "SELECT * FROM posts where old='0' && keep='0' order by date DESC Limit $start1 , $per1";
+                            $sqlresultnew = "SELECT * FROM posts where save='0' && old='0' && keep='0' order by date DESC Limit $start1 , $per1";
                             $newresult[$start1] = mysqli_query($db_link, $sqlresultnew);
                             $newresult[$page1] = mysqli_query($db_link, $sqlresultnew);
 
@@ -140,7 +140,7 @@ session_start();
 
                     <?php
 
-                    $sqlold = "SELECT * FROM posts where old='1' && keep='0' order by date DESC";
+                    $sqlold = "SELECT * FROM posts where save='0' && old='1' && keep='0' order by date DESC";
                     $resultold= mysqli_query($db_link,$sqlold);
 
                     $date_nums2 = mysqli_num_rows($resultold);                          //講記數量
@@ -154,7 +154,7 @@ session_start();
 
                     $start2 = ($page2 - 1) * $per2;
 
-                    $sqlresultold = "SELECT * FROM posts where old='1' && keep='0' order by date DESC Limit $start2 , $per2";
+                    $sqlresultold = "SELECT * FROM posts where save='0' && old='1' && keep='0' order by date DESC Limit $start2 , $per2";
                     $oldresult[$start2] = mysqli_query($db_link, $sqlresultold);
                     $oldresult[$page2] = mysqli_query($db_link, $sqlresultold);
 

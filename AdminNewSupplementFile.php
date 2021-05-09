@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js?ver=<?php echo time; ?>"></script>
 
-    <title>新增補充資料檔案 | 管理後台</title>
+    <title>新增補充資料 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,142 +34,231 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
-<?php
-session_start();
-?>
 
 <body>
+<form name="formspost" method="POST" action="">
+    <div id="wrapper">
+        <?php include 'nav.php';?>
+        <?php include 'database.php';?>
 
-<div id="wrapper">
-    <?php include 'nav.php';?>
-    <?php include 'database.php';?>
-    <div class="col-lg-12">
+        <div class="col-lg-12">
 
-        <font size="6"><strong style= "background:white" >新增補充資料檔案</strong></font>
+            <font size="6"><strong style= "background:white" >新增補充資料</strong></font>
 
-    </div>
-    <!--Body-->
-    <div id="page-wrapper">
+        </div>
+        <!--Body-->
+        <div id="page-wrapper">
 
-        <div class="container-fluid">
+            <div class="container-fluid">
 
-            <div class='wrapper'>
-                <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+                <div class='wrapper'>
+                    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
-                <?php
-                /*資料庫連結*/
+                    <?php
+                    include 'includes.php';
+                    /*資料庫連結*/
 
-                $sqltype="SELECT * FROM `spm_types` ";
-                $resulttype=mysqli_query($db_link,$sqltype);
+                    $sqltype="SELECT * FROM `spm_types` ";
+                    $resulttype=mysqli_query($db_link,$sqltype);
+                    /*$row=mysqli_fetch_assoc($resulttype);*/
+                    session_start();
 
-
-                ?>
-
-
-                <div id="con2">
-                    <div class="main">
-                        <div class="newstitle" >
-
-                            <div class="contentlist">
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <form method="post" enctype="multipart/form-data" action="">
-
-                                            <div class="form-group">
-                                                <label for="type">補充資料類別:</label>
-                                                <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
-                                                    <?php while ($row = $resulttype->fetch_assoc()) {
-                                                        echo "<option name='type' value=$row[spt_id]>$row[spmtypename]</option>";
+                    mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
+                    # 設定時區
+                    date_default_timezone_set('Asia/Taipei');
+                    $getDate= date("Y-m-d");
+                    ?>
 
 
-                                                    }
-                                                    $sqltypeinput="SELECT * FROM `spm_types` where `spt_id`='$_POST[type]'";
-                                                    $resulttypeinput=mysqli_query($db_link,$sqltypeinput);
-                                                    $rowinput= mysqli_fetch_assoc($resulttypeinput);
-                                                    $_SESSION[inputtype]=$rowinput['spmtypename'];
-                                                    ?>
 
-                                                </select>
-                                            </div>
+                    <div id="con2">
+                        <div class="main">
+                            <div class="newstitle" >
+
+                                <div class="contentlist">
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+
+                                            <form name="form" method="POST" action="">
+
+                                                <div class="form-group">
+                                                    <label for="type">類別編號:</label>
+                                                    <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
+                                                        <?php while ($row = $resulttype->fetch_assoc()) {
+                                                            echo "<option value=$row[spt_id]>$row[spmtypename]</option>";
 
 
-                                            <div class="form-group">
-                                                <label for="file">檔案上傳:</label>
-                                                <input type="file" name="my_file">
-                                            </div>
+                                                        }
+                                                        $sqltypeinput="SELECT * FROM `spm_types` where `spt_id`='$_POST[type]'";
+                                                        $resulttypeinput=mysqli_query($db_link,$sqltypeinput);
+                                                        $rowinput= mysqli_fetch_assoc($resulttypeinput);
+                                                        $inputtype=$rowinput['spmtypename'];
+                                                        ?>
+
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="title">補充資料標題:</label>
+                                                    <input id="title" name="title" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                </div>
 
 
-                                            <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning"  value="發佈" >
-                                            </div>
+                                                <div class="form-group">
+                                                    <label for="content">補充資料內容:</label>
 
-                                        </form>
 
+                                                    <textarea id="content" name="content" id="content" rows="10" cols="80"></textarea>
+                                                    <script>
+                                                        CKEDITOR.replace('content',{
+                                                            width:1000,height:500,
+                                                        });
+                                                    </script>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="date">發佈日期:</label>
+                                                    <input id="date" value="<?php echo $getDate?>" name="date" type="date"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
+                                                    <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
+
+
+                                                </div>
+
+                                            </form>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <?php
-
-                $getDate= date("Y-m-d");
-                $spmtype = $_SESSION[inputtype];
-                $filename = $_FILES['my_file']['name'];
-
-                # 檢查檔案是否上傳成功
-                if ($_FILES['my_file']['error'] === UPLOAD_ERR_OK){
-                    /*echo '檔案名稱: ' . $_FILES['my_file']['name'] . '<br/>';
-                    echo '檔案類型: ' . $_FILES['my_file']['type'] . '<br/>';
-                    echo '檔案大小: ' . ($_FILES['my_file']['size'] / 1024) . ' KB<br/>';
-                    echo '暫存名稱: ' . $_FILES['my_file']['tmp_name'] . '<br/>';*/
+                    <?php
 
 
-                    # 檢查檔案是否已經存在
-                    if (file_exists("C:/AppServ/www/漢修專題/supplement/".$spmtype."/".$filename)){
-                        echo "<script>alert('檔案已存在！');</script>";
-                    } else {
-                        $file = $_FILES['my_file']['tmp_name'];
-                        $dest = "C:/AppServ/www/漢修專題/supplement/".$spmtype."/".$filename;
-
-                        # 將檔案移至指定位置
-                        move_uploaded_file($file, $dest);
-                        //存入資料庫
+                    $title = $_POST["title"];
+                    $filename = $_POST["title"].".txt";
+                    $content = $_POST["content"];
+                    $sql_namecheck = "SELECT * FROM `supplements` where `filename`='$filename'";
+                    $checkresult= mysqli_query($db_link, $sql_namecheck);
+                    $rowcheck=mysqli_fetch_assoc($checkresult);
+                    $filenamecheck=$rowcheck["filename"];
 
 
-                        $sql="INSERT INTO supplements (spt_id,spmtypename,filename,date) VALUES ('$_POST[type]','$rowinput[spmtypename]','$filename','$getDate')";
-                        mysqli_query($db_link, $sql);
-                        echo "<script>alert('檔案已經上傳!');location.href='AdminSupplementManage.php'</script>";
+                    # 設定時區
+                    date_default_timezone_set('Asia/Taipei');
+                    $getDate= date("Y-m-d");
+                    if($_POST["date"]==null){
+                        $date=$getDate;
+                    }else{
+                        $date = $_POST["date"];
                     }
-                } /*else {
-                        echo '錯誤代碼：' . $_FILES['my_file']['error'] . '<br/>';
-                    }*/
 
 
-                ?>
+                    if(isset($_POST["go"]))
+                    {
+                        if( $title==null ||  $content==null || $date ==null)
+                        {
+                            echo "<script>alert('請輸入資料!');</script>";
+
+
+                        }
+
+                        else  if (file_exists("C:/AppServ/www/漢修專題/supplement/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                        {
+                            echo "<script>alert('補充資料標題重複，請重新輸入！');location.href='AdminNewSupplementFile.php'</script>";
+                        }
+
+                        else
+                        {
+                            //寫入檔案
+                            $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                            $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $txt = $content;
+                            fwrite($myfile,$txt);
+                            fclose($myfile);
+
+                            $system_msg = "補充資料新增";
+
+
+                            $sql="INSERT INTO supplements (spt_id,spmtypename,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$title','$filename','$content','$date','0','$_SESSION[updatename]')";
+
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('補充資料已經上傳!');location.href='AdminSupplementManage.php'</script>";
+                        }
+                    }
+                    if(isset($_POST["save"]))
+                    {
+                        if( $title==null  || $content==null || $date ==null)
+                        {
+                            echo "<script>alert('請輸入資料!');location.href='AdminNewSupplementFile.php'</script>";
+                        }
+                        else  if (file_exists("C:/AppServ/www/漢修專題/supplement/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                        {
+                            echo "<script>alert('補充資料標題重複，請重新輸入！');location.href='AdminNewSupplementFile.php'</script>";
+                        }
+                        else
+                        {
+                            //寫入檔案
+                            $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                            $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","a+") or die("Unable to open file!");
+
+                            $txt = $content;
+                            fwrite($myfile,$txt);
+                            fclose($myfile);
+
+                            $system_msg = "補充資料暫存";
+
+                            $sql="INSERT INTO supplements (spt_id,spmtypename,title,filename,content,date,save,newupdate) VALUES ('$_POST[type]','$inputtype','$title','$filename','$content','$date','1','$_SESSION[updatename]')";
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('補充資料已經暫存!');location.href='AdminSupplementSave.php'</script>";
+                        }
+                    }
+
+
+                    if($_SERVER['REQUEST_METHOD'] === "POST")
+                    {
+                        if ($system_msg == "補充資料新增")
+                        {
+                            $log = "$_SESSION[name]新增$inputtype/卷號$_POST[number]";
+                            logger($log);
+                        }else if($system_msg == "補充資料暫存"){
+                            $log = "$_SESSION[name]暫存$inputtype/卷號$_POST[number]";
+                            logger($log);
+                        }
+
+                    }
+
+
+
+
+
+                    ?>
+
+                </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- /#page-wrapper -->
 
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /#wrapper -->
 
-    </div>
-    <!-- /#wrapper -->
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+        <!-- Morris Charts JavaScript -->
+        <script src="js/plugins/morris/raphael.min.js"></script>
+        <script src="js/plugins/morris/morris.min.js"></script>
+        <script src="js/plugins/morris/morris-data.js"></script>
 
 </body>
 

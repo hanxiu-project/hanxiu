@@ -129,7 +129,7 @@ session_start();
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=supplement.php>補充資料</a></li>";	
+                         echo "<li><a href=supplementtype.php>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>公告訊息</a></li>";
 						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
@@ -141,7 +141,7 @@ session_start();
                          echo "<li><a href=indexs.php>首頁</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
-                         echo "<li><a href=supplement.php>補充資料</a></li>";	
+                         echo "<li><a href=supplementtype.php>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li></a></li>";
                          echo " <li><a href=news.php>公告訊息</a></li>";
 						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
@@ -156,7 +156,7 @@ session_start();
                          <li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
-                         <li><a href=supplement.php>補充資料</a></li>
+                         <li><a href=supplementtype.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">公告訊息</a></li>
                          <li><a href="Memberdonates.php">查看捐獻</a></li>
@@ -173,7 +173,7 @@ session_start();
                          <li><a href="indexs.php">首頁</a></li>
                          <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
-                         <li><a href=supplement.php>補充資料</a></li>
+                         <li><a href=supplementtype.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">公告訊息</a></li>
                          <li><a href="Memberdonates.php">查看捐獻</a></li>

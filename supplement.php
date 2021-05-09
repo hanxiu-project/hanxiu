@@ -1,13 +1,9 @@
 <html>
 <head>
 
-    <title>補充資料</title>
+    <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -18,13 +14,7 @@
 
 <body>
 
-<?php
-session_start();
-if($_SESSION['acc']==null||$_SESSION['pwd']==null){
-	echo "<script>alert('請先登入或註冊！');location.href='login.php'</script>";
-}
 
-?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
@@ -34,11 +24,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
 
     <!--頁首-->
     <!--包住固定不動的Header-->
-
-
-
     <?php include 'header.php';?>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -59,142 +45,96 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
 
 
     <!--主內文區-->
+
     <div id="content">
+
         <div class="newstitle">
-            <div class="contentlist">
-                <?php
-                if (isset($_GET["sptid"]))
-                {
-                $sptid = $_GET["sptid"];
-                $sqltype = "SELECT * FROM `spm_types` where `spt_id` = $sptid";
-                $resulttype = mysqli_query($db_link, $sqltype);
-                $rtypename = mysqli_fetch_row($resulttype);
-                $_SESSION['rtypename'] = $rtypename[1];
-                ?>
-                <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
-                <center>
-                    <table width="80%">
-                        <br>
+
+            <?php
+
+            if (isset($_GET["spid"]))                                                            //sid為經文id(同資料庫的s_id意思)
+            {
+            echo "<form method='POST' name='gggo'>";
+            $sqltit = "Select * From `supplements` where `sp_id`= $_GET[spid]";
+
+            $tit = "";
+            $resultshow[$tit] = mysqli_query($db_link, $sqltit);
+            $rtit = mysqli_fetch_row($resultshow[$tit]);
+
+            $sqltype = "SELECT sp_id , supplements.spmtypename, title , filename , date FROM `supplements` ,`spm_types` WHERE `supplements`.`sp_id`=$_GET[spid] AND `spm_types`.`spt_id`=$rtit[1]";
+
+            $resulttype =mysqli_query($db_link, $sqltype);
+            $type = mysqli_fetch_row($resulttype);
+            $sql_count="update  supplements set clicktimes =clicktimes+1  WHERE supplements.sp_id = $_GET[spid]";
+            mysqli_query($db_link, $sql_count);
+
+            $sqlcount = "SELECT * FROM supplements  WHERE supplements.sp_id = $_GET[spid] ";
+            $resultcount = mysqli_query($db_link, $sqlcount);
+            $rowcount = mysqli_fetch_assoc($resultcount);
+
+            ?>
+            <div class="newstitle2" style="text-align:right;">
+                <?php echo "瀏覽人次為 $rowcount[clicktimes]" ?>
+            </div>
+
+            <h3>｜<?php echo "$type[1] / $type[2]" ?></h3><br>
+
+        </div>
+
+        <div class="contentlist" >
+
+            <div class="tableforcontent">
+
+
+
+
+                <tr>
+                    <td>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `supplements` where `spt_id` = $sptid";
+                        $_SESSION["sptid"] = "$rtit[0]";
 
-                        $result_row = mysqli_query($db_link, $sqlatcnum);
-                        $data = mysqli_num_rows($result_row);       //抓總共幾筆
-
-
-                        $per = 10;
-                        $pages = ceil($data / $per);     //pages
-                        $k = $pages;
-
-
-                        if (!isset($_GET["page"])) {
-                            $page = 1;
-                        } else {
-                            $page = intval($_GET["page"]);
-                        }
-
-                        $start = ($page - 1) * $per;
-
-                        $resultnum = mysqli_query($db_link, $sqlatcnum);
-
-                        $sqlatcnum10 = "SELECT * FROM `supplements` where `spt_id` = $sptid Limit $start , $per";
-                        $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
-                        $resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
-
-                        while ($sup = mysqli_fetch_assoc($resultnum10[$page])) {
-                            echo "<tr>";
-                            echo "<td width='8%'>";
-                            echo "<a href='download.php?filename=../漢修專題/supplement/$sup[spmtypename]/$sup[filename]' title=$sup[filename]>$sup[filename]</a></p>";
-                            echo "</td>";
-                            echo "</tr>";
-
-                        }
-
-
-                        echo "</table>";
-
-                        ?>
-
-                        <?php
-                        echo '共 ' . $data . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
-                        echo "<br/><a href=?sptid=$sptid&page=1>首頁</a> ";
-                        echo "第 ";
-                        for ($i = 1; $i <= $pages; $i++) {
-                            if ($page - $k < $i && $i < $page + $k) {
-                                echo "<a href=?sptid=$sptid&page=$i>" . $i . "</a> ";
+                        $typename = $rtit[2];
+                        $filename = $rtit[4];
+                        $str = "";
+                        //判斷是否有該檔案
+                        if (file_exists("C:/AppServ/www/漢修專題/supplement/$typename/$filename")) {
+                            $file = fopen("C:/AppServ/www/漢修專題/supplement/$typename/$filename", "r");
+                            if ($file != NULL) {
+                                //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
+                                while (!feof($file)) {
+                                    $str .= fgets($file);
+                                }
+                                fclose($file);
                             }
                         }
-                        echo " 頁 <a href=?sptid=$sptid&page=$pages>末頁</a>";
-                        echo "</center>";
-                        ?>
 
-
-                        <?php
 
                         }
-                        else                                            //還沒選類別時
-                        {
+                        echo "$str";
+
+
                         ?>
 
-                        <h2>｜補充資料 </h2>
-                        <br><br>
 
-                        <br>
-                        <center>
-                            <table width="80%" >
-                                <br>
-                                <?php
-                                $sqlkptypecnum = "SELECT * FROM `spm_types`";
-
-                                $results_row = mysqli_query($db_link, $sqlkptypecnum);
-                                $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+                    </td>
+                </tr>
 
 
-                                $per = 10;
-                                $rows = ceil($datas / $per);
-
-                                $resultsnum = mysqli_query($db_link, $sqlkptypecnum);
-
-                                for ($j = 1; $j <= $rows; $j++) {
-                                    $start = ($j - 1) * 5;
-                                    $sqlatcnums10 = "SELECT * FROM spm_types Limit $start , $per";
-                                    $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                    echo "<tr height=50px>";
-                                    while ($row = mysqli_fetch_assoc($resultnums10)) {
-                                        echo "<td width='8%'>";
-                                        echo "<a href=?sptid='$row[spt_id]'>$row[spmtypename]</a></p>";
-
-
-                                        echo "</td>";
-                                    }
-
-                                    echo "</tr>";
-
-                                }
-                                }
-                                ?>
-
-                            </table>
-
-                        </center>
 
 
             </div>
 
+
+
         </div>
 
 
+
+
+        <!--註腳-->
+        <?php include 'footer.php';?>
+
     </div>
-
-
-    <!--註腳-->
-
-
-
-    <?php include 'footer.php';?>
-
-
-
 </div>
 
 </body>

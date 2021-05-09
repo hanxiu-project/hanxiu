@@ -52,8 +52,8 @@
             $('table tbody').sortable({
                 update:function (event,ui){
                     $(this).children().each(function (index){
-                        if ($(this).attr('data-position') != (index+1)){
-                            $(this).attr('data-position',(index+1)).addClass('updated');
+                        if ($(this).attr('data-position') != (index)){
+                            $(this).attr('data-position',(index)).addClass('updated');
                         }
                     });
 
@@ -70,7 +70,7 @@
             });
 
             $.ajax({
-                url: 'test.php',
+                url: 'AdminScripturesTypeSort.php',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -78,6 +78,7 @@
                     positions: positions
                 }, success: function (response){
                     console.log(response);
+                    window.location.reload();
                 }
             });
         }
@@ -106,12 +107,6 @@
                     </thead>
                     <tbody>
                     <?php
-                    $db_ip = "127.0.0.1";
-                    $db_user = "root";
-                    $db_pwd = "123456789";
-                    $db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                    mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
                     if (isset($_POST['update']))
                     {
                         foreach ($_POST['positions'] as $position) {
@@ -126,12 +121,18 @@
 
                     $sql="select * from types order by listorder";
                     $result=mysqli_query($db_link,$sql);
+                    echo "<tr align=center width='70%'>";
+                    echo "<td width='20%'><b>順序編號</b></td>";
+                    echo "<td width='80%'><b>講記類別</b></td>";
+                    echo "</tr>";
                     while ($data = $result->fetch_array())
                     {
                         echo "<tr data-index=$data[t_id] data-position=$data[listorder]>";
+                        echo "<td> $data[listorder] </td>";
                         echo "<td> $data[typename] </td>";
                         echo "</tr>";
                     }
+
                     ?>
                     </tbody>
                   </table>

@@ -198,7 +198,7 @@
 				
 				$sql_update_all = "UPDATE supplements SET `spt_id` = '$_POST[type]',`spmtypename` = '$inputtype',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '0' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
 				$sql_update_all_save = "UPDATE supplements SET `spt_id` = '$_POST[type]',`spmtypename` = '$inputtype',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '1' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
-               $sql_update_newupdate = "UPDATE supplements SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
+               $sql_update_newupdate = "UPDATE supplements SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
 
 
                 if(isset($_POST["edit"]))//發佈

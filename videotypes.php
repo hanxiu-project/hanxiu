@@ -47,7 +47,6 @@ session_start();
 
     <!--主內文區-->
     <div id="content">
-	<br><br>
         <div class="newstitle">
 
             <?php
@@ -64,7 +63,7 @@ session_start();
         <div class="contentlist">
 		<div class="tableforcontent">
             <center>
-                <div class="table" width="80%"  valign="top">
+
                     <br>
                     <?php
                     $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
@@ -103,10 +102,10 @@ session_start();
                     <br><br>
 
                     <center>
-                        <br>
+                        <div class="contentlist" align="center">
 
                         <table width="80%" >
-                            <br>
+
                             <?php
                             $sqlatypecnum = "SELECT * FROM `videotypes`";
 
@@ -148,14 +147,14 @@ session_start();
 	
 
     </div>
-	
+
 
    
 
 <!--註腳-->
     <?php include 'footer.php'; ?>
 </div>
- 
+
 </div>
 
 </div>

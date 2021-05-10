@@ -66,7 +66,7 @@ session_start();
             <div class="tableforcontent">
                 <center>
                     <table width="80%">
-                        <br>
+                        <br><br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `supplements` where  `save`='0' && `spt_id` = $sptid ";
 
@@ -112,10 +112,10 @@ session_start();
 
 
                         <center>
-                            <br>
 
+                            <div class="contentlist" align="center">
                             <table width="80%" >
-                                <br>
+
                                 <?php
                                 $sqlatypecnum = "SELECT * FROM `spm_types`";
 

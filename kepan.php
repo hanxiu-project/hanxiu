@@ -57,20 +57,22 @@ session_start();
     <!--主內文區-->
     <div id="content">
         <div class="newstitle">
-            <div class="contentlist">
-                <?php
-                if (isset($_GET["kptid"]))
-                {
-                $kptid = $_GET["kptid"];
-                $sqltype = "SELECT * FROM `kp_types` where `kpt_id` = $kptid";
-                $resulttype = mysqli_query($db_link, $sqltype);
-                $rtypename = mysqli_fetch_row($resulttype);
-                $_SESSION['rtypename'] = $rtypename[1];
-                ?>
-                <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
-                <center>
-                    <table width="80%" >
-                        <br>
+            <?php
+            if (isset($_GET["kptid"]))
+            {
+            $kptid = $_GET["kptid"];
+            $sqltype = "SELECT * FROM `kp_types` where `kpt_id` = $kptid";
+            $resulttype = mysqli_query($db_link, $sqltype);
+            $rtypename = mysqli_fetch_row($resulttype);
+            $_SESSION['rtypename'] = $rtypename[1];
+            ?>
+            <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
+        </div>
+        <div class="contentlist" >
+            <div class="tableforcontent">
+<center>
+    <table width="80%" >
+                        <br><br>
                         <?php
                         $sqlatcnum = "SELECT * FROM `kepans` where `kpt_id` = $kptid";
 
@@ -111,6 +113,7 @@ session_start();
 
                         ?>
 
+
                         <?php
                         echo '共 ' . $data . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
                         echo "<br/><a href=?kptid=$kptid&page=1>首頁</a> ";
@@ -122,6 +125,7 @@ session_start();
                         }
                         echo " 頁 <a href=?kptid=$kptid&page=$pages>末頁</a>";
                         echo "</center>";
+
                         ?>
 
 
@@ -135,10 +139,11 @@ session_start();
                         <h2>｜科判 </h2>
                         <br><br>
 
-                        <br>
-                        <center>
+
+                <div class="contentlist" align="center">
+
                             <table width="80%" >
-                                <br>
+
                                 <?php
                                 $sqlkptypecnum = "SELECT * FROM `kp_types`";
 
@@ -171,11 +176,12 @@ session_start();
                                 ?>
 
                             </table>
+</center>
 
-                        </center>
+                </div>
 
 
-            </div>
+
 
         </div>
 

@@ -174,7 +174,7 @@ session_start();
                     echo " 頁 <a href=?page=$pages2>末頁</a>";
                     echo "</center>";
                     ?>
-            </div>
+        </div>
 
 
     </div>

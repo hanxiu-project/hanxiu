@@ -96,7 +96,7 @@
 
 
         <div class="col-lg-12">
-            <font size="6"><strong style= "background:white" >講記類別排序</strong></font>
+            <font size="6"><strong style= "background:white" >講記類別排序(直接拉就可以改變)</strong></font>
         </div>
 
         <!--Body-->

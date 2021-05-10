@@ -49,14 +49,14 @@ table {
 				/*最外框*/
                 #sitebody {
 
-						
+
                         width:100%;
 						
 
                         margin: 0 auto;
 
 
-                        
+
 
 
                 }
@@ -66,15 +66,15 @@ table {
 				/*頁首*/
                 #header {
 						width :100%;
-						
+
                         background-color: #C7B897;
 						font-weight:bold;
 						color:#612E04;
                         height:130px;
 
 
-                        text-align: center;                   
-						
+                        text-align: center;
+
 						position:fixed; /*固定位置定位*/
 						top:0; /*距離上方 0 像素*/
 						z-index:1; /*重疊時會在其他元素之上*/
@@ -83,7 +83,7 @@ table {
 				/*包住固定不動的Header*/
 				#header2 {
 						width :100%;
-						
+
                         background-color:  #C7B897;
 
 
@@ -93,23 +93,23 @@ table {
                         text-align: center;
 						position: relative;
 					z-index:1; /*重疊時會在其他元素之上*/
-                      
-						
+
+
 						
 
                 }
 				/*包住導覽列的DIV*/
 				#wrapnav1{
-					position: absolute; 
-					top: 5px; 
+					position: absolute;
+					top: 5px;
 					right: 300px;
 					z-index:1; /*重疊時會在其他元素之上*/
 				}
 				/*包住導覽列的DIV2*/
 				#wrapnav2{
-					position: absolute; 
+					position: absolute;
 					z-index:1; /*重疊時會在其他元素之上*/
-					bottom: 3px; 
+					bottom: 3px;
 					right: 300px;
 				}
 				

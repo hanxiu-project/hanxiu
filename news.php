@@ -65,8 +65,6 @@ session_start();
 		</div>
 				 
                 <div class="contentlist" align="center">
-				    <div class="tableforcontent" align="center">
-
                         <table width="60%" style="border:3px #000000  solid;">
                             <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
                                 <th width="30%">發佈日期</th>
@@ -81,10 +79,10 @@ session_start();
                             $date_nums1 = mysqli_num_rows($resultnew);                          //講記數量
                             $per1 = 5;                                                      //10筆換頁
                             $pages1 = ceil($date_nums1 / $per1);                             //共幾頁
-                            if (!isset($_GET["page"])) {
+                            if (!isset($_GET["news_page"])) {
                                 $page1 = 1;
                             } else {
-                                $page1 = intval($_GET["page"]);                              //確認頁數只能是數值資料
+                                $page1 = intval($_GET["news_page"]);                              //確認頁數只能是數值資料
                             }
 
                             $start1 = ($page1 - 1) * $per1;
@@ -112,17 +110,17 @@ session_start();
 
                             echo "<center>";
                             echo '共 ' . $date_nums1 . ' 筆-在 ' . $page1 . ' 頁-共 ' . $pages1 . ' 頁';
-                            echo "<br/><a href=?page=1>首頁</a> ";
+                            echo "<br/><a href=?news_page=1>首頁</a> ";
                             echo "第 ";
                             for ($i = 1; $i <= $pages1; $i++) {
                                 if ($page1 - 10 < $i && $i < $page1 + 10) {
-                                    echo "<a href=?page=$i>" . $i . "</a> ";
+                                    echo "<a href=?news_page=$i>" . $i . "</a> ";
                                 }
                             }
-                            echo " 頁 <a href=?page=$pages1>末頁</a>";
+                            echo " 頁 <a href=?news_page=$pages1>末頁</a>";
                             echo "</center>";
                             ?>
-                    </div>
+
                 </div>
 
         <div class="newstitle">
@@ -130,7 +128,6 @@ session_start();
         </div>
 
         <div class="contentlist" align="center">
-            <div class="tableforcontent" align="center">
 
                 <table width="60%" style="border:3px #000000  solid;">
                     <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
@@ -178,7 +175,7 @@ session_start();
                     echo "</center>";
                     ?>
             </div>
-        </div>
+
 
     </div>
     

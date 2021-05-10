@@ -60,7 +60,7 @@ session_start();
                 $rtypename = mysqli_fetch_row($resulttype);
 				$_SESSION['rtypename']=$rtypename[1];
                 ?>
-                <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
+                <h2>｜<?php echo "$rtypename[2]" ?>  </h2>
 				</div> 
 				<div class="contentlist">
 				<div class="tableforcontent">

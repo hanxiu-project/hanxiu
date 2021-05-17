@@ -89,8 +89,22 @@
 
                                             <div class="form-group">
                                                 <label for="date">發佈日期:<?php echo $row['date']?></label>
-                                               </br>
-												 <input type='checkbox' name='top' value="<?php echo $row['save'] ?>"><label>置頂</label>
+                                                </br>
+                                                <?php
+                                                    if($row["top"]==0)
+                                                    {
+                                                ?>
+                                                        <input type='checkbox' name='top' value='0'><label>置頂</label>
+                                                <?php
+                                                    }
+                                                    else if($row["top"]==1)
+                                                    {
+                                                ?>
+                                                        <input type='checkbox' name='top' value='1' checked><label>置頂</label>
+                                                <?php
+                                                    }
+                                                ?>
+
                                             </div>
 
                                             <div class="form-group">

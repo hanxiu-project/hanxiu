@@ -66,7 +66,7 @@
 				date_default_timezone_set('Asia/Taipei');
 				$getDate= date("Y-m-d");
 
-                $sql = "SELECT * FROM posts where old='0' && keep='0' order by date DESC";
+                $sql = "SELECT * FROM posts where old='0' && keep='0' && save='0' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 				$resultfortd= mysqli_query($db_link,$sql);
 				$rowfortd=$resultfortd->fetch_assoc();
@@ -84,7 +84,7 @@
                
                 echo "</tr>";
 
-                $sqlpost = "SELECT * FROM posts where old='0' && keep='0' order by date DESC";
+                $sqlpost = "SELECT * FROM posts where old='0' && keep='0' && save='0' order by date DESC";
                 $resultpost= mysqli_query($db_link,$sqlpost);
 
                 $date_nums = mysqli_num_rows($resultpost);                          //講記數量
@@ -98,7 +98,7 @@
 
                 $start = ($page - 1) * $per;
 
-                $sqlresult = "SELECT * FROM posts where old='0' && keep='0' order by date DESC Limit $start , $per";
+                $sqlresult = "SELECT * FROM posts where old='0' && keep='0' && save='0' order by date DESC Limit $start , $per";
                 $postresult[$start] = mysqli_query($db_link, $sqlresult);
                 $postresult[$page] = mysqli_query($db_link, $sqlresult);
 

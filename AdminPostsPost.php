@@ -142,6 +142,7 @@ session_start();
 							{
 								$keep=0;
 							}
+
                             if($title==null || $content==null || $date ==null)
                             {
                                 echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";
@@ -178,6 +179,16 @@ session_start();
 
                         if(isset($_POST["save"]))
                         {
+                            if($_POST["date"]>$getDate)
+                            {
+                                $keep=1;
+                            }
+                            else
+                            {
+                                $keep=0;
+                            }
+
+
                             if($title==null || $content==null || $date ==null)
                             {
                                 echo "<script>alert('請輸入資料!');location.href='AdminPostsPost.php'</script>";

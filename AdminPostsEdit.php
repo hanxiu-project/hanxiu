@@ -54,6 +54,9 @@
 
                 <?php
                 session_start();
+                date_default_timezone_set('Asia/Taipei');
+                $getDate= date("Y-m-d");
+                $getDate2= date("Y-m-d", strtotime($getDate."+1 day"));
                 $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
@@ -87,25 +90,61 @@
                                                 </script>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="date">發佈日期:<?php echo $row['date']?></label>
-                                                </br>
-                                                <?php
-                                                    if($row["top"]==0)
-                                                    {
-                                                ?>
-                                                        <input type='checkbox' name='top' value='0'><label>置頂</label>
-                                                <?php
-                                                    }
-                                                    else if($row["top"]==1)
-                                                    {
-                                                ?>
-                                                        <input type='checkbox' name='top' value='1' checked><label>置頂</label>
-                                                <?php
-                                                    }
-                                                ?>
+                                            <?php
+                                                if($row["save"]==1 || $row["keep"]==1)
+                                                {
+                                            ?>
+                                                    <div class="form-group">
+                                                        <label for="date">發佈日期:</label>
+                                                        <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                        <label for="day">下架日期:</label>
+                                                        <input id="newday" name="newday" type="date" value="<?php echo $row['newday']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                        </br>
+                                            <?php
+                                                        if($row["top"]==0)
+                                                        {
+                                            ?>
+                                                            <input type='checkbox' name='top' value='0'><label>置頂</label>
+                                            <?php
+                                                        }
+                                                        else if($row["top"]==1)
+                                                        {
+                                            ?>
+                                                            <input type='checkbox' name='top' value='1' checked><label>置頂</label>
+                                            <?php
+                                                        }
+                                            ?>
+                                                    </div>
+                                            <?php
+                                                }
 
-                                            </div>
+                                                else
+                                                {
+                                            ?>          <div class="form-group">
+                                                        <label for="date">發佈日期:</label>
+                                                        <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly">
+                                                        <label for="day">下架日期:</label>
+                                                        <input id="newday" name="newday" type="date" value="<?php echo $row['newday']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly">
+                                                        </br>
+                                            <?php
+                                                        if($row["top"]==0)
+                                                        {
+                                                            ?>
+                                                            <input type='checkbox' name='top' value='0'><label>置頂</label>
+                                                            <?php
+                                                        }
+                                                        else if($row["top"]==1)
+                                                        {
+                                                            ?>
+                                                            <input type='checkbox' name='top' value='1' checked><label>置頂</label>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </div>
+                                            <?php
+                                                }
+                                            ?>
+
 
                                             <div class="form-group">
                                                 <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
@@ -124,13 +163,22 @@
                 <?php
                 if(isset($_POST["save"]))
                 {
+                    if($_POST["date"]>$getDate)
+                    {
+                        $keep=1;
+                    }
+                    else
+                    {
+                        $keep=0;
+                    }
+
                     if($_POST["title"]==null || $_POST["content"]==null || $_POST["date"] ==null)
                     {
                         echo "<script>alert('請輸入資料!');location.href='AdminPostsEdit.php'</script>";
                     }
                     else
                     {
-                        $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,save,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$_POST[title]','$_POST[content]','1','$_POST[top]')";
+                        $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$_POST[top]',`save`='1' `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";
                     }
@@ -139,23 +187,67 @@
 
                 if(isset($_POST["edit"]))
                 {
-                    if($_POST["title"] == NULL || $_POST["content"] == NULL )
+                    if($row["old"]!=1)
                     {
-                        echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
+                        if ($_POST["date"] > $getDate) {
+                            $keep = 1;
+                        } else {
+                            $keep = 0;
+                        }
+
+                        if ($_POST["title"] == NULL || $_POST["content"] == NULL) {
+                            echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
+                        }
+                        else if ($_POST["date"] >= $_POST["newday"]) {
+                            echo "<script>alert('發佈日期不得大於等於首頁下架日期!');location.href='AdminPostsEdit.php'</script>";
+                        }
+                        else if ($_POST["date"] < $getDate) {
+                            echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsEdit.php'</script>";
+                        }
+                        else if ($_POST["date"] > $getDate) {
+                            $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$_POST[top]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id]";
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('公告已經上傳待發佈專區!');location.href='AdminPostsKeep.php'</script>";
+                        }
+                        else {
+                            if ($row["save"] == 1)
+                            {
+                                $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' ,`date`='$_POST[date]',`newday=$_POST[newday]`,`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                                mysqli_query($db_link, $sqledit);
+                            }
+                            $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                            mysqli_query($db_link, $sqledit);
+                            if ($_POST['top'] == '1') {
+                                echo "<script>alert('公告修改完成1!');location.href='AdminPostsTop.php'</script>";
+                            } else if ($row['old'] == '1') {
+                                echo "<script>alert('公告修改完成2!');location.href='AdminOldPostsManage.php'</script>";
+                            } else {
+                                echo "<script>alert('公告修改完成3!');location.href='AdminPostsManage.php'</script>";
+                            }
+                        }
                     }
-                    else
-                    {
-                        $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
-                        mysqli_query($db_link, $sqledit);
-						if($_POST['top']=='1'){
-							 echo "<script>alert('公告修改完成!');location.href='AdminPostsTop.php'</script>";
-						}
-						else if($row['old']=='1'){
-						    echo "<script>alert('公告修改完成!');location.href='AdminOldPostsManage.php'</script>";
-						}
-						else{
-							echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
-						}
+                    else{
+                        if ($_POST["title"] == NULL || $_POST["content"] == NULL)
+                        {
+                            echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
+                        }
+                        else
+                        {
+                            $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                            mysqli_query($db_link, $sqledit);
+                            if ($_POST['top'] == '1')
+                            {
+                                echo "<script>alert('公告修改完成!');location.href='AdminPostsTop.php'</script>";
+                            }
+                            else if ($row['old'] == '1')
+                            {
+                                echo "<script>alert('公告修改完成!');location.href='AdminOldPostsManage.php'</script>";
+                            }
+                            else
+                            {
+                                echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
+                            }
+                        }
                     }
                 }
 

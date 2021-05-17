@@ -48,17 +48,8 @@ table {
 
 /*最外框*/
 #sitebody {
-
-
 	width:100%;
-
-
 	margin: 0 auto;
-
-
-
-
-
 }
 
 
@@ -66,15 +57,11 @@ table {
 /*頁首*/
 #header {
 	width :100%;
-
 	background-color: #C7B897;
 	font-weight:bold;
 	color:#612E04;
 	height:130px;
-
-
 	text-align: center;
-
 	position:fixed; /*固定位置定位*/
 	top:0; /*距離上方 0 像素*/
 	z-index:1; /*重疊時會在其他元素之上*/
@@ -83,20 +70,11 @@ table {
 /*包住固定不動的Header*/
 #header2 {
 	width :100%;
-
 	background-color:  #C7B897;
-
-
 	height: 130px;
-
-
 	text-align: center;
 	position: relative;
 	z-index:1; /*重疊時會在其他元素之上*/
-
-
-
-
 }
 /*包住導覽列的DIV*/
 #wrapnav1{
@@ -117,24 +95,15 @@ table {
 #photo {
 	margin:0 auto;
 	position: relative;
-
 	background-color:#FCFAF2;
-
 	width:auto;
 	height: auto;
 	z-index:0; /*重疊時會在其他元素之上*/
-
-	/*background-color: #EEEEEE;
-    text-align: center;
-    line-height: 400px;*/
-
-
 }
 /*放幻燈片*/
 #container{
 	margin:0 auto;
 	position: relative;
-
 	width:1100px;
 	background-color:#EEEEEE;
 	/* border:1px solid #F00;*/
@@ -144,52 +113,24 @@ table {
 
 /*左側*/
 #sidebar_left {
-
-
 	background-color:#EEEEEE;
-
-
 	width: 120px;
-
-
 	height: 400px;
-
-
 	text-align: center;
-
-
 	line-height: 400px;
-
-
 	float: left;
-
-
 }
 
 
 
 /*右側*/
 #sidebar_right {
-
-
 	background-color:#EEEEEE;
-
-
 	width: 120px;
-
-
 	height: 400px;
-
-
 	text-align: center;
-
-
 	line-height: 400px;
-
-
 	float: right;
-
-
 }
 
 
@@ -215,7 +156,6 @@ nav > ul {
 	margin:0;
 	padding: 0;
 	/* border:1px solid #F00;*/   /*	紅色框線記得刪除*/
-
 }
 
 nav a {

@@ -172,13 +172,23 @@
                         $keep=0;
                     }
 
+                    if($_POST["top"]==1)
+                    {
+                        $checked='1';
+                    }
+                    else
+                    {
+                        $checked='0';
+                    }
+
+
                     if($_POST["title"]==null || $_POST["content"]==null || $_POST["date"] ==null)
                     {
                         echo "<script>alert('請輸入資料!');location.href='AdminPostsEdit.php'</script>";
                     }
                     else
                     {
-                        $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$_POST[top]',`save`='1' `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
+                        $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$checked',`save`='1' `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";
                     }
@@ -189,39 +199,56 @@
                 {
                     if($row["old"]!=1)
                     {
-                        if ($_POST["date"] > $getDate) {
+                        if ($_POST["date"] > $getDate)
+                        {
                             $keep = 1;
-                        } else {
+                        }
+                        else
+                        {
                             $keep = 0;
                         }
 
-                        if ($_POST["title"] == NULL || $_POST["content"] == NULL) {
+                        if ($_POST["title"] == NULL || $_POST["content"] == NULL)
+                        {
                             echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
                         }
-                        else if ($_POST["date"] >= $_POST["newday"]) {
+                        else if ($_POST["date"] >= $_POST["newday"])
+                        {
                             echo "<script>alert('發佈日期不得大於等於首頁下架日期!');location.href='AdminPostsEdit.php'</script>";
                         }
-                        else if ($_POST["date"] < $getDate) {
+                        else if ($_POST["date"] < $getDate)
+                        {
                             echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsEdit.php'</script>";
                         }
-                        else if ($_POST["date"] > $getDate) {
-                            $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$_POST[top]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id]";
+                        else if ($_POST["date"] > $getDate)
+                        {
+                            $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday`='$_POST[newday]', `top`='$_POST[top]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id]";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('公告已經上傳待發佈專區!');location.href='AdminPostsKeep.php'</script>";
                         }
-                        else {
-                            if ($row["save"] == 1)
+                        else
+                        {
+                            if($_POST["top"]==1)
                             {
-                                $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' ,`date`='$_POST[date]',`newday=$_POST[newday]`,`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id] ";
-                                mysqli_query($db_link, $sqledit);
+                                $checked='1';
                             }
-                            $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                            else
+                            {
+                                $checked='0';
+                            }
+                            $sqledit = "UPDATE posts SET `top`='$checked', `title` = '$_POST[title]', `content` = '$_POST[content]' ,`date`='$_POST[date]',`newday`='$_POST[newday]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id] ";
                             mysqli_query($db_link, $sqledit);
-                            if ($_POST['top'] == '1') {
+
+                            if ($_POST['top'] == '1')
+                            {
                                 echo "<script>alert('公告修改完成1!');location.href='AdminPostsTop.php'</script>";
-                            } else if ($row['old'] == '1') {
+                            }
+                            else if ($row['old'] == '1')
+                            {
                                 echo "<script>alert('公告修改完成2!');location.href='AdminOldPostsManage.php'</script>";
-                            } else {
+                            }
+                            else
+                            {
                                 echo "<script>alert('公告修改完成3!');location.href='AdminPostsManage.php'</script>";
                             }
                         }

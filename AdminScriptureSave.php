@@ -254,7 +254,7 @@
                     $filename = $row2["filename"];//刪除檔案
                     $typename = $row2["typename"];//類別名稱
 
-                    unlink("../漢修專題/ScriptureFile/" . $typename . "/" . $filename);
+                    unlink("ScriptureFile/" . $typename . "/" . $filename);
                     echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
 
                 }

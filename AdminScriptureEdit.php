@@ -193,7 +193,7 @@
 				$thrupdate = $rowmodify["secupdate"];
                 $number = $_POST["number"];
                 $title = $_POST["title"];
-               $filename = $_POST["number"].".txt";
+                $filename = $_POST["number"].".txt";
                 $content = $_POST["content"];
                 $date = $_POST["date"];
 				
@@ -205,17 +205,9 @@
 				
 				$sql_update_all = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '0' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				$sql_update_all_save = "UPDATE scripture SET `t_id` = '$_POST[type]',`typename` = '$inputtype',`number` = '$number',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '1' WHERE scripture.s_id = $_SESSION[edit_s_id]";
-               $sql_update_newupdate = "UPDATE scripture SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
+                $sql_update_newupdate = "UPDATE scripture SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE scripture.s_id = $_SESSION[edit_s_id]";
 				
-				
 
-
-
-                   
-					/*$sql_namecheck = "SELECT * FROM `scripture` where `filename`='$filename'";
-					$checkresult= mysqli_query($db_link, $sql_namecheck);
-					$rowcheck=mysqli_fetch_assoc($checkresult);
-					$filenamecheck=$rowcheck["filename"];*/
 
                 if(isset($_POST["edit"]))//發佈
                 {
@@ -237,10 +229,10 @@
                                 }
                                 elseif($typename != $inputtype)     //類別有改過的話，原本的 != 現在選的
                                 {
-                                    unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
+                                    unlink("ScriptureFile/".$typename."/".$filename);
 
                                     //寫入檔案
-                                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                    $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                                     $txt = $content;
                                     fwrite($myfile,$txt);
                                     fclose($myfile);
@@ -251,9 +243,9 @@
                                 }
                                 else                                                            //檔名沒重複且類別沒改
                                 {
-                                    unlink("../漢修專題/ScriptureFile/".$typename."/".$oldfilename);
+                                    unlink("ScriptureFile/".$typename."/".$oldfilename);
 
-                                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                    $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                                     $txt = $content;
                                     fwrite($myfile,$txt);
                                     fclose($myfile);
@@ -267,10 +259,10 @@
                         else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)  單改類別
                         {
 
-                            unlink("../漢修專題/ScriptureFile/".$typename."/".$oldfilename);
+                            unlink("ScriptureFile/".$typename."/".$oldfilename);
 
                         //寫入檔案
-                        $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                        $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                         $txt = $content;
                         fwrite($myfile,$txt);
                         fclose($myfile);
@@ -283,7 +275,7 @@
                         else                    //檔名相同             沒改類別沒改檔名
                         {
 
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                            $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
@@ -301,7 +293,7 @@
 				  if(isset($_POST["save"]))
                   {
 								//寫入檔案
-                    $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                    $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                     $txt = $content;
                     fwrite($myfile,$txt);
                     fclose($myfile);
@@ -323,10 +315,10 @@
                                   }
                                   else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)
                                   {
-                                      unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
+                                      unlink("ScriptureFile/".$typename."/".$filename);
 
                                       //寫入檔案
-                                      $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                      $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                                       $txt = $content;
                                       fwrite($myfile,$txt);
                                       fclose($myfile);
@@ -337,9 +329,9 @@
                                   }
                                   else
                                   {
-                                      unlink("../漢修專題/ScriptureFile/".$typename."/".$oldfilename);
+                                      unlink("ScriptureFile/".$typename."/".$oldfilename);
 
-                                      $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                                      $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                                       $txt = $content;
                                       fwrite($myfile,$txt);
                                       fclose($myfile);
@@ -352,10 +344,10 @@
                           }
                           else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)
                           {
-                              unlink("../漢修專題/ScriptureFile/".$typename."/".$filename);
+                              unlink("ScriptureFile/".$typename."/".$filename);
 
                               //寫入檔案
-                              $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                              $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                               $txt = $content;
                               fwrite($myfile,$txt);
                               fclose($myfile);
@@ -367,7 +359,7 @@
                           else                    //檔名相同
                           {
 
-                              $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
+                              $myfile = fopen("ScriptureFile/$inputtype/$filename","w+") or die("Unable to open file!");
                               $txt = $content;
                               fwrite($myfile,$txt);
                               fclose($myfile);

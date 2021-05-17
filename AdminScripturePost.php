@@ -173,7 +173,7 @@
 							
 							
                         }
-                        else  if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                        else  if (file_exists("ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                         {
                             echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                         }
@@ -181,7 +181,7 @@
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
@@ -203,7 +203,7 @@
                        {
                             echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
                        }
-                       else  if (file_exists("C:/AppServ/www/漢修專題/ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                       else  if (file_exists("ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                        {
                            echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                        }
@@ -211,7 +211,7 @@
                        {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("C:/AppServ/www/漢修專題/ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
 						
                             $txt = $content;
                             fwrite($myfile,$txt);

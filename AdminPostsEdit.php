@@ -90,11 +90,12 @@
                                             <div class="form-group">
                                                 <label for="date">發佈日期:<?php echo $row['date']?></label>
                                                </br>
-												 <input type='checkbox' name='top' value='1'><label>置頂</label>
+												 <input type='checkbox' name='top' value="<?php echo $row['save'] ?>"><label>置頂</label>
                                             </div>
 
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-sm btn-warning" name="edit" value="修改" >
+                                                <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
+                                                <input type="submit" class="btn btn-sm btn-warning" name="edit" value="發佈" >
                                             </div>
 
                                         </form>
@@ -107,6 +108,19 @@
                 </div>
 
                 <?php
+                if(isset($_POST["save"]))
+                {
+                    if($_POST["title"]==null || $_POST["content"]==null || $_POST["date"] ==null)
+                    {
+                        echo "<script>alert('請輸入資料!');location.href='AdminPostsEdit.php'</script>";
+                    }
+                    else
+                    {
+                        $sql="INSERT INTO `posts` (p_id,mname,m_id,title,content,save,top) VALUES('NULL','$_SESSION[name]','$_SESSION[m_id]','$_POST[title]','$_POST[content]','1','$_POST[top]')";
+                        mysqli_query($db_link, $sql);
+                        echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";
+                    }
+                }
 
 
                 if(isset($_POST["edit"]))
@@ -121,15 +135,14 @@
                         mysqli_query($db_link, $sqledit);
 						if($_POST['top']=='1'){
 							 echo "<script>alert('公告修改完成!');location.href='AdminPostsTop.php'</script>";
-						}else if($row['old']=='1'){
-						echo "<script>alert('公告修改完成!');location.href='AdminOldPostsManage.php'</script>";
-
-						}else{
+						}
+						else if($row['old']=='1'){
+						    echo "<script>alert('公告修改完成!');location.href='AdminOldPostsManage.php'</script>";
+						}
+						else{
 							echo "<script>alert('公告修改完成!');location.href='AdminPostsManage.php'</script>";
 						}
-                        
                     }
-
                 }
 
                 ?>

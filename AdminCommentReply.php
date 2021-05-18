@@ -67,9 +67,15 @@ session_start();
                 session_start();
 
 
-                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[reply_c_id]' and `comments`.`status`='0' and `members`.`m_id` = '$_SESSION[reply_m_id]'";
+
+               $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime`,`status` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[reply_c_id]' and  `members`.`m_id` = '$_SESSION[reply_m_id]'";
+                //$sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[reply_c_id]' and `comments`.`status`='0' and `members`.`m_id` = '$_SESSION[reply_m_id]'";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
+
+
+
+                //$status = $row['status'];
 
                 ?>
 
@@ -113,14 +119,14 @@ session_start();
                                             </div>
 
                                             <div class="form-group">
-                                                <textarea id="rpy" name="rpy" rows="5" cols="80">
-                                                </textarea>
+                                                <textarea id="rpy" name="rpy" rows="5" cols="80"></textarea>
 
                                             </div>
 
                                             <div class="form-group">
                                                 <input type="submit" class="btn btn-sm btn-warning" name="reply" value="回覆" >
                                             </div>
+
 
                                         </form>
 
@@ -148,8 +154,16 @@ session_start();
                     }
                     else
                     {
-                        $sql_update_reply="UPDATE `comments` SET `reply` = '$reply',`replyman`='$_SESSION[name]',`rpy_datetime`= '$nowdate' ,`status`= '1' where `comments`.`c_id` = $_SESSION[reply_c_id]";
-                        mysqli_query($db_link, $sql_update_reply);
+
+                       if($row[status]==1){
+                            $sql_insert_reply = "INSERT INTO `comments` (m_id,message,msg_datetime,replyman,reply,rpy_datetime,status) VALUES('$_SESSION[reply_m_id]','$row[message]','$row[msg_datetime]','$_SESSION[name]','$reply','$nowdate',1)";
+                            mysqli_query($db_link, $sql_insert_reply);
+                        }
+                        else{
+                            $sql_update_reply="UPDATE `comments` SET `reply` = '$reply',`replyman`='$_SESSION[name]',`rpy_datetime`= '$nowdate' ,`status`= '1' where `comments`.`c_id` = $_SESSION[reply_c_id]";
+                            mysqli_query($db_link, $sql_update_reply);
+                        }
+
                         echo "<script>alert('回覆成功!');location.href='AdminCommentManagefor0.php'</script>";
                     }
                 }

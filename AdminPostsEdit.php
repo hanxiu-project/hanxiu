@@ -178,6 +178,7 @@
                     }
                     else
                     {
+                        //echo "<script>alert('$_POST[top]');location.href=''</script>";
                         $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$_POST[top]',`save`='1' `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";

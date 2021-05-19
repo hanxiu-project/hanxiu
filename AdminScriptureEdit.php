@@ -284,12 +284,15 @@
                             mysqli_query($db_link,$sql_update_newupdate);
                             echo "<script>alert('經文發佈完成!');location.href='AdminScriptureManage.php'</script>";
                         }
-
+                    }
+                    else if($_POST["type"]==null || $_POST["number"]==null || $_POST["title"]==null || $_POST["content"]==null || $_POST["date"]==null){
+                        echo "<script>alert('尚有欄位未填入資料，請輸入後再發佈！');location.href='AdminScriptureEdit.php'</script>";
                     }
 
-                   
-
                 }
+
+
+
 				  if(isset($_POST["save"]))
                   {
 								//寫入檔案

@@ -1,12 +1,11 @@
 <html>
 
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
 
-	<link href="csss_file/topic.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="csss_file/RWD.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -23,10 +22,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>-->
 </head>
 
-<body>
+<body >
 
 <!--最外圍-->
-<div id="sitebody">
+<div class="sitebody">
 
     <?php include 'header.php'; ?>
 
@@ -47,72 +46,63 @@
 
     <!--照片區-->
 
-    <div id="photo">
-
-        <div id="container">
-
+    <div class="photo">
+        <div class="container">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
-                <ol class="carousel-indicators">
-                    <?php
-                        $sql1 = "SELECT path1 FROM carousel ORDER BY listorder ";
-                        $result1 = mysqli_query($db_link,$sql1);
-                        $rowcount =  mysqli_num_rows($result1);
-                        $i = 0;
-                        foreach ($result1 as $row1)
-                        {
-							 if ($i == 0)
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
+                        <ol class="carousel-indicators">
+
+                            <?php
+                            $sql1 = "SELECT path1 FROM carousel ORDER BY listorder ";
+                            $result1 = mysqli_query($db_link,$sql1);
+                            $rowcount =  mysqli_num_rows($result1);
+                            $i = 0;
+                            foreach ($result1 as $row1)
                             {
-                    ?>
+                                $actives = '';
+                                if ($i == 0)
+                                {
+                                    $actives = 'active';
+                                }
+                                ?>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>" class="<?php $actives; ?>"></li>
+                                <?php $i++; } ?>
+
+                        </ol>
+
+                        <div class="carousel-inner">
                             <?php
-                            }
-                            else
+                            $i = 0;
+                            foreach ($result1 as $row1)
                             {
-                            ?>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="<?php $i; ?>"></li>
-                            <?php
+                                if ($i == 0)
+                                {
+                                    ?>
+                                    <div class="carousel-item active ">
+                                        <img src="<?php echo $row1[path1]; ?>" class="d-block w-100"  alt="...">
+                                    </div>
+                                    <?php
+                                }
+                                else
+                                {
+                                    ?>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo $row1[path1]; ?>" class="d-block w-100"alt="...">
+                                    </div>
+                                    <?php
+                                }
+                                $i++;
                             }
-                            $i++;
-					    } ?>
-                </ol>
-
-                <div class="carousel-inner">
-                    <?php
-                    $i = 0;
-                    foreach ($result1 as $row1)
-                    {
-                        if ($i == 0)
-                        {
                             ?>
-                            <div class="carousel-item active ">
-                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
-                            </div>
-                            <?php
-                        }
-                        else
-                        {
-                            ?>
-                            <div class="carousel-item ">
-                                <img src="<?php echo $row1[path1]; ?>" class="d-block w-100" height="500px" alt="...">
-                            </div>
-                            <?php
-                        }
-                        $i++;
-                    }
-                    ?>
-
                 </div>
-
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-
-
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
             </div>
 
         </div>
@@ -137,10 +127,11 @@
 				date_default_timezone_set('Asia/Taipei');
 				$getDate= date("Y-m-d");
 	?>
-    <div id="content">
+    <div class="content">
 	 <?php
           echo "</br>";
             ?>
+            <div class="slogan">
        <?php $sqlslo = "SELECT * FROM slogan where `sloganid`= '1'";
                 $resultslo= mysqli_query($db_link,$sqlslo);
       
@@ -149,25 +140,29 @@
 					echo "<center> <font color=#612E04><h2>$rowsl[slogantext]<h2></font></center><p>";
 				}
 					?>
-		 <div class="newstitle">
+           </div>         
+		    <div class="newstitle">
             <h2>｜最新公告 </h2>
-        </div>
-        <div class="tablelist">
+            </div>
+        
 
             <?php
             //...
 
-            $sql = "SELECT * FROM posts where  save='0' && old='0' && keep='0' && top='0' || save='0' && old='0' && keep='0' && top='1'  order by `top` DESC, `date` desc ";
+
+            $sql = "SELECT * FROM posts where  save='0' && old='0' && keep='0'|| top='1' && save='0'  order by `top` DESC, `date` desc ";
+
+           
             $result = mysqli_query($db_link, $sql);
             ?>
 
             <center>
-                <div class="contentlist" align="center">
+                <!--<div class="contentlist" align="center">-->
 				<div class="tableforcontent" align="center">
-                        <table width="60%" style="border:3px #000000  solid;" >
-                            <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
-                                <th width="30%">發佈日期</th>
-                                <th width="70%">公告標題</th>
+                        <table class="newstable" >
+                            <tr  class="tabletitle">
+                                <th class="date">發佈日期</th>
+                                <th class="title">公告標題</th>
                             </tr>
 							
                             <?php
@@ -183,9 +178,10 @@
 
                                 echo "<tr>";
 							    if($row['top']=='1'){
-								    echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'><i class='fas fa-thumbtack'></i>&nbsp&nbsp$row[date]</td>";
+								    echo "<td ><i class='fas fa-thumbtack'></i>&nbsp&nbsp$row[date]</td>";
 							    }else{
-								    echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>&emsp; $row[date]</td>";
+								    echo "<td  >&emsp; $row[date]</td>";
+                                    
 							    }
                                
                                 echo "<td align='center' style='vertical-align:middle;'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
@@ -195,22 +191,23 @@
 
                                 mysqli_close($db_link);
                             ?>
-
-                   
-            </center>
-
-        </div>
+                    
+                               
+                 </div>  
+             </center>                  
+             
+          
+             
     </div>
+    
 </div>
-
+<?php include 'footer.php'; ?>
 
 
 <!--註腳-->
 
 
-</div>
-<?php include 'footer.php'; ?>
-</div>
+
 </body>
 
 

@@ -3,33 +3,36 @@
 
     <title>個人資料</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-
 <?php
 session_start();
 if($_SESSION['acc']==null||$_SESSION['pwd']==null){
-	echo "<script>alert('請先登入或註冊！');location.href='login.php'</script>";
+    echo "<script>alert('請先登入或註冊！');location.href='login.php'</script>";
 }
+?>
+
+<?php
+session_start();
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
 <!--最外圍-->
-<div id="sitebody">
+<div class="sitebody">
 
 
     <!--頁首-->
     <!--包住固定不動的Header-->
     <?php include 'header.php';?>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -39,48 +42,67 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
     <!--照片區-->
 
 
-    <!--左邊欄位
-    <div id="sidebar_left">sidebar_left</div>
+    
 
+                        <?php
+                    //是否為行動裝置
+                    function isMobileCheck(){
+                        //Detect special conditions devices
+                        $iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+                        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                        $iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+                        if(stripos($_SERVER['HTTP_USER_AGENT'],"Android") && stripos($_SERVER['HTTP_USER_AGENT'],"mobile")){
+                            $Android = true;
+                        }else if(stripos($_SERVER['HTTP_USER_AGENT'],"Android")){
+                            $Android = false;
+                            $AndroidTablet = true;
+                        }else{
+                            $Android = false;
+                            $AndroidTablet = false;
+                        }
+                        $webOS = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+                        $BlackBerry = stripos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+                        $RimTablet= stripos($_SERVER['HTTP_USER_AGENT'],"RIM Tablet");
+                        //do something with this information
+                        if( $iPod || $iPhone || $iPad || $Android || $AndroidTablet || $webOS || $BlackBerry || $RimTablet){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    } 
 
-
-
-    右邊欄位
-    <div id="sidebar_right">sidebar_right</div>-->
-
-
+                        ?>
+      </script>
     <!--主內文區-->
-    <div id="content">
-        <div class="newstitle">
-            <div class="contentlist">
-                <?php
-
-                
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                mysqli_query($db_link, 'SET CHARACTER SET utf8');
-
-
-                $sql = "SELECT * FROM members where account = '$_SESSION[acc]'";
-                $result = mysqli_query($db_link, $sql);
-                $row = mysqli_fetch_assoc($result);
-
-                ?>
-                <h3>|個人資料</h3>
-                <div class="table" align="center">
-                    <form name="form" method="post" action="">
-                    <table width="60%" style="border:3px 	#000000  solid;padding:5px;" rules="all" cellpadding='5'; >
+         <div class="content">
+            <div class="tableforcontent">
+                     
+            <?php             
+                        $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+                        mysqli_query($db_link, 'SET CHARACTER SET utf8');
+                        $sql = "SELECT * FROM members where account = '$_SESSION[acc]'";
+                        $result = mysqli_query($db_link, $sql);
+                        $row = mysqli_fetch_assoc($result);
+                        ?>
+                        <div class="newstitle">
+                        <br>
+                <h2>｜個人資料</h2>
+                              </div> 
+                              <table class="memberprofile">
+                              <form name="form" method="post" action="">
+                   
                         <tr align="center">
                             
                                 <td height="65"  align="center" style="height:60px" >
                                     <label for="account" accesskey="N">&emsp;&emsp;帳號:</label>
-                                    <input type="text" style="font size:20px; padding:6px;" name="account" id="account" value="<?php echo $row[account]; ?>" readonly="readonly">
+                                    <input type="text" style="font size:20px; " name="account" id="account" value="<?php echo $row[account]; ?>" readonly="readonly">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td height="65" align="center" style="height:60px">
                                     <label for="password" accesskey="N">&emsp;&emsp;密碼:</label>
-                                    <input type="password" style="font size:20px; padding:6px;" name="password" id="password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
+                                    <input type="password" style="font size:20px; " name="password" id="password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
 
                                     <div class="accordion" id="accordionExample2">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2"
@@ -88,12 +110,13 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                             編輯
                                         </button>
                                         <div id="collapse2" class="collapse hidden" aria-labelledby="heading2" data-parent="#accordionExample2">
-                                            <label for="e_password" accesskey="N">&emsp;&emsp;舊密碼:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_oldpassword" id="e_password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
-                                            <label>&emsp;&emsp;新密碼:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_newpassword"><br>
-                                            <label>&emsp;重新輸入新密碼:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_repassword">
+                                            <label for="e_password" accesskey="N">&emsp;舊密碼:</label>
+                                            <input type="text" style="font size:20px; " name="e_oldpassword" id="e_password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
+                                            <label>&emsp;新密碼:</label>
+                                            <input type="text" style="font size:20px;" name="e_newpassword"><br>
+                                            <label>重新輸入新密碼:</label>
+                                            <input type="text" style="font size:20px; " name="e_repassword">
+                                            <br>
                                             <input type="submit" name="edit_password" value="修改">
                                         </div>
                                     </div>
@@ -102,8 +125,8 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="name" accesskey="N">會員姓名:</label>
-                                    <input type="text" style="font size:20px; padding:6px;" name="name" id="name" value="<?php echo $row[name]; ?>" readonly="readonly"> <br>
+                                <td height="65" align="center" style="height:60px"><label for="name" accesskey="N">&emsp;會員姓名:</label>
+                                    <input type="text" style="font size:20px; " name="name" id="name" value="<?php echo $row[name]; ?>" readonly="readonly"> <br>
 
                                     <div class="accordion" id="accordionExample3">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3"
@@ -111,8 +134,9 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                             編輯
                                         </button>
                                         <div id="collapse3" class="collapse hidden" aria-labelledby="heading3" data-parent="#accordionExample3">
-                                            <label for="e_name" accesskey="N">&emsp;&emsp;會員姓名:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_name" id="e_name" value="<?php echo $row[name]; ?>">
+                                            <label for="e_name" accesskey="N">新會員姓名:</label>
+                                            <input type="text" style="font size:20px; " name="e_name" id="e_name" value="<?php echo $row[name]; ?>">
+                                            <br>
                                             <input type="submit" name="edit_name" value="修改">
                                         </div>
                                     </div>
@@ -121,8 +145,8 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="email" accesskey="N">會員信箱:</label>
-                                    <input type="gmail" style="font size:20px; padding:6px;" name="email" id="email" value="<?php echo $row[email]; ?>" readonly="readonly"><br>
+                                <td height="65" align="center" style="height:60px"><label for="email" accesskey="N">&emsp;會員信箱:</label>
+                                    <input type="gmail" style="font size:20px; " name="email" id="email" value="<?php echo $row[email]; ?>" readonly="readonly"><br>
 
                                     <div class="accordion" id="accordionExample4">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4"
@@ -130,8 +154,9 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                             編輯
                                         </button>
                                         <div id="collapse4" class="collapse hidden" aria-labelledby="heading4" data-parent="#accordionExample4">
-                                            <label for="e_email" accesskey="N">&emsp;&emsp;會員信箱:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_email" id="e_email" value="<?php echo $row[email]; ?>">
+                                            <label for="e_email" accesskey="N">新會員信箱:</label>
+                                            <input type="text" style="font size:20px; " name="e_email" id="e_email" value="<?php echo $row[email]; ?>">
+                                            <br>
                                             <input type="submit" name="edit_email" value="修改">
                                         </div>
                                     </div>
@@ -140,8 +165,8 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="telephone" accesskey="N">會員行動:</label>
-                                    <input type="text" style="font size:20px; padding:6px;" name="telephone" id="telephone" value="<?php echo $row[telephone]; ?>" readonly="readonly"><br>
+                                <td height="65" align="center" style="height:60px"><label for="telephone" accesskey="N">&emsp;會員行動:</label>
+                                    <input type="text" style="font size:20px; " name="telephone" id="telephone" value="<?php echo $row[telephone]; ?>" readonly="readonly"><br>
 
                                     <div class="accordion" id="accordionExample5">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5"
@@ -149,8 +174,9 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                             編輯
                                         </button>
                                         <div id="collapse5" class="collapse hidden" aria-labelledby="heading5" data-parent="#accordionExample5">
-                                            <label for="e_telephone" accesskey="N">&emsp;&emsp;會員行動:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_telephone" id="e_telephone" value="<?php echo $row[telephone]; ?>">
+                                            <label for="e_telephone" accesskey="N">新會員行動:</label>
+                                            <input type="text" style="font size:20px;" name="e_telephone" id="e_telephone" value="<?php echo $row[telephone]; ?>">
+                                            <br>
                                             <input type="submit" name="edit_telephone" value="修改">
                                         </div>
                                     </div>
@@ -160,7 +186,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
 
                             <tr>
                                 <td height="65" align="center" style="height:60px"><label for="address" accesskey="N">會員地址:</label>
-                                    <input type="text" style="font size:20px; padding:6px;  width:450px;" name="address" id="address" value="<?php echo $row[address]; ?>" readonly="readonly"> <br>
+                                    <input type="text" style="font size:20px;  width:300px;" name="address" id="address" value="<?php echo $row[address]; ?>" readonly="readonly"> <br>
 
                                     <div class="accordion" id="accordionExample6">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse6"
@@ -168,8 +194,9 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
                                             編輯
                                         </button>
                                         <div id="collapse6" class="collapse hidden" aria-labelledby="heading6" data-parent="#accordionExample6">
-                                            <label for="e_address" accesskey="N">&emsp;&emsp;會員地址:</label>
-                                            <input type="text" style="font size:20px; padding:6px;" name="e_address" id="e_address" value="<?php echo $row[address]; ?>">
+                                            <label for="e_address" accesskey="N">新會員地址:</label>
+                                            <input type="text" style="font size:20px;  width:300px;" name="e_address" id="e_address" value="<?php echo $row[address]; ?>">
+                                            <br>
                                             <input type="submit" name="edit_address" value="修改">
                                         </div>
                                     </div>
@@ -181,8 +208,7 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
 
                     </table>
                     </form>
-
-                       <?php
+                    <?php
                        $sqlup_password="UPDATE `members` SET `password` = '$_POST[e_newpassword]' WHERE `members`.`m_id` = $row[m_id]";
 
                        $sqlup_name="UPDATE `members` SET `name` = '$_POST[e_name]' WHERE `members`.`m_id` = $row[m_id]";
@@ -253,20 +279,25 @@ if($_SESSION['acc']==null||$_SESSION['pwd']==null){
 
                        ?>
 
-                </div>
-            </div>
+                    <center>
+                   
+                
 
-        </div>
+              
 
-
-    </div>
-
-    <!--註腳-->
-  <?php include 'footer.php';?>
-
+                       
+            </div><!--CONTENTFORTABLE-->
+			
+	 <!--註腳-->
+  
+    </div><!--CONTENT-->
+    
+	
+    
+   
 
 </div>
-
+<?php include 'footer.php';?>
 </body>
 
 

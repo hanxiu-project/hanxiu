@@ -1,18 +1,20 @@
 <html>
 <head>
 
+
     <title>瑜論講記</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
-
 </head>
 
 <body>
+    
 
 <?php
 session_start();
@@ -24,7 +26,7 @@ session_start();
 
 
 <!--最外圍-->
-<div id="sitebody">
+<div class="sitebody">
 
 
     <!--頁首-->
@@ -45,129 +47,247 @@ session_start();
     <!--照片區-->
 
 
-    <!--左邊欄位
-    <div id="sidebar_left">sidebar_left</div>
+    
 
-
-
-
-    右邊欄位
-    <div id="sidebar_right">sidebar_right</div>-->
-
-
-    <!--主內文區-->
-    <div id="content">
-        <div class="newstitle">
-            
-                <?php
-                if (isset($_GET["tid"]))
-                {
-                $tid = $_GET["tid"];
-                $sqltype = "SELECT * FROM `types` where `t_id` = $tid";
-                $resulttype = mysqli_query($db_link, $sqltype);
-                $rtypename = mysqli_fetch_row($resulttype);
-				$_SESSION['rtypename']=$rtypename[1];
-                ?>
-                <h2>｜<?php echo "$rtypename[2]" ?>  </h2>
-				</div> 
-				<div class="contentlist">
-				<div class="tableforcontent">
-                <center>
-                    <table width="80%">
-                        <br>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `scripture` where  `date` <= '$getDate' && `save`='0' && `t_id` = $tid ";
+                    //是否為行動裝置
+                    function isMobileCheck(){
+                        //Detect special conditions devices
+                        $iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+                        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                        $iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+                        if(stripos($_SERVER['HTTP_USER_AGENT'],"Android") && stripos($_SERVER['HTTP_USER_AGENT'],"mobile")){
+                            $Android = true;
+                        }else if(stripos($_SERVER['HTTP_USER_AGENT'],"Android")){
+                            $Android = false;
+                            $AndroidTablet = true;
+                        }else{
+                            $Android = false;
+                            $AndroidTablet = false;
+                        }
+                        $webOS = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+                        $BlackBerry = stripos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+                        $RimTablet= stripos($_SERVER['HTTP_USER_AGENT'],"RIM Tablet");
+                        //do something with this information
+                        if( $iPod || $iPhone || $iPad || $Android || $AndroidTablet || $webOS || $BlackBerry || $RimTablet){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    } 
 
-                        $result_row = mysqli_query($db_link, $sqlatcnum);
-                        $data = mysqli_num_rows($result_row);       //抓總共幾筆
+                        ?>
 
-                        $per=10;
-                        $rows=ceil($data/$per);
 
-                        $resultnum = mysqli_query($db_link, $sqlatcnum);
+    
+ 
+    <script type="text/javascript">
 
-                        for($i=1;$i<=$rows;$i++)
-                            {
-                                $start=($i-1)*10;
-                                $sqlatcnum10 = "SELECT * FROM `scripture` where  `date` <= '$getDate' && `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
-                                $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
-                                echo "<tr height=50px>";
-                                while ($script = mysqli_fetch_assoc($resultnum10)) {
-                                    echo "<td width='8%'>";
-                                    echo "<a href=article.php?sid='$script[s_id]' title='$script[number]'>$script[number]</a></p>";
-									
-									
-                                    echo "</td>";
+      <?php
+      $screenwidth.="<script language=/'javascript/'>";     
+      $screenwidth.="document.write(window.screen.width);";      
+      $screenwidth.="</script>";  
+
+      ?>  
+      </script>
+    <!--主內文區-->
+         <div class="content">
+                
+                 <div class="tableforcontent">
+                     
+                                <div class="newstitle">
+                                <?php                
+                            
+                                if (isset($_GET["tid"]))
+                                {
+                                $tid = $_GET["tid"];
+                                $sqltype = "SELECT * FROM `types` where `t_id` = $tid";
+                                $resulttype = mysqli_query($db_link, $sqltype);
+                                $rtypename = mysqli_fetch_row($resulttype);
+                                $_SESSION['rtypename']=$rtypename[1];
+                                ?>
+                                <br>
+                                <h2>｜<?php echo "$rtypename[2]" ?></h2>
+				                </div> 
+				
+			
+                <center>
+                    <table>
+                        
+                        <?php
+
+                      
+                       
+                        if(isMobileCheck()){
+                            $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
+
+                            $result_row = mysqli_query($db_link, $sqlatcnum);
+                            $data = mysqli_num_rows($result_row);       //抓總共幾筆
+                            //是行動裝置
+                            $per=3;
+                            $rows=ceil($data/$per);
+    
+                            $resultnum = mysqli_query($db_link, $sqlatcnum);
+    
+                            for($i=1;$i<=$rows;$i++)
+                                {
+                                    $start=($i-1)*3;
+                                    $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
+                                    $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
+                                    echo "<tr >";
+                                    while ($script = mysqli_fetch_assoc($resultnum10)) {
+                                        echo "<td>";
+                                       
+                                        echo "<a href=article.php?sid='$script[s_id]' title='$script[number]'>$script[number]</a></p>";
+                                      
+                                        
+                                        echo "</td>";
+                                    }
+    
+                                    echo "</tr>";
+    
+
+
                                 }
+                        
+                       
+                        }else {
+                            $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
 
-                                echo "</tr>";
-
-                            }
-
-
-
+                            $result_row = mysqli_query($db_link, $sqlatcnum);
+                            $data = mysqli_num_rows($result_row);       //抓總共幾筆
+                            $per=10;
+                            $rows=ceil($data/$per);
+    
+                            $resultnum = mysqli_query($db_link, $sqlatcnum);
+    
+                            for($i=1;$i<=$rows;$i++)
+                                {
+                                    $start=($i-1)*10;
+                                    $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
+                                    $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
+                                    echo "<tr >";
+                                    while ($script = mysqli_fetch_assoc($resultnum10)) {
+                                        echo "<td>";
+                                       
+                                        echo "<a href=article.php?sid='$script[s_id]' title='$script[number]'>$script[number]</a></p>";
+                                        
+                                        
+                                        echo "</td>";
+                                    }
+    
+                                    echo "</tr>";
+    
+                                }
+                        }
                         echo "</table>";
                         echo "</center>";
                         }
                         else                                            //還沒選類別時
                         {
+                           
                         ?>
+                        
+                         
+                           <br>  
+                         <h2>｜講記類別</h2>
+                        
 
-                        <h2>｜講記類別 </h2>
+                                
+                                <div class="search">
+                                <form name="src" method="GET" action="">
 
-                        <br><br>
+                                        查詢文章標題：<input type="text" name="srctitle" Placeholder="輸入文章標題">
+                                        <input type='submit' name='tsrcbtn' value='搜尋'>
+                                        <br>
+                                        查詢文章內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
+                                        <input type='submit' name='srcbtn' value='搜尋'>
 
-                        <div align="right">
-                            <form name="src" method="GET" action="">
-
-                                查詢文章標題：<input type="text" name="srctitle" Placeholder="輸入文章標題">
-                                <input type='submit' name='tsrcbtn' value='搜尋'>
-                                <br>
-                                查詢文章內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
-                                <input type='submit' name='srcbtn' value='搜尋'>
-
-                                <br><br>
-                            </form>
-                        </div>
+                                        <br><br>
+                                    </form>
+                                </div>
+                       
+                          
+                      
 
 
                         <center>
-                            <br>
+                            
 							
-                           <table width="80%" >
+                           <table  >
                                 <br>
                                 <?php
-                        $sqlatypecnum = "SELECT * FROM `types` order by listorder";
-
-                        $results_row = mysqli_query($db_link, $sqlatypecnum);
-                        $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+                                if(isMobileCheck()){
+                                    $sqlatypecnum = "SELECT * FROM `types` order by listorder";
 
 
-                        $per=10;
-                        $rows=ceil($datas/$per);
+                                    $results_row = mysqli_query($db_link, $sqlatypecnum);
+                                    $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+            
+            
+                                    $per=3;
+                                    $rows=ceil($datas/$per);
+            
+                                    $resultsnum = mysqli_query($db_link, $sqlatypecnum);
+            
+                                    for($j=1;$j<=$rows;$j++)
+                                        {
+                                            $start=($j-1)*3;
+                                            $sqlatcnums10 = "SELECT * FROM types order by listorder Limit $start , $per";
+                                            $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                            echo "<tr >";
+                                            while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                                echo "<td >";
+                                                echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a></p>";
+                                                
+                                            
+                                                echo "</td>";
+                                            }
+            
+                                            echo "</tr>";
+            
+                                        }
+                                  
+                                
+                               
+                                }else {
+                                    $sqlatypecnum = "SELECT * FROM `types` order by listorder";
 
-                        $resultsnum = mysqli_query($db_link, $sqlatypecnum);
+                                    $results_row = mysqli_query($db_link, $sqlatypecnum);
+                                    $datas = mysqli_num_rows($results_row);       //抓總共幾筆
+            
+            
+                                    $per=10;
+                                    $rows=ceil($datas/$per);
+            
+                                    $resultsnum = mysqli_query($db_link, $sqlatypecnum);
+            
+                                    for($j=1;$j<=$rows;$j++)
+                                        {
+                                            $start=($j-1)*10;
+                                            $sqlatcnums10 = "SELECT * FROM types order by listorder Limit $start , $per";
+                                            $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                            echo "<tr>";
+                                            while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                                echo "<td>";
+                                                echo "<a href=?tid='$row[t_id]' title='$row[typename]'`>$row[typename]</a></p>";
+                                                
+                                            
+                                                echo "</td>";
+                                            
+                                            }
+            
+                                            echo "</tr>";
+            
+                                        }
 
-                        for($j=1;$j<=$rows;$j++)
-                            {
-                                $start=($j-1)*10;
-                                $sqlatcnums10 = "SELECT * FROM types order by listorder Limit $start , $per";
-                                $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                echo "<tr height=50px>";
-                                while ($row = mysqli_fetch_assoc($resultnums10)) {
-                                    echo "<td width='8%'>";
-                                    echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
-
-
-								
-                                    echo "</td>";
                                 }
-
-                                echo "</tr>";
-
-                            }
+                               
+                               
+                                
+                        
                         ?>
-
+                        
                         </table>
                             <center>
                                 <?php
@@ -186,19 +306,21 @@ session_start();
                                 ?>
                     
                 </center>
-            </div>
+                           
 
-        </div>
+              
+        </div><!--CONTENTFORTABLE-->
 			
 	 <!--註腳-->
-   <?php include 'footer.php';?>
-    </div>
+  
+    </div><!--CONTENT-->
+    
+	
     
    
-	
-
 
 </div>
+<?php include 'footer.php';?>
 </body>
 
 

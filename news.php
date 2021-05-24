@@ -3,16 +3,16 @@
 
     <title>公告訊息</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
-
 </head>
 
 <body>
+    
 
 <?php
 session_start();
@@ -21,7 +21,7 @@ session_start();
 
 
 <!--最外圍-->
-<div id="sitebody">
+<div class="sitebody">
 
 
     <!--頁首-->
@@ -37,40 +37,63 @@ session_start();
     <!--照片區-->
 
 
-    <!--左邊欄位
-    <div id="sidebar_left">sidebar_left</div>
+    
 
+                        <?php
+                    //是否為行動裝置
+                    function isMobileCheck(){
+                        //Detect special conditions devices
+                        $iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+                        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                        $iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+                        if(stripos($_SERVER['HTTP_USER_AGENT'],"Android") && stripos($_SERVER['HTTP_USER_AGENT'],"mobile")){
+                            $Android = true;
+                        }else if(stripos($_SERVER['HTTP_USER_AGENT'],"Android")){
+                            $Android = false;
+                            $AndroidTablet = true;
+                        }else{
+                            $Android = false;
+                            $AndroidTablet = false;
+                        }
+                        $webOS = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+                        $BlackBerry = stripos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+                        $RimTablet= stripos($_SERVER['HTTP_USER_AGENT'],"RIM Tablet");
+                        //do something with this information
+                        if( $iPod || $iPhone || $iPad || $Android || $AndroidTablet || $webOS || $BlackBerry || $RimTablet){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    } 
 
-
-
-    右邊欄位
-    <div id="sidebar_right">sidebar_right</div>-->
-
-
+                        ?>
+      </script>
     <!--主內文區-->
-    <div id="content">
-        <div class="newstitle">
-           
-                <?php
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                mysqli_query($db_link, 'SET CHARACTER SET utf8');
+         <div class="content">
+            <div class="tableforcontent">
+                     
+                    <?php
+                        $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+                        mysqli_query($db_link, 'SET CHARACTER SET utf8');
 
-                //$sqlold = "SELECT * FROM posts where old = '1' order by date DESC";
-                //$resultold= mysqli_query($db_link,$sqlold);
-				# 設定時區
-				date_default_timezone_set('Asia/Taipei');
-				$getDate= date("Y-m-d");
-                ?>
-		<h2>｜最新公告</h2>
-		</div>
-				 
-                <div class="contentlist" align="center">
-                        <table width="60%" style="border:3px #000000  solid;">
+                        //$sqlold = "SELECT * FROM posts where old = '1' order by date DESC";
+                        //$resultold= mysqli_query($db_link,$sqlold);
+                        # 設定時區
+                        date_default_timezone_set('Asia/Taipei');
+                        $getDate= date("Y-m-d");
+                        ?>
+                        <div class="newstitle">
+                        <br>
+                <h2>｜最新公告</h2>
+                              </div> 					
+                    <center>
+                    <table class="news">
+                    
                             <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
-                                <th width="30%">發佈日期</th>
-                                <th width="70%">公告標題</th>
+                                <th width="50%">發佈日期</th>
+                                <th width="50%">公告標題</th>
                             </tr>
-
+                            
                             <?php
 
                             $sqlnew = "SELECT * FROM posts where save='0' && old='0' && keep='0' order by date DESC";
@@ -102,8 +125,8 @@ session_start();
 								}
 
                                 echo "<tr>";
-                                echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>$row[date]</td>";
-                                echo "<td align='center' style='height:60px; vertical-align:middle;'><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
+                                echo "<td >$row[date]</td>";
+                                echo "<td ><a href = 'post.php?id=$row[p_id]'>$row[title]</a></td>";
                                 echo "</tr>";
                             }
                         echo "</table>";
@@ -121,21 +144,18 @@ session_start();
                             echo "</center>";
                             ?>
 
+               
+                <div class="newstitle">
+                    <h2>｜歷史公告</h2>
                 </div>
-
-        <div class="newstitle">
-            <h2>｜歷史公告</h2>
-        </div>
-
-        <div class="contentlist" align="center">
-
-                <table width="60%" style="border:3px #000000  solid;">
-                    <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
-                        <th width="30%">發佈日期</th>
-                        <th width="70%">公告標題</th>
-                    </tr>
-
-                    <?php
+                        
+               
+                <table class="news">
+                <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
+                                <th width="50%">發佈日期</th>
+                                <th width="50%">公告標題</th>
+                            </tr>   
+                       <?php
 
                     $sqlold = "SELECT * FROM posts where save='0' && old='1' && keep='0' order by date DESC";
                     $resultold= mysqli_query($db_link,$sqlold);
@@ -157,11 +177,15 @@ session_start();
 
                     while ($rowold =mysqli_fetch_assoc($oldresult[$start2])) {
                         echo "<tr>";
-                        echo "<td height='65' align='center' style='height:60px; vertical-align:middle;'>$rowold[date]</td>";
-                        echo "<td align='center' style='height:60px; vertical-align:middle;'><a href = 'post.php?id=$rowold[p_id]'>$rowold[title]</a></td>";
+                        echo "<td>$rowold[date]</td>";
+                        echo "<td ><a href = 'post.php?id=$rowold[p_id]'>$rowold[title]</a></td>";
                         echo "</tr>";
                     }
                     echo "</table>";
+                    ?>
+                    <div class="pageforvideo">
+                    <?php
+                   
                     echo "<center>";
                     echo '共 ' . $date_nums2 . ' 筆-在 ' . $page2 . ' 頁-共 ' . $pages2 . ' 頁';
                     echo "<br/><a href=?page=1>首頁</a> ";
@@ -173,15 +197,26 @@ session_start();
                     }
                     echo " 頁 <a href=?page=$pages2>末頁</a>";
                     echo "</center>";
+                    
                     ?>
-        </div>
+                </div>
 
+              
 
-    </div>
+                       
+            </div><!--CONTENTFORTABLE-->
+			
+	 <!--註腳-->
+  
+    </div><!--CONTENT-->
     
-    <!--註腳-->
- <?php include 'footer.php';?>
+	
+    
+   
 
 </div>
+<?php include 'footer.php';?>
 </body>
+
+
 </html>

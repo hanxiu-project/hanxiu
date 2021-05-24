@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+    <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -23,7 +23,7 @@
 
 
     <!--最外圍-->
-    <div id="sitebody">
+<div class="sitebody">
 
 
         <!--頁首-->
@@ -43,41 +43,41 @@
 
 
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 
 
         右邊欄位
         <div id="sidebar_right">sidebar_right</div>-->
 
-<span style="font-family:微軟正黑體,serif;">
+    <span style="font-family:微軟正黑體,serif;">
+    <div class="content">
         <!--主內文區-->
-        <div id="content">
+     <div class="tableforcontent">
+        
             <div class="newstitle">
-
-                <div class="contentlist">
+                    <br>
                     <h2>｜會員註冊</h2>
-                    <div class="tableforregis" align="center">
-
-                        <table width="60%" style=" font-size:18px;  solid;padding:5px;" cellpadding='5' ;>
+            </div>
+                        <table class="registered" >
                             <form name="registered" method="post" action="">
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="account" accesskey="N">&emsp;&emsp;帳號:</label><input
+                                <td><label for="account" accesskey="N">&emsp;&emsp;帳號:</label><input
                                             type="text" style="font size:20px; padding:6px;" name="account" id="account" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"
                                             required autofocus placeholder="必填"><br>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="password" accesskey="N">&emsp;&emsp;密碼:</label><input
+                                <td ><label for="password" accesskey="N">&emsp;&emsp;密碼:</label><input
                                             type="password" style="font size:20px; padding:6px;" name="password" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"
                                             id="password" required autofocus placeholder="必填"> </br>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="confirmpassword"
+                                <td><label for="confirmpassword"
                                                                                           accesskey="N">確認密碼:</label><input
                                             type="password" style="font size:20px; padding:6px;" name="confirmpassword" 
                                             id="confirmpassword" required autofocus placeholder="必填"> </br>
@@ -85,7 +85,7 @@
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="name"
+                                <td ><label for="name"
                                                                                           accesskey="N">會員姓名:</label><input
                                             type="text" style="font size:20px; padding:6px;" name="name" id="name"
                                             required autofocus placeholder="必填"> </br>
@@ -93,55 +93,44 @@
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px">會員性別:<input type="radio" name="sex"
+                                <td >會員性別:<input type="radio" name="sex"
                                                                                                value="男">男<input
                                             type="radio" name="sex" value="女">女<br>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="email" accesskey="N">會員信箱:</label><input
+                                <td ><label for="email" accesskey="N">會員信箱:</label><input
                                             type="email" style="font size:20px; padding:6px;" name="email" id="email"
                                             required autofocus placeholder="必填"><br>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="telephone" accesskey="N">會員行動:</label><input
+                                <td><label for="telephone" accesskey="N">會員行動:</label><input
                                             type="text" style="font size:20px; padding:6px;" name="telephone"
                                             id="telephone" required autofocus placeholder="必填"><br>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td height="65" align="center" style="height:60px"><label for="address" accesskey="N">會員地址:</label><input
-                                            type="text" style="font size:20px; padding:6px;  width:450px;"
+                                <td><label for="address" accesskey="N">會員地址:</label><input
+                                            type="text" style="font size:20px; padding:6px;  width:300px;"
                                             name="address" id="address" required autofocus placeholder="必填"> </br>
                                 </td>
                             </tr>
 
-                            <div id="loginandre">
+                            
                                 </br>
 
-                                <tr>
-                                    <td height="65" align="center" style="height:60px">
-                                        <input type="submit"
-                                               style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;'
-                                               name="gore" value="註冊" style="width:60px;height:40px;">
-                                    </td>
-
-                                </tr>
-
-                            </div>
                             </form>
 
                         </table>
-
-                    </div>
-
-
-                </div>
-            </div>
+                        <div class="loginandregis">
+                                        <input type="submit" name="gore" value="註冊">
+                                        </div>
+                                    
+     
             <?php
           
             $sql = "SELECT * FROM `members` where `account`='$_POST[account]'";
@@ -205,26 +194,19 @@
 
                 }
             }
-
-
-
-
-
-
-
             ?>
-            <!--註腳-->
-            <?php include 'footer.php'; ?>
-
-
+           
+           </div>
+            
         </div>
-</span>
+    </span>
  
 
 </div>
 
-
+<!--註腳-->
+<?php include 'footer.php'; ?>
 </body>
-
+ 
 
 </html>

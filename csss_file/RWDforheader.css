@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  button {
+   cursor: pointer;
+  }
+  /*最外框*/
+  
+  .sitebody {
+      width:100%;
+      min-height:100%;
+      margin: 0 auto;
+      background-color: #fcfAf2;
+  }
+  
+  .wrapnav{
+      display: none;
+  }
+  #menu_control{
+      display: none;
+  }
+  
+  .header { /*手機板的header*/
+      width :100%;
+      background-color: #C7B897;
+      font-weight:bold;
+      color:#612E04;
+      height:10%;
+      text-align: center;
+      position:fixed; /*固定位置定位*/
+      top:0; /*距離上方 0 像素*/
+      z-index:2; /*重疊時會在其他元素之上*/
+  
+  }
+  /*包住固定不動的Header*/
+  .header2 {  /*手機板的header*/
+      width :100%;
+      background-color:  #C7B897;
+      height: 10%;
+      text-align: center;
+      position: relative;
+      z-index:2; /*重疊時會在其他元素之上*/
+  }
+  
+  .logoimg { /*LOGO圖片的DIV*/
+      width: 40%;
+      height: 100%;
+  }
+  .logoimg img{ /*LOGO圖片*/
+      width: 100%;
+      height: 100%;
+  }
+  .menu_btn{ /*手機板的導覽列選單按鈕*/
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: absolute;
+      top: 25%;
+      right: 10px;  
+  }
+  .menu_btn span{ 
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      display: block;
+      overflow: hidden;
+  }
+  .menu_btn::before{
+      content: '';
+      position: absolute;
+      height: 2px;
+      left: 2px;
+      width: 36px;
+      background-color: #612E04;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      box-shadow: 0px 8px 0px #612E04,
+                  0px -8px 0px #612E04;
+  }
+  nav{
+      border-top: 2px solid #612E04;
+      width: 100%;
+      height: calc(100vh - 10vh);
+      background-color: #C7B897;
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      transition: .5s;
+      z-index:2 ;
+  }
+  nav>ul{
+      margin: 0;
+      
+  }
+  
+  nav a{
+      font-size: 24px;
+      display: block;
+      text-decoration:none;
+  
+      color: #612E04;
+      padding: 10px 20px;
+      /*border-bottom: 1px solid #000000;*/
+      
+    
+  
+  }
+  nav a:hover
+      {
+          text-decoration: none;
+          color:#ffffff;
+          /*font-size:24px;*/
+      }
+  #menu_control:checked ~ nav{
+      left: 0;
+  }
+  
+  
+  @media screen and (min-width:1400px) {
+      /*最外框*/
+  .sitebody {
+      width:100%;
+      min-height: 100%;
+      margin: 0 auto;
+      background-color: #fcfAf2;
+  }
+      .menu_btn{display: none;}
+      .header{
+          width :100%;
+          background-color: #C7B897;
+          font-weight:bold;
+          color:#612E04;
+          height:130px;
+          text-align: center;
+          position:fixed; /*固定位置定位*/
+          top:0; /*距離上方 0 像素*/
+          z-index:1; /*重疊時會在其他元素之上*/
+          justify-content: right;
+          font-weight: bold;
+      }
+      .header2{
+          width :100%;
+          background-color:  #C7B897;
+          height: 130px;
+          text-align: center;
+          position: relative;
+          z-index:1; /*重疊時會在其他元素之上*/
+          justify-content: right;
+          font-weight: bold;
+      }
+      
+      nav{
+          border-top:0;
+          display: flex;
+          width: 80%;
+          height: auto;
+          top:20px;
+          right: 1px;
+          left: 15%;
+          background-color: transparent;
+          list-style: none; 
+      }
+      nav a{
+          text-decoration:none;
+          border-bottom: none;
+          color: inherit;
+          display: block;
+          font-size: 18px;
+      }
+      nav>ul{
+          text-align:right;
+      }
+      nav >ul>li{
+          display: inline-flex;
+      }
+      nav a:hover
+      {
+          text-decoration: none;
+          color:#ffffff;
+          /*font-size:24px;*/
+      }
+       
+  
+      .logoimg{
+          width: 20%;
+          height: 130px;
+      }
+      .logoimg img{
+          width: 100%;
+          height: 130px;
+      }
+    
+  }
+  

@@ -247,7 +247,7 @@
                     $filename = $row2["filename"];//刪除檔案
                     $typename = $row2["spmtypename"];//類別名稱
 
-                    unlink("../漢修專題/supplement/" . $typename . "/" . $filename);
+                    unlink("supplement/" . $typename . "/" . $filename);
                     echo "<script>alert('成功刪除!');location.href='AdminSupplementManage.php'</script>";
 
                 }

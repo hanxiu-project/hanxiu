@@ -70,7 +70,7 @@
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                $sql = "SELECT * FROM posts where top='1' && save='0' order by date DESC";
+                $sql = "SELECT * FROM posts where top='1' && save='0' && keep='0' order by date DESC";
                 $result= mysqli_query($db_link,$sql);
 				 $resultfortd= mysqli_query($db_link,$sql);
 				$rowfortd=$resultfortd->fetch_assoc();
@@ -89,7 +89,7 @@
                 echo "</tr>";
 
 
-                $sqlkeep = "SELECT * FROM posts where top='1' && save='0' order by date DESC";
+                $sqlkeep = "SELECT * FROM posts where top='1' && save='0' && keep='0' order by date DESC";
                 $resultkeep= mysqli_query($db_link,$sqlkeep);
 
                 $date_nums = mysqli_num_rows($resultkeep);                          //講記數量
@@ -103,7 +103,7 @@
 
                 $start = ($page - 1) * $per;
 
-                $sqlresult = "SELECT * FROM posts where top='1' && save='0' order by date DESC Limit $start , $per";
+                $sqlresult = "SELECT * FROM posts where top='1' && save='0' && keep='0' order by date DESC Limit $start , $per";
                 $keepresult[$start] = mysqli_query($db_link, $sqlresult);
                 $keepresult[$page] = mysqli_query($db_link, $sqlresult);
 

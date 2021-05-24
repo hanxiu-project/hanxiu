@@ -140,7 +140,7 @@
                             echo "<script>alert('請輸入欲新增的類別!');location.href='AdminNewSupplement.php'</script>";
                         } else {
                             //資料夾的建立
-                            $file_path = "C:/AppServ/www/漢修專題/supplement/$type";
+                            $file_path = "supplement/$type";
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
@@ -153,8 +153,6 @@
                             }
 
                         }
-
-
                     }
 
 

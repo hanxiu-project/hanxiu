@@ -66,10 +66,24 @@ session_start();
                 session_start();
                 //echo "<script>alert('$_SESSION[vreply_c_id]')</script>";
 
-                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`replyman`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[vreply_c_id]' and `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]'";
+                $sqlall = "SELECT * FROM `comments` WHERE `c_id`= $_SESSION[vreply_c_id] and `m_id`=$_SESSION[vreply_m_id]";
+                //$sqlall = "SELECT * FROM `comments`";
+                $resultall=mysqli_query($db_link,$sqlall);
+                $rowall=mysqli_fetch_assoc($resultall);
+
+
+
+                $sql = "SELECT `c_id`,`comments`.`m_id`,`members`.`account`,`members`.`name`,`replyman`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]' and `comments`.`message`=$rowall[message]";
+
+
+
+
+                //$sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`replyman`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[vreply_c_id]' and `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]'";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
 
+
+                $commentresult[msg] = mysqli_query($db_link, $sql);
 
                 ?>
 
@@ -82,51 +96,55 @@ session_start();
                                 <div class="row">
                                     <div class="col-lg-12">
 
+                                    <?php
+                                        while($rowmsgdata = mysqli_fetch_assoc($commentresult[msg]))
+                                        {
+                                            echo "<div class='form-group'>";
+                                            echo "<label for='title'>會員編號:</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[m_id]</font>";
+                                            echo "</div>";
+                                            echo "<div class='form-group''>";
+                                            echo "<label for='title'>會員帳號:</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[account]</font>";
+                                            echo "</div>";
+                                            echo "<div class='form-group'>";
+                                            echo "<label for='title'>會員姓名:</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[name]</font>";
+                                            echo "</div>";
 
-                                            <div class="form-group">
-                                                <label for="title">會員編號:</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['m_id']?></font>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="title">會員帳號:</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['account']?></font>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="title">會員姓名:</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['name']?></font>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="date">留言日期:</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['msg_datetime']?></font>
-                                            </div>
-
-
-                                            <div class="form-group">
-                                                <label for="content">留言內容:</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['message']?></font>
-                                            </div>
-
-                                        <hr>
-
-                                            <div class="form-group">
-                                                <label for="">回覆人員：</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['replyman']?></font>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="">回覆內容：</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['reply']?></font>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="date">回覆日期:</label>
-                                                <font style="width:525px; height:30px; color:#000000; background-color:transparent" ><?php echo $row['rpy_datetime']?></font>
-                                            </div>
+                                            echo "<div class='form-group'>";
+                                            echo "<label for='date'>留言日期:</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[msg_datetime]</font>";
+                                            echo "</div>";
 
 
+                                            echo "<div class='form-group'>";
+                                            echo "<label for='content'>留言內容:</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[message]</font>";
+                                            echo "</div>";
 
-                                        </form>
+                                            echo "<div class='form-group'>";
+                                            echo "<label for=''>回覆人員：</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[replyman]</font>";
+                                            echo "</div>";
+
+                                            echo "<div class='form-group'>";
+                                            echo "<label for=''>回覆內容：</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[reply]</font>";
+                                            echo "</div>";
+
+                                            echo "<div class='form-group'>";
+                                            echo "<label for=''>回覆日期：</label>";
+                                            echo "<font style='width:525px; height:30px; color:#000000; background-color:transparent' >$rowmsgdata[rpy_datetime]</font>";
+                                            echo "</div>";
+
+                                           echo "<hr style='background-color:black; height:1px; border:none;'>";
+                                        }
+                                        ?>
+
+
+
+                                    </form>
 
                                     </div>
                                 </div>

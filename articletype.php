@@ -1,7 +1,7 @@
 <html>
 <head>
 
-    <title>test</title>
+    <title>瑜論講記</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="csss_file/cssfornophoto3.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -16,8 +16,11 @@
 
 <?php
 session_start();
+
+
 ?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
 
 
 <!--最外圍-->
@@ -150,7 +153,8 @@ session_start();
                                 while ($row = mysqli_fetch_assoc($resultnums10)) {
                                     echo "<td width='8%'>";
                                     echo "<a href=?tid='$row[t_id]'>$row[typename]</a></p>";
-									
+
+
 								
                                     echo "</td>";
                                 }
@@ -174,6 +178,7 @@ session_start();
                                     echo "<script>location.href='searchtitle.php?srctitle=$_GET[srctitle]';</script>";        //
 
                                 }
+
                                 ?>
                     
                 </center>

@@ -62,8 +62,8 @@
 
 
               
-
-                $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
+                $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`message`,`name`,`msg_datetime` FROM `comments`,`members` where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' GROUP BY m_id , message ORDER BY msg_datetime DESC";
+                //$sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
                 $result= mysqli_query($db_link,$sql);
 				$resultfortd= mysqli_query($db_link,$sql);
 				$rowfortd=$resultfortd->fetch_assoc();
@@ -80,11 +80,13 @@
 				if($rowfortd["c_id"]!=null){
                 echo "<td></td>";
 				echo "<td></td>";
+                echo "<td></td>";
 				}
 				
                 echo "</tr>";
 
-                $sqlcomment= "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
+				$sqlcomment="SELECT `c_id`,`comments`.`m_id`,`account`,`message`,`name`,`msg_datetime` FROM `comments`,`members` where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' GROUP BY m_id , message ORDER BY msg_datetime DESC";
+                //$sqlcomment= "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
                 $result1= mysqli_query($db_link,$sqlcomment);
 
                 $date_nums = mysqli_num_rows($result1);                          //講記數量
@@ -98,7 +100,8 @@
 
                 $start = ($page - 1) * $per;
 
-                $sqlresult = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC Limit $start , $per";
+                $sqlresult = "SELECT `c_id`,`comments`.`m_id`,`account`,`message`,`name`,`msg_datetime` FROM `comments`,`members` where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' GROUP BY m_id , message ORDER BY msg_datetime DESC";
+                //$sqlresult = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC Limit $start , $per";
                 $commentresult[$start] = mysqli_query($db_link, $sqlresult);
                 $commentresult[$page] = mysqli_query($db_link, $sqlresult);
 
@@ -111,6 +114,7 @@
                     echo "<td>$row[name]</td>";
                     
                     echo "<td>$row[msg_datetime]</td>";
+                    echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[c_id]+3' value='回覆'></td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[c_id]+1' value='查看'></td>";
                     ?>
                     <td><input type='submit' class="btn btn-sm btn-danger "  style='width:100px;height:30px;'name="<?php echo "$row[c_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這則留言?')"></td><?php
@@ -146,13 +150,21 @@
                         echo "</script>";
                     }
 
-                    //刪除未做
+
 
                     if (isset($_POST["$row2[c_id]+2"])) {
                         $_SESSION["delete_c_id"]=$row2["c_id"];
                         $sql_delete="DELETE FROM comments WHERE c_id = $_SESSION[delete_c_id]";
                         mysqli_query($db_link, $sql_delete);
                         echo "<script>alert('成功刪除!');location.href='AdminCommentManagefor1.php'</script>";
+                    }
+
+                    if (isset($_POST["$row2[c_id]+3"])) {
+                        $_SESSION['reply_c_id']=$row2["c_id"];
+                        $_SESSION['reply_m_id']=$row2["m_id"];
+                        echo "<script langauge = 'javascript' type='text/javascript'>";
+                        echo "window.location.href = 'AdminCommentReply.php'";
+                        echo "</script>";
                     }
                 }
 

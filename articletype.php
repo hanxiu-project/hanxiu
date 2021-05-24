@@ -29,7 +29,12 @@ session_start();
 
     <!--頁首-->
     <!--包住固定不動的Header-->
-    <?php include 'header.php';?>
+    <?php include 'header.php';
+
+    # 設定時區
+    date_default_timezone_set('Asia/Taipei');
+    $getDate= date("Y-m-d");
+    ?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -71,11 +76,10 @@ session_start();
                     <table width="80%">
                         <br>
                         <?php
-                        $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
+                        $sqlatcnum = "SELECT * FROM `scripture` where  `date` <= '$getDate' && `save`='0' && `t_id` = $tid ";
 
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
-
 
                         $per=10;
                         $rows=ceil($data/$per);
@@ -85,7 +89,7 @@ session_start();
                         for($i=1;$i<=$rows;$i++)
                             {
                                 $start=($i-1)*10;
-                                $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
+                                $sqlatcnum10 = "SELECT * FROM `scripture` where  `date` <= '$getDate' && `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
                                 $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
                                 echo "<tr height=50px>";
                                 while ($script = mysqli_fetch_assoc($resultnum10)) {

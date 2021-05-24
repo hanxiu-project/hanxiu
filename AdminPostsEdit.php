@@ -90,10 +90,7 @@
                                                 </script>
                                             </div>
 
-                                            <?php
-                                                if($row["save"]==1 || $row["keep"]==1)
-                                                {
-                                            ?>
+
                                                     <div class="form-group">
                                                         <label for="date">發佈日期:</label>
                                                         <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
@@ -104,7 +101,8 @@
                                                         if($row["top"]==0)
                                                         {
                                             ?>
-                                                            <input type='checkbox' name='top' value='0'><label>置頂</label>
+                                                            <input type='hidden' name='top' value='0'>
+                                                            <input type='checkbox' name='top' value='1'><label>置頂</label>
                                             <?php
                                                         }
                                                         else if($row["top"]==1)
@@ -115,35 +113,7 @@
                                                         }
                                             ?>
                                                     </div>
-                                            <?php
-                                                }
 
-                                                else
-                                                {
-                                            ?>          <div class="form-group">
-                                                        <label for="date">發佈日期:</label>
-                                                        <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly">
-                                                        <label for="day">下架日期:</label>
-                                                        <input id="newday" name="newday" type="date" value="<?php echo $row['newday']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly">
-                                                        </br>
-                                            <?php
-                                                        if($row["top"]==0)
-                                                        {
-                                                            ?>
-                                                            <input type='checkbox' name='top' value='0'><label>置頂</label>
-                                                            <?php
-                                                        }
-                                                        else if($row["top"]==1)
-                                                        {
-                                                            ?>
-                                                            <input type='checkbox' name='top' value='1' checked><label>置頂</label>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                    </div>
-                                            <?php
-                                                }
-                                            ?>
 
 
                                             <div class="form-group">
@@ -172,15 +142,14 @@
                         $keep=0;
                     }
 
-                    if($_POST["top"]==1)
+                    if(isset($_POST["top"]))
                     {
-                        $checked='1';
+                        $checked = 1;
                     }
                     else
                     {
-                        $checked='0';
+                        $checked = 0;
                     }
-
 
                     if($_POST["title"]==null || $_POST["content"]==null || $_POST["date"] ==null)
                     {
@@ -188,9 +157,8 @@
                     }
                     else
                     {
-
                         //echo "<script>alert('$_POST[top]');location.href=''</script>";
-                        $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday=$_POST[newday]`, `top`='$_POST[top]',`save`='1' `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
+                        $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday`='$_POST[newday]', `top`='$_POST[top]',`save`='1' , `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
 
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";
@@ -200,7 +168,7 @@
 
                 if(isset($_POST["edit"]))
                 {
-                    if($row["old"]!=1)
+                    if($row["old"]!=1)     /*如果該公告不是歷史公告的話*/
                     {
                         if ($_POST["date"] > $getDate)
                         {
@@ -209,6 +177,15 @@
                         else
                         {
                             $keep = 0;
+                        }
+
+                        if(isset($_POST["top"]))
+                        {
+                            $checked = 1;
+                        }
+                        else
+                        {
+                            $checked = 0;
                         }
 
                         if ($_POST["title"] == NULL || $_POST["content"] == NULL)
@@ -225,38 +202,31 @@
                         }
                         else if ($_POST["date"] > $getDate)
                         {
-                            $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday`='$_POST[newday]', `top`='$_POST[top]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id]";
+                            $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday`='$_POST[newday]', `top`='$checked',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id]";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('公告已經上傳待發佈專區!');location.href='AdminPostsKeep.php'</script>";
                         }
                         else
                         {
-                            if($_POST["top"]==1)
-                            {
-                                $checked='1';
-                            }
-                            else
-                            {
-                                $checked='0';
-                            }
-                            $sqledit = "UPDATE posts SET `top`='$checked', `title` = '$_POST[title]', `content` = '$_POST[content]' ,`date`='$_POST[date]',`newday`='$_POST[newday]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                            $sqledit = "UPDATE posts SET `top`='$checked' , `title` = '$_POST[title]', `content` = '$_POST[content]' ,`date`='$_POST[date]',`newday`='$_POST[newday]',`save`='0' WHERE posts.p_id = $_SESSION[edit_p_id] ";
                             mysqli_query($db_link, $sqledit);
 
                             if ($_POST['top'] == '1')
                             {
-                                echo "<script>alert('公告修改完成1!');location.href='AdminPostsTop.php'</script>";
+                                echo "<script>alert('公告已經上傳，且為置頂公告!');location.href='AdminPostsTop.php'</script>";
                             }
                             else if ($row['old'] == '1')
                             {
-                                echo "<script>alert('公告修改完成2!');location.href='AdminOldPostsManage.php'</script>";
+                                echo "<script>alert('公告已經上傳!');location.href='AdminOldPostsManage.php'</script>";
                             }
                             else
                             {
-                                echo "<script>alert('公告修改完成3!');location.href='AdminPostsManage.php'</script>";
+                                echo "<script>alert('公告已經上傳!');location.href='AdminPostsManage.php'</script>";
                             }
                         }
                     }
-                    else{
+                    else     /*如果該公告是歷史公告的話*/
+                    {
                         if ($_POST["title"] == NULL || $_POST["content"] == NULL)
                         {
                             echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";

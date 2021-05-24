@@ -160,7 +160,7 @@
                         $_SESSION["delete_p_id"]=$row2["p_id"];
                         $sql_delete="DELETE FROM posts WHERE posts.p_id = $_SESSION[delete_p_id]";
                         mysqli_query($db_link, $sql_delete);
-                        echo "<script>alert('成功刪除!');location.href='AdminPostsTop.php'</script>";
+                        echo "<script>alert('成功刪除!');location.href='AdminPostsSave.php'</script>";
                     }
                 }
 

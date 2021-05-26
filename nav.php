@@ -51,10 +51,10 @@
                         <a href="AdminScriptureSave.php"><i class="fas fa-file"></i> 暫存講記總覽</a>
                     </li>
                     <li>
-                        <a href="AdminScripturePost.php"><i class="fas fa-file"></i> 新增新講記</a>
+                        <a href="AdminScripturePost.php"><i class="fas fa-file"></i> 新增講記</a>
                     </li>
                     <li>
-                        <a href="ScriptureManageNewType.php"><i class="fas fa-file"></i> 新增新講記類別</a>
+                        <a href="ScriptureManageNewType.php"><i class="fas fa-file"></i> 新增講記類別</a>
                     </li>
                     <li>
                         <a href="AdminScripturesTypeSort.php"><i class="fas fa-file"></i> 講記類別排序</a>

@@ -290,7 +290,9 @@
  .content  .tableforcontent .registered td{
      line-height: 15px;
      padding: 10px;
-   
+     overflow : hidden;
+     text-overflow: inherit;
+     white-space:normal ;
  /* border:1px solid #F00;*/  /*	紅色框線記得刪除*/
 }
 /*法音流佈區域*/
@@ -644,11 +646,13 @@
       margin-bottom: 30px;
     }
       .content .tableforcontent .scripture td{
+        
         overflow:auto;
         text-overflow:inherit;
         white-space:normal;
         text-align: left;
     }
+    
     .content .tableforcontent .commenttable{
       margin-bottom: 30px;
      font-size: 24px;

@@ -79,7 +79,10 @@
 
                     $sql = "SELECT * FROM kp_types ";
                     $result = mysqli_query($db_link, $sql);
-
+                    $sql_listorder =" SELECT MAX(listorder) as max FROM  `kp_types` ";
+                    $listresult=mysqli_query($db_link,  $sql_listorder);
+                    $listcheck=mysqli_fetch_assoc($listresult);
+                    $max_listorder=$listcheck['max'];
 
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
@@ -144,7 +147,7 @@
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
-                                $sqltype = "INSERT INTO kp_types (kptypename) VALUES ('$type')";
+                                $sqltype = "INSERT INTO kp_types (kptypename,listorder) VALUES ('$type','$max_listorder'+1)";
                                 mysqli_query($db_link, $sqltype);
                                 echo "<script>alert('科判類別建立成功!');location.href='AdminNewKepan.php'</script>";
                             } else {

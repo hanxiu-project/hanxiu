@@ -51,8 +51,11 @@
 
         $sqltype = "SELECT * FROM types ";
         $resulttype = mysqli_query($db_link, $sqltype);
-
-        session_start();
+        $sql_listorder =" SELECT MAX(listorder) as max FROM  `types` ";
+        $listresult=mysqli_query($db_link,  $sql_listorder);
+        $listcheck=mysqli_fetch_assoc($listresult);
+        $max_listorder=$listcheck['max'];
+       
         ?>
         <!--建立新經文-->
         <div class="row" style="margin-bottom: 20px; text-align: left">
@@ -143,9 +146,9 @@
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
-                                $sqltype = "INSERT INTO types (typename) VALUES ('$type')";
+                                $sqltype = "INSERT INTO types (typename,listorder) VALUES ('$type','$max_listorder'+1)";
                                 mysqli_query($db_link, $sqltype);
-                                echo "<script>alert('講記類別建立成功!');location.href='ScriptureManageNewType.php'</script>";
+                                echo "<script>alert('講記類別建立成功! ');location.href='ScriptureManageNewType.php'</script>";
                             } else {
 //                            echo “資料夾已存在”;
                                 echo "<script>alert('講記類別已存在!');location.href='ScriptureManageNewType.php'</script>";

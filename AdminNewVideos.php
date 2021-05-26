@@ -79,7 +79,10 @@
 
                     $sql = "SELECT * FROM videotypes ";
                     $result = mysqli_query($db_link, $sql);
-
+                    $sql_listorder =" SELECT MAX(listorder) as max FROM  `videotypes` ";
+                    $listresult=mysqli_query($db_link,  $sql_listorder);
+                    $listcheck=mysqli_fetch_assoc($listresult);
+                    $max_listorder=$listcheck['max'];
 
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table  border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
@@ -130,7 +133,7 @@
                         }
 
                         else if($resultnum == null){
-                            $sqltype = "INSERT INTO videotypes (typename) VALUES ('$type')";
+                            $sqltype = "INSERT INTO videotypes (typename,listorder) VALUES ('$type',' $max_listorder'+1)";
                             mysqli_query($db_link, $sqltype);
                             echo "<script>alert('法音類別建立成功!');location.href='AdminNewVideos.php'</script>";
                         }

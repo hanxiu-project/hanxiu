@@ -107,7 +107,10 @@
                     //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
                     $sql2 = "SELECT * FROM spm_types ";
                     $result2 = mysqli_query($db_link, $sql2);
-
+                    $sql_listorder =" SELECT MAX(listorder) as max FROM  `spm_types` ";
+                    $listresult=mysqli_query($db_link,  $sql_listorder);
+                    $listcheck=mysqli_fetch_assoc($listresult);
+                    $max_listorder=$listcheck['max'];
                     while ($row2 = $result2->fetch_assoc()) {
                         if (isset($_POST["$row2[spt_id]+2"])) {
                             $file_path = "supplement/$row2[spmtypename]";
@@ -144,7 +147,7 @@
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
-                                $sqltype = "INSERT INTO spm_types (spmtypename) VALUES ('$type')";
+                                $sqltype = "INSERT INTO spm_types (spmtypename,listorder) VALUES ('$type','$max_listorder'+1)";
                                 mysqli_query($db_link, $sqltype);
                                 echo "<script>alert('補充資料類別建立成功!');location.href='AdminNewSupplement.php'</script>";
                             } else {

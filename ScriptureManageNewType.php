@@ -145,10 +145,10 @@
                                 //echo “建立資料夾成功”;
                                 $sqltype = "INSERT INTO types (typename) VALUES ('$type')";
                                 mysqli_query($db_link, $sqltype);
-                                echo "<script>alert('經文類別建立成功!');location.href='ScriptureManageNewType.php'</script>";
+                                echo "<script>alert('講記類別建立成功!');location.href='ScriptureManageNewType.php'</script>";
                             } else {
 //                            echo “資料夾已存在”;
-                                echo "<script>alert('經文類別已存在!');location.href='ScriptureManageNewType.php'</script>";
+                                echo "<script>alert('講記類別已存在!');location.href='ScriptureManageNewType.php'</script>";
                             }
 
                         }

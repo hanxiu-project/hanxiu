@@ -47,7 +47,7 @@
         <!--建立新經文-->
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
-                <label for="content"><font color="#ffffff">新增法音類別:</font></label>
+                <label for="content"><font color="#ffffff">新增影音類別:</font></label>
                 <input id="type" name="type" type="text"
                        style="width:525px; height:30px; color:#000000; ">
 

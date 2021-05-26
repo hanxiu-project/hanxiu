@@ -43,7 +43,7 @@
     <!--建立新公告-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
-            <a href="AdminNewVideos.php" class="btn btn-success  ">建立新影音</a>
+            <a href="AdminNewVideos.php" class="btn btn-success  ">建立新影音類別</a>
             <a href="AdminNewVideoFile.php" class="btn btn-success  ">建立新影音檔案</a>
 			
         </div>

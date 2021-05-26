@@ -197,10 +197,10 @@ session_start();
                                 <div class="search">
                                 <form name="src" method="GET" action="">
 
-                                        查詢文章標題：<input type="text" name="srctitle" Placeholder="輸入文章標題">
+                                        查詢講記標題：<input type="text" name="srctitle" Placeholder="輸入講記標題">
                                         <input type='submit' name='tsrcbtn' value='搜尋'>
                                         <br>
-                                        查詢文章內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
+                                        查詢講記內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
                                         <input type='submit' name='srcbtn' value='搜尋'>
 
                                         <br><br>

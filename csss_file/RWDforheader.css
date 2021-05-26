@@ -100,7 +100,7 @@
   }
   
   nav a{
-      font-size: 24px;
+      font-size: 18px;
       display: block;
       text-decoration:none;
   
@@ -121,6 +121,17 @@
       left: 0;
   }
   
+  @media screen and (min-width:1024px) {
+    nav a{
+        font-size: 24px;
+        display: block;
+        text-decoration:none;
+        color: #612E04;
+        padding: 20px 30px;
+        /*border-bottom: 1px solid #000000;*/
+
+    }
+   
   
   @media screen and (min-width:1400px) {
       /*最外框*/
@@ -172,6 +183,7 @@
           color: inherit;
           display: block;
           font-size: 18px;
+          padding: 10px 20px;
       }
       nav>ul{
           text-align:right;
@@ -197,4 +209,4 @@
       }
     
   }
-  
+}

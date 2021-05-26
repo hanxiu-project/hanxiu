@@ -79,7 +79,10 @@
 
                     $sql = "SELECT * FROM kp_types ";
                     $result = mysqli_query($db_link, $sql);
-
+                    $sql_listorder =" SELECT MAX(listorder) as max FROM  `kp_types` ";
+                    $listresult=mysqli_query($db_link,  $sql_listorder);
+                    $listcheck=mysqli_fetch_assoc($listresult);
+                    $max_listorder=$listcheck['max'];
 
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
@@ -110,7 +113,7 @@
 
                     while ($row2 = $result2->fetch_assoc()) {
                         if (isset($_POST["$row2[kpt_id]+2"])) {
-                            $file_path = "C:/AppServ/www/漢修專題/kepan/$row2[kptypename]";
+                            $file_path = "kepan/$row2[kptypename]";
                             if (is_dir($file_path)) {//先判斷是不是資料夾
                                 if (rmdir($file_path)) {//判斷是否能刪除成功
 //                                    echo “刪除資料夾成功”;
@@ -140,11 +143,11 @@
                             echo "<script>alert('請輸入欲新增的類別!');location.href='AdminNewKepan.php'</script>";
                         } else {
                             //資料夾的建立
-                            $file_path = "C:/AppServ/www/漢修專題/kepan/$type";
+                            $file_path = "kepan/$type";
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
-                                $sqltype = "INSERT INTO kp_types (kptypename) VALUES ('$type')";
+                                $sqltype = "INSERT INTO kp_types (kptypename,listorder) VALUES ('$type','$max_listorder'+1)";
                                 mysqli_query($db_link, $sqltype);
                                 echo "<script>alert('科判類別建立成功!');location.href='AdminNewKepan.php'</script>";
                             } else {

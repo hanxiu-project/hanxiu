@@ -153,7 +153,7 @@
 					$checkresult= mysqli_query($db_link, $sql_namecheck);
 					$rowcheck=mysqli_fetch_assoc($checkresult);
 					$filenamecheck=$rowcheck["filename"];
-				
+                   
 					
 					# 設定時區
 					date_default_timezone_set('Asia/Taipei');

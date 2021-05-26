@@ -38,17 +38,39 @@
         <!--照片區-->
 
 
-        <!--左邊欄位
-        <div id="sidebar_left">sidebar_left</div>
+   
 
 
 
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <?php
+                    //是否為行動裝置
+                    function isMobileCheck(){
+                        //Detect special conditions devices
+                        $iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+                        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                        $iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+                        if(stripos($_SERVER['HTTP_USER_AGENT'],"Android") && stripos($_SERVER['HTTP_USER_AGENT'],"mobile")){
+                            $Android = true;
+                        }else if(stripos($_SERVER['HTTP_USER_AGENT'],"Android")){
+                            $Android = false;
+                            $AndroidTablet = true;
+                        }else{
+                            $Android = false;
+                            $AndroidTablet = false;
+                        }
+                        $webOS = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+                        $BlackBerry = stripos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+                        $RimTablet= stripos($_SERVER['HTTP_USER_AGENT'],"RIM Tablet");
+                        //do something with this information
+                        if( $iPod || $iPhone || $iPad || $Android || $AndroidTablet || $webOS || $BlackBerry || $RimTablet){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    } 
+?>
 
 
-
-        右邊欄位
-        <div id="sidebar_right">sidebar_right</div>-->
 
     <span style="font-family:微軟正黑體,serif;">
     <div class="content">
@@ -114,10 +136,24 @@
                             </tr>
 
                             <tr>
-                                <td><label for="address" accesskey="N">會員地址:</label><input
-                                            type="text" style="font size:20px; padding:6px;  width:300px;"
-                                            name="address" id="address" required autofocus placeholder="必填"> </br>
+                                <?php
+                                if(isMobileCheck()){
+                                    ?>
+                                    <td><label for="address" accesskey="N">會員地址:</label><input
+                                    type="text" style="font size:20px; padding:6px;  width:250px;"
+                                    name="address" id="address" required autofocus placeholder="必填"> </br>
                                 </td>
+                                <?php
+                                }else{?>
+                                    <td><label for="address" accesskey="N">會員地址:</label><input
+                                    type="text" style="font size:20px; padding:6px;  width:300px;"
+                                    name="address" id="address" required autofocus placeholder="必填"> </br>
+                                </td>
+                                <?php
+
+                                }
+                                ?>
+                              
                             </tr>
 
                             

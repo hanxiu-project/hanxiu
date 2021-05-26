@@ -77,7 +77,7 @@ session_start();
                          if (isset($_GET["tid"]))
                          {
                          $tid = $_GET["tid"];
-                         $sqltype = "SELECT * FROM `videotypes` where `t_id` = $tid";
+                         $sqltype = "SELECT * FROM `videotypes` where `t_id` = $tid ";
                          $resulttype = mysqli_query($db_link, $sqltype);
                          $rtypename = mysqli_fetch_row($resulttype);
                          $_SESSION['rtypename'] = $rtypename[1];
@@ -89,7 +89,7 @@ session_start();
                   
                    
                     <?php
-                       $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid";
+                       $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid ";
                        $result_row = mysqli_query($db_link, $sqlatcnum);
                        $data = mysqli_num_rows($result_row);       //抓總共幾筆
                        $per = 10;
@@ -145,7 +145,7 @@ session_start();
                                 <?php
                                 if(isMobileCheck()){
                                     
-                                    $sqlatypecnum = "SELECT * FROM `videotypes`";
+                                    $sqlatypecnum = "SELECT * FROM `videotypes` order by listorder";
         
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
@@ -158,7 +158,7 @@ session_start();
         
                                     for ($j = 1; $j <= $rows; $j++) {
                                         $start = ($j - 1) * 3;
-                                        $sqlatcnums10 = "SELECT * FROM videotypes Limit $start , $per";
+                                        $sqlatcnums10 = "SELECT * FROM videotypes  order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                         echo "<tr>";
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {
@@ -171,7 +171,7 @@ session_start();
         
                                     }
                                 }else{
-                                    $sqlatypecnum = "SELECT * FROM `videotypes`";
+                                    $sqlatypecnum = "SELECT * FROM `videotypes` order by listorder";
         
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
@@ -184,7 +184,7 @@ session_start();
         
                                     for ($j = 1; $j <= $rows; $j++) {
                                         $start = ($j - 1) * 10;
-                                        $sqlatcnums10 = "SELECT * FROM videotypes Limit $start , $per";
+                                        $sqlatcnums10 = "SELECT * FROM videotypes order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                         echo "<tr>";
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {

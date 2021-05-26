@@ -86,7 +86,7 @@ session_start();
                         ?>
                         <div class="newstitle">
                         <br>
-                <h2>｜留言區</h2>
+                <h2>｜錯誤回報區</h2>
                 <div class="newstitle2" style="text-align:right;">
                 <a href="mycomments.php">查看我的歷史留言</a>
               </div>

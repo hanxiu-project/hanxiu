@@ -72,7 +72,11 @@
                     </li>
                     <li>
                         <a href="AdminNewKepanFile.php"><i class="fas fa-folder"></i> 新增科判檔案</a>
+                        
                     </li>
+                    <li>
+                        <a href="AdminKepanTypeSort.php"><i class="fas fa-folder"></i>科判類別排序</a>
+                      </li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -91,6 +95,11 @@
                         <a href="AdminNewSupplementFile.php"><i class="fas fa-sticky-note"></i> 新增補充資料</a>
 
                     </li>
+                    <li>
+                        <a href=" AdminSupplementTypeSort.php"><i class="fas fa-sticky-note"></i> 補充資料類別排序</a>
+
+                    </li>
+                   
                 </ul>
             </li>
             <li class="dropdown">
@@ -105,6 +114,9 @@
 
                     <li>
                         <a href="AdminNewVideoFile.php"><i class="fas fa-video"></i> 新增影音檔案</a>
+                    </li>
+                    <li>
+                        <a href="AdminVideoTypeSort.php"><i class="fas fa-video"></i> 影音類別排序</a>
                     </li>
                 </ul>
             </li>

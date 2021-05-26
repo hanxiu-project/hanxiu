@@ -101,7 +101,7 @@ session_start();
                     <table class="kepan">
                         <?php
 
-                        $sqlatcnum = "SELECT * FROM `kepans` where `kpt_id` = $kptid";
+                        $sqlatcnum = "SELECT * FROM `kepans` where `kpt_id` = $kptid ";
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
                         $per = 5;
@@ -114,7 +114,7 @@ session_start();
                         }
                         $start = ($page - 1) * $per;
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
-                        $sqlatcnum10 = "SELECT * FROM `kepans` where `kpt_id` = $kptid Limit $start , $per";
+                        $sqlatcnum10 = "SELECT * FROM `kepans` where `kpt_id` = $kptid  Limit $start  , $per";
                         $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
                         $resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
                         while ($kepan = mysqli_fetch_assoc($resultnum10[$start])) {
@@ -157,7 +157,7 @@ session_start();
                                 <?php
                                  if(isMobileCheck()){
                                      
-                                $sqlkptypecnum = "SELECT * FROM `kp_types`";
+                                $sqlkptypecnum = "SELECT * FROM `kp_types` order by listorder";
                                 $results_row = mysqli_query($db_link, $sqlkptypecnum);
                                 $datas = mysqli_num_rows($results_row);       //抓總共幾筆
                                 $per = 3;
@@ -165,7 +165,7 @@ session_start();
                                 $resultsnum = mysqli_query($db_link, $sqlkptypecnum);
                                 for ($j = 1; $j <= $rows; $j++) {
                                     $start = ($j - 1) * 3;
-                                    $sqlatcnums10 = "SELECT * FROM kp_types Limit $start , $per";
+                                    $sqlatcnums10 = "SELECT * FROM kp_types order by listorder Limit $start , $per";
                                     $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                     echo "<tr >";
                                     while ($row = mysqli_fetch_assoc($resultnums10)) {
@@ -176,7 +176,7 @@ session_start();
                                     echo "</tr>";
                                 }
                                  }else{                                  
-                                $sqlkptypecnum = "SELECT * FROM `kp_types`";
+                                $sqlkptypecnum = "SELECT * FROM `kp_types` order by listorder";
                                 $results_row = mysqli_query($db_link, $sqlkptypecnum);
                                 $datas = mysqli_num_rows($results_row);       //抓總共幾筆
                                 $per = 5;
@@ -184,7 +184,7 @@ session_start();
                                 $resultsnum = mysqli_query($db_link, $sqlkptypecnum);
                                 for ($j = 1; $j <= $rows; $j++) {
                                     $start = ($j - 1) * 5;
-                                    $sqlatcnums10 = "SELECT * FROM kp_types Limit $start , $per";
+                                    $sqlatcnums10 = "SELECT * FROM kp_types order by listorder Limit $start , $per";
                                     $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                     echo "<tr >";
                                     while ($row = mysqli_fetch_assoc($resultnums10)) {

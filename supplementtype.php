@@ -168,7 +168,7 @@ session_start();
                             
                                 <?php
                                 if(isMobileCheck()){
-                                    $sqlatypecnum = "SELECT * FROM `spm_types`";
+                                    $sqlatypecnum = "SELECT * FROM `spm_types` order by listorder";
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
                                     $per=3;
@@ -177,7 +177,7 @@ session_start();
                                     for($j=1;$j<=$rows;$j++)
                                     {
                                         $start=($j-1)*3;
-                                        $sqlatcnums10 = "SELECT * FROM spm_types Limit $start , $per";
+                                        $sqlatcnums10 = "SELECT * FROM spm_types  order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                         echo "<tr>";
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {
@@ -192,7 +192,7 @@ session_start();
     
                                     }
                                 }else{
-                                    $sqlatypecnum = "SELECT * FROM `spm_types`";
+                                    $sqlatypecnum = "SELECT * FROM `spm_types` order by listorder";
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
                                     $per=10;
@@ -201,7 +201,7 @@ session_start();
                                     for($j=1;$j<=$rows;$j++)
                                     {
                                         $start=($j-1)*10;
-                                        $sqlatcnums10 = "SELECT * FROM spm_types Limit $start , $per";
+                                        $sqlatcnums10 = "SELECT * FROM spm_types order by listorder  Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                         echo "<tr>";
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {

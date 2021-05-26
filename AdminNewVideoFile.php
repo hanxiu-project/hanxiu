@@ -45,7 +45,7 @@ session_start();
     <?php include 'database.php';?>
  <div class="col-lg-12">
             
-			<font size="6"><strong style= "background:white" >新增影音檔案</strong></font>
+			<font size="6"><strong style= "background:white" >新增影音網址</strong></font>
 		
         </div>
     <!--Body-->

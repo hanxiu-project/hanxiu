@@ -110,7 +110,7 @@
 
                     while ($row2 = $result2->fetch_assoc()) {
                         if (isset($_POST["$row2[spt_id]+2"])) {
-                            $file_path = "C:/AppServ/www/漢修專題/supplement/$row2[spmtypename]";
+                            $file_path = "supplement/$row2[spmtypename]";
                             if (is_dir($file_path)) {//先判斷是不是資料夾
                                 if (rmdir($file_path)) {//判斷是否能刪除成功
 //                                    echo “刪除資料夾成功”;

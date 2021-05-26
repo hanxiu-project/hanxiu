@@ -110,7 +110,7 @@
 
                     while ($row2 = $result2->fetch_assoc()) {
                         if (isset($_POST["$row2[kpt_id]+2"])) {
-                            $file_path = "C:/AppServ/www/漢修專題/kepan/$row2[kptypename]";
+                            $file_path = "kepan/$row2[kptypename]";
                             if (is_dir($file_path)) {//先判斷是不是資料夾
                                 if (rmdir($file_path)) {//判斷是否能刪除成功
 //                                    echo “刪除資料夾成功”;
@@ -140,7 +140,7 @@
                             echo "<script>alert('請輸入欲新增的類別!');location.href='AdminNewKepan.php'</script>";
                         } else {
                             //資料夾的建立
-                            $file_path = "C:/AppServ/www/漢修專題/kepan/$type";
+                            $file_path = "kepan/$type";
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;

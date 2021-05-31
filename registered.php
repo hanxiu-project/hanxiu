@@ -81,8 +81,9 @@
                     <br>
                     <h2>｜會員註冊</h2>
             </div>
+                    <form name="registered" method="post" action="">
                         <table class="registered" >
-                            <form name="registered" method="post" action="">
+
 
                             <tr>
                                 <td><label for="account" accesskey="N">&emsp;&emsp;帳號:</label><input
@@ -159,15 +160,12 @@
                             
                                 </br>
 
-                            </form>
-
                         </table>
-                        <div class="loginandregis">
-                                        <input type="submit" name="gore" value="註冊">
-                                        </div>
-                                    
-     
-            <?php
+                            <div class="loginandregis">
+                                            <input type="submit" name="gore" value="註冊">
+                            </div>
+                    </form>
+                 <?php
           
             $sql = "SELECT * FROM `members` where `account`='$_POST[account]'";
             mysqli_query($db_link, 'SET CHARACTER SET UTF-8');

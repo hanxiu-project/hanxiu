@@ -172,8 +172,8 @@ session_start();
                         <form name="login01" method="post" action="">
 
                             <font >電子郵件：</font><input type="text" name="email" ><br><br>
-                            <font>密碼：</font><input type="password" name="password" ><br><br>
-                            <font>重新輸入密碼：</font><input type="password" name="password2" ><br>
+                            <font>新密碼：</font><input type="password" name="password" ><br><br>
+                            <font>重新輸入新密碼：</font><input type="password" name="password2" ><br>
                             <br><br>
 
                             <input type="submit" style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="newpwd" value="更改密碼" style="width:60px;height:40px;">

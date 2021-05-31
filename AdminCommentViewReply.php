@@ -66,14 +66,14 @@ session_start();
                 session_start();
                 //echo "<script>alert('$_SESSION[vreply_c_id]')</script>";
 
-                $sqlall = "SELECT * FROM `comments` WHERE `c_id`= $_SESSION[vreply_c_id] and `m_id`=$_SESSION[vreply_m_id]";
+                $sqlall = "SELECT * FROM `comments` WHERE `c_id`= '$_SESSION[vreply_c_id]' and `m_id`= '$_SESSION[vreply_m_id]'";
                 //$sqlall = "SELECT * FROM `comments`";
                 $resultall=mysqli_query($db_link,$sqlall);
                 $rowall=mysqli_fetch_assoc($resultall);
 
 
 
-                $sql = "SELECT `c_id`,`comments`.`m_id`,`members`.`account`,`members`.`name`,`replyman`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]' and `comments`.`message`=$rowall[message]";
+                $sql = "SELECT `c_id`,`comments`.`m_id`,`members`.`account`,`members`.`name`,`replyman`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`status`='1' and `members`.`m_id` = '$_SESSION[vreply_m_id]' and `comments`.`message`= '$rowall[message]'";
 
 
 

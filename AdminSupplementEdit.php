@@ -118,7 +118,7 @@
 											<?php 
 											
 											while ($rowtype = $resulttype->fetch_assoc()) {
-											    if($row['typename']==$rowtype[spmtypename])                    //先前的與現在抓資料庫的相同
+											    if($row['spmtypename']==$rowtype[spmtypename])                    //先前的與現在抓資料庫的相同
                                                 {
                                                     echo "<option name=typeid value=$rowtype[spt_id] selected>$rowtype[spmtypename]</option>";
                                                 }

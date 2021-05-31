@@ -92,8 +92,23 @@
 
 
                                                     <div class="form-group">
-                                                        <label for="date">發佈日期:</label>
-                                                        <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                        <?php
+                                                            if ($row["save"] == 1)
+                                                            {
+                                                        ?>
+                                                                <label for="date">發佈日期:</label>
+                                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent">
+                                                        <?php
+                                                            }
+                                                            else
+                                                            {
+                                                        ?>
+                                                                <label for="date">發佈日期:</label>
+                                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly" >
+                                                        <?php
+                                                            }
+                                                        ?>
+
                                                         <label for="day">下架日期:</label>
                                                         <input id="newday" name="newday" type="date" value="<?php echo $row['newday']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                                         </br>
@@ -195,10 +210,6 @@
                         else if ($_POST["date"] >= $_POST["newday"])
                         {
                             echo "<script>alert('發佈日期不得大於等於首頁下架日期!');location.href='AdminPostsEdit.php'</script>";
-                        }
-                        else if ($_POST["date"] < $getDate)
-                        {
-                            echo "<script>alert('發佈日期不得小於今天日期!');location.href='AdminPostsEdit.php'</script>";
                         }
                         else if ($_POST["date"] > $getDate)
                         {

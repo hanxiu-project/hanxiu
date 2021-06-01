@@ -114,10 +114,20 @@
                     while ($row2 = $result2->fetch_assoc()) {
                         if (isset($_POST["$row2[t_id]+2"]))
                         {
-                            $_SESSION["delete_t_id"] = $row2["t_id"];
-                            $sql_delete = "DELETE FROM videotypes WHERE videotypes.t_id = $_SESSION[delete_t_id]";
-                            mysqli_query($db_link, $sql_delete);
-                            echo "<script>alert('成功刪除法音類別!');location.href='AdminNewVideos.php'</script>";
+                            $sqltid = "SELECT * FROM `videos` WHERE `videos`.`t_id` = '$row2[t_id]'";
+                            $resulttid = mysqli_query($db_link, $sqltid);
+                            if(mysqli_num_rows($resulttid)==0)
+                            {
+                                $_SESSION["delete_t_id"] = $row2["t_id"];
+
+                                $sql_delete = "DELETE FROM videotypes WHERE videotypes.t_id = $_SESSION[delete_t_id]";
+                                mysqli_query($db_link, $sql_delete);
+                                echo "<script>alert('成功刪除法音類別!');location.href='AdminNewVideos.php'</script>";
+                            }
+                            else{
+                                echo "<script>alert('影音類別內含有影音連結無法刪除!');location.href='AdminNewVideos.php'</script>";
+                            }
+
                         }
 
                     }

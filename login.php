@@ -163,10 +163,10 @@
     </div>
     
     <?php
-    $_SESSION['acc'] = $_POST["account"];                            //session存帳號密碼
-    $_SESSION['pwd'] = $_POST["password"];
+    /*$_SESSION['acc'] = $_POST["account"];                            //session存帳號密碼
+    $_SESSION['pwd'] = $_POST["password"];*/
 
-    $sql_login = "SELECT * FROM `members` WHERE `account` = '$_SESSION[acc]'";
+    $sql_login = "SELECT * FROM `members` WHERE `account` = '$_POST[account]'";
     $result = mysqli_query($db_link, $sql_login);
     $row = mysqli_fetch_assoc($result);                        //查詢資料庫
     $acc = $row["account"];                                        //查詢到的帳號
@@ -179,18 +179,22 @@
     if (isset($_POST["gologin"])) {
         if ($_POST["account"] == null || $_POST["password"] == null) {
             echo "<script>alert('請輸入帳號或密碼！');location.href='login.php'</script>";
-        } else if ($acc != $_SESSION["acc"] || $pwd != $_SESSION["pwd"]) {
+        } else if ($acc != $_POST["account"] || $pwd != $_POST["password"]) {
             echo "<script>alert('帳號或密碼錯誤！請重新輸入。');location.href='login.php'</script>";
         } else if ($_SESSION["verified"] == 0) {
             echo "<script>alert('帳號尚未驗證，請至email收取信驗證信。');location.href='login.php'</script>";
         } else if ($authority == 0) {
+            $_SESSION['acc'] = $_POST["account"];                            //session存帳號密碼
+            $_SESSION['pwd'] = $_POST["password"];
             //header("location:indexs.php");
             echo "<script>location.href='indexs.php';</script>";		//導向一般會員頁面
         } else if ($authority == 1 || $authority == 2) {
+            $_SESSION['acc'] = $_POST["account"];                            //session存帳號密碼
+            $_SESSION['pwd'] = $_POST["password"];
 			$_SESSION["updatename"]="$row[name]";
             //header("location:AdminScriptureManage.php");
             echo "<script>location.href='AdminScriptureManage.php';</script>";        //導向管理員頁面
-            $_SESSION["updatename"]="$row[name]";
+
         }
 
     }

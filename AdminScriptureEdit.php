@@ -75,9 +75,9 @@
                 $str = "";
 
                 //判斷是否有該檔案
-                if(file_exists("C:AppServ/www/漢修專題/ScriptureFile/$typename/$oldfilename"))
+                if(file_exists("ScriptureFile/$typename/$oldfilename"))
                 {
-                    $filee = fopen("C:AppServ/www/漢修專題/ScriptureFile/$typename/$oldfilename","r");
+                    $filee = fopen("ScriptureFile/$typename/$oldfilename","r");
                     if($filee != NULL)
                         //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
                     {

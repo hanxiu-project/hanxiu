@@ -142,7 +142,7 @@
 					?>
            </div>         
 		    <div class="newstitle">
-            <h2>｜最新公告 </h2>
+            <h2>｜最新公告 </h2>   
             </div>
         
 

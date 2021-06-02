@@ -194,7 +194,7 @@
                             $keep = 0;
                         }
 
-                        if(isset($_POST["top"]))
+                        if($_POST["top"] == 1)
                         {
                             $checked = 1;
                         }
@@ -238,13 +238,21 @@
                     }
                     else     /*如果該公告是歷史公告的話*/
                     {
+                        if($_POST["top"] == 1)
+                        {
+                            $checked = 1;
+                        }
+                        else
+                        {
+                            $checked = 0;
+                        }
                         if ($_POST["title"] == NULL || $_POST["content"] == NULL)
                         {
                             echo "<script>alert('請輸入標題或內容!');location.href='AdminPostsEdit.php'</script>";
                         }
                         else
                         {
-                            $sqledit = "UPDATE posts SET `top`='$_POST[top]', `title` = '$_POST[title]', `content` = '$_POST[content]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
+                            $sqledit = "UPDATE posts SET `top`='$checked', `title` = '$_POST[title]', `content` = '$_POST[content]' ,`newday`='$_POST[newday]' WHERE posts.p_id = $_SESSION[edit_p_id] ";
                             mysqli_query($db_link, $sqledit);
                             if ($_POST['top'] == '1')
                             {

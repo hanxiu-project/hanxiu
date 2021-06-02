@@ -150,7 +150,7 @@
             //...
 
 
-            $sql = "SELECT * FROM posts where  save = '0' && old = '0' && keep = '0' && top = '0' || save = '0' && old = '0' && keep = '0' && top = '1'  order by `top` DESC, `date` desc ";
+            $sql = "SELECT * FROM posts where  save = '0' && old = '0' && keep = '0' && top = '0' || save = '0' && old = '1' && keep = '0' && top = '1'  order by `top` DESC, `date` desc ";
 
            
             $result = mysqli_query($db_link, $sql);

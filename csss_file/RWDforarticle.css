@@ -541,10 +541,34 @@
      
       
       .content  .tableforcontent .videotable  .picture{
-          width: 15%;
+          width: 30%;
         text-align:center;
        
       }
+      .content  .tableforcontent .sup {
+        
+        border-collapse: collapse;
+        width: 80%;
+        border:3px #000000  solid;
+        
+      }
+      .content  .tableforcontent .sup td{
+        
+        
+        padding: 15px;
+        border-bottom:1px #000000  solid ;
+         vertical-align: middle;
+        
+      }
+      .content  .tableforcontent .sup tr{
+        
+        height: 40px;
+        
+        border:1px #000000  solid ;
+         vertical-align: middle;
+        
+      }
+    
 
       /*公告表格*/
       .content  .tableforcontent .news{

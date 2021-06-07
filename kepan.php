@@ -151,7 +151,7 @@ session_start();
                         {                     
                         ?>     
                         <br>
-                        <h2>｜科判 </h2>                                  
+                        <h2>｜科判類別 </h2>                                  
                             <table>
                             <br><br>
                                 <?php

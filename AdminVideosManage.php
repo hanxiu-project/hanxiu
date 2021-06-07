@@ -35,19 +35,37 @@
 </head>
 
 <body>
-
+<form name="forms" method="get" action="">
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
+    <?php
+    $sqltype = "SELECT * FROM `videotypes` ";
+    $resulttype = mysqli_query($db_link, $sqltype);
+    ?>
 
     <!--建立新公告-->
     <div class="row" style="margin-bottom: 20px; text-align: left">
         <div class="col-lg-12">
             <a href="AdminNewVideos.php" class="btn btn-success  ">建立新影音類別</a>
             <a href="AdminNewVideoFile.php" class="btn btn-success  ">建立新影音檔案</a>
-			
+
+            <select id="type" name="type" style="width:525px; height:30px; color:#000000; background-color:white">
+                <option>請選擇類別</option>
+                <option value="all">全選</option>
+                <?php
+
+                while ($rowtype = $resulttype->fetch_assoc()) {
+                    echo "<option name=typeid value=$rowtype[typename]>$rowtype[typename]</option>";
+
+                } ?> `
+
+            </select>
+
+            <input type="submit" class="btn btn-sm btn-warning" name="gotype" value="查看講記類別">
         </div>
     </div>
+</form>
  <div class="col-lg-12">
             
 			<font size="6"><strong style= "background:white" >影音總覽</strong></font>
@@ -71,6 +89,7 @@
                 echo "<form name='form1' method='POST' action=''>";
                 echo "<table border=1 width=100% style=font-size:24px;line-height:50px; >";
                 echo "<tr align=center>";
+                echo "<td>影片類別</td>";
                 echo "<td>影片描述</td>";
                 echo "<td>影片網址</td>";
 				if($rowfortd["v_id"]!=null){
@@ -79,6 +98,8 @@
 				}
                 echo "</tr>";
 
+                if (!($_GET["type"]) || $_GET["type"]=="all")
+                {
 
                 $sqlvideo = "SELECT * FROM videos";
                 $resultv= mysqli_query($db_link,$sqlvideo);
@@ -102,12 +123,14 @@
                 while($row = mysqli_fetch_assoc($videoresult[$start]))
                 {
                     echo "<tr align=center>";
+                    echo "<td>$row[typename]</td>";
                     echo "<td>$row[vcontent]</td>";
                     echo "<td>$row[vnet]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[v_id]+1' value='編輯'></td>";
 					?>
-					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[v_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這部影片?')"></td><?php
-                    
+					<td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[v_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這部影片?')"></td>
+                    <?php
+
                     echo "</tr>";
                 }
                 echo "</form>";
@@ -124,6 +147,57 @@
                 }
                 echo " 頁 <a href=?page=$pages>末頁</a>";
                 echo "</center>";
+                }
+
+                elseif (isset($_GET["type"]))
+                {
+                    $sqltype = "SELECT * FROM videos WHERE typename ='$_GET[type]' order by t_id   ";
+                    $resulttype= mysqli_query($db_link, $sqltype);
+
+                    $date_nums = mysqli_num_rows($resulttype);                             //講記數量
+                    //$date_nums = mysqli_num_rows($sqltype);
+                    $per = 10;                                                      //10筆換頁
+                    $pages = ceil($date_nums / $per);                             //共幾頁
+                    if (!isset($_GET["page"])) {
+                        $page = 1;
+                    } else {
+                        $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
+                    }
+
+                    $start = ($page - 1) * $per;
+
+                    $sqlresultvdo = "SELECT * FROM videos WHERE typename ='$_GET[type]' order by t_id Limit $start , $per";
+                    $vdoresult[src] = mysqli_query($db_link, $sqlresultvdo);
+
+                    while ($row = mysqli_fetch_assoc($vdoresult[src]))
+                    {
+                        echo "<tr align=center>";
+                        echo "<td>$row[typename]</td>";
+                        echo "<td>$row[vcontent]</td>";
+                        echo "<td>$row[vnet]</td>";
+
+                        echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[v_id]+1' value='編輯'></td>";
+
+                        ?>
+                        <td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[v_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這部影片?')"></td>
+                        <?php
+                        echo "</tr>";
+                    }
+                    echo "</form>";
+                    echo "</table>";
+                    echo "<center>";
+                    echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
+                    echo "<br/><a href=?type=$_GET[type]&page=1>首頁</a> ";
+                    echo "第 ";
+                    for ($i = 1; $i <= $pages; $i++) {
+                        if ($page - 10 < $i && $i < $page + 10) {
+                            echo "<a href=?type=$_GET[type]&page=$i>" . $i . "</a> ";
+                        }
+                    }
+                    echo " 頁 <a href=?type=$_GET[type]&page=$pages>末頁</a>";
+                    echo "</center>";
+
+                }
 
 
 

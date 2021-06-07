@@ -200,13 +200,11 @@
   }
   .content .tableforcontent table{
       text-align: center;
-    table-layout: fixed;
-    width: 100%;
+        width: 100%;
     max-width: 100%;
     margin: 0 auto;
     table-layout: fixed;
     border-collapse:separate ;
-    border-spacing:20px ;
    
   }
   

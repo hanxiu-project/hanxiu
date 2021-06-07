@@ -86,7 +86,12 @@ session_start();
                         <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                               </div> 					
                     <center>
-                    <table>
+                    <table style="border:1px #000000 solid;" >
+					<tr>
+						<th>補充資料類別名稱</th>
+						<th>補充資料標題名稱</th>
+						<th>發佈日期</th>
+					</tr>
                    
                     <?php
                      if(isMobileCheck()){
@@ -122,35 +127,61 @@ session_start();
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
                         $per=10;
-                        $rows=ceil($data/$per);
+                        $pages=ceil($data/$per);
+						$k = $pages;
+						if (!isset($_GET["page"])) {
+                            $page = 1;
+                        } else {
+                            $page = intval($_GET["page"]);
+                        }
 
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
 
-                        for($i=1;$i<=$rows;$i++)
-                        {
-                            $start=($i-1)*10;
-                            $sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` ASC Limit  $start  , $per";
-                            $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
-                            echo "<tr >";
-                            while ($supplement = mysqli_fetch_assoc($resultnum10)) {
-                                echo "<td>";
-                                echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a></p>";
-
-
+                        /*for($i=1;$i<=$rows;$i++)
+                        {*/
+                            $start=($page-1)*$per;
+                            $sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` DESC Limit  $start  , $per";
+                            $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
+							$resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
+                            
+                            while ($supplement = mysqli_fetch_assoc($resultnum10[$start])) {
+								echo "<tr >";
+								echo "<td>";
+                                echo "$supplement[spmtypename]";
                                 echo "</td>";
+								echo "<td>";
+                                echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a>";
+                                echo "</td>";
+                                echo "<td>";
+                                echo "$supplement[date]";
+                                echo "</td>";
+								echo "</tr >";
                             }
 
-                            echo "</tr>";
-
-                        }
+                        //}
 
 
                     }
+					?>
                        
 
-                        echo "</table>";
-                        echo "</center>";
+                       </table>
+						<div class="page">
+                        <?php
+                        echo '共 ' . $data . ' 筆-在第' . $page . ' 頁-共 ' . $pages . ' 頁';
+                        echo "<br/><a href=?sptid=$sptid&page=1>首頁</a> ";
+                        echo "第 ";
+                        for ($i = 1; $i <= $pages; $i++) {
+                            if ($page - $k < $i && $i < $page + $k) {
+                                echo "<a href=?sptid=$sptid&page=$i>" . $i . "</a> ";
+                            }
                         }
+                        echo " 頁 <a href=?sptid=$sptid&page=$pages>末頁</a>";
+                        echo "</center>";   
+                        ?>
+                       </div>
+                        <?php
+							}
                         else                                            //還沒選類別時
                         {
                         ?>

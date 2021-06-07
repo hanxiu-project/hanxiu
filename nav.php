@@ -113,7 +113,7 @@
                     </li>
 
                     <li>
-                        <a href="AdminNewVideoFile.php"><i class="fas fa-video"></i> 新增影音檔案</a>
+                        <a href="AdminNewVideoFile.php"><i class="fas fa-video"></i> 新增影音網址</a>
                     </li>
                     <li>
                         <a href="AdminVideoTypeSort.php"><i class="fas fa-video"></i> 影音類別排序</a>

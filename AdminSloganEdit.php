@@ -35,7 +35,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+include 'verification.php';
+?>
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>

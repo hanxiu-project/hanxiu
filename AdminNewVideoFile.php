@@ -38,8 +38,8 @@
 <body>
 <?php
 session_start();
+include 'verification.php';
 ?>
-
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
@@ -58,9 +58,7 @@ session_start();
 
                 <?php
                 /*資料庫連結*/
-              
-             
-                session_start();
+
 
                 $sql="SELECT * FROM posts WHERE posts.p_id = $_SESSION[edit_p_id]";
                 $result=mysqli_query($db_link,$sql);

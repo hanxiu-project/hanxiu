@@ -37,6 +37,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="forms" method="get" action="">
 
     <div id="wrapper">
@@ -56,65 +60,6 @@
                 <input type="text" name="sdonatemember" Placeholder="輸入姓名或編號">
 
                 <input type="submit" name="gosearchm" class="btn btn-success  " value="搜尋" style="left">
-
-                <?php
-                /*搜尋姓名*/
-
-               /* if(isset($_GET["gosearchm"]))
-                {
-                    $sql_mid = "SELECT * FROM `donates` where dname like'%$_GET[sdonatemember]%' || m_id like '%$_GET[sdonatemember]%'  ";
-                    $result= mysqli_query($db_link,$sql_mid);
-
-                    echo "<form name='form1' method='POST' action=''>";
-                    echo "<table  width=100% style=font-size:20px;line-height:50px;>";
-                    echo "<tr align=center>";
-                    echo "<td>捐獻者ID</td>";
-                    echo "<td>捐獻者</td>";
-                    echo "<td>捐獻內容</td>";
-                    echo "<td>捐獻數量</td>";
-                    echo "<td>捐獻日期</td>";
-                    echo "<td></td>";
-                    echo "</tr>";
-                    while($row=$result->fetch_assoc())
-                    {
-                        echo "<tr align=center>";
-                        echo "<td>$row[m_id]</td>";
-                        echo "<td>$row[dname]</td>";
-                        echo "<td>$row[type]</td>";
-                        echo "<td>$row[amount]</td>";
-                        echo "<td>$row[date]</td>";
-
-                        ?>
-                        <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[d_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這筆捐贈?')"></td>
-
-                        <?php
-
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-
-                    $sql2 = "SELECT * FROM `members`";
-                    $result2=mysqli_query($db_link,$sql2);
-
-                    while($row2=$result2->fetch_assoc()) {
-                        if (isset($_POST["$row2[m_id]+1"])) {
-                            $_SESSION["edit_m_id"]=$row2["m_id"];
-                            echo "<script langauge = 'javascript' type='text/javascript'>";
-                            echo "window.location.href = 'DonatemanageEdit.php'";
-                            echo "</script>";
-                        }
-
-                    }
-                }*/
-
-
-
-                /*if (isset($_POST["gosearchm"])) {
-                    $_SESSION['sdonatemember'] = $_POST['sdonatemember'];
-                    echo "<script>location.href='Donatesearch.php'</script>";
-
-                }*/
-                ?>
 
                 <select name="sort" value="date"
                         style="width:525px; height:30px; color:#000000; background-color:white">
@@ -148,9 +93,6 @@
             <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
             <?php
-
-            session_start();
-
 
             mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 

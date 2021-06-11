@@ -35,6 +35,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="forms" method="get" action="">
 <div id="wrapper">
     <?php include 'nav.php';?>

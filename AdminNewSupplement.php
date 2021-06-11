@@ -35,6 +35,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="forms" method="post" action="">
     <div id="wrapper">
         <?php include 'nav.php';?>
@@ -42,7 +46,6 @@
         <?php
         /*資料庫連結*/
 
-        session_start();
         ?>
         <!--建立新經文-->
         <div class="row" style="margin-bottom: 20px; text-align: left">

@@ -76,15 +76,15 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
+
 <?php include 'nav.php'; ?>
 <?php include 'database.php';?>
 <div id="wrapper">
 
-
-    <?php
-    /*資料庫連結*/
-    session_start();
-    ?>
 
     <!--Body-->
     <div id="page-wrapper">

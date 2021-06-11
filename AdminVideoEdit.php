@@ -36,7 +36,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+include 'verification.php';
+?>
 
 
 <div id="wrapper">
@@ -55,8 +58,6 @@
                 <?php
                 /*資料庫連結*/
 
-
-                session_start();
 
                 $sql="SELECT * FROM videos WHERE videos.v_id = $_SESSION[edit_v_id]";
                 $result=mysqli_query($db_link,$sql);

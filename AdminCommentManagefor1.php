@@ -35,6 +35,11 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
+
 
 <div id="wrapper">
     <?php include 'nav.php';?>
@@ -57,11 +62,7 @@
 
                 <?php
                 /*資料庫連結*/
-               
-                session_start();
 
-
-              
                 $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`message`,`name`,`msg_datetime` FROM `comments`,`members` where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' GROUP BY m_id , message ORDER BY msg_datetime DESC";
                 //$sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='1' ORDER BY msg_datetime DESC";
                 $result= mysqli_query($db_link,$sql);

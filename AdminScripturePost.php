@@ -36,6 +36,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="formspost" method="POST" action="">
 <div id="wrapper">
     <?php include 'nav.php';?>
@@ -61,7 +65,6 @@
 				$sqltype="SELECT * FROM `types` ";
                 $resulttype=mysqli_query($db_link,$sqltype);
                 /*$row=mysqli_fetch_assoc($resulttype);*/
-				session_start();
 				
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 				# 設定時區

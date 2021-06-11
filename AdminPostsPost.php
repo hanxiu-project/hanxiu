@@ -38,6 +38,7 @@
 <body>
 <?php
 session_start();
+include 'verification.php';
 ?>
 
 <div id="wrapper">
@@ -58,8 +59,7 @@ session_start();
 
                 <?php
                 /*資料庫連結*/
-            
-                session_start();
+
 				date_default_timezone_set('Asia/Taipei');
 					$getDate= date("Y-m-d");
 					$getDate2= date("Y-m-d", strtotime($getDate."+1 day"));

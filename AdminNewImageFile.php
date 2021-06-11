@@ -38,6 +38,7 @@
 <body>
 <?php
 session_start();
+include 'verification.php';
 ?>
 
 <div id="wrapper">

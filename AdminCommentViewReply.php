@@ -38,7 +38,9 @@
 <body>
 <?php
 session_start();
+include 'verification.php';
 ?>
+
 
 <div id="wrapper">
     <!--sidebar-->
@@ -62,8 +64,7 @@ session_start();
 
                 <?php
                 /*資料庫連結*/
-                
-                session_start();
+
                 //echo "<script>alert('$_SESSION[vreply_c_id]')</script>";
 
                 $sqlall = "SELECT * FROM `comments` WHERE `c_id`= '$_SESSION[vreply_c_id]' and `m_id`= '$_SESSION[vreply_m_id]'";

@@ -35,6 +35,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="formsearchdoante" method="post" action="">
 <div id="wrapper">
     <?php include 'nav.php';?>
@@ -62,7 +66,6 @@
                 $db_user="root";
                 $db_pwd="123456789";
                 $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                session_start();
 
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');

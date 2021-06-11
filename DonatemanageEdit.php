@@ -36,7 +36,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+include 'verification.php';
+?>
 
 
 <div id="wrapper">
@@ -54,9 +57,7 @@
                 <?php
                 /*資料庫連結*/
               
-           
-                
-                session_start();
+
 
                  $sql="SELECT * FROM members WHERE members.m_id = $_SESSION[edit_m_id]";
                 $result=mysqli_query($db_link,$sql);

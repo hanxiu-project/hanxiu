@@ -35,6 +35,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="forms" method="post" action="">
 
 <div id="wrapper">
@@ -65,9 +69,6 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-               
-                session_start();
-
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 

@@ -35,6 +35,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="forms" method="get" action="">
     <div id="wrapper">
         <?php include 'nav.php';?>
@@ -46,7 +50,6 @@
         $sqltype="SELECT * FROM spm_types ";
         $resulttype=mysqli_query($db_link,$sqltype);
 
-        session_start();
         ?>
         <!--建立新經文-->
         <div class="row" style="margin-bottom: 20px; text-align: left">

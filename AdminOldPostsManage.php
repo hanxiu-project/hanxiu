@@ -35,7 +35,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+include 'verification.php';
+?>
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
@@ -64,8 +67,6 @@
                 <?php
                 /*資料庫連結*/
                
-                session_start();
-
 
                 mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 

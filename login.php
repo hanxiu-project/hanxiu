@@ -130,10 +130,6 @@
 		    <div class="newstitle">
             <h2>｜會員登入 </h2>
             </div>
-        
-           
-                       
-                    
           
 
             <center>
@@ -172,6 +168,7 @@
     $acc = $row["account"];                                        //查詢到的帳號
     $pwd = $row["password"];                                        //查詢到的密碼
     $authority = $row["authority"];
+    $_SESSION['authority'] = $authority;
     $_SESSION['name'] = $row["name"];
     $_SESSION['m_id'] = $row["m_id"];
     $_SESSION["verified"] = $row["verified"];

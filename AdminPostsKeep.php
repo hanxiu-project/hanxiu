@@ -35,7 +35,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+include 'verification.php';
+?>
 <div id="wrapper">
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
@@ -63,7 +66,6 @@
                 <?php
                 /*資料庫連結*/
                
-                session_start();
 				# 設定時區
 				date_default_timezone_set('Asia/Taipei');
 				$getDate= date("Y-m-d");

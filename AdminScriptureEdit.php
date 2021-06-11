@@ -36,8 +36,10 @@
 </head>
 
 <body>
-
-
+<?php
+session_start();
+include 'verification.php';
+?>
 
 <div id="wrapper">
     <!--sidebar-->
@@ -56,7 +58,6 @@
                 <?php
                 /*資料庫連結*/
                 
-                session_start();
 
                 $sql="SELECT * FROM scripture WHERE scripture.s_id = $_SESSION[edit_s_id]";
                 $result=mysqli_query($db_link,$sql);

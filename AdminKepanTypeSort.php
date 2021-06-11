@@ -86,6 +86,11 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
+
 <form name="forms" method="post" action="">
     <div id="wrapper">
         <?php

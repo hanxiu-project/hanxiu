@@ -37,6 +37,10 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 <form name="forms" method="get" action="">
     <div id="wrapper">
         <?php include 'nav.php'; ?>
@@ -48,7 +52,6 @@
         $sqltype = "SELECT * FROM types ";
         $resulttype = mysqli_query($db_link, $sqltype);
 
-        session_start();
         ?>
         <!--建立新講記-->
         <div class="row" style="margin-bottom: 20px; text-align: left">

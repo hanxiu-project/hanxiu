@@ -38,7 +38,9 @@
 <body>
 <?php
 session_start();
+include 'verification.php';
 ?>
+
 
 <div id="wrapper">
     <!--sidebar-->
@@ -65,9 +67,6 @@ session_start();
                 /*資料庫連結*/
                
                 session_start();
-
-
-
                $sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime`,`status` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[reply_c_id]' and  `members`.`m_id` = '$_SESSION[reply_m_id]'";
                 //$sql="SELECT `c_id`,`members`.`m_id`,`members`.`account`,`members`.`name`,`msg_datetime`,`message`,`reply`,`rpy_datetime` FROM `comments`,`members` where `comments`.`c_id` = '$_SESSION[reply_c_id]' and `comments`.`status`='0' and `members`.`m_id` = '$_SESSION[reply_m_id]'";
                 $result=mysqli_query($db_link,$sql);

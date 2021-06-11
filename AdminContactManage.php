@@ -38,6 +38,7 @@
 <body>
 <?php
 session_start();
+include 'verification.php';
 ?>
 
 <div id="wrapper">
@@ -61,7 +62,6 @@ session_start();
                 <?php
                 /*資料庫連結*/
               
-                session_start();
 
                 $sql="SELECT * FROM contact ";
                 $result=mysqli_query($db_link,$sql);

@@ -34,11 +34,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
-<?php
-session_start();
-?>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 
     <div id="wrapper">
         <?php include 'nav.php';?>

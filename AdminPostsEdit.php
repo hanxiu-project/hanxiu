@@ -36,7 +36,10 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+include 'verification.php';
+?>
 
 
 <div id="wrapper">
@@ -53,7 +56,6 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                 <?php
-                session_start();
                 date_default_timezone_set('Asia/Taipei');
                 $getDate= date("Y-m-d");
                 $getDate2= date("Y-m-d", strtotime($getDate."+1 day"));

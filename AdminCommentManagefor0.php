@@ -35,10 +35,15 @@
 </head>
 
 <body>
+<?php
+session_start();
+include 'verification.php';
+?>
 
 <div id="wrapper">
     <?php include 'nav.php';?>
 	<?php include 'database.php';?>
+
 
     
  <div class="col-lg-12">
@@ -57,7 +62,7 @@
                 <?php
                 /*資料庫連結*/
                
-                session_start();
+
 
 
                 $sql = "SELECT `c_id`,`comments`.`m_id`,`account`,`name`,`message`,`msg_datetime` FROM `comments`,`members`  where `members`.`m_id` = `comments`.`m_id` and `comments`.`status`='0' ORDER BY msg_datetime DESC";

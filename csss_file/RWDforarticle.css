@@ -299,12 +299,13 @@
     margin-bottom: 30px;
     border-spacing:0px ;
     border-collapse: separate;
-     background-color: #f5efde;
+    border:2px solid #000000;
+    
    /* border:1px solid #F00;*/  /*	紅色框線記得刪除*/
    } 
    .content  .tableforcontent .videotable td{
-      padding-left: 2px;
-      padding-right: 2px;
+      
+     
        padding-top: 10px;
        padding-bottom: 10px;
        width: 330px;
@@ -516,12 +517,33 @@
       
     /* border:1px solid #F00;*/  /*	紅色框線記得刪除*/
     }   
+    .content  .tableforcontent .videotypetable{
+      border-spacing:0px ;
+      border-collapse: separate;
+      border: 2px #000000 solid;
+      vertical-align: middle;
+  }
+  .content  .tableforcontent .videotypetable th{ 
+    background-color: #BFBFBF;
+    height: 40px;
+    font-size: 20px;
+    
+  }
+  .content  .tableforcontent .videotypetable td{ 
+  border-bottom: solid 1px #000000;
+  vertical-align: middle;
+    
+  }
+  .content  .tableforcontent .videotypetable .short{
+   width: 5%;
+}
     .content  .tableforcontent .videotable{
+        
         vertical-align: middle;
         border-spacing:0px ;
-        border-collapse: separate;
+        border-collapse:collapse;
          width: 80%;
-      background-color: #f5efde;
+         border: #000000 2px   solid;
      
       
     } 
@@ -535,7 +557,8 @@
         overflow : hidden;
         text-overflow: inherit;
         white-space:normal ;
-        border:1px solid #000000;
+        border: 0px;
+        border-bottom:1px solid #000000;
       /* border:1px solid #F00;*/  /*	紅色框線記得刪除*/
       }
      

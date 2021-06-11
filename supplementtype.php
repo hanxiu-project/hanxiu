@@ -86,8 +86,8 @@ session_start();
                         <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                               </div> 					
                     <center>
-                    <table style="border:1px #000000 solid;" >
-					<tr>
+                    <table class="sup" >
+					<tr  bgcolor="#bfbfbf" style="font-weight:bold;font-size:20px"   >
 						<th>補充資料類別名稱</th>
 						<th>補充資料標題名稱</th>
 						<th>發佈日期</th>

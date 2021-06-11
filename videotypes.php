@@ -102,6 +102,7 @@ session_start();
                        if(isMobileCheck()){
                         while ($videos = mysqli_fetch_assoc($resultvideos)) {
                            
+                           
                             echo "<tr >";
                             echo "<td class='picture' ><iframe width=324 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
                             echo "</tr>";
@@ -114,7 +115,7 @@ session_start();
                         }
                        }else{
                         while ($videos = mysqli_fetch_assoc($resultvideos)) {
-                          
+                            
                             echo "<tr >";
                             echo "<td class='picture'><iframe width=324 height=200 src=$videos[vnet] frameborder=0 allow=accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></td>";
                             echo "<td ><h6>影片描述:</h6>$videos[vcontent]</td>";
@@ -140,7 +141,7 @@ session_start();
                         <center>
 
                      
-                            <table  >
+                            <table class="videotypetable" >
                             
                                 <?php
                                 if(isMobileCheck()){
@@ -160,8 +161,9 @@ session_start();
                                         $start = ($j - 1) * 3;
                                         $sqlatcnums10 = "SELECT * FROM videotypes  order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                        echo "<tr>";
+                                     
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                            echo "<tr>";
                                             echo "<td >";
                                             echo "<a href=?tid='$row[t_id]'  title='$row[typename]'>$row[typename]</a></p>";
                                             echo "</td>";
@@ -181,20 +183,40 @@ session_start();
                                     $rows = ceil($datas / $per);
         
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
-        
+                                        echo "<th>內容</th>";
+                                        echo "<th>集數</th>";
+                                        echo "<th class='short'>音頻</th>";
+                                        echo "<th class='short'>視頻</th>";
                                     for ($j = 1; $j <= $rows; $j++) {
                                         $start = ($j - 1) * 10;
                                         $sqlatcnums10 = "SELECT * FROM videotypes order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                        echo "<tr>";
+                                       
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                            echo "<tr>";
                                             echo "<td >";
-                                            echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a></p>";
+                                            echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a>";
                                             echo "</td>";
+                                            $sqlcount="SELECT COUNT(*) as count FROM videos where typename = '$row[typename]' ";
+                                            $countresult=mysqli_query($db_link,  $sqlcount);
+                                            $countcheck=mysqli_fetch_assoc($countresult);
+                                            $count_videos=$countcheck['count'];
+                                            echo "<td >";
+                                            echo "$count_videos";
+                                            echo "</td>";
+                                           
+                                           
+                                            echo "<td >";
+                                           
+                                            echo "</td>";
+                                            echo "<td >";
+                                            
+                                            echo "</td>";
+                                            echo "</tr>";
+                                    
                                         }
         
-                                        echo "</tr>";
-                                    
+                                      
                                     }
                                     ?>
                                    

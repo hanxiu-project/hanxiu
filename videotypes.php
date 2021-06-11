@@ -184,9 +184,9 @@ session_start();
         
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
                                         echo "<th>內容</th>";
+                                        echo "<th>地點</th>";
                                         echo "<th>集數</th>";
-                                        echo "<th class='short'>音頻</th>";
-                                        echo "<th class='short'>視頻</th>";
+                                        
                                     for ($j = 1; $j <= $rows; $j++) {
                                         $start = ($j - 1) * 10;
                                         $sqlatcnums10 = "SELECT * FROM videotypes order by listorder Limit $start , $per";
@@ -197,6 +197,9 @@ session_start();
                                             echo "<td >";
                                             echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a>";
                                             echo "</td>";
+                                            echo "<td >";
+                                           
+                                            echo "</td>";
                                             $sqlcount="SELECT COUNT(*) as count FROM videos where typename = '$row[typename]' ";
                                             $countresult=mysqli_query($db_link,  $sqlcount);
                                             $countcheck=mysqli_fetch_assoc($countresult);
@@ -206,12 +209,7 @@ session_start();
                                             echo "</td>";
                                            
                                            
-                                            echo "<td >";
-                                           
-                                            echo "</td>";
-                                            echo "<td >";
-                                            
-                                            echo "</td>";
+                                          
                                             echo "</tr>";
                                     
                                         }

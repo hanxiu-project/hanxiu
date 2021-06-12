@@ -138,7 +138,7 @@ include 'verification.php';
 
                     $type = $_POST["type"];   
                     $local = $_POST["local"];                   //新增講記類別
-                    $sql2 = "SELECT * FROM videotypes where typename = '$_POST[type]' ";
+                    $sql2 = "SELECT * FROM videotypes where `local` = '$local' ";
                     $result2 = mysqli_query($db_link, $sql2);
                     $resultnum = mysqli_num_rows($result2);
 
@@ -157,7 +157,7 @@ include 'verification.php';
                         }
                         else
                         {
-                            echo "<script>alert('法音類別重複，請重新輸入!');location.href='AdminNewVideos.php'</script>";
+                            echo "<script>alert('同講記有重複地點，請重新輸入!');location.href='AdminNewVideos.php'</script>";
                         }
 
                     }

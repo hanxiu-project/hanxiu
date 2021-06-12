@@ -157,7 +157,7 @@ include 'verification.php';
                         }
                         else
                         {
-                            echo "<script>alert('同講記有重複地點，請重新輸入!');location.href='AdminNewVideos.php'</script>";
+                            echo "<script>alert('同類別有重複地點，請重新輸入!');location.href='AdminNewVideos.php'</script>";
                         }
 
                     }

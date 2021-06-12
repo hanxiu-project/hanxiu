@@ -47,9 +47,11 @@ include 'verification.php';
         <!--建立新經文-->
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
-                <label for="content"><font color="#ffffff">新增影音類別:</font></label>
+                <label for="content"><font color="#ffffff">影音類別:</font></label>
                 <input id="type" name="type" type="text"
-                       style="width:525px; height:30px; color:#000000; ">
+                       style="width:525px; height:30px; color:#000000; "><br>
+                       <font color="#ffffff">類別地點:</font>           
+                <input id="local" name="local" type="text" style=" height:30px; ">
 
 
                 <input type="submit" class="btn btn-sm btn-warning" name="go"
@@ -88,12 +90,14 @@ include 'verification.php';
                     echo "<table  border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
                     echo "<tr align=center>";
                     echo "<td><b>影音類別</b></td>";
+                    echo "<td><b>地點</b></td>";
                     echo "<td></td>";
                     echo "</tr>";
 
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr align=center>";
                         echo "<td>$row[typename]</td>";
+                        echo "<td>$row[local]</td>";
 
                         echo "<td>";
 
@@ -132,7 +136,8 @@ include 'verification.php';
 
                     }
 
-                    $type = $_POST["type"];                     //新增講記類別
+                    $type = $_POST["type"];   
+                    $local = $_POST["local"];                   //新增講記類別
                     $sql2 = "SELECT * FROM videotypes where typename = '$_POST[type]' ";
                     $result2 = mysqli_query($db_link, $sql2);
                     $resultnum = mysqli_num_rows($result2);
@@ -141,9 +146,12 @@ include 'verification.php';
                         if ($type == null) {
                             echo "<script>alert('請輸入欲新增的法音類別!');location.href='AdminNewVideos.php'</script>";
                         }
-
+                        else if ($local == null)
+                        {
+                            echo "<script>alert('請輸入欲新增的地點!');location.href='AdminNewVideos.php'</script>";
+                        }
                         else if($resultnum == null){
-                            $sqltype = "INSERT INTO videotypes (typename,listorder) VALUES ('$type',' $max_listorder'+1)";
+                            $sqltype = "INSERT INTO videotypes (typename,listorder,local) VALUES ('$type',' $max_listorder'+1,'$local')";
                             mysqli_query($db_link, $sqltype);
                             echo "<script>alert('法音類別建立成功!');location.href='AdminNewVideos.php'</script>";
                         }

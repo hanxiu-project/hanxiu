@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>影音類別排序 | 管理後台</title>
+    <title>影音排序 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@
             });
 
             $.ajax({
-                url: 'AdminVideoTypeSort.php',
+                url: 'videosort.php',
                 method: 'POST',
                 dataType: 'text',
                 data: {
@@ -96,10 +96,9 @@ include 'verification.php';
             include 'nav.php';
             include 'database.php';
         ?>
-
-
+       
         <div class="col-lg-12">
-            <font size="6"><strong style= "background:white" >影音類別排序(直接拉就可以改變)</strong></font>
+            <font size="6"><strong style= "background:white" >影音排序(直接拉就可以改變)</strong></font>
         </div>
 
         <!--Body-->
@@ -115,14 +114,14 @@ include 'verification.php';
                         foreach ($_POST['positions'] as $position) {
                             $index = $position[0];
                             $newposiotion = $position[1];
-                            $sql = "UPDATE videotypes SET listorder = '$newposiotion' WHERE t_id= '$index'";
+                            $sql = "UPDATE videos SET listorder = '$newposiotion' WHERE v_id= '$index'";
                             mysqli_query($db_link, $sql);
                             echo "<script>alert('排序完成!');location.href='test.php'</script>";
                         }
                         exit('success');
                     }
 
-                    $sql="select * from videotypes order by listorder";
+                    $sql="select * from `videos` where `typename`= '$_SESSION[typename]'   order by listorder ";
                     $result=mysqli_query($db_link,$sql);
                     echo "<tr align=center width='70%'>";
                     echo "<td width='20%'><b>順序編號</b></td>";
@@ -130,23 +129,16 @@ include 'verification.php';
                     echo "</tr>";
                     while ($data = $result->fetch_array())
                     {
-                        echo "<tr data-index=$data[t_id] data-position=$data[listorder]>";
+                        echo "<tr data-index=$data[v_id] data-position=$data[listorder]>";
                         echo "<td> $data[listorder] </td>";
+                   
+                        echo "<td>$data[vcontent]</td>";
+                        
                        
-                        echo "<td><a href=videosort.php?sid='$data[t_id]' title='$data[typename]'>$data[typename]</a></p>";
-                        echo "<input type='submit' name='$data[t_id]+1'  value='排序類別內影片順序'>";
-                        if (isset($_POST["$data[t_id]+1"])) {
-                            $_SESSION['typename'] = $data['typename'];
-                            echo "<script langauge = 'javascript' type='text/javascript'>";
-                            echo "window.location.href = 'videosort.php'";
-                            echo "</script>";
-                        }
-                        echo "</td>";
                         echo "</tr>";
                     }
 
                     ?>
-                    
                     </tbody>
                   </table>
 

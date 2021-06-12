@@ -89,13 +89,13 @@ session_start();
                   
                    
                     <?php
-                       $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid ";
+                       $sqlatcnum = "SELECT * FROM `videos` where `t_id` = $tid  ";
                        $result_row = mysqli_query($db_link, $sqlatcnum);
                        $data = mysqli_num_rows($result_row);       //抓總共幾筆
                        $per = 10;
                        $rows = ceil($data / $per);
                        $resultnum = mysqli_query($db_link, $sqlatcnum);
-                       $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid";
+                       $sqlvideos = "SELECT * FROM `videos` where `t_id` = $tid order by listorder";
                        $resultvideos = mysqli_query($db_link, $sqlvideos);
                        echo "<form name='form1' method='POST' action=''>";
                        echo "<table class='videotable'>";
@@ -198,7 +198,7 @@ session_start();
                                             echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a>";
                                             echo "</td>";
                                             echo "<td >";
-                                           
+                                            echo "$row[local]";
                                             echo "</td>";
                                             $sqlcount="SELECT COUNT(*) as count FROM videos where typename = '$row[typename]' ";
                                             $countresult=mysqli_query($db_link,  $sqlcount);

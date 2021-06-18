@@ -87,7 +87,7 @@
       border-top: 2px solid #612E04;
       width: 100%;
       
-      min-height: calc(100vh - 10vh);
+      min-height: 100%;
       background-color: #C7B897;
       position: absolute;
       top: 100%;

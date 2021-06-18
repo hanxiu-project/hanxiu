@@ -121,7 +121,7 @@ session_start();
                         ?>
 
                         </ul>
-                        <ul >
+                        <ul class='member' >
                         <?php
                         
 					 if ($_SESSION[acc] == null  || $_SESSION[pwd] == null) {
@@ -136,6 +136,11 @@ session_start();
 						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
 						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們2</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們3</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們4</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們5</a></li>";
+                         echo " <li><a href=contact.php>聯絡我們6</a></li>";
                         }
                     else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
                          echo "<li><a href=indexs.php>首頁</a></li>";
@@ -148,6 +153,7 @@ session_start();
 						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
 						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
+                       
 
                         }
                     else if ($authority=='1' || $authority=='2'){
@@ -180,6 +186,7 @@ session_start();
                          <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
 						 <li><a href="contact.php">聯絡我們</a></li>
+                         
 
 						<?php
 						}

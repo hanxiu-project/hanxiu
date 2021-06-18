@@ -86,8 +86,10 @@
   nav{
       border-top: 2px solid #612E04;
       width: 100%;
-      
-      min-height: 100%;
+      overflow :auto;
+      text-overflow :inherit;
+      white-space :normal;
+      min-height: calc(100vh - 10vh);
       background-color: #C7B897;
       position: absolute;
       top: 100%;
@@ -99,8 +101,8 @@
       margin: 0; 
   }
   nav  .member{
-      margin-bottom: 100px;
-    background-color: aqua;
+      margin-bottom: 50px;
+    
    
     
 }

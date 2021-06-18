@@ -130,15 +130,9 @@
                 <div class="login">
                     <center>
                         <form name="login01" method="post" action="">
-
                             <font>輸入您註冊的電子郵件，並至信箱收取確認信：</font><input type="email" name="checkemail"><br><br>
-                            <a href="forgotpwd.php">忘記密碼？</a>
                             <br><br>
-
-                            <input type="submit"
-                                   style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;'
-                                   name="go" value="送出" style="width:60px;height:40px;">
-
+                            <input type="submit" style='width:120px; height:40px;color:black;background-color:#C7B897;border:0px none;' name="go" value="送出" style="width:60px;height:40px;">
                         </form>
                     </center>
                 </div>

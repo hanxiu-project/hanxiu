@@ -111,8 +111,6 @@ include 'verification.php';
             {
                 $sql_tid = "SELECT * FROM supplements  where save='1' order by spt_id";
                 $resultpage = mysqli_query($db_link, $sql_tid);
-
-
                 $date_nums = mysqli_num_rows($resultpage);                          //講記數量
                 $per = 10;                                                      //10筆換頁
                 $pages = ceil($date_nums / $per);                             //共幾頁
@@ -128,9 +126,6 @@ include 'verification.php';
                 $scriptureresult[$start] = mysqli_query($db_link, $sqlresult);
                 $scriptureresult[$page] = mysqli_query($db_link, $sqlresult);
 
-
-
-
                 while ($row = mysqli_fetch_assoc($scriptureresult[$start]))//$row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
@@ -145,7 +140,6 @@ include 'verification.php';
                     <td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;'
                                name="<?php echo "$row[sp_id]+2"; ?>" value='刪除'
                                onclick="return confirm('是否確認刪除此份補充資料?')"></td>
-
 
                     <?php
 
@@ -164,11 +158,7 @@ include 'verification.php';
                 }
                 echo " 頁 <a href=?page=$pages>末頁</a>";
                 echo "</center>";
-
-
-
             }
-
 
             else if (isset($_GET["type"]))
             {
@@ -176,7 +166,6 @@ include 'verification.php';
                 $resulttype= mysqli_query($db_link, $sqltype);
 
                 $date_nums = mysqli_num_rows($resulttype);                             //講記數量
-                //$date_nums = mysqli_num_rows($sqltype);
                 $per = 10;                                                      //10筆換頁
                 $pages = ceil($date_nums / $per);                             //共幾頁
                 if (!isset($_GET["page"])) {
@@ -230,7 +219,7 @@ include 'verification.php';
 
             }
 
-                $sql2="SELECT sp_id,spmtypename,title,date FROM supplements,spm_types WHERE supplement.spt_id = spm_types.spt_id";
+            $sql2="SELECT sp_id,spmtypename,title,date FROM supplements,spm_types WHERE supplement.spt_id = spm_types.spt_id";
             $sql2 = "SELECT * FROM supplements ";
             $result2 = mysqli_query($db_link, $sql2);
 
@@ -250,7 +239,7 @@ include 'verification.php';
                     $filename = $row2["filename"];//刪除檔案
                     $typename = $row2["spmtypename"];//類別名稱
 
-                    unlink("supplement/" . $typename . "/" . $filename);
+                    unlink("./supplement/" . $typename . "/" . $filename);
                     echo "<script>alert('成功刪除!');location.href='AdminSupplementManage.php'</script>";
 
                 }

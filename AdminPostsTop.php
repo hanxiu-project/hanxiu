@@ -111,26 +111,19 @@ include 'verification.php';
                 $keepresult[$page] = mysqli_query($db_link, $sqlresult);
 
 
-
                 while($row = mysqli_fetch_assoc($keepresult[$start]))
                 {
 				$date1 = strtotime($row[date]);
 				$date2 = strtotime($row[newday]);
 				$days = (($date2 - $date1)/86400);
                     echo "<tr align=center>";
-					
-						 echo "<td>$row[title]</td>";
-					
-                   
+                    echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
-					 echo "<td>$row[newday]</td>";
-					 
+                    echo "<td>$row[newday]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[p_id]+1' value='編輯'></td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+2' value='刪除'></td>";
 					echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+3' value='取消置頂'></td>";
-					
                     echo "</tr>";
-					
                 }
                 echo "</form>";
                 echo "</table>";
@@ -147,7 +140,6 @@ include 'verification.php';
                 echo " 頁 <a href=?page=$pages>末頁</a>";
                 echo "</center>";
 	
-
 
                 $sql2 = "SELECT * FROM posts";
                 $result2=mysqli_query($db_link,$sql2);
@@ -175,14 +167,7 @@ include 'verification.php';
                 }
 
                 mysqli_close($db_link);
-
-
                 ?>
-
-
-
-
-
 
             </div>
             <!-- /#page-wrapper -->

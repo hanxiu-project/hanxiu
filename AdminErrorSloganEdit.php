@@ -63,7 +63,7 @@ include 'verification.php';
 
             <div class='wrapper'>
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-<form name="form4"  method="post" action=" ">
+                <form name="form4"  method="post" action=" ">
                 <?php
                 /*資料庫連結*/
 
@@ -82,8 +82,9 @@ include 'verification.php';
 				
 				
 				?>
-</form>
-<?php			if(isset($_POST["slogans2"]))
+                </form>
+                <?php
+                if(isset($_POST["slogans2"]))
                 {
 					if($_POST["slogant2"]==null){
 						echo "<script>alert('更改內容不能為空值');location.href='AdminErrorSloganEdit.php'</script>";

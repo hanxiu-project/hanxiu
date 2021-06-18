@@ -77,9 +77,9 @@ include 'verification.php';
                 $str = "";
 
                 //判斷是否有該檔案
-                if(file_exists("C:AppServ/www/漢修專題/supplement/$typename/$oldfilename"))
+                if(file_exists("./supplement/$typename/$oldfilename"))
                 {
-                    $filee = fopen("C:AppServ/www/漢修專題/supplement/$typename/$oldfilename","r");
+                    $filee = fopen("./supplement/$typename/$oldfilename","r");
                     if($filee != NULL)
                         //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
                     {
@@ -136,14 +136,12 @@ include 'verification.php';
 											?>
 											
 											</select>
-											   </div>
-
+                                            </div>
 
                                             <div class="form-group">
                                                 <label for="title">補充資料標題:</label>
                                                 <input id="title" name="title" type="text"  value="<?php echo $row['title']?>" style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
-
 
                                             <div class="form-group">
                                                 <label for="content">補充資料內容:</label>
@@ -182,36 +180,27 @@ include 'verification.php';
 
                 <?php
                 
-				 $sqlmodify="SELECT * FROM supplements WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
+                $sqlmodify="SELECT * FROM supplements WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
                 $resultmodify=mysqli_query($db_link,$sqlmodify);
                 $rowmodify=mysqli_fetch_assoc($resultmodify);
 				$secupdate = $rowmodify["newupdate"];
 				$thrupdate = $rowmodify["secupdate"];
                 $title = $_POST["title"];
-               $filename = $_POST["title"].".txt";
+                $filename = $_POST["title"].".txt";
                 $content = $_POST["content"];
                 $date = $_POST["date"];
-				
                 $nnewupdate=$_SESSION["updatename"];
-				
 
-
-
-				
 				$sql_update_all = "UPDATE supplements SET `spt_id` = '$_POST[type]',`spmtypename` = '$inputtype',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '0' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
 				$sql_update_all_save = "UPDATE supplements SET `spt_id` = '$_POST[type]',`spmtypename` = '$inputtype',`title` = '$title',`filename` = '$filename',`content` = '$content',`date` = '$date',`save` = '1' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
-               $sql_update_newupdate = "UPDATE supplements SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
-
+                $sql_update_newupdate = "UPDATE supplements SET `newupdate` = '$nnewupdate',`secupdate` = '$secupdate',`thrupdate` = '$thrupdate' WHERE supplements.sp_id = $_SESSION[edit_sp_id]";
 
                 if(isset($_POST["edit"]))//發佈
                 {
-
                     if($_POST["type"]!=null && $_POST["title"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
                     {
-
                         if($_POST["title"].".txt" != $oldfilename)           //若檔名與之前的不同  單改檔名
                         {
-
                             $sql3 = "SELECT * FROM supplements ";
                             $result3=mysqli_query($db_link,$sql3);
 
@@ -223,10 +212,10 @@ include 'verification.php';
                                 }
                                 elseif($typename != $inputtype)     //類別有改過的話，原本的 != 現在選的
                                 {
-                                    unlink("../漢修專題/supplement/".$typename."/".$filename);
+                                    unlink("./supplement/".$typename."/".$filename);
 
                                     //寫入檔案
-                                    $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                                    $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                                     $txt = $content;
                                     fwrite($myfile,$txt);
                                     fclose($myfile);
@@ -237,9 +226,9 @@ include 'verification.php';
                                 }
                                 else                                                            //檔名沒重複且類別沒改
                                 {
-                                    unlink("../漢修專題/supplement/".$typename."/".$oldfilename);
+                                    unlink("./supplement/".$typename."/".$oldfilename);
 
-                                    $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                                    $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                                     $txt = $content;
                                     fwrite($myfile,$txt);
                                     fclose($myfile);
@@ -253,10 +242,10 @@ include 'verification.php';
                         else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)  單改類別
                         {
 
-                            unlink("../漢修專題/supplement/".$typename."/".$oldfilename);
+                            unlink("./supplement/".$typename."/".$oldfilename);
 
                         //寫入檔案
-                        $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                        $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                         $txt = $content;
                         fwrite($myfile,$txt);
                         fclose($myfile);
@@ -269,7 +258,7 @@ include 'verification.php';
                         else                    //檔名相同             沒改類別沒改檔名
                         {
 
-                            $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                            $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
@@ -287,32 +276,28 @@ include 'verification.php';
 				  if(isset($_POST["save"]))
                   {
 								//寫入檔案
-                    $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                    $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                     $txt = $content;
                     fwrite($myfile,$txt);
                     fclose($myfile);
 
+                    if($_POST["type"]!=null && $_POST["title"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
+                    {
+                        if($_POST["title"].".txt" != $oldfilename)           //若檔名與之前的不同
+                        {
+                            $sql3 = "SELECT * FROM supplements ";
+                            $result3=mysqli_query($db_link,$sql3);
 
-
-                      if($_POST["type"]!=null && $_POST["title"]!=null && $_POST["content"]!=null && $_POST["date"]!=null)
-                      {
-                          if($_POST["title"].".txt" != $oldfilename)           //若檔名與之前的不同
-                          {
-                              $sql3 = "SELECT * FROM supplements ";
-                              $result3=mysqli_query($db_link,$sql3);
-
-                              while($row3=$result3->fetch_assoc()) {
-
+                            while($row3=$result3->fetch_assoc()) {
                                   if ($_POST["title"].".txt" == $row3["filename"]) {
-
                                       echo "<script>alert('補充資料標題重複，請重新輸入！');location.href='AdminSupplementEdit.php'</script>";
                                   }
                                   else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)
                                   {
-                                      unlink("../漢修專題/supplement/".$typename."/".$filename);
+                                      unlink("./supplement/".$typename."/".$filename);
 
                                       //寫入檔案
-                                      $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                                      $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                                       $txt = $content;
                                       fwrite($myfile,$txt);
                                       fclose($myfile);
@@ -323,9 +308,9 @@ include 'verification.php';
                                   }
                                   else
                                   {
-                                      unlink("../漢修專題/supplement/".$typename."/".$oldfilename);
+                                      unlink("./supplement/".$typename."/".$oldfilename);
 
-                                      $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                                      $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                                       $txt = $content;
                                       fwrite($myfile,$txt);
                                       fclose($myfile);
@@ -338,10 +323,10 @@ include 'verification.php';
                           }
                           else if($typename != $inputtype)     //類別有改過的話(原本的 != 現在選的)
                           {
-                              unlink("../漢修專題/supplement/".$typename."/".$filename);
+                              unlink("./supplement/".$typename."/".$filename);
 
                               //寫入檔案
-                              $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                              $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                               $txt = $content;
                               fwrite($myfile,$txt);
                               fclose($myfile);
@@ -353,7 +338,7 @@ include 'verification.php';
                           else                    //檔名相同
                           {
 
-                              $myfile = fopen("C:/AppServ/www/漢修專題/supplement/$inputtype/$filename","w+") or die("Unable to open file!");
+                              $myfile = fopen("./supplement/$inputtype/$filename","w+") or die("Unable to open file!");
                               $txt = $content;
                               fwrite($myfile,$txt);
                               fclose($myfile);
@@ -363,10 +348,7 @@ include 'verification.php';
                               echo "<script>alert('補充資料暫存完成!');location.href='AdminSupplementSave.php'</script>";
                           }
                       }
-
-
                     }
-
                 ?>
 
             </div>

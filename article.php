@@ -34,12 +34,7 @@ session_start();
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
 
-    <!--照片區-->
-
-
-    
-
-                        <?php
+                <?php
                     //是否為行動裝置
                     function isMobileCheck(){
                         //Detect special conditions devices
@@ -65,7 +60,7 @@ session_start();
                             return false;
                         }
                     } 
-                        ?>
+                ?>
     <!--主內文區-->
         <div class="content">
             <div class="tableforcontent">
@@ -73,7 +68,7 @@ session_start();
                                 <div class="newstitle">
                                 <?php
 
-                                if (isset($_GET["sid"]))                                                            //sid為經文id(同資料庫的s_id意思)
+                                if (isset($_GET["sid"]))                   //sid為經文id(同資料庫的s_id意思)
                                 {
                                 echo "<form method='POST' name='gggo'>";
                                 $sqltit = "Select * From `scripture` where `s_id`= $_GET[sid]";
@@ -123,8 +118,8 @@ session_start();
                                 $filename = $rtit[5];
                                 $str = "";
                                 //判斷是否有該檔案
-                                if (file_exists("ScriptureFile/$typename/$filename")) {
-                                    $file = fopen("ScriptureFile/$typename/$filename", "r");
+                                if (file_exists("./ScriptureFile/$typename/$filename")) {
+                                    $file = fopen("./ScriptureFile/$typename/$filename", "r");
                                     if ($file != NULL) {
                                         //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
                                         while (!feof($file)) {
@@ -133,7 +128,6 @@ session_start();
                                         fclose($file);
                                     }
                                 }
-
 
                                 }
                                 echo "$str";
@@ -148,18 +142,8 @@ session_start();
 
                             </div>
             </div><!--CONTENTFORTABLE-->
-			
-	 
-     
     </div><!--CONTENT-->
-    
-	
-    
-   
-
 </div>
 <?php include 'footer.php';?>
 </body>
-
-
 </html>

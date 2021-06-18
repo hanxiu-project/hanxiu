@@ -46,7 +46,7 @@ include 'verification.php';
         <?php include 'nav.php';?>
         <?php include 'database.php';?>
 		
- <div class="col-lg-12">
+    <div class="col-lg-12">
             
 			<font size="6"><strong style= "background:white" >照片總覽</strong></font>
         </div>

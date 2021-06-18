@@ -146,7 +146,7 @@ include 'verification.php';
                             echo "<script>alert('請輸入欲新增的類別!');location.href='AdminNewSupplement.php'</script>";
                         } else {
                             //資料夾的建立
-                            $file_path = "supplement/$type";
+                            $file_path = "./supplement/$type";
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
@@ -157,14 +157,10 @@ include 'verification.php';
 //                            echo “資料夾已存在”;
                                 echo "<script>alert('補充資料類別已存在!');location.href='AdminNewSupplement.php'</script>";
                             }
-
                         }
                     }
 
-
                     mysqli_close($db_link);
-
-
                     ?>
 
 

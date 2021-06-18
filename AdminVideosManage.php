@@ -159,7 +159,6 @@ include 'verification.php';
                     $resulttype= mysqli_query($db_link, $sqltype);
 
                     $date_nums = mysqli_num_rows($resulttype);                             //講記數量
-                    //$date_nums = mysqli_num_rows($sqltype);
                     $per = 10;                                                      //10筆換頁
                     $pages = ceil($date_nums / $per);                             //共幾頁
                     if (!isset($_GET["page"])) {
@@ -179,9 +178,7 @@ include 'verification.php';
                         echo "<td>$row[typename]</td>";
                         echo "<td>$row[vcontent]</td>";
                         echo "<td>$row[vnet]</td>";
-
                         echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[v_id]+1' value='編輯'></td>";
-
                         ?>
                         <td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;' name="<?php echo "$row[v_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這部影片?')"></td>
                         <?php
@@ -225,14 +222,7 @@ include 'verification.php';
                 }
 
                 mysqli_close($db_link);
-
-
                 ?>
-
-
-
-
-
 
             </div>
             <!-- /#page-wrapper -->

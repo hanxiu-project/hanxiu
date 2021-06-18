@@ -20,10 +20,6 @@
 </head>
 
 <body>
-
-
-
-
 <!--最外圍-->
 <div id="sitebody">
 
@@ -179,7 +175,6 @@
                 $mail->addAddress("$email");
                 $mail->SMTPDebug = 3;
 
-
                 if (!$mail->Send()) {
                     echo "Error" . $mail->ErrorInfo;
                 } else {
@@ -195,18 +190,11 @@
 
     //mysqli_close($db_link);
     ?>
-
-
 </div>
-
 
 <!--註腳-->
 <?php include 'footer.php'; ?>
 
-
 </div>
-
 </body>
-
-
 </html>

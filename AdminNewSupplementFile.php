@@ -64,7 +64,6 @@ include 'verification.php';
 
                     $sqltype="SELECT * FROM `spm_types` ";
                     $resulttype=mysqli_query($db_link,$sqltype);
-                    /*$row=mysqli_fetch_assoc($resulttype);*/
 
                     mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
                     # 設定時區
@@ -77,21 +76,15 @@ include 'verification.php';
                     <div id="con2">
                         <div class="main">
                             <div class="newstitle" >
-
                                 <div class="contentlist">
-
                                     <div class="row">
                                         <div class="col-lg-12">
-
                                             <form name="form" method="POST" action="">
-
                                                 <div class="form-group">
                                                     <label for="type">類別編號:</label>
                                                     <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
                                                         <?php while ($row = $resulttype->fetch_assoc()) {
                                                             echo "<option value=$row[spt_id]>$row[spmtypename]</option>";
-
-
                                                         }
                                                         $sqltypeinput="SELECT * FROM `spm_types` where `spt_id`='$_POST[type]'";
                                                         $resulttypeinput=mysqli_query($db_link,$sqltypeinput);
@@ -128,12 +121,8 @@ include 'verification.php';
                                                 <div class="form-group">
                                                     <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
                                                     <input type="submit" class="btn btn-sm btn-warning" name="go" value="發佈" >
-
-
                                                 </div>
-
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +161,7 @@ include 'verification.php';
 
                         }
 
-                        else  if (file_exists("supplement/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                        else  if (file_exists("./supplement/".$inputtype."/".$filename))
                         {
                             echo "<script>alert('補充資料標題重複，請重新輸入！');location.href='AdminNewSupplementFile.php'</script>";
                         }
@@ -181,7 +170,7 @@ include 'verification.php';
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("supplement/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("./supplement/$inputtype/$filename","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
@@ -201,7 +190,7 @@ include 'verification.php';
                         {
                             echo "<script>alert('請輸入資料!');location.href='AdminNewSupplementFile.php'</script>";
                         }
-                        else  if (file_exists("supplement/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                        else  if (file_exists("./supplement/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                         {
                             echo "<script>alert('補充資料標題重複，請重新輸入！');location.href='AdminNewSupplementFile.php'</script>";
                         }
@@ -209,7 +198,7 @@ include 'verification.php';
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("supplement/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("./supplement/$inputtype/$filename","a+") or die("Unable to open file!");
 
                             $txt = $content;
                             fwrite($myfile,$txt);
@@ -234,13 +223,7 @@ include 'verification.php';
                             $log = "$_SESSION[name]暫存$inputtype/卷號$_POST[number]";
                             logger($log);
                         }
-
                     }
-
-
-
-
-
                     ?>
 
                 </div>

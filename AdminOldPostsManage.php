@@ -107,8 +107,6 @@ include 'verification.php';
                 $opostresult[$page] = mysqli_query($db_link, $sqlresult);
 
 
-
-
                 while($row = mysqli_fetch_assoc($opostresult[$start]))
                 {
                     echo "<tr align=center>";
@@ -121,14 +119,13 @@ include 'verification.php';
 					}
                    
                     echo "<td>$row[date]</td>";
-					 echo "<td>$row[newday]</td>";
+					echo "<td>$row[newday]</td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[p_id]+1' value='編輯'></td>";
                     echo "<td><input type='submit' class='btn btn-sm btn-danger ' style='width:100px;height:30px;' name='$row[p_id]+2' value='刪除'></td>";
                     echo "</tr>";
                 }
                 echo "</form>";
                 echo "</table>";
-
                 echo "<center>";
                 echo '共 ' . $date_nums . ' 筆-在 ' . $page . ' 頁-共 ' . $pages . ' 頁';
                 echo "<br/><a href=?page=1>首頁</a> ";
@@ -163,14 +160,7 @@ include 'verification.php';
                 }
 
                 mysqli_close($db_link);
-
-
                 ?>
-
-
-
-
-
 
             </div>
             <!-- /#page-wrapper -->

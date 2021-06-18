@@ -125,8 +125,6 @@ session_start();
                         }
                        
                        }
-                      
-                       
 
                         }else                                            //還沒選類別時
                         {

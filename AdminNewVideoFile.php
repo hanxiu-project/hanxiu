@@ -102,21 +102,17 @@ include 'verification.php';
                                                 <input id="vcontent" name="vcontent" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
                                             </div>
 
-
                                             <div class="form-group">
                                                 <label for="vnet">影片網址:</label>
                                                 <input id="vnet" name="vnet" type="text"   style="width:525px; height:30px; color:#000000; background-color:transparent" >
 
                                             </div>
 
-
-
                                             <div class="form-group">
                                                 <input type="submit" class="btn btn-sm btn-warning" name="vpost" value="發佈" >
                                             </div>
 
                                         </form>
-
                                     </div>
                                 </div>
                             </div>
@@ -126,19 +122,11 @@ include 'verification.php';
 
                 <?php
 
-
-
-
                 $vcontent = $_POST["vcontent"];
                 $vnet = $_POST["vnet"];
 
-
-
                 if(isset($_POST["vpost"]))
                 {
-
-
-
                     $testwatchnetpos = strpos($_POST["vnet"],"watch");          //找網址內有watch?v=的位置(算w的位置在24)
                     $testnet = substr($_POST["vnet"],"$testwatchnetpos"+8);            //取的watch?v=之後的網址字串(因為watch?v=所以+8)
                     $renewnet = substr_replace($_POST["vnet"],"embed/$testnet",$testwatchnetpos);       //新網址
@@ -147,9 +135,6 @@ include 'verification.php';
                     $sqlnet="SELECT * FROM `videos` WHERE `vnet` = '$renewnet'";
                     $resultnet=mysqli_query($db_link,$sqlnet);
                     $rownet=mysqli_fetch_assoc($resultnet);
-                    /*$checkvnet = $rownet[vnet];
-                    echo "<script>alert('$checkvnet')";*/
-
 
                     if($vcontent==null && $vnet==null)
                     {
@@ -161,7 +146,6 @@ include 'verification.php';
                     }
                     else
                     {
-                        //echo "<script>alert('$rownet[vent]')";
                         $sql="INSERT INTO `videos` (v_id,t_id,typename,vcontent,vnet) VALUES('NULL','$_POST[type]','$rowinput[typename]','$vcontent','$renewnet')";
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('影音已經上傳!');location.href='AdminVideosManage.php'</script>";

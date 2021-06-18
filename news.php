@@ -200,19 +200,11 @@ session_start();
                     
                     ?>
                 </div>
-
-              
-
-                       
             </div><!--CONTENTFORTABLE-->
 			
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
 
 </div>
 <?php include 'footer.php';?>

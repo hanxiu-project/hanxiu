@@ -115,7 +115,6 @@ include 'verification.php';
             echo "</tr>";
 
 
-
             /*排序*/
             /**/
             if(isset($_GET["gosearchm"]))
@@ -229,13 +228,9 @@ include 'verification.php';
                 } else {
                     $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
                 }
-
                 $start = ($page - 1) * $per;
-
                 $sqlresultsort = "$sqlsort Limit $start , $per";
                 $sortresult[src] = mysqli_query($db_link, $sqlresultsort);
-
-
 
                 while ($row = mysqli_fetch_assoc($sortresult[src])) {
                     echo "<tr align=center>";
@@ -267,26 +262,6 @@ include 'verification.php';
                 echo "</center>";
 
             }
-           /* else {
-                $sqlsort = "SELECT * FROM donates  ";
-                $resultsort = mysqli_query($db_link, $sqlsort);
-                while ($row = $resultsort->fetch_assoc()) {
-                    echo "<tr align=center>";
-                    echo "<td>$row[m_id]</td>";
-                    echo "<td>$row[dname]</td>";
-                    echo "<td>$row[type]</td>";
-                    echo "<td>$row[amount]</td>";
-                    echo "<td>$row[date]</td>";
-                    ?>
-                    <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[d_id]+2"; ?>"
-                               value='刪除' onclick="return confirm('是否確認刪除這筆捐贈?')"></td>
-
-                    <?php
-                    echo "</tr>";
-                }
-                echo "</table>";
-            }*/
-
 
             $sql2 = "SELECT * FROM donates";
             $result2 = mysqli_query($db_link, $sql2);
@@ -308,10 +283,7 @@ include 'verification.php';
             }
 
             mysqli_close($db_link);
-
-
             ?>
-
 
         </div>
         <!-- /#page-wrapper -->

@@ -120,12 +120,10 @@ session_start();
                         while ($kepan = mysqli_fetch_assoc($resultnum10[$start])) {
                             echo "<tr>";
                             echo "<td >";
-                            echo "<a href='download.php?filename=../漢修專題/kepan/$kepan[kptypename]/$kepan[filename]' title='$kepan[filename]'>$kepan[filename]</a></p>";
+                            echo "<a href='download.php?filename=./kepan/$kepan[kptypename]/$kepan[filename]' title='$kepan[filename]'>$kepan[filename]</a></p>";
                             echo "</td>";
                             echo "</tr>";
                         }
-                        
-                        
                         ?>
                      </table> 
                      <div class="page">
@@ -142,11 +140,9 @@ session_start();
                         echo "</center>";   
                         ?>
                        </div>
-                        
-                        
+
                         <?php                    
                     }
-                  
                         else                                            //還沒選類別時
                         {                     
                         ?>     
@@ -211,10 +207,6 @@ session_start();
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
 
 </div>
 <?php include 'footer.php';?>

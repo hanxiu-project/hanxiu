@@ -157,9 +157,6 @@
                 }
                 echo " 頁 <a href=?page=$pages>末頁</a>";
                 echo "</center>";
-			
-				
-
 
                 $sql2 = "SELECT * FROM members";
                 $result2=mysqli_query($db_link,$sql2);
@@ -187,14 +184,7 @@
                 }
 
                 mysqli_close($db_link);
-
-
                 ?>
-
-
-
-
-
 
             </div>
             <!-- /#page-wrapper -->

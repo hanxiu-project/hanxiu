@@ -39,11 +39,6 @@ session_start();
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
 
-    <!--照片區-->
-
-
-    
-
                         <?php
                     //是否為行動裝置
                     function isMobileCheck(){
@@ -130,11 +125,6 @@ session_start();
     $rows = mysqli_fetch_assoc($resultsrchmember);
     $m_id = $rows["m_id"];
 
-
-
-
-
-
     if(isset($_POST["send"]))
     {
         $nowdate=date("Y-m-d H:i:s" , mktime(date('H'),date('i'),date('s'), date('m'), date('d'), date('Y')));
@@ -149,31 +139,12 @@ session_start();
             echo "<script>alert('留言成功！');location.href='comments.php'</script>";
         }
     }
-
-
-
-
     ?>
-                   
-                   
-                
-
-              
-
-                       
             </div><!--CONTENTFORTABLE-->
-			
 	 <!--註腳-->
-  
     </div><!--CONTENT-->
-    
-	
-    
-   
-
 </div>
 <?php include 'footer.php';?>
 </body>
-
 
 </html>

@@ -133,24 +133,21 @@ session_start();
 
                     <center>
                     <div class="mycommenttable" >
-                            
-                            
-                                <font size="6">留言回覆</font>
-                            
-                            <br>
+                        <font size="6">留言回覆</font>
+                        <br>
 
-                            <?php
+                        <?php
 
-                            $sql_search_mbrcid = "SELECT * FROM `comments` WHERE `c_id` = '$_GET[ccid]'";
-                            $resultsrchcommentdata = mysqli_query($db_link, $sql_search_mbrcid);
-                            $rowq = mysqli_fetch_assoc($resultsrchcommentdata);
-                            $msg2 = $rowq["message"];
-                            $time2 = $rowq["msg_datetime"];
-                            $reply = $rowq["reply"];
-                            $rpy_time2 = $rowq["rpy_datetime"];
+                        $sql_search_mbrcid = "SELECT * FROM `comments` WHERE `c_id` = '$_GET[ccid]'";
+                        $resultsrchcommentdata = mysqli_query($db_link, $sql_search_mbrcid);
+                        $rowq = mysqli_fetch_assoc($resultsrchcommentdata);
+                        $msg2 = $rowq["message"];
+                        $time2 = $rowq["msg_datetime"];
+                        $reply = $rowq["reply"];
+                        $rpy_time2 = $rowq["rpy_datetime"];
 
 
-                            ?>
+                        ?>
 
                         <div style='border:1px solid;'>
                         <div align="left"><b>我：</b><?php echo $msg2; ?></div>
@@ -162,33 +159,17 @@ session_start();
                                 <div align="left"><b>管理員：</b><?php echo $reply; ?></div>
                                 <div align='right'><?php echo $rpy_time2; ?></div>
                             </div>
-
-
                     </center>
                 </div>
 
             <?php
-
             }
-
             ?>
-    
-                  
-                   
-                
-
-              
-
-                       
             </div><!--CONTENTFORTABLE-->
 			
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
 
 </div>
 <?php include 'footer.php';?>

@@ -177,7 +177,8 @@
           border-top:0;
           display: flex;
           width: 80%;
-          height: auto;
+          height: 100px;
+          overflow:hidden;
           top:20px;
           right: 1px;
           left: 15%;

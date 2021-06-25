@@ -137,7 +137,7 @@ session_start();
 						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
 						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
-                        
+                      
 
                         }
                     else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){

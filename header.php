@@ -127,6 +127,7 @@ session_start();
 					 if ($_SESSION[acc] == null  || $_SESSION[pwd] == null) {
 
                          echo "<li><a href=indexs.php>首頁</a></li>";
+                         echo "<li><a href=origin.php>緣起</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=supplementtype.php>補充資料</a></li>";
@@ -136,10 +137,12 @@ session_start();
 						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
 						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
-                         
+                        
+
                         }
                     else if ($_SESSION[acc] != $acc  || $_SESSION[pwd] != $pwd){
                          echo "<li><a href=indexs.php>首頁</a></li>";
+                         echo "<li><a href=origin.php>緣起</a></li>";
                          echo "<li><a href=articletype.php>瑜論講記</a></li>";
                          echo "<li><a href=kepan.php>科判</a></li>";
                          echo "<li><a href=supplementtype.php>補充資料</a></li>";
@@ -156,6 +159,7 @@ session_start();
 
                         ?>
                          <li><a href="indexs.php">首頁</a></li>
+                         <li><a href="origin.php">緣起</a></li>
                          <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplementtype.php>補充資料</a></li>
@@ -173,6 +177,7 @@ session_start();
 
 
                          <li><a href="indexs.php">首頁</a></li>
+                         <li><a href="origin.php">緣起</a></li>
                          <li><a href="articletype.php">瑜論講記</a></li>
                          <li><a href=kepan.php>科判</a></li>
                          <li><a href=supplementtype.php>補充資料</a></li>

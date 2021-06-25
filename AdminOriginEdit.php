@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <script src="ckeditor/ckeditor.js?ver=<?php echo time; ?>"></script>
 
-    <title>資訊管理 | 管理後台</title>
+    <title>緣起管理 | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@ include 'verification.php';
 
 		  <div class="col-lg-12">
               
-				<font size="6"><strong style= "background:white" >資訊管理</strong></font>
+				<font size="6"><strong style= "background:white" >緣起管理</strong></font>
 
 
             </div>
@@ -63,7 +63,7 @@ include 'verification.php';
                 /*資料庫連結*/
               
 
-                $sql="SELECT * FROM contact ";
+                $sql="SELECT * FROM  origin ";
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
 
@@ -83,11 +83,11 @@ include 'verification.php';
                                            
 											
                                             <div class="form-group">
-                                                <label for="content">聯絡資訊內容內容:</label>
+                                                <label for="content">緣起內容:</label>
                                                 <textarea id="content" name="content" rows="10" cols="80" ><?php echo $row[content]?></textarea>
                                                 <script>
                                                     CKEDITOR.replace('content',{
-                                                        width:1650,height:500,
+                                                        width:1650,height:700,
                                                     });
                                                 </script>
                                             </div>
@@ -122,16 +122,18 @@ include 'verification.php';
                         if(isset($_POST["post"]))
                         {
                            
-                            if($row['contact_id'] == null)
-                            {
-                             $sql="INSERT INTO  contact (content,date) values ('$content','$date') ";
-                             mysqli_query($db_link, $sql);
-                             echo "<script>alert('聯絡資訊已經上傳!');location.href='AdminContactManage.php'</script>";
-                            }else{  
-                                    $sql="UPDATE contact SET content = '$content' ";
-                                    mysqli_query($db_link, $sql);
-                                    echo "<script>alert('聯絡資訊已經上傳!');location.href='AdminContactManage.php'</script>";
-                                }
+                           if($row['origin_id'] == null)
+                           {
+                            $sql="INSERT INTO  origin (content,date) values ('$content','$date') ";
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('緣起已經上傳!');location.href='AdminOriginEdit.php'</script>";
+                           }else
+                           {
+                            $sql="UPDATE origin SET content = '$content' ";
+                            mysqli_query($db_link, $sql);
+                            echo "<script>alert('緣起已經上傳!');location.href='AdminOriginEdit.php'</script>";
+                           }
+								 
                               
                            
                         }

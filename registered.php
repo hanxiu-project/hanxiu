@@ -124,14 +124,14 @@
 
                             <tr>
                                 <td ><label for="email" accesskey="N">會員信箱:</label><input
-                                            type="email" style="font size:20px; padding:6px;" name="email" id="email"
+                                            type="email" style="font size:20px; padding:6px;" name="email" pattern="^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$" id="email"
                                             required autofocus placeholder="必填"><br>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><label for="telephone" accesskey="N">會員行動:</label><input
-                                            type="text" style="font size:20px; padding:6px;" name="telephone"
+                                            type="text" style="font size:20px; padding:6px;" name="telephone" minlength="10" maxlength="10"
                                             id="telephone" required autofocus placeholder="必填"><br>
                                 </td>
                             </tr>

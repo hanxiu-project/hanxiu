@@ -1,22 +1,4 @@
-<form>
-<table style="background-color:#f8d85a">
-	<tbody>
-		<tr>
-			<td style="background-color:#f8d85a"><span style="font-size:medium">卷:</span></td>
-			<td style="background-color:#f8d85a"><select name="SelectMenu">&nbsp;<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option><option>50</option><option>51</option><option>52</option><option>53</option><option>54</option><option>55</option><option>56</option><option>57</option><option>58</option><option>59</option><option>60</option><option>61</option><option>62</option><option>63</option><option>64</option><option>65</option><option>66</option><option>67</option><option>68</option><option>69</option><option>70</option><option>71</option><option>72</option><option>73</option><option>74</option><option>75</option><option>76</option><option>77</option><option>78</option><option>79</option><option>80</option><option>81</option><option>82</option><option>83</option><option>84</option><option selected="selected">85</option><option>86</option><option>87</option><option>88</option><option>89</option><option>90</option><option>91</option><option>92</option><option>93</option><option>94</option><option>95</option><option>96</option><option>97</option><option>98</option><option>99</option><option>100</option></select></td>
-			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mahabodhi.org/yoga/cb/kp2.htm#yy85">科判中綱</a></td>
-			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mahabodhi.org/yoga/cb/kp2.htm#y85">科判細綱</a></td>
-			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.back()">上一頁</a></td>
-			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.forward()">下一頁</a></td>
-			<td style="background-color:#f8d85a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mahabodhi.org/yoga/cb/index.htm">回首頁</a></td>
-		</tr>
-	</tbody>
-</table>
-</form>
-
-<form action="http://www.google.com/search" id="search" method="get"><input name="q" type="text" value="" />&nbsp;<input type="submit" value="Search" />&nbsp;</form>
-
-<h3 style="text-align:start"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:14pt"><span style="color:darkred"><strong>瑜伽師地論科句披尋記卷第八十五</strong></span></span></span></span></h3>
+<form><strong style="color:darkred; font-family:&quot;Times New Roman&quot;; font-size:14pt">瑜伽師地論科句披尋記卷第八十五</strong></form>
 
 <p><span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　彌勒菩薩說</span></span></span><br />
 <a name="85p6419"></a><span style="font-size:medium"><span style="color:#000000"><span style="font-family:&quot;Times New Roman&quot;">　　　　　　　　　　　　　　　　　　　　　　　　唐三藏沙門玄奘奉詔譯</span></span></span><br />
@@ -3745,8 +3727,5 @@
 
 <div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　彌勒菩薩依據這幾部經典，於本論中以三種（圓滿）作解釋，分別說明了修行的圓滿、證果的圓滿及說法師的圓滿，這可以說是菩薩讀了這幾段經的心得，也為有情作了更深入的衍義與探討。</span></span></span></div>
 
-<p><span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第八十五</span></strong></span></span></p>
-
-<div class="redeviation-bs-fullHeight redeviation-bs-visible" id="redeviation-bs-indicator" style="padding:0px; text-align:start; width:20px">
-<div style="border-radius:0px; width:24px !important">&nbsp;</div>
-</div>
+<p><span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第八十五</span></strong></span></span><br />
+&nbsp;</p>

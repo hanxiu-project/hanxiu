@@ -1,0 +1,271 @@
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">三界九地表解</span></span></p>
+
+<p>&nbsp;</p>
+
+<table cellspacing="0" class="MsoTableGrid" style="border-collapse:collapse; border:none; width:643px">
+	<tbody>
+		<tr>
+			<td style="background-color:#d6e3bc; border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; vertical-align:top; width:73px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">三界</span></span></p>
+			</td>
+			<td colspan="2" style="background-color:#d6e3bc; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; vertical-align:top; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">九地</span></span></p>
+			</td>
+			<td style="background-color:#d6e3bc; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; vertical-align:top; width:54px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">五趣</span></span></p>
+			</td>
+			<td colspan="2" style="background-color:#d6e3bc; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">天界</span></span></p>
+			</td>
+			<td style="background-color:#d6e3bc; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">定</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; width:73px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無色界</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">非想非非想處地</span></span></p>
+			</td>
+			<td rowspan="4" style="background-color:#daeef3; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:54px">
+			<p>&nbsp;</p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">非想非非想處天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">非想非非想處定</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無所有處地</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無所有處天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無所有處定</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">空無邊處地</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">空無邊處天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">空無邊處定</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">識無邊處地</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">識無邊處天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">識無邊處定</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:23px; width:73px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">色界</span></span></p>
+			</td>
+			<td colspan="2" rowspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">捨念清淨地</span></span></p>
+			</td>
+			<td rowspan="6" style="background-color:#daeef3; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; vertical-align:top; width:54px">
+			<p>&nbsp;</p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">五不還天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; vertical-align:top; width:180px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無煩天、無熱天、善現天、善見天、色究竟天</span></span></p>
+			</td>
+			<td rowspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">四禪</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">外道天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; vertical-align:top; width:180px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無想天</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">四禪天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:23px; vertical-align:top; width:180px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">無雲天、福生天、廣果天</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">離喜妙樂地</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">少淨天、無量淨天、遍淨天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">三禪</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">定生喜樂地</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">少光天、無量光天、光音天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">二禪</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:126px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">離生喜樂地</span></span></p>
+			</td>
+			<td colspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">梵眾天、梵輔天、梵王天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">初禪</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:17px; width:73px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">欲界</span></span></p>
+			</td>
+			<td rowspan="6" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">五趣雜居地</span></span></p>
+			</td>
+			<td rowspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; width:36px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">善</span></span></p>
+			</td>
+			<td rowspan="2" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; width:54px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">天居天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; vertical-align:top; width:180px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">夜摩天、兜率天、化樂天、他化自在天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; width:120px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">欲界定，未至定</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">地居天</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; vertical-align:top; width:180px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">四天王天、忉利天</span></span></p>
+			</td>
+			<td rowspan="5" style="background-color:#daeef3; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:17px; vertical-align:top; width:120px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color:yellow; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:54px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">人</span></span></p>
+			</td>
+			<td colspan="2" rowspan="4" style="background-color:#daeef3; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:270px">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:36px">
+			<p style="text-align:center"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">惡</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:54px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">畜生</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:54px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">餓鬼</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:54px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">地獄</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">十法界</span></span></p>
+
+<table cellspacing="0" class="MsoTableGrid" style="border-collapse:collapse; border:none">
+	<tbody>
+		<tr>
+			<td rowspan="4" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; width:103px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">界外四聖</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">佛</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">菩薩</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">緣覺</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">聲聞</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; width:103px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">界內六凡</span></span></p>
+			</td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">天</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">人</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">阿修羅</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">畜生</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">餓鬼</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:top; width:90px">
+			<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">地獄</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>

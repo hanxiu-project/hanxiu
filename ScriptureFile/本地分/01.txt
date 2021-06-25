@@ -3827,3 +3827,7 @@
 <div class="cb" style="margin-bottom:4px; margin-left:16px; margin-top:4px; text-align:start"><span style="font-size:14pt"><span style="color:#002200"><span style="font-family:&quot;Times New Roman&quot;">　如前文已說，臨命終時，阿賴耶識會從身體一分一分慢慢地離開，最後從肉心這個地方捨離，說名最後捨。</span></span></span></div>
 
 <p><span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第一</span></strong></span></span></p>
+
+<div class="redeviation-bs-fullHeight redeviation-bs-visible" id="redeviation-bs-indicator" style="padding:0px; text-align:start; width:1px">
+<div style="border-radius:0px; width:24px !important">&nbsp;</div>
+</div>

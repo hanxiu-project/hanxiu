@@ -91,13 +91,13 @@ session_start();
                               <table class="memberprofile">
                               <form name="form" method="post" action="">
                    
-                        <tr align="center">
+                            <tr align="center">
                             
                                 <td height="65"  align="center" style="height:60px" >
                                     <label for="account" accesskey="N">&emsp;&emsp;帳號:</label>
                                     <input type="text" style="font size:20px; " name="account" id="account" value="<?php echo $row[account]; ?>" readonly="readonly">
                                 </td>
-                            </tr>
+                             </tr>
 
                             <tr>
                                 <td height="65" align="center" style="height:60px">
@@ -111,11 +111,11 @@ session_start();
                                         </button>
                                         <div id="collapse2" class="collapse hidden" aria-labelledby="heading2" data-parent="#accordionExample2">
                                             <label for="e_password" accesskey="N">&emsp;舊密碼:</label>
-                                            <input type="text" style="font size:20px; " name="e_oldpassword" id="e_password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
+                                            <input type="password" style="font size:20px; " name="e_oldpassword" id="e_password" value="<?php echo $row[password]; ?>" readonly="readonly"><br>
                                             <label>&emsp;新密碼:</label>
-                                            <input type="text" style="font size:20px;" name="e_newpassword"><br>
+                                            <input type="password" style="font size:20px;" name="e_newpassword" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12" title="請最少輸入8-12位英文與數字"><br>
                                             <label>重新輸入新密碼:</label>
-                                            <input type="text" style="font size:20px; " name="e_repassword">
+                                            <input type="password" style="font size:20px; " name="e_repassword" pattern="^([a-zA-Z]+\d+|\d+[a-zA-Z]+)[a-zA-Z0-9]*$" minlength="8" maxlength="12">
                                             <br>
                                             <input type="submit" name="edit_password" value="修改">
                                         </div>
@@ -155,7 +155,7 @@ session_start();
                                         </button>
                                         <div id="collapse4" class="collapse hidden" aria-labelledby="heading4" data-parent="#accordionExample4">
                                             <label for="e_email" accesskey="N">新會員信箱:</label>
-                                            <input type="text" style="font size:20px; " name="e_email" id="e_email" value="<?php echo $row[email]; ?>">
+                                            <input type="text" style="font size:20px; " name="e_email" pattern="^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$" id="e_email" value="<?php echo $row[email]; ?>">
                                             <br>
                                             <input type="submit" name="edit_email" value="修改">
                                         </div>
@@ -166,7 +166,7 @@ session_start();
 
                             <tr>
                                 <td height="65" align="center" style="height:60px"><label for="telephone" accesskey="N">&emsp;會員行動:</label>
-                                    <input type="text" style="font size:20px; " name="telephone" id="telephone" value="<?php echo $row[telephone]; ?>" readonly="readonly"><br>
+                                    <input type="number" style="font size:20px; " name="telephone" id="telephone" value="<?php echo $row[telephone]; ?>" readonly="readonly"><br>
 
                                     <div class="accordion" id="accordionExample5">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5"
@@ -175,7 +175,7 @@ session_start();
                                         </button>
                                         <div id="collapse5" class="collapse hidden" aria-labelledby="heading5" data-parent="#accordionExample5">
                                             <label for="e_telephone" accesskey="N">新會員行動:</label>
-                                            <input type="text" style="font size:20px;" name="e_telephone" id="e_telephone" value="<?php echo $row[telephone]; ?>">
+                                            <input type="number" style="font size:20px;" name="e_telephone" minlength="10" maxlength="10" id="e_telephone" value="<?php echo $row[telephone]; ?>">
                                             <br>
                                             <input type="submit" name="edit_telephone" value="修改">
                                         </div>
@@ -238,6 +238,10 @@ session_start();
                                    echo "<script>alert('修改成功!');location.href='MemberProfile.php'</script>";
                                }
                            }
+                           else
+                           {
+                               echo "<script>alert('請輸入新密碼!');location.href='MemberProfile.php'</script>";
+                           }
                        }
 
 
@@ -248,14 +252,22 @@ session_start();
                                mysqli_query($db_link, $sqlup_name);
                                echo "<script>alert('修改成功!');location.href='MemberProfile.php'</script>";
                            }
+                           else
+                           {
+                               echo "<script>alert('請輸入姓名!');location.href='MemberProfile.php'</script>";
+                           }
                        }
 
                        if(isset($_POST["edit_email"]))
                        {
-                           if($_POST["e_mail"]!=null)
+                           if($_POST["e_email"]!=null)
                            {
                                mysqli_query($db_link, $sqlup_email);
                                echo "<script>alert('修改成功!');location.href='MemberProfile.php'</script>";
+                           }
+                           else
+                           {
+                               echo "<script>alert('請輸入電子信箱!');location.href='MemberProfile.php'</script>";
                            }
                        }
 
@@ -266,6 +278,10 @@ session_start();
                                mysqli_query($db_link, $sqlup_telephone);
                                echo "<script>alert('修改成功!');location.href='MemberProfile.php'</script>";
                            }
+                           else
+                           {
+                               echo "<script>alert('請輸入電話號碼!');location.href='MemberProfile.php'</script>";
+                           }
                        }
 
                        if(isset($_POST["edit_address"]))
@@ -274,6 +290,10 @@ session_start();
                            {
                                mysqli_query($db_link, $sqlup_address);
                                echo "<script>alert('修改成功!');location.href='MemberProfile.php'</script>";
+                           }
+                           else
+                           {
+                               echo "<script>alert('請輸入地址!');location.href='MemberProfile.php'</script>";
                            }
                        }
 

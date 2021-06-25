@@ -86,9 +86,9 @@
   nav{
       border-top: 2px solid #612E04;
       width: 100%;
-      overflow :auto;
      
-      min-height: calc(100vh - 10vh);
+      overflow :auto;
+      height: calc(100vh - 10vh);
       background-color: #C7B897;
       position: absolute;
       top: 100%;

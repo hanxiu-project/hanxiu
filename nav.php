@@ -30,6 +30,15 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
+                 <li class="dropdown">
+				<a href="AdminOriginEdit.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-file"></i>緣起管理<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+				<a href="AdminOriginEdit.php"><i class="fas fa-file"></i> 緣起管理編輯</a>
+				</li>
+				
+				</ul>
+				</li>
 				<li class="dropdown">
 				<a href="AdminSloganEdit.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-file"></i>標語管理<b class="caret"></b></a>
 				<ul class="dropdown-menu">

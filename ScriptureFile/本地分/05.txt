@@ -3189,6 +3189,6 @@
 
 <p><span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第五</span></strong></span></span></p>
 
-<div class="redeviation-bs-fullHeight redeviation-bs-visible" id="redeviation-bs-indicator" style="padding:0px; text-align:start; width:20px">
+<div class="redeviation-bs-fullHeight redeviation-bs-visible" id="redeviation-bs-indicator" style="padding:0px; text-align:start; width:1px">
 <div style="border-radius:0px; width:24px !important">&nbsp;</div>
 </div>

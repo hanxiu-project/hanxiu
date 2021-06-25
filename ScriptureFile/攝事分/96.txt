@@ -638,8 +638,5 @@
 <span style="font-size:medium"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">巳二、隨釋後一</span></strong></span></span><br />
 <span style="font-size:14pt"><span style="color:darkblue"><strong><span style="font-family:&quot;Times New Roman&quot;">如說喜樂色等義別，如是喜樂取等義別，應知亦爾。</span></strong></span></span><br />
 <span style="font-size:14pt"><span style="color:#590000"><strong><span style="font-family:&quot;Times New Roman&quot;">《披》如說喜樂色等義別等者：此中義顯決定記事。謂唯有心住四識住，有轉有染；又唯有心斷四識住，無轉無染。心轉染時，復有四依，謂色、受、想、行，由是此說色等義別。復有四取，謂於欲、見、戒禁、我語所有欲貪，由是此說取等義別。言喜樂者，謂喜為先因，於彼彼生處障於厭離，滋潤自體。如是一切，已如前說應知。（<a href="http://mahabodhi.org/yoga/cb/87.htm#73598:66539">陵本八十七卷十三頁6588</a>）</span></strong></span></span><br />
-<span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第九十六</span></strong></span></span></p>
-
-<div class="redeviation-bs-fullHeight redeviation-bs-visible" id="redeviation-bs-indicator" style="padding:0px; text-align:start; width:20px">
-<div style="border-radius:0px; width:24px !important">&nbsp;</div>
-</div>
+<span style="font-size:14pt"><span style="color:darkred"><strong><span style="font-family:&quot;Times New Roman&quot;">瑜伽師地論科句披尋記卷第九十六</span></strong></span></span><br />
+&nbsp;</p>

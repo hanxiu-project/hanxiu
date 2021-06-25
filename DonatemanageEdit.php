@@ -63,19 +63,14 @@ include 'verification.php';
                 $result=mysqli_query($db_link,$sql);
                 $row=mysqli_fetch_assoc($result);
 
-                /*$sql2="SELECT typename FROM scripture,types WHERE scripture.t_id = types.t_id AND scripture.s_id = $_SESSION[edit_s_id]";
-                $result2=mysqli_query($db_link,$sql2);
-                $row2=mysqli_fetch_assoc($result2);*/
-
-
                 //讀取檔案
                 $filename = $row["filename"];
                 $str = "";
 
                 //判斷是否有該檔案
-                if(file_exists("C:AppServ/www/漢修專題/ScriptureFile/$filename"))
+                if(file_exists("./ScriptureFile/$filename"))
                 {
-                    $filee = fopen("C:AppServ/www/漢修專題/ScriptureFile/$filename","r");
+                    $filee = fopen("./ScriptureFile/$filename","r");
                     if($filee != NULL)
                         //當檔案未執行到最後一筆，迴圈繼續執行(fgets一次抓一行)
                     {
@@ -88,8 +83,6 @@ include 'verification.php';
                 }
 
                 ?>
-
-
 
                 <div id="con2">
                     <div class="main">
@@ -160,13 +153,6 @@ include 'verification.php';
 						$dcontent = $_POST["dcontent"];
 						$damount = $_POST["damount"];
 						$ddate = $_POST["ddate"];
-							/*$sqli="SELECT * FROM `members` WHERE name = '$dname' and telephone='$dtele'";
-						$result=mysqli_query($db_link,$sqli);
-						$row=mysqli_fetch_assoc($result);
-							mysqli_query($db_link, $sqli);
-						$mid=$row["m_id"];*/
-						
-						
 						$sqlii="SELECT * FROM `donate`";
 						$result1=mysqli_query($db_link,$sqlii);
 						$row1=mysqli_fetch_assoc($result1);
@@ -181,7 +167,6 @@ include 'verification.php';
                             }
                             else
                             {
-								
                                 $sqldonate="INSERT INTO `donates` (m_id,dname,amount,date,type) VALUES('$row[m_id]','$row[name]','$damount','$ddate','$dcontent')";
                                 mysqli_query($db_link, $sqldonate);
                                 echo "<script>alert('捐獻資料已經上傳!');location.href='Donatemanage.php'</script>";

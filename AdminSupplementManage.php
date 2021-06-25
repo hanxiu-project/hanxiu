@@ -93,9 +93,6 @@ include 'verification.php';
 
                     mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
 
-                   /* $sql_tid = "SELECT * FROM supplements order by spt_id";
-                    $result= mysqli_query($db_link,$sql_tid);*/
-
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table border=1 width=100% style=font-size:20px;line-height:50px;>";
                     echo "<tr align=center>";
@@ -108,12 +105,10 @@ include 'verification.php';
                     echo "<td></td>";
                     echo "</tr>";
 
-
                     if (!($_GET["type"]) || $_GET["type"]=="all")
                     {
                         $sql_tid = "SELECT * FROM supplements where save='0' order by spt_id";
                         $resultpage = mysqli_query($db_link, $sql_tid);
-
 
                         $date_nums = mysqli_num_rows($resultpage);                          //講記數量
                         $per = 10;                                                      //10筆換頁
@@ -130,10 +125,7 @@ include 'verification.php';
                         $scriptureresult[$start] = mysqli_query($db_link, $sqlresult);
                         $scriptureresult[$page] = mysqli_query($db_link, $sqlresult);
 
-
-
-
-                        while ($row = mysqli_fetch_assoc($scriptureresult[$start]))//$row=$result->fetch_assoc())
+                        while ($row = mysqli_fetch_assoc($scriptureresult[$start]))
                         {
                             echo "<tr align=center>";
                             echo "<td>$row[spmtypename]</td>";
@@ -142,14 +134,10 @@ include 'verification.php';
                             echo "<td>$row[newupdate]</td>";
                             echo "<td>$row[secupdate]/$row[thrupdate]</td>";
                             echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[sp_id]+1' value='編輯'></td>";
-
                             ?>
                             <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[sp_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
 
-
-
                             <?php
-
                             echo "</tr>";
                         }
                         echo "</form>";
@@ -173,9 +161,7 @@ include 'verification.php';
                     {
                         $sqltype = "SELECT * FROM supplements WHERE spmtypename ='$_GET[type]' order by spt_id";
                         $resulttype= mysqli_query($db_link, $sqltype);
-
                         $date_nums = mysqli_num_rows($resulttype);                             //講記數量
-                        //$date_nums = mysqli_num_rows($sqltype);
                         $per = 10;                                                      //10筆換頁
                         $pages = ceil($date_nums / $per);                             //共幾頁
                         if (!isset($_GET["page"])) {
@@ -183,7 +169,6 @@ include 'verification.php';
                         } else {
                             $page = intval($_GET["page"]);                              //確認頁數只能是數值資料
                         }
-
                         $start = ($page - 1) * $per;
 
                         $sqlresultsrc = "SELECT * FROM supplements WHERE spmtypename ='$_GET[type]' order by spt_id Limit $start , $per";
@@ -202,10 +187,7 @@ include 'verification.php';
                             ?>
                             <td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[sp_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除此檔案?')"></td>
 
-
                             <?php
-
-
                             echo "</tr>";
                         }
 
@@ -222,58 +204,18 @@ include 'verification.php';
                         }
                         echo " 頁 <a href=?type=$_GET[type]&gotype=查看補充資料&page=$pages>末頁</a>";
                         echo "</center>";
-
-
-
                     }
 
-
-
-                   // $sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
                     $sql2 = "SELECT * FROM supplements ";
                     $result2 = mysqli_query($db_link, $sql2);
 
                     while ($row2 = $result2->fetch_assoc()) {
-                    if (isset($_POST["$row2[sp_id]+1"])) {
-                        $_SESSION["edit_sp_id"] = $row2["sp_id"];
-                        echo "<script langauge = 'javascript' type='text/javascript'>";
-                        echo "window.location.href = 'AdminSupplementEdit.php'";
-                        echo "</script>";
-                    }
-
-                    if (isset($_POST["$row2[sp_id]+2"])) {
-
-                        $_SESSION["delete_sp_id"]=$row2["sp_id"];
-                        $sql_delete="DELETE FROM supplements WHERE supplements.sp_id = $_SESSION[delete_sp_id]";
-                        mysqli_query($db_link, $sql_delete);
-                        $filename = $row2["filename"];//刪除檔案
-                        $type = $row2["spmtypename"];//刪除檔案
-                        unlink("../漢修專題/supplement/".$type."/".$filename);
-
-                        echo "<script>alert('成功刪除!');location.href='AdminSupplementManage.php'</script>";
-
-                    }
-                    if (isset($_POST["$row2[sp_id]+1"])) {
-                        $_SESSION["edit_sp_id"] = $row2["sp_id"];
-                        echo "<script langauge = 'javascript' type='text/javascript'>";
-                        echo "window.location.href = 'AdminSupplementEdit.php'";
-                        echo "</script>";
-                    }
-
-
-
-
-
-
-
-
-
-                    //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
-                    /*$sql2 = "SELECT * FROM supplements ";
-                    $result2=mysqli_query($db_link,$sql2);
-
-                    while($row2=$result2->fetch_assoc()) {
-
+                        if (isset($_POST["$row2[sp_id]+1"])) {
+                            $_SESSION["edit_sp_id"] = $row2["sp_id"];
+                            echo "<script langauge = 'javascript' type='text/javascript'>";
+                            echo "window.location.href = 'AdminSupplementEdit.php'";
+                            echo "</script>";
+                        }
 
                         if (isset($_POST["$row2[sp_id]+2"])) {
 
@@ -282,16 +224,18 @@ include 'verification.php';
                             mysqli_query($db_link, $sql_delete);
                             $filename = $row2["filename"];//刪除檔案
                             $type = $row2["spmtypename"];//刪除檔案
-                            unlink("../漢修專題/supplement/".$type."/".$filename);
+                            unlink("./supplement/".$type."/".$filename);
                             echo "<script>alert('成功刪除!');location.href='AdminSupplementManage.php'</script>";
-
-                        }*/
-
+                        }
+                        if (isset($_POST["$row2[sp_id]+1"])) {
+                            $_SESSION["edit_sp_id"] = $row2["sp_id"];
+                            echo "<script langauge = 'javascript' type='text/javascript'>";
+                            echo "window.location.href = 'AdminSupplementEdit.php'";
+                            echo "</script>";
+                        }
                     }
 
                     mysqli_close($db_link);
-
-
                     ?>
 
 

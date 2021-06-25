@@ -111,7 +111,7 @@ include 'verification.php';
                         echo "</tr>";
                     }
                     echo "</table>";
-                    //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
+
                     $sql2 = "SELECT * FROM videotypes ";
                     $result2 = mysqli_query($db_link, $sql2);
 
@@ -162,10 +162,7 @@ include 'verification.php';
 
                     }
 
-
                     mysqli_close($db_link);
-
-
                     ?>
 
 

@@ -37,8 +37,6 @@ session_start();
     <!--照片區-->
 
 
-    
-
                         <?php
                     //是否為行動裝置
                     function isMobileCheck(){
@@ -136,31 +134,24 @@ session_start();
                         }
 
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
-
-                        /*for($i=1;$i<=$rows;$i++)
-                        {*/
-                            $start=($page-1)*$per;
-                            $sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` DESC Limit  $start  , $per";
-                            $resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
-							$resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
+						$start=($page-1)*$per;
+						$sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` DESC Limit  $start  , $per";
+						$resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
+						$resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
                             
-                            while ($supplement = mysqli_fetch_assoc($resultnum10[$start])) {
-								echo "<tr >";
-								echo "<td>";
-                                echo "$supplement[spmtypename]";
-                                echo "</td>";
-								echo "<td>";
-                                echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a>";
-                                echo "</td>";
-                                echo "<td>";
-                                echo "$supplement[date]";
-                                echo "</td>";
-								echo "</tr >";
-                            }
-
-                        //}
-
-
+                        while ($supplement = mysqli_fetch_assoc($resultnum10[$start])) {
+                            echo "<tr >";
+                            echo "<td>";
+                            echo "$supplement[spmtypename]";
+                            echo "</td>";
+                            echo "<td>";
+                            echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a>";
+                            echo "</td>";
+                            echo "<td>";
+                            echo "$supplement[date]";
+                            echo "</td>";
+                            echo "</tr >";
+                        }
                     }
 					?>
                        
@@ -189,13 +180,8 @@ session_start();
                         <br>
                         <h2>｜補充資料類別 </h2>
                         </div>
-                        
-
-
                         <center>
-
-                     
-                            <table  >
+                            <table>
                             
                                 <?php
                                 if(isMobileCheck()){
@@ -252,21 +238,13 @@ session_start();
                                 ?>  
                         </table>
                             <center>
-                              
-                    
                     </center>
-                           
 
-                       
             </div><!--CONTENTFORTABLE-->
 			
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
 
 </div>
 <?php include 'footer.php';?>

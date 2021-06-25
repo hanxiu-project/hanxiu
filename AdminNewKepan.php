@@ -110,7 +110,7 @@ include 'verification.php';
                         echo "</tr>";
                     }
                     echo "</table>";
-                    //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
+
                     $sql2 = "SELECT * FROM kp_types ";
                     $result2 = mysqli_query($db_link, $sql2);
 
@@ -146,7 +146,7 @@ include 'verification.php';
                             echo "<script>alert('請輸入欲新增的類別!');location.href='AdminNewKepan.php'</script>";
                         } else {
                             //資料夾的建立
-                            $file_path = "kepan/$type";
+                            $file_path = "./kepan/$type";
                             if (!file_exists($file_path)) {
                                 mkdir($file_path);
                                 //echo “建立資料夾成功”;
@@ -157,16 +157,10 @@ include 'verification.php';
 //                            echo “資料夾已存在”;
                                 echo "<script>alert('科判類別已存在!');location.href='AdminNewKepan.php'</script>";
                             }
-
                         }
-
-
                     }
 
-
                     mysqli_close($db_link);
-
-
                     ?>
 
 

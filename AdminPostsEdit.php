@@ -81,7 +81,6 @@ include 'verification.php';
 												
                                             </div>
 
-
                                             <div class="form-group">
                                                 <label for="content">公告內容:</label>
                                                 <textarea id="content" name="content" rows="10" cols="80"><?php echo $row['content']?></textarea>
@@ -92,46 +91,42 @@ include 'verification.php';
                                                 </script>
                                             </div>
 
-
-                                                    <div class="form-group">
-                                                        <?php
-                                                            if ($row["save"] == 1)
-                                                            {
-                                                        ?>
-                                                                <label for="date">發佈日期:</label>
-                                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent">
-                                                        <?php
-                                                            }
-                                                            else
-                                                            {
-                                                        ?>
-                                                                <label for="date">發佈日期:</label>
-                                                                <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly" >
-                                                        <?php
-                                                            }
-                                                        ?>
-
-                                                        <label for="day">下架日期:</label>
-                                                        <input id="newday" name="newday" type="date" value="<?php echo $row['newday']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
-                                                        </br>
-                                            <?php
-                                                        if($row["top"]==0)
-                                                        {
-                                            ?>
-                                                            <input type='hidden' name='top' value='0'>
-                                                            <input type='checkbox' name='top' value='1'><label>置頂</label>
-                                            <?php
-                                                        }
-                                                        else if($row["top"]==1)
-                                                        {
-                                            ?>
-                                                            <input type='checkbox' name='top' value='1' checked><label>置頂</label>
-                                            <?php
-                                                        }
-                                            ?>
-                                                    </div>
-
-
+                                            <div class="form-group">
+                                                <?php
+                                                if ($row["save"] == 1)
+                                                {
+                                                ?>
+                                                    <label for="date">發佈日期:</label>
+                                                    <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent">
+                                                <?php
+                                                }
+                                                else
+                                                {
+                                                ?>
+                                                    <label for="date">發佈日期:</label>
+                                                    <input id="date" name="date" type="date" value="<?php echo $row['date']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" readonly="readonly" >
+                                                <?php
+                                                }
+                                                ?>
+                                                    <label for="day">下架日期:</label>
+                                                    <input id="newday" name="newday" type="date" value="<?php echo $row['newday']?>"  style="width:525px; height:30px; color:#000000; background-color:transparent" >
+                                                    </br>
+                                                <?php
+                                                    if($row["top"]==0)
+                                                {
+                                                ?>
+                                                    <input type='hidden' name='top' value='0'>
+                                                    <input type='checkbox' name='top' value='1'><label>置頂</label>
+                                                <?php
+                                                }
+                                                    else if($row["top"]==1)
+                                                {
+                                                ?>
+                                                    <input type='checkbox' name='top' value='1' checked><label>置頂</label>
+                                                <?php
+                                                }
+                                                ?>
+                                            </div>
 
                                             <div class="form-group">
                                                 <input type="submit" class="btn btn-sm btn-warning" name="save" value="暫存" >
@@ -174,14 +169,12 @@ include 'verification.php';
                     }
                     else
                     {
-                        //echo "<script>alert('$_POST[top]');location.href=''</script>";
                         $sql = "UPDATE posts SET  `title` = '$_POST[title]',`content` = '$_POST[content]',`date`='$_POST[date]',`newday`='$_POST[newday]', `top`='$_POST[top]',`save`='1' , `keep` = '$keep' WHERE posts.p_id = $_SESSION[edit_p_id]";
 
                         mysqli_query($db_link, $sql);
                         echo "<script>alert('公告已經上傳至暫存區!');location.href='AdminPostsSave.php'</script>";
                     }
                 }
-
 
                 if(isset($_POST["edit"]))
                 {

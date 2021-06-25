@@ -44,12 +44,8 @@ session_start();
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
 
-    <!--照片區-->
 
-
-    
-
-                        <?php
+                <?php
                     //是否為行動裝置
                     function isMobileCheck(){
                         //Detect special conditions devices
@@ -76,7 +72,7 @@ session_start();
                         }
                     } 
 
-                        ?>
+                ?>
 
 
     
@@ -92,7 +88,6 @@ session_start();
       </script>
     <!--主內文區-->
          <div class="content">
-                
                  <div class="tableforcontent">
                      
                                 <div class="newstitle">
@@ -109,8 +104,7 @@ session_start();
                                 <br>
                                 <h2>｜<?php echo "$rtypename[2]" ?></h2>
 				                </div> 
-				
-			
+
                 <center>
                     <table>
                         
@@ -143,14 +137,8 @@ session_start();
                                         
                                         echo "</td>";
                                     }
-    
                                     echo "</tr>";
-    
-
-
                                 }
-                        
-                       
                         }else {
                             $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
 
@@ -169,15 +157,10 @@ session_start();
                                     echo "<tr >";
                                     while ($script = mysqli_fetch_assoc($resultnum10)) {
                                         echo "<td>";
-                                       
                                         echo "<a href=article.php?sid='$script[s_id]' title='$script[number]'>$script[number]</a></p>";
-                                        
-                                        
                                         echo "</td>";
                                     }
-    
                                     echo "</tr>";
-    
                                 }
                         }
                         echo "</table>";
@@ -191,43 +174,27 @@ session_start();
                          
                            <br>  
                          <h2>｜講記類別</h2>
-                        
-
-                                
                                 <div class="search">
                                 <form name="src" method="GET" action="">
-
                                         查詢講記標題：<input type="text" name="srctitle" Placeholder="輸入講記標題">
                                         <input type='submit' name='tsrcbtn' value='搜尋'>
                                         <br>
                                         查詢講記內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
                                         <input type='submit' name='srcbtn' value='搜尋'>
-
                                         <br><br>
                                     </form>
                                 </div>
-                       
-                          
-                      
-
-
                         <center>
-                            
-							
-                           <table  >
+
+                           <table>
                                 <br>
                                 <?php
                                 if(isMobileCheck()){
                                     $sqlatypecnum = "SELECT * FROM `types` order by listorder";
-
-
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
-            
-            
                                     $per=3;
                                     $rows=ceil($datas/$per);
-            
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
             
                                     for($j=1;$j<=$rows;$j++)
@@ -239,27 +206,16 @@ session_start();
                                             while ($row = mysqli_fetch_assoc($resultnums10)) {
                                                 echo "<td >";
                                                 echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a></p>";
-                                                
-                                            
                                                 echo "</td>";
                                             }
-            
                                             echo "</tr>";
-            
                                         }
-                                  
-                                
-                               
                                 }else {
                                     $sqlatypecnum = "SELECT * FROM `types` order by listorder";
-
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
-            
-            
                                     $per=10;
                                     $rows=ceil($datas/$per);
-            
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
             
                                     for($j=1;$j<=$rows;$j++)
@@ -271,21 +227,11 @@ session_start();
                                             while ($row = mysqli_fetch_assoc($resultnums10)) {
                                                 echo "<td>";
                                                 echo "<a href=?tid='$row[t_id]' title='$row[typename]'`>$row[typename]</a></p>";
-                                                
-                                            
                                                 echo "</td>";
-                                            
                                             }
-            
                                             echo "</tr>";
-            
                                         }
-
                                 }
-                               
-                               
-                                
-                        
                         ?>
                         
                         </table>
@@ -293,35 +239,19 @@ session_start();
                                 <?php
                                 }
                                 if (isset($_GET['srcbtn'])) {
-
                                     echo "<script>location.href='searchkeyword.php?srckword=$_GET[srckeyword]';</script>";        //
-
                                 }
                                 if (isset($_GET['tsrcbtn'])) {
-
                                     echo "<script>location.href='searchtitle.php?srctitle=$_GET[srctitle]';</script>";        //
-
                                 }
-
                                 ?>
-                    
                 </center>
-                           
-
-              
         </div><!--CONTENTFORTABLE-->
 			
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
-
 </div>
 <?php include 'footer.php';?>
 </body>
-
-
 </html>

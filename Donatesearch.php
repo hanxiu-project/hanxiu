@@ -44,14 +44,6 @@ include 'verification.php';
     <?php include 'nav.php';?>
     <?php include 'database.php';?>
 
-    <!--建立新經文
-    <div class="row" style="margin-bottom: 20px; text-align: left">
-        <div class="col-lg-12">
-           <a href="Donatesearch.php" class="btn btn-success  " style="left">搜尋會員姓名</a>
-		   <input type="text" name="sdonatemember" Placeholder="輸入姓名">
-        </div>
-    </div>-->
-
     <!--Body-->
     <div id="page-wrapper">
 
@@ -91,18 +83,13 @@ include 'verification.php';
                     echo "<td>$row[type]</td>";
 					echo "<td>$row[amount]</td>";
 					echo "<td>$row[date]</td>";
-                    
                     ?>
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[d_id]+2"; ?>" value='刪除' onclick="return confirm('是否確認刪除這筆捐贈?')"></td>
-                    
 					<?php
-
                     echo "</tr>";
                 }
                 echo "</table>";
 
-
-                //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
                 $sql2 = "SELECT * FROM `members`";
                 $result2=mysqli_query($db_link,$sql2);
 
@@ -117,11 +104,7 @@ include 'verification.php';
                 }
 
                     mysqli_close($db_link);
-
-
                 ?>
-
-
         </div>
         <!-- /#page-wrapper -->
 

@@ -99,23 +99,18 @@ include 'verification.php';
             echo "<tr align=center>";
             echo "<td>類別名稱</td>";
             echo "<td>卷號</td>";
-
             echo "<td>經文標題</td>";
             echo "<td>發佈日期</td>";
             echo "<td>最新修改管理員</td>";
             echo "<td>前二位修改管理員</td>";
-
             echo "<td></td>";
             echo "<td></td>";
             echo "</tr>";
-
 
             if (!($_GET["type"]) || $_GET["type"]=="all")
             {
                 $sql_tid = "SELECT * FROM scripture  where save='1' order by t_id";
                 $resultpage = mysqli_query($db_link, $sql_tid);
-
-
                 $date_nums = mysqli_num_rows($resultpage);                          //講記數量
                 $per = 10;                                                      //10筆換頁
                 $pages = ceil($date_nums / $per);                             //共幾頁
@@ -130,9 +125,6 @@ include 'verification.php';
                 $sqlresult = "SELECT * FROM scripture  where save='1' order by t_id Limit $start , $per";
                 $scriptureresult[$start] = mysqli_query($db_link, $sqlresult);
                 $scriptureresult[$page] = mysqli_query($db_link, $sqlresult);
-
-
-
 
                 while ($row = mysqli_fetch_assoc($scriptureresult[$start]))//$row=$result->fetch_assoc())
                 {
@@ -150,8 +142,6 @@ include 'verification.php';
                     <td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;'
                                name="<?php echo "$row[s_id]+2"; ?>" value='刪除'
                                onclick="return confirm('是否確認刪除這篇講記?')"></td>
-
-
                     <?php
 
                     echo "</tr>";
@@ -169,11 +159,7 @@ include 'verification.php';
                 }
                 echo " 頁 <a href=?page=$pages>末頁</a>";
                 echo "</center>";
-
-
-
             }
-
 
             else if (isset($_GET["type"]))
             {
@@ -181,7 +167,6 @@ include 'verification.php';
                 $resulttype= mysqli_query($db_link, $sqltype);
 
                 $date_nums = mysqli_num_rows($resulttype);                             //講記數量
-                //$date_nums = mysqli_num_rows($sqltype);
                 $per = 10;                                                      //10筆換頁
                 $pages = ceil($date_nums / $per);                             //共幾頁
                 if (!isset($_GET["page"])) {
@@ -202,20 +187,15 @@ include 'verification.php';
                     echo "<td>$row[number]</td>";
                     echo "<td>$row[title]</td>";
                     echo "<td>$row[date]</td>";
-
                     echo "<td>$row[newupdate]</td>";
                     echo "<td>$row[secupdate]/$row[thrupdate]</td>";
-
                     echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[s_id]+1' value='編輯'></td>";
-
                     ?>
                     <td><input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;'
                                name="<?php echo "$row[s_id]+2"; ?>" value='刪除'
                                onclick="return confirm('是否確認刪除這篇講記?')"></td>
 
                     <?php
-
-
                     echo "</tr>";
                 }
 
@@ -232,9 +212,6 @@ include 'verification.php';
                 }
                 echo " 頁 <a href=?type=$_GET[type]&gotype=查看講記類別&page=$pages>末頁</a>";
                 echo "</center>";
-
-
-
             }
 
             $sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
@@ -257,7 +234,7 @@ include 'verification.php';
                     $filename = $row2["filename"];//刪除檔案
                     $typename = $row2["typename"];//類別名稱
 
-                    unlink("ScriptureFile/" . $typename . "/" . $filename);
+                    unlink("./ScriptureFile/" . $typename . "/" . $filename);
                     echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
 
                 }
@@ -270,9 +247,7 @@ include 'verification.php';
             }
             ?>
 
-
             <?php
-
             mysqli_close($db_link);
             ?>
 

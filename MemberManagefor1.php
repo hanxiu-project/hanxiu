@@ -135,13 +135,8 @@ include 'verification.php';
 					<td><input type='submit' class="btn btn-sm btn-danger " name="<?php echo "$row[m_id]+3"; ?>" value='移權' onclick="return confirm('是否停權這位管理員?')"></td>
 					<?php
 					}
-					
 				   echo "</tr>";
-                
-                    
-					
                 }
-
 
                 echo "</form>";
                 echo "</table>";
@@ -185,14 +180,7 @@ include 'verification.php';
                 }
 
                 mysqli_close($db_link);
-
-
                 ?>
-
-
-
-
-
 
             </div>
             <!-- /#page-wrapper -->

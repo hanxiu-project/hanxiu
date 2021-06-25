@@ -36,11 +36,6 @@ session_start();
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
 
-    <!--照片區-->
-
-
-    
-
                         <?php
                     //是否為行動裝置
                     function isMobileCheck(){
@@ -79,18 +74,15 @@ session_start();
 
     ?>
            
-                        <div class="newstitle">
-                        <br>
-                        <h2>｜聯絡資訊</h2>
-                          </div> 
-             
+            <div class="newstitle">
+                <br>
+                <h2>｜聯絡資訊</h2>
+            </div>
 
-                    <center>
-                        <table class="contact" >      
-                        <tr align="center">
-                      
-                      <td width="80%" align="center">聯絡資訊</th>
-                  </tr>
+            <table class="contact" >
+            <tr align="center">
+                <td width="80%" align="center">聯絡資訊</th>
+            </tr>
               <?php
               while($row=$result->fetch_assoc())
               {
@@ -103,28 +95,11 @@ session_start();
               
               mysqli_close($db_link);
               ?>
-            
-    
-                  
-                   
-                
 
-              
-
-                       
             </div><!--CONTENTFORTABLE-->
-			
 	 <!--註腳-->
-  
     </div><!--CONTENT-->
-    
-	
-    
-   
-
 </div>
 <?php include 'footer.php';?>
 </body>
-
-
 </html>

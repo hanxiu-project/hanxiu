@@ -43,9 +43,6 @@ session_start();
 
     <!--照片區-->
 
-
-    
-
                         <?php
                     //是否為行動裝置
                     function isMobileCheck(){
@@ -110,19 +107,12 @@ session_start();
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr>";
-                    
-					
-                   echo "<td align='center'>$row[type]</td>";
+                    echo "<td align='center'>$row[type]</td>";
 					echo "<td align='center'>$row[amount]</td>";
 					echo "<td>$row[date]</td>";
- 
-					
 					echo "</tr>";
 					
                 }
-				
-					
-						
                 echo "</table>";
                 ?>
                 <div class="total">
@@ -137,12 +127,6 @@ session_start();
 
                 ?>
 
-                          
-
-               
-               
-                        
-               
                 <table class="news">
                 <tr height="40px" style="font-weight:bold;font-size:20px" bgcolor="#bfbfbf" align="center">
                 <td width="25%" align="center" align="center">捐獻內容</td>
@@ -163,19 +147,12 @@ session_start();
                 while($row5=$result5->fetch_assoc())
                 {
                     echo "<tr>";
-                    
-					
-                   echo "<td align='center'>$row5[type]</td>";
+                    echo "<td align='center'>$row5[type]</td>";
 					echo "<td align='center'>$row5[amount]</td>";
 					echo "<td>$row5[date]</td>";
- 
-					
 					echo "</tr>";
-					
                 }
-				
-					
-						
+
                 echo "</table>";
                 ?>
                 <div class="total">
@@ -190,18 +167,11 @@ session_start();
                 ?>
                 </div>
 
-              
-
-                       
             </div><!--CONTENTFORTABLE-->
 			
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
 
 </div>
 <?php include 'footer.php';?>

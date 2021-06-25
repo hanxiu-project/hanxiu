@@ -101,16 +101,10 @@ include 'verification.php';
                     echo "<td>$row[telephone]</td>";
 					 echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[m_id]+1' value='新增贊助'></td>";
                     ?>
-					
-					
-                    
 					<?php
 				   echo "</tr>";
                 }
-					
-					
 				}else{
-					
                 while($row=$result->fetch_assoc())
                 {
                     echo "<tr align=center>";
@@ -120,17 +114,12 @@ include 'verification.php';
                     echo "<td>$row[telephone]</td>";
 					 echo "<td><input type='submit' class='btn btn-sm btn-primary' style='width:100px;height:30px;' name='$row[m_id]+1' value='新增贊助'></td>";
                     ?>
-					
-                    
 					<?php
 				   echo "</tr>";
                 }
 				}
                 echo "</table>";
-               
 
-
-                //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
                 $sql2 = "SELECT * FROM `members`";
                 $result2=mysqli_query($db_link,$sql2);
 
@@ -141,30 +130,10 @@ include 'verification.php';
                         echo "window.location.href = 'DonatemanageEdit.php'";
                         echo "</script>";
                     }
-
-                    /*if (isset($_POST["$row2[s_id]+2"])) {
-
-                        $_SESSION["delete_s_id"]=$row2["s_id"];
-                        $sql_delete="DELETE FROM scripture WHERE scripture.s_id = $_SESSION[delete_s_id]";
-                        mysqli_query($db_link, $sql_delete);
-                        $filename = $row2["filename"];//刪除檔案
-                        unlink($filename);
-                        echo "<script>alert('成功刪除!');location.href='AdminScriptureManage.php'</script>";
-
-                    }*/
                 }
-			
-				
-
-
-
-
 
                     mysqli_close($db_link);
-
-
                 ?>
-
 
         </div>
         <!-- /#page-wrapper -->

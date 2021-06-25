@@ -112,19 +112,10 @@ session_start();
                       
                         </div>
                         <!--CONTENTFORTABLE-->
-                           
 
-                       
-          
-            
 	 <!--註腳-->
   
     </div><!--CONTENT-->
-    
-	
-    
-   
-   
 
 </div>
 

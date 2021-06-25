@@ -72,8 +72,6 @@ include 'verification.php';
 				$getDate= date("Y-m-d");
                 ?>
 
-
-
                     <div id="con2">
                         <div class="main">
                             <div class="newstitle" >
@@ -90,13 +88,12 @@ include 'verification.php';
 													 <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:transparent">
 													<?php while ($row = $resulttype->fetch_assoc()) {
 														echo "<option value=$row[t_id]>$row[typename]</option>";
-														
-														
+
 													}
 													$sqltypeinput="SELECT * FROM `types` where `t_id`='$_POST[type]'";
 													$resulttypeinput=mysqli_query($db_link,$sqltypeinput);
-													 $rowinput= mysqli_fetch_assoc($resulttypeinput);	
-													 $inputtype=$rowinput['typename'];
+													$rowinput= mysqli_fetch_assoc($resulttypeinput);
+													$inputtype=$rowinput['typename'];
 													?>
                                                    
                                                     </select>
@@ -137,7 +134,6 @@ include 'verification.php';
                                                 </div>
 
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +172,7 @@ include 'verification.php';
 							
 							
                         }
-                        else  if (file_exists("ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                        else  if (file_exists("./ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                         {
                             echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                         }
@@ -184,7 +180,7 @@ include 'verification.php';
                         {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("./ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
                             $txt = $content;
                             fwrite($myfile,$txt);
                             fclose($myfile);
@@ -206,7 +202,7 @@ include 'verification.php';
                        {
                             echo "<script>alert('請輸入資料!');location.href='AdminScripturePost.php'</script>";
                        }
-                       else  if (file_exists("ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
+                       else  if (file_exists("./ScriptureFile/".$inputtype."/".$filename)) //if($filename == $filenamecheck)
                        {
                            echo "<script>alert('卷號重複，請重新輸入！');location.href='AdminScripturePost.php'</script>";
                        }
@@ -214,7 +210,7 @@ include 'verification.php';
                        {
                             //寫入檔案
                             $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-                            $myfile = fopen("ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
+                            $myfile = fopen("./ScriptureFile/$inputtype/$filename","a+") or die("Unable to open file!");
 						
                             $txt = $content;
                             fwrite($myfile,$txt);
@@ -239,13 +235,7 @@ include 'verification.php';
                            $log = "$_SESSION[name]暫存$inputtype/卷號$_POST[number]";
                            logger($log);
                        }
-
                     }
-
-
-
-
-
                     ?>
 
         </div>

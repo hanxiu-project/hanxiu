@@ -149,26 +149,18 @@
                                              echo "</tr>";
                                         }
                                          echo "</table>";
-        
-        
                                      }
                         }
 
                     }
-
-
-
                     ?>
-           
 
                      </div>
-
 
     </div>
 
     <!--註腳-->
  
-
 
 </div>
 <?php include 'footer.php';?>

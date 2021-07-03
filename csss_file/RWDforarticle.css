@@ -731,6 +731,14 @@
 
  
   
+}.content .tableforcontent .origin td{
+  overflow:auto;
+  text-overflow:inherit;
+  white-space:normal;
+ 
+
+ 
+  
 }
 
  

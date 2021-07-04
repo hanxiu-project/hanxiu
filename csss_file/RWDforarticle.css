@@ -398,7 +398,22 @@
   white-space:normal;
  
 }
-     
+.content .tableforcontent .origin{
+  margin-bottom: 30px;
+  word-break: break-all;
+  border-collapse: collapse;
+  width: 90%;
+
+ 
+  
+}.content .tableforcontent .origin td{
+  overflow:hidden;
+  text-overflow:inherit;
+  white-space:normal;
+
+ 
+  
+} 
  .pageforvideo{
         margin-bottom: 50px;
        

@@ -109,7 +109,19 @@ session_start();
                             echo "<li>";
                             echo "<a href='registered.php'>註冊</a>";
                             echo "</li>";
-                        }else
+                        }  else if ($authority=='1' || $authority=='2')
+                        {
+                            echo "<li>";
+                            echo "<a href='#'><b>$name</b>，您好</a>";
+                            echo "</li>";
+                            echo "<li>";
+                            echo "<a href='logout.php' >登出</a>";
+                            echo "</li>";
+                            echo "<li>";
+                            echo "<a href='AdminScriptureManage.php' >回後台</a>";
+                            echo "</li>";
+                        }
+                        else
                             {
                             echo "<li>";
                             echo "<a href='#'><b>$name</b>，您好</a>";
@@ -169,7 +181,7 @@ session_start();
                          <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
 						 <li><a href="contact.php">聯絡我們</a></li>
-                         <li><a href="AdminScriptureManage.php">回後台</a></li>
+                         
 						<?php
 
                         }

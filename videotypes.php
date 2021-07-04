@@ -150,26 +150,48 @@ session_start();
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
         
         
-                                    $per = 3;
+                                    $per = 10;
                                     $rows = ceil($datas / $per);
         
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
-        
+                                        echo "<th>內容</th>";
+                                        echo "<th>地點</th>";
+                                        echo "<th>集數</th>";
+                                        
                                     for ($j = 1; $j <= $rows; $j++) {
-                                        $start = ($j - 1) * 3;
-                                        $sqlatcnums10 = "SELECT * FROM videotypes  order by listorder Limit $start , $per";
+                                        $start = ($j - 1) * 10;
+                                        $sqlatcnums10 = "SELECT * FROM videotypes order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
-                                     
+                                       
                                         while ($row = mysqli_fetch_assoc($resultnums10)) {
                                             echo "<tr>";
                                             echo "<td >";
-                                            echo "<a href=?tid='$row[t_id]'  title='$row[typename]'>$row[typename]</a></p>";
+                                            echo "<a href=?tid='$row[t_id]' title='$row[typename]'>$row[typename]</a>";
                                             echo "</td>";
+                                            echo "<td >";
+                                            echo "$row[local]";
+                                            echo "</td>";
+                                            $sqlcount="SELECT COUNT(*) as count FROM videos where typename = '$row[typename]' ";
+                                            $countresult=mysqli_query($db_link,  $sqlcount);
+                                            $countcheck=mysqli_fetch_assoc($countresult);
+                                            $count_videos=$countcheck['count'];
+                                            echo "<td >";
+                                            echo "$count_videos";
+                                            echo "</td>";
+                                           
+                                           
+                                          
+                                            echo "</tr>";
+                                    
                                         }
         
-                                        echo "</tr>";
-        
+                                      
                                     }
+                                    ?>
+                                   
+                                    <?php
+        
+                                    
                                 }else{
                                     $sqlatypecnum = "SELECT * FROM `videotypes` order by listorder";
         

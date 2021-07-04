@@ -212,7 +212,7 @@
                         $email->Password = '3a732087ncut';
                         $email->setFrom('xuj8906@gmail.com',"漢修學院");
                         $email->Subject = 'Email註冊驗證信通知';
-                        $email->Body = "<a href='http://localhost/漢修專題/verify.php?vkey=$vkey'>註冊帳號</a>";
+                        $email->Body = "<a href='http://localhost/hanxiu/verify.php?vkey=$vkey'>註冊帳號</a>";
                         $email->addAddress("$e");
                         $email->SMTPDebug = 0;
 

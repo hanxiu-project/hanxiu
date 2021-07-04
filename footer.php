@@ -28,7 +28,14 @@ session_start();
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 <span style="font-family:微軟正黑體,serif;">
-    <footer class="footer">版權所有 轉載請註明出處  </footer>
+    <footer class="footer"><?php 
+				$sqlslo = "SELECT * FROM slogan where `sloganid`= '3'";
+                $resultslo= mysqli_query($db_link,$sqlslo);
+				while($rowsl = mysqli_fetch_assoc($resultslo))
+				{
+					echo "$rowsl[slogantext]</font><p>";
+				}
+	?> </footer>
 </span>
 
 </body>

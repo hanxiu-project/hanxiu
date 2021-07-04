@@ -48,6 +48,9 @@
 					<li>
 				<a href="AdminErrorSloganEdit.php"><i class="fas fa-file"></i> 錯誤回報標語編輯</a>
 				</li>
+					<li>
+				<a href="AdminfootSloganEdit.php"><i class="fas fa-file"></i> 底部標語編輯</a>
+				</li>
 				</ul>
 				</li>
             <li class="dropdown">

@@ -145,7 +145,7 @@ session_start();
                          echo "<li><a href=supplementtype.php>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li>";
                          echo " <li><a href=news.php>公告訊息</a></li>";
-						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
+//						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
 						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
 						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
@@ -160,7 +160,7 @@ session_start();
                          echo "<li><a href=supplementtype.php>補充資料</a></li>";
                          echo "<li><a href=videotypes.php>法音流佈</a></li>";
                          echo " <li><a href=news.php>公告訊息</a></li>";
-						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
+//						 echo " <li><a href=Memberdonates.php>查看捐獻</a></li>";
 						 echo " <li><a href=MemberProfile.php>個人資料</a></li>";
 						 echo " <li><a href=comments.php>錯誤回報</a></li>";
                          echo " <li><a href=contact.php>聯絡我們</a></li>";
@@ -177,7 +177,7 @@ session_start();
                          <li><a href=supplementtype.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">公告訊息</a></li>
-                         <li><a href="Memberdonates.php">查看捐獻</a></li>
+<!--                         <li><a href="Memberdonates.php">查看捐獻</a></li>-->
                          <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
 						 <li><a href="contact.php">聯絡我們</a></li>
@@ -195,7 +195,7 @@ session_start();
                          <li><a href=supplementtype.php>補充資料</a></li>
                          <li><a href="videotypes.php">法音流佈</a></li>
                          <li><a href="news.php">公告訊息</a></li>
-                         <li><a href="Memberdonates.php">查看捐獻</a></li>
+<!--                         <li><a href="Memberdonates.php">查看捐獻</a></li>-->
                          <li><a href="MemberProfile.php">個人資料</a></li>
                          <li><a href="comments.php">錯誤回報</a></li>
 						 <li><a href="contact.php">聯絡我們</a></li>

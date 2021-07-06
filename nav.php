@@ -156,17 +156,17 @@
                 </ul>
             </li>
 
-            <li class="dropdown">
-                <a href="Donatemanage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-star"></i> 捐獻管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="DonateView.php"><i class="fas fa-star"></i> 捐獻總覽</a>
-                    </li>
-                    <li>
-                        <a href="Donatemanage.php"><i class="fas fa-star"></i> 新增捐獻</a>
-                    </li>
-                </ul>
-            </li>
+<!--            <li class="dropdown">-->
+<!--                <a href="Donatemanage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-star"></i> 捐獻管理<b class="caret"></b></a>-->
+<!--                <ul class="dropdown-menu">-->
+<!--                    <li>-->
+<!--                        <a href="DonateView.php"><i class="fas fa-star"></i> 捐獻總覽</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="Donatemanage.php"><i class="fas fa-star"></i> 新增捐獻</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </li>-->
 
 
 

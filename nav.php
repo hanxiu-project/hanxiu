@@ -46,7 +46,7 @@
 				<a href="AdminSloganEdit.php"><i class="fas fa-file"></i> 首頁標語編輯</a>
 				</li>
 					<li>
-				<a href="AdminErrorSloganEdit.php"><i class="fas fa-file"></i> 錯誤回報標語編輯</a>
+				<a href="AdminErrorSloganEdit.php"><i class="fas fa-file"></i> 留言區標語編輯</a>
 				</li>
 					<li>
 				<a href="AdminfootSloganEdit.php"><i class="fas fa-file"></i> 底部標語編輯</a>

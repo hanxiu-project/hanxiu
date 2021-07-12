@@ -776,9 +776,12 @@ width: 5%;
  
   
 }.content .tableforcontent .origin td{
-  overflow:auto;
+  text-align: left;
+  
+  overflow:hidden;
   text-overflow:inherit;
   white-space:normal;
+
  
 
  

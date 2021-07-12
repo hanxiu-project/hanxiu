@@ -100,7 +100,7 @@ include 'verification.php';
                     {
                         $image = $_FILES['image']['name'];
                         $path1 = 'images/'.$image;
-                        $path2 = 'C:/AppServ/www/漢修專題/images/'.$image;
+                        $path2 = 'C:/AppServ/www/hanxiu/images/'.$image;              //$path2 = 'C:/AppServ/www/漢修專題/images/'.$image;
                         $sqlnum = "SELECT * FROM carousel";
                         $resultnum = mysqli_query($db_link,$sqlnum);
                         $rownum = mysqli_num_rows($resultnum);

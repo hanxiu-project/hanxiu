@@ -83,7 +83,7 @@ include 'verification.php';
                                            
 											
                                             <div class="form-group">
-                                                <label for="content">聯絡資訊內容內容:</label>
+                                                <label for="content">聯絡資訊內容:</label>
                                                 <textarea id="content" name="content" rows="10" cols="80" ><?php echo $row[content]?></textarea>
                                                 <script>
                                                     CKEDITOR.replace('content',{

@@ -57,7 +57,7 @@ include 'verification.php';
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
                 <a href="AdminNewSupplement.php" class="btn btn-success  " style="left">新增補充資料類別</a>
-                <a href="AdminNewSupplementFile.php" class="btn btn-success  " style="left">建立新補充資料檔案</a>
+                <a href="AdminNewSupplementFile.php" class="btn btn-success  " style="left">建立新補充資料</a>
 
                 <select id="type" name="type"  style="width:525px; height:30px; color:#000000; background-color:white">
                     <option>請選擇補充資料類別</option>

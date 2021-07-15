@@ -56,8 +56,9 @@ include 'verification.php';
         <!--建立新講記-->
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
-                <a href="AdminScripturePost.php" class="btn btn-success  " style="left">建立新講記</a>
+               
                 <a href="ScriptureManageNewType.php" class="btn btn-success  " style="left">建立新講記類別</a>
+                <a href="AdminScripturePost.php" class="btn btn-success  " style="left">建立新講記</a>
 
                 <select id="type" name="type" style="width:525px; height:30px; color:#000000; background-color:white">
                     <option>請選擇類別</option>

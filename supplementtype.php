@@ -83,41 +83,51 @@ session_start();
                         <br>
                         <h2>｜<?php echo "$rtypename[1]" ?>  </h2>
                               </div> 					
-                    <center>
-                    <table class="sup" >
-					<tr  bgcolor="#bfbfbf" style="font-weight:bold;font-size:20px"   >
-						<th>補充資料類別名稱</th>
-						<th>補充資料標題名稱</th>
-						<th>發佈日期</th>
-					</tr>
+                 
                    
                     <?php
                      if(isMobileCheck()){
+                         
                         $sqlatcnum = "SELECT * FROM `supplements` where  `save`='0' && `spt_id` = $sptid ";
                         $result_row = mysqli_query($db_link, $sqlatcnum);
                         $data = mysqli_num_rows($result_row);       //抓總共幾筆
-                        $per=3;
-                        $rows=ceil($data/$per);
+                        $per=10;
+                        $pages=ceil($data/$per);
+						$k = $pages;
+						if (!isset($_GET["page"])) {
+                            $page = 1;
+                        } else {
+                            $page = intval($_GET["page"]);
+                        }
 
                         $resultnum = mysqli_query($db_link, $sqlatcnum);
-
-                        for($i=1;$i<=$rows;$i++)
-                        {
-                            $start=($i-1)*3;
-                            $sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` ASC Limit  $start  , $per";
-                            $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
+						$start=($page-1)*$per;
+						$sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` DESC Limit  $start  , $per";
+						$resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
+						$resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
+                        ?>
+                           <center>
+                    <table class="sup" >
+					<tr  bgcolor="#bfbfbf" style="font-weight:bold;font-size:20px"   >
+						<th>補充資料類別名稱</th>
+						<th>標題名稱</th>
+						
+					</tr>
+                        <?php
+                            
+                        while ($supplement = mysqli_fetch_assoc($resultnum10[$start])) {
                             echo "<tr >";
-                            while ($supplement = mysqli_fetch_assoc($resultnum10)) {
-                                echo "<td>";
-                                echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a></p>";
-
-
-                                echo "</td>";
-                            }
-
-                            echo "</tr>";
-
+                             echo "<td >";
+                            echo "$supplement[spmtypename]";
+                            echo "</td>";
+                            echo "<td>";
+                            echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a>";
+                            echo "</td>";
+                         
+                            echo "</tr >";
                         }
+
+                        
 
 
                     }else{
@@ -138,6 +148,16 @@ session_start();
 						$sqlatcnum10 = "SELECT * FROM `supplements` where  `save`='0' &&`spt_id` = $sptid order by `sp_id` DESC Limit  $start  , $per";
 						$resultnum10[$start] = mysqli_query($db_link, $sqlatcnum10);
 						$resultnum10[$page] = mysqli_query($db_link, $sqlatcnum10);
+                        ?>
+                        <center>
+                 <table class="sup" >
+                 <tr  bgcolor="#bfbfbf" style="font-weight:bold;font-size:20px"   >
+                     <th>補充資料類別名稱</th>
+                     <th>標題名稱</th>
+                     <th>發佈日期</th>
+                     
+                 </tr>
+                     <?php
                             
                         while ($supplement = mysqli_fetch_assoc($resultnum10[$start])) {
                             echo "<tr >";
@@ -188,12 +208,12 @@ session_start();
                                     $sqlatypecnum = "SELECT * FROM `spm_types` order by listorder";
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
                                     $datas = mysqli_num_rows($results_row);       //抓總共幾筆
-                                    $per=3;
+                                    $per=1;
                                     $rows=ceil($datas/$per);
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
                                     for($j=1;$j<=$rows;$j++)
                                     {
-                                        $start=($j-1)*3;
+                                        $start=($j-1)*1;
                                         $sqlatcnums10 = "SELECT * FROM spm_types  order by listorder Limit $start , $per";
                                         $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
                                         echo "<tr>";

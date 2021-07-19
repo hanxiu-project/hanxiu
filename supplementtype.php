@@ -109,21 +109,22 @@ session_start();
                            <center>
                     <table class="sup" >
 					<tr  bgcolor="#bfbfbf" style="font-weight:bold;font-size:20px"   >
-						<th>補充資料類別名稱</th>
+						
 						<th>標題名稱</th>
+                        <th>發佈日期</th>
 						
 					</tr>
                         <?php
                             
                         while ($supplement = mysqli_fetch_assoc($resultnum10[$start])) {
                             echo "<tr >";
-                             echo "<td >";
-                            echo "$supplement[spmtypename]";
-                            echo "</td>";
+                         
                             echo "<td>";
                             echo "<a href=supplement.php?spid='$supplement[sp_id]' title='$supplement[title]'>$supplement[title]</a>";
                             echo "</td>";
-                         
+                            echo "<td>";
+                            echo "$supplement[date]";
+                            echo "</td>";
                             echo "</tr >";
                         }
 

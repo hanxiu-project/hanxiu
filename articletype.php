@@ -217,8 +217,12 @@ session_start();
                                     $per=10;
                                     $rows=ceil($datas/$per);
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
-            
-                                    for($j=1;$j<=$rows;$j++)
+                                    $sqlscr="SELECT * FROM `scr_show` ";
+                                    $result=mysqli_query($db_link,$sqlscr);
+                                    $rowscr=mysqli_fetch_assoc($result);
+                                    if($_SESSION['authority']=='1' || $_SESSION['authority']=='2') //還未編輯之處理
+                                    {
+                                        for($j=1;$j<=$rows;$j++)
                                         {
                                             $start=($j-1)*10;
                                             $sqlatcnums10 = "SELECT * FROM types order by listorder Limit $start , $per";
@@ -231,7 +235,30 @@ session_start();
                                             }
                                             echo "</tr>";
                                         }
-                                }
+                                    }else
+                                    {
+                                        if($rowscr['shownumber'] == '0')
+                                        {  
+                                        echo "<center> <font color=#612E04><h1>※網頁尚在構置中※<h1></font></center>";
+                                         }                            
+                                        else
+                                         {
+                                          for($j=1;$j<=$rows;$j++)
+                                            {
+                                            $start=($j-1)*10;
+                                            $sqlatcnums10 = "SELECT * FROM types order by listorder Limit $start , $per";
+                                            $resultnums10 = mysqli_query($db_link, $sqlatcnums10);
+                                            echo "<tr>";
+                                            while ($row = mysqli_fetch_assoc($resultnums10)) {
+                                                echo "<td>";
+                                                echo "<a href=?tid='$row[t_id]' title='$row[typename]'`>$row[typename]</a></p>";
+                                                echo "</td>";
+                                             }
+                                             echo "</tr>";
+                                            }
+                                        }
+                                    }
+                                 }
                         ?>
                         
                         </table>

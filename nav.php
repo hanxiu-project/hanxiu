@@ -71,6 +71,9 @@
                     <li>
                         <a href="AdminScripturesTypeSort.php"><i class="fas fa-file"></i> 講記類別排序</a>
                     </li>
+                    <li>
+                        <a href="AdminShowScriptureManage.php"><i class="fas fa-cogs"></i>編輯講記是否顯示</a>
+                    </li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -221,7 +224,8 @@
                         <a href="MemberManagefor0.php"><i class="fa fa-fw fa-user"></i> 一般會員</a>
                     </li>
                 </ul>
-            </li>
+            </li>  
+           
 </ul>
     </div>
     <!-- /.navbar-collapse -->

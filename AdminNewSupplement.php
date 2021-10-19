@@ -51,38 +51,24 @@ include 'verification.php';
         <div class="row" style="margin-bottom: 20px; text-align: left">
             <div class="col-lg-12">
                 <label for="content"><font color="#ffffff">新增補充資料類別:</font></label>
-                <input id="type" name="type" type="text"
-                       style="width:525px; height:30px; color:#000000; ">
-
-
-                <input type="submit" class="btn btn-sm btn-warning" name="go"
-                       value="新增">
-
-
+                <input id="type" name="type" type="text" style="width:525px; height:30px; color:#000000; ">
+                <input type="submit" class="btn btn-sm btn-warning" name="go" value="新增">
             </div>
-
         </div>
+
         <div class="col-lg-12">
-
             <font size="6"><strong style= "background:white" >新增補充資料類別</strong></font>
-
         </div>
         <!--Body-->
         <div id="page-wrapper">
-
             <div class="container-fluid">
-
                 <div class='wrapper'>
                     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
                     <?php
-
-
                     mysqli_query($db_link, 'SET CHARACTER SET UTF-8');
-
                     $sql = "SELECT * FROM spm_types ";
                     $result = mysqli_query($db_link, $sql);
-
 
                     echo "<form name='form1' method='POST' action=''>";
                     echo "<table border rules=rows cellspacing=0 width=100% style=font-size:20px;line-height:50px;>";
@@ -94,26 +80,23 @@ include 'verification.php';
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr align=center>";
                         echo "<td>$row[spmtypename]</td>";
-
                         echo "<td>";
-
                         ?>
                         <input type='submit' class="btn btn-sm btn-danger " style='width:100px;height:30px;'
                                name="<?php echo "$row[spt_id]+2"; ?>" value='刪除'
                                onclick="return confirm('是否確認刪除此類別?')"></td>
-
                         <?php
-
                         echo "</tr>";
                     }
                     echo "</table>";
-                    //$sql2="SELECT s_id,typename,number,title,date FROM scripture,types WHERE scripture.t_id = types.t_id";
+
                     $sql2 = "SELECT * FROM spm_types ";
                     $result2 = mysqli_query($db_link, $sql2);
                     $sql_listorder =" SELECT MAX(listorder) as max FROM  `spm_types` ";
                     $listresult=mysqli_query($db_link,  $sql_listorder);
                     $listcheck=mysqli_fetch_assoc($listresult);
                     $max_listorder=$listcheck['max'];
+
                     while ($row2 = $result2->fetch_assoc()) {
                         if (isset($_POST["$row2[spt_id]+2"])) {
                             $file_path = "supplement/$row2[spmtypename]";
@@ -134,8 +117,6 @@ include 'verification.php';
                                 echo "<script>alert('補充資料類別不存在!');location.href='AdminNewSupplement.php'</script>";
                                 //echo "講記類別不存在！";        資料夾不存在
                             }
-
-
                         }
                     }
 

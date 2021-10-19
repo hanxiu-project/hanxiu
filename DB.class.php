@@ -2,9 +2,9 @@
 class DB{
     // Database configuration
     private $dbHost     = "localhost";
-    private $dbUsername = "root";
-    private $dbPassword = "123456789";
-    private $dbName     = "專題";
+    private $dbUsername = "hanhsiuo_user1";
+    private $dbPassword = "Aqd#%&ca27";
+    private $dbName     = "hanhsiuo_hanhsiu";
     private $imgTbl     = 'carousel';
 
     function __construct(){

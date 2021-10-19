@@ -18,18 +18,8 @@
 
 <body>
 
-<?php
-$db_ip = "127.0.0.1";
-$db_user = "root";
-$db_pwd = "123456789";
-$db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-mysqli_query($db_link, 'SET CHARACTER SET utf8');
-//載入資料庫連線與啟用session
-//include("sql.php");
-session_start();
-# 設定時區
+<?php include 'database.php';?>
 
-?>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 <?php

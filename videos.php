@@ -15,10 +15,7 @@
 <body>
 
 <?php
-$db_ip = "127.0.0.1";
-$db_user = "root";
-$db_pwd = "123456789";
-$db_link = @mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+include 'database.php';
 mysqli_query($db_link, 'SET CHARACTER SET utf8');
 //載入資料庫連線與啟用session
 //include("sql.php");
@@ -131,10 +128,7 @@ session_start();
             <div class="contentlist">
 			<h2>｜影音專區</h2>
                 <?php
-				$db_ip="127.0.0.1";
-                $db_user="root";
-                $db_pwd="123456789";
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+			
                 mysqli_query($db_link, 'SET CHARACTER SET utf8');
                 $result= mysqli_query($db_link,$sql);
 				$sql = "SELECT * FROM videos";

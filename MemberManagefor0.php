@@ -44,7 +44,7 @@
 	<?php 
 			 /*資料庫連結*/
                
-                $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
+             
 				$sqlmember="SELECT * FROM members where m_id= $_SESSION[m_id] ";
                 $resultmanager=mysqli_query($db_link,$sqlmember);
 				$rowmanager = mysqli_fetch_assoc($resultmanager);	

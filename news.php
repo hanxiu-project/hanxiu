@@ -73,8 +73,7 @@ session_start();
             <div class="tableforcontent">
                      
                     <?php
-                        $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                        mysqli_query($db_link, 'SET CHARACTER SET utf8');
+                      
 
                         //$sqlold = "SELECT * FROM posts where old = '1' order by date DESC";
                         //$resultold= mysqli_query($db_link,$sqlold);

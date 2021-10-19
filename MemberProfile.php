@@ -78,8 +78,7 @@ session_start();
             <div class="tableforcontent">
                      
             <?php             
-                        $db_link=@mysqli_connect($db_ip, $db_user, $db_pwd, "專題");
-                        mysqli_query($db_link, 'SET CHARACTER SET utf8');
+                   
                         $sql = "SELECT * FROM members where account = '$_SESSION[acc]'";
                         $result = mysqli_query($db_link, $sql);
                         $row = mysqli_fetch_assoc($result);

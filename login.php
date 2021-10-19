@@ -137,9 +137,8 @@
 
                 <form name="login01" method="post" action="">
                 <font>帳號：</font><input type="text" name="account"><br><br>
-                <font>密碼：</font><input type="password" name="password"><br>
-                <a href="forgotpwd.php">忘記密碼？</a>
-                <br><br>
+                <font>密碼：</font><input type="password" name="password"><br><br><br>
+                <!--<a href="forgotpwd.php">忘記密碼？</a>-->
                 <div class="wraplogin">
                 <div class="loginandregis">
                 <input type="submit"style='height:40px;'name="gologin" value="登入" style="width:60px;height:40px;">
@@ -178,9 +177,9 @@
             echo "<script>alert('請輸入帳號或密碼！');location.href='login.php'</script>";
         } else if ($acc != $_POST["account"] || $pwd != $_POST["password"]) {
             echo "<script>alert('帳號或密碼錯誤！請重新輸入。');location.href='login.php'</script>";
-        } else if ($_SESSION["verified"] == 0) {
+        } /*else if ($_SESSION["verified"] == 0) {
             echo "<script>alert('帳號尚未驗證，請至email收取信驗證信。');location.href='login.php'</script>";
-        } else if ($authority == 0) {
+        } */else if ($authority == 0) {
             $_SESSION['acc'] = $_POST["account"];                            //session存帳號密碼
             $_SESSION['pwd'] = $_POST["password"];
             //header("location:indexs.php");

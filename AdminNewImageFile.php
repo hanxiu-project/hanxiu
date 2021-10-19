@@ -69,7 +69,7 @@ include 'verification.php';
                                         <form name="forms" method="POST" action="" enctype="multipart/form-data">
 
                                             <div class="form-group">
-                                                <label for="title">(照片檔名不得為中文!!)選擇照片上傳:</label>
+                                                <label for="title">選擇照片上傳:</label>
                                             </div>
 
 

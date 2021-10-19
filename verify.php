@@ -8,11 +8,9 @@ if(isset($_GET['vkey']))
 
 
     header("Content-type:text/html;charset=utf8");
-    $db_ip="127.0.0.1";
-    $db_user="root";
-    $db_pwd="123456789";
+    include 'database.php';
 
-    $db_link = @mysqli_connect($db_ip,$db_user,$db_pwd,"專題");
+  
     session_start();
     mysqli_query($db_link, 'SET CHARACTER SET utf8');
     $sql = "SELECT `verified`,`vkey` FROM `members` WHERE `verified` = 0 AND `vkey` = '$veky' LIMIT 1";

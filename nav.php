@@ -215,7 +215,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="AdminCommentManage.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-users"></i> 會員管理<b class="caret"></b></a>
+                <a href="MemberManagefor1.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-users"></i> 會員管理<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
                         <a href="MemberManagefor1.php"><i class="fas fa-cogs"></i> 管理員</a>

@@ -197,22 +197,22 @@
                     $sql_insert = "INSERT INTO `members` (account,password,name,gender,email,address,telephone,authority,vkey) VALUES ('$_POST[account]','$_POST[password]','$_POST[name]','$_POST[sex]','$_POST[email]','$_POST[address]','$_POST[telephone]','0','$vkey')";
                     mysqli_query($db_link, $sql_insert);
 
-                    if ($sql_insert) {
+                   /* if ($sql_insert) {
 
                         include('PHPMailer/PHPMailerAutoload.php');
                         $email = new PHPMailer();
                         $email->CharSet = 'UTF-8';
-                        $email->isSMTP();
+                        //$email->isSMTP();
                         $email->SMTPAuth = true;
-                        $email->SMTPSecure = 'ssl';
-                        $email->Host = 'smtp.gmail.com';
+                        //$email->SMTPSecure = 'ssl';
+                        $email->Host = 'mail.hanhsiu.org';
                         $email->Port = '465';
                         $email->isHTML(true);
-                        $email->Username = 'xuj8906@gmail.com';
-                        $email->Password = '3a732087ncut';
-                        $email->setFrom('xuj8906@gmail.com',"漢修學院");
+                        $email->Username = 'hanhsiu@hanhsiu.org';
+                        $email->Password = 'Aqd#%&ca27';
+                        $email->setFrom('hanhsiu@hanhsiu.org',"漢修學院");
                         $email->Subject = 'Email註冊驗證信通知';
-                        $email->Body = "<a href='http://140.128.80.207/hanxiu/verify.php?vkey=$vkey'>註冊帳號</a>";
+                        $email->Body = "<a href='https://hanhsiu.org/hanhsiu/verify.php?vkey=$vkey'>註冊帳號</a>";
                         $email->addAddress("$e");
                         $email->SMTPDebug = 0;
 
@@ -224,8 +224,8 @@
                             echo "<script>alert('感謝註冊，請到email收取驗證信！');location.href='indexs.php'</script>";
                         }
 
-                    }
-
+                    }*/
+                    echo "<script>alert('感謝註冊，請重新登入！');location.href='indexs.php'</script>";
                 }
             }
             ?>
@@ -242,5 +242,4 @@
 <?php include 'footer.php'; ?>
 </body>
  
-
 </html>

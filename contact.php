@@ -2,7 +2,7 @@
 <head>
 
 
-    <title>聯絡我們</title>
+    <title>漢修學苑-聯絡我們</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">

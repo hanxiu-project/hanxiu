@@ -2,7 +2,7 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首頁</title>
+    <title>漢修學苑-首頁</title>
 
     <link href="csss_file/RWD.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

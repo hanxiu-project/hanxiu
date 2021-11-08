@@ -2,7 +2,7 @@
 <head>
 
 
-    <title>緣起</title>
+    <title>漢修學苑-緣起</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">

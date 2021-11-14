@@ -6,11 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -107,14 +105,9 @@ session_start();
 
                 <center>
                     <table>
-                        
                         <?php
-
-                      
-                       
                         if(isMobileCheck()){
                             $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
-
                             $result_row = mysqli_query($db_link, $sqlatcnum);
                             $data = mysqli_num_rows($result_row);       //抓總共幾筆
                             //是行動裝置
@@ -176,11 +169,13 @@ session_start();
                          <h2>｜講記類別</h2>
                                 <div class="search">
                                 <form name="src" method="GET" action="">
-                                        查詢講記標題：<input type="text" name="srctitle" Placeholder="輸入講記標題">
+                                        查詢講記標題：<input type="text" name="srctitle" id="srctitle" Placeholder="輸入講記標題">
                                         <input type='submit' name='tsrcbtn' value='搜尋'>
                                         <br>
-                                        查詢講記內容：<input type="text" name="srckeyword" Placeholder="輸入關鍵字">
+                                        查詢講記內容：<input type="text" name="srckeyword" id="srckeyword" Placeholder="輸入關鍵字">
                                         <input type='submit' name='srcbtn' value='搜尋'>
+                                        <br>
+                                        <font color="black">請點擊搜尋鍵進行搜尋，勿按Enter</font>　　　　
                                         <br><br>
                                     </form>
                                 </div>
@@ -265,11 +260,11 @@ session_start();
                             <center>
                                 <?php
                                 }
-                                if (isset($_GET['srcbtn'])) {
-                                    echo "<script>location.href='searchkeyword.php?srckword=$_GET[srckeyword]';</script>";        //
-                                }
                                 if (isset($_GET['tsrcbtn'])) {
                                     echo "<script>location.href='searchtitle.php?srctitle=$_GET[srctitle]';</script>";        //
+                                }
+                                if (isset($_GET['srcbtn'])) {
+                                    echo "<script>location.href='searchkeyword.php?srckword=$_GET[srckeyword]';</script>";        //
                                 }
                                 ?>
                 </center>

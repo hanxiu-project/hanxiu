@@ -1,9 +1,6 @@
 <html>
 <head>
-
-
     <title>漢修學苑-瑜論講記</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="csss_file/RWDforarticle.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -105,9 +102,14 @@ session_start();
 
                 <center>
                     <table>
+                        
                         <?php
+
+                      
+                       
                         if(isMobileCheck()){
                             $sqlatcnum = "SELECT * FROM `scripture` where  `save`='0' && `t_id` = $tid ";
+
                             $result_row = mysqli_query($db_link, $sqlatcnum);
                             $data = mysqli_num_rows($result_row);       //抓總共幾筆
                             //是行動裝置
@@ -119,7 +121,7 @@ session_start();
                             for($i=1;$i<=$rows;$i++)
                                 {
                                     $start=($i-1)*3;
-                                    $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
+                                    $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by CAST(`number` AS UNSIGNED) ASC Limit  $start  , $per";
                                     $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
                                     echo "<tr >";
                                     while ($script = mysqli_fetch_assoc($resultnum10)) {
@@ -143,9 +145,9 @@ session_start();
                             $resultnum = mysqli_query($db_link, $sqlatcnum);
     
                             for($i=1;$i<=$rows;$i++)
-                                {
+                                { 
                                     $start=($i-1)*10;
-                                    $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by `number` ASC Limit  $start  , $per";
+                                    $sqlatcnum10 = "SELECT * FROM `scripture` where  `save`='0' &&`t_id` = $tid order by CAST(`number` AS UNSIGNED) ASC Limit  $start  , $per";
                                     $resultnum10 = mysqli_query($db_link, $sqlatcnum10);
                                     echo "<tr >";
                                     while ($script = mysqli_fetch_assoc($resultnum10)) {
@@ -168,7 +170,7 @@ session_start();
                            <br>  
                          <h2>｜講記類別</h2>
                                 <div class="search">
-                                <form name="src" method="GET" action="">
+                                    <form name="src" method="GET" action="">
                                         查詢講記標題：<input type="text" name="srctitle" id="srctitle" Placeholder="輸入講記標題">
                                         <input type='submit' name='tsrcbtn' value='搜尋'>
                                         <br>
@@ -191,7 +193,15 @@ session_start();
                                     $per=3;
                                     $rows=ceil($datas/$per);
                                     $resultsnum = mysqli_query($db_link, $sqlatypecnum);
-            
+                                    
+                                    $sqlscr="SELECT * FROM `scr_show` ";
+                                    $result=mysqli_query($db_link,$sqlscr);
+                                    $rowscr=mysqli_fetch_assoc($result);
+                                    if($rowscr['shownumber'] == '0')
+                                    {  
+                                    echo "<center> <font color=#612E04><h1>※網頁尚在構置中※<h1></font></center>";
+                                     }                            
+                                    else{
                                     for($j=1;$j<=$rows;$j++)
                                         {
                                             $start=($j-1)*3;
@@ -205,6 +215,7 @@ session_start();
                                             }
                                             echo "</tr>";
                                         }
+                                    }
                                 }else {
                                     $sqlatypecnum = "SELECT * FROM `types` order by listorder";
                                     $results_row = mysqli_query($db_link, $sqlatypecnum);
@@ -260,11 +271,11 @@ session_start();
                             <center>
                                 <?php
                                 }
-                                if (isset($_GET['tsrcbtn'])) {
-                                    echo "<script>location.href='searchtitle.php?srctitle=$_GET[srctitle]';</script>";        //
-                                }
                                 if (isset($_GET['srcbtn'])) {
                                     echo "<script>location.href='searchkeyword.php?srckword=$_GET[srckeyword]';</script>";        //
+                                }
+                                if (isset($_GET['tsrcbtn'])) {
+                                    echo "<script>location.href='searchtitle.php?srctitle=$_GET[srctitle]';</script>";        //
                                 }
                                 ?>
                 </center>
